@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
 
-## Available Scripts
+<p align="center">
+  <a href="git@github.com:IBUNHABIBU/react-bookstore.git">
+    <p align="center">🖩 </p>
+  </a>
 
-In the project directory, you can run:
+  <h2 align="center"> REACT BOOKSTORE</h2>
+  <h3 align="center"> This project is part of the Microverse curriculum in the Redux.js module to design a bookstore app</h3>
 
-### `npm start`
+  <p align="center">
+    <a href="https://github.com/IBUNHABIBU/react-bookstore/issues">Report Bug</a>
+    <a href="https://github.com/IBUNHABIBU/react-bookstore/issues">Request Feature</a>
+  </p>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of Contents
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [About the Project](#about-the-project)
+* [Story](#story)
+  * [Built With](#built-with)
+  * [Features](#features)
+  * [Requirements](#requirements)
+  * [Useful commands](#useful-commands)
+* [Contact](#Authors)
+* [Acknowledgements](#Acknowledgements)
 
-### `npm test`
+<!-- ABOUT THE PROJECT -->
+## About The Project
+Magic-books Inc. is a fictional company based in Germany. They have requested your help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic and responsive to their actions and therefore you decided to build it with React & Redu
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Story
 
-### `npm run build`
+### Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Milestone 2
+- Creating container folder
+  - Creating BookForm component
+  - Creating BookList component
+- Creating component folder
+  - creating Book component
+  - creating store
+  - creating action and reducers
+    
+<!-- BUILD WITH -->
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was built using these technologies.
+* React
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Requirement
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Node.js
+- NPM
+- big.js
+- propTypes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### How to Install 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To run this locally, clone the repository, navigate to it's containing directory.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Follow these commands step by step:-
 
-## Learn More
+`
+git clone git@github.com:IBUNHABIBU/react-bookstore.git
+`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`
+cd react-bookstore
+`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ `$npm install `
+ 
+ 
+ `$npm run start`
+ 
+Enjoy playing it.
 
-### Code Splitting
+### Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ `$npm run test `
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Useful Commands
 
-### Making a Progressive Web App
+| Command | Description |
+|---------|-------------|
+| `npm install` | Install project dependencies |
+| `npm start` | Build project and open web server running project |
+| `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- ### How to play -->
 
-### Advanced Configuration
+<!-- CONTACT -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## link to  [Live Demo ](https://salim-tz-bookstore.herokuapp.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Authors
 
-### `npm run build` fails to minify
+👤 **Salum Habibu** 
+    
+* Github: [IBUNHABIBU](https://github.com/IBUNHABIBU)
+* Twitter: [@ibunhabibu](https://twitter.com/Ibunhabibu)
+* LinkedIn: [Salum Habibu Kombo](https://www.linkedin.com/in/salum-habibu/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Show your support
+
+Give a :star: if you like this project!
+
+
+## Acknowledgments
+Credits go to  <!--Mr Christian Ceamatu who helped me when I'm stuck. -->
+all my standup team for their help.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/react-bookstore.svg?style=flat-square
+[contributors-url]: https://github.com/IBUNHABIBU/react-bookstore/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/IBUNHABIBU/react-bookstore.svg?style=flat-square
+[forks-url]: https://github.com/IBUNHABIBU/react-bookstore/network/members
+[stars-shield]: https://img.shields.io/github/stars/IBUNHABIBU/react-bookstore.svg?style=flat-square
+[stars-url]: https://github.com/IBUNHABIBU/react-bookstore/stargazers
+[issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/react-bookstore.svg?style=flat-square
+[issues-url]: https://github.com/IBUNHABIBU/react-bookstore/issues
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
