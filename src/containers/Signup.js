@@ -5,11 +5,11 @@ const Signup = () => (
     <form>
       <div className="form-floating mb-3">
         <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
-        <label htmlFor="floatingInput">Email address</label>
+        <label htmlFor="Email">Email</label>
       </div>
       <div className="form-floating">
         <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
-        <label htmlFor="floatingPassword">Password</label>
+        <label htmlFor="Password">Password</label>
       </div>
       <button type="submit" className="btn btn-primary">Submit</button>
     </form>
