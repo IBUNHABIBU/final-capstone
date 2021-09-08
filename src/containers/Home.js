@@ -12,8 +12,14 @@ const Home = () => {
       <input type="text" />
     </label>
     <label htmlFor="email">
-     <input type="email" name="" id="" />
-     </label>
+      <input type="email" name="" id="" />
+    </label>
+    <label htmlFor="password">
+     <input type="password" name="" id="" />
+    </label>
+    <label htmlFor="password">
+     <input type="password" name="" id="" />
+    </label>
    </form>
   </div>
  )
