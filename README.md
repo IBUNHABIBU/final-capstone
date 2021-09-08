@@ -7,11 +7,11 @@
 
 <p align="center">
   <a href="git@github.com:IBUNHABIBU/react-bookstore.git">
-    <p align="center">🖩 </p>
+    <p align="center"></p>
   </a>
 
-  <h2 align="center"> REACT BOOKSTORE</h2>
-  <h3 align="center"> This project is part of the Microverse curriculum in the Redux.js module to design a bookstore app</h3>
+  <h2 align="center"> FINAL CAPSTONE PROJECT </h2>
+  <h3 align="center"> This project is final project to design a full stack application </h3>
 
   <p align="center">
     <a href="https://github.com/IBUNHABIBU/react-bookstore/issues">Report Bug</a>
