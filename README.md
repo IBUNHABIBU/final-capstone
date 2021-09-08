@@ -6,7 +6,7 @@
 <br />
 
 <p align="center">
-  <a href="git@github.com:IBUNHABIBU/react-bookstore.git">
+  <a href="git@github.com:IBUNHABIBU/final-capstone.git">
     <p align="center"></p>
   </a>
 
@@ -14,8 +14,8 @@
   <h3 align="center"> This project is final project to design a full stack application </h3>
 
   <p align="center">
-    <a href="https://github.com/IBUNHABIBU/react-bookstore/issues">Report Bug</a>
-    <a href="https://github.com/IBUNHABIBU/react-bookstore/issues">Request Feature</a>
+    <a href="https://github.com/IBUNHABIBU/final-capstone/issues">Report Bug</a>
+    <a href="https://github.com/IBUNHABIBU/final-capstone/issues">Request Feature</a>
   </p>
 </p>
 
@@ -68,11 +68,11 @@ To run this locally, clone the repository, navigate to it's containing directory
 #### Follow these commands step by step:-
 
 `
-git clone git@github.com:IBUNHABIBU/react-bookstore.git
+git clone git@github.com:IBUNHABIBU/final-capstone.git
 `
 
 `
-cd react-bookstore
+cd final-capstone
 `
 
  `$npm install `
@@ -121,14 +121,14 @@ all my standup team for their help.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/react-bookstore.svg?style=flat-square
-[contributors-url]: https://github.com/IBUNHABIBU/react-bookstore/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/IBUNHABIBU/react-bookstore.svg?style=flat-square
-[forks-url]: https://github.com/IBUNHABIBU/react-bookstore/network/members
-[stars-shield]: https://img.shields.io/github/stars/IBUNHABIBU/react-bookstore.svg?style=flat-square
-[stars-url]: https://github.com/IBUNHABIBU/react-bookstore/stargazers
-[issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/react-bookstore.svg?style=flat-square
-[issues-url]: https://github.com/IBUNHABIBU/react-bookstore/issues
+[contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/final-capstone.svg?style=flat-square
+[contributors-url]: https://github.com/IBUNHABIBU/final-capstone/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/IBUNHABIBU/final-capstone.svg?style=flat-square
+[forks-url]: https://github.com/IBUNHABIBU/final-capstone/network/members
+[stars-shield]: https://img.shields.io/github/stars/IBUNHABIBU/final-capstone.svg?style=flat-square
+[stars-url]: https://github.com/IBUNHABIBU/final-capstone/stargazers
+[issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/final-capstone.svg?style=flat-square
+[issues-url]: https://github.com/IBUNHABIBU/final-capstone/issues
 
 ## 📝 License
 
