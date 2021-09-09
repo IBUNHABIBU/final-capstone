@@ -4,7 +4,6 @@ import React from 'react';
 const Login = () => (
   <div className="signup container">
     <form className="form">
-
       <div className="form-floating mb-2 col-3">
         <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
         <label htmlFor="floatingInput">Email</label>
