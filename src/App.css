@@ -4,9 +4,14 @@
 .signup {
   text-align: center;
 }
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
 .btn-primary,
 .btn-primary:hover {
   background-color: #99c210;
   border-color: #99c210;
-
 }
