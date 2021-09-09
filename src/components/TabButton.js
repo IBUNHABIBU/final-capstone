@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const TabButton = (props) => {
   const { index, btnNumber, content } = props;
@@ -14,8 +14,8 @@ const TabButton = (props) => {
   );
 };
 TabButton.propTypes = {
-  index: PropTypes.integer.isRequired,
-  btnNumber: PropTypes.integer.isRequired,
+  index: PropTypes.number.isRequired,
+  btnNumber: PropTypes.number.isRequired,
   content: PropTypes.string.isRequired,
 };
 export default TabButton;
