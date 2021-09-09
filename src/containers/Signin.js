@@ -15,7 +15,7 @@ const Signin = () => {
       </div>
       
       <div className="form-floating mb-3 col-3">
-        <button type="submit" className="btn btn-primary col-12">Submit</button>
+        <button type="submit" className="btn btn-primary col-12">Login</button>
       </div>
       <p>
         Already Member?
