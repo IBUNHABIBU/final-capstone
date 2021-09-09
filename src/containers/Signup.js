@@ -23,6 +23,10 @@ const Signup = () => (
       <div className="form-floating mb-3 col-3">
         <button type="submit" className="btn btn-primary col-12">Submit</button>
       </div>
+      <p>
+        Already Member?
+        <span>  Login</span>
+      </p>
     </form>
   </div>
 );
