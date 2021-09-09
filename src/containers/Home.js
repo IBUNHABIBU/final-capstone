@@ -1,12 +1,12 @@
 import React from 'react';
-import Signin from './Signin';
+import Login from './Login';
 
 const Home = () => (
   <div>
     <h1>
       Please register to rent a car
     </h1>
-    <Signin />
+    <Login />
   </div>
 );
 
