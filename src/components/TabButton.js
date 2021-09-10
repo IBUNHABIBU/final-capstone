@@ -9,8 +9,28 @@ const TabButton = (props) => {
   };
   return (
     <div>
+      <div className="d-flex align-items-start">
+        <div className="nav flex-column nav-pills me-3 navi-bar" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <TabButton index={1} btnNumber={1} content="Home" />
+          <TabButton index={2} btnNumber={2} content="Lifestyle" />
+          <TabButton index={3} btnNumber={3} content="Ride" />
+          <TabButton index={4} btnNumber={4} content="book" />
+          
       <button onClick={() => toggleTab(index)} className={tab === btnNumber ? 'nav-link active' : 'nav-link'} id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">{content}</button>
-    </div>
+
+        </div>
+        <div className="tab-content" id="v-pills-tabContent">
+          <div className={tab === 1 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            ...
+            Lorem ipsum dolor sit amet consectetur, adipisicing e
+            lit. Iste optio in, nihil quasi esse quaerat dicta nobis delectus aliquid neque rem
+            cupiditate cum officia autem sit! Cupiditate repellat vitae aut.
+          </div>
+          <div className={tab === 2 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Lorem 2 lorem ljadli liedlie *</div>
+          <div className={tab === 3 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">ldiedkaa ia laie adlaie aidioae</div>
+          <div className={tab === 4 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...ldidaieakdaieoalkaielaiela</div>
+        </div>
+         </div>
   );
 };
 TabButton.propTypes = {
