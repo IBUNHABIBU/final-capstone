@@ -24,7 +24,8 @@ const TabButton = (props) => {
           <div className={tab === 3 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">ldiedkaa ia laie adlaie aidioae</div>
           <div className={tab === 4 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...ldidaieakdaieoalkaielaiela</div>
         </div>
-         </div>
+      </div>
+      </div>
   );
 };
 TabButton.propTypes = {
