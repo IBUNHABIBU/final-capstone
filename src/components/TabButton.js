@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Lifestyle from '../containers/Lifestyle';
 import Models from '../containers/Models';
 // import PropTypes from 'prop-types';
 
@@ -21,7 +22,7 @@ const TabButton = () => {
             <Models />
           </div>
           <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-            
+            <Lifestyle />
           </div>
           <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
           <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
