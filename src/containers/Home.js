@@ -1,17 +1,10 @@
 import React from 'react';
 import TabButton from '../components/TabButton';
 
-const Home = () => {
-  // const [tab, setTab] = useState(initialState);
-  // const toggleTab = (index) => {
-  //   setTab(index);
-  // };
-  const tab = 1;
-  return (
-    <div>
-      <h1>Logo </h1>
-      
-    </div>
-  );
-};
+const Home = () => (
+  <div>
+    <h1>Logo </h1>
+    <TabButton />
+  </div>
+);
 export default Home;
