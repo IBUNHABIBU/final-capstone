@@ -11,7 +11,7 @@ const TabButton = (props) => {
     <div>
       <div className="d-flex align-items-start">
         <div className="nav flex-column nav-pills me-3 navi-bar" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-         <button onClick={() => toggleTab(index)} className={tab === btnNumber ? 'nav-link active' : 'nav-link'} id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">{content}</button>
+          <button onClick={() => toggleTab(index)} className={tab === btnNumber ? 'nav-link active' : 'nav-link'} id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">{content}</button>
         </div>
         <div className="tab-content" id="v-pills-tabContent">
           <div className={tab === 1 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
@@ -25,7 +25,7 @@ const TabButton = (props) => {
           <div className={tab === 4 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...ldidaieakdaieoalkaielaiela</div>
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 TabButton.propTypes = {
