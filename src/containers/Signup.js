@@ -18,6 +18,8 @@ const Signup = () => {
     { withCredentials: true }
     ).then( response => {
       console.log('Post', response)
+    }).catch(error => {
+      console.log("Error", error)
     })
     e.preventDefault();
   };
