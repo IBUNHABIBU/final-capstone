@@ -4,23 +4,24 @@ import React, { useState } from 'react';
 
 const Signup = () => {
   const [user, setUser] = useState(
-   { name: '', email: '', password: '', password_confirmation: '' }
+    {
+      name: '', email: '', password: '', password_confirmation: '',
+    },
   );
   const handleSubmit = (e) => {
-    axios.post('http://localhost3001/users', {
+    axios.post('http://localhost:3001/users', {
       user: {
         name: user.name,
         email: user.email,
         password: user.password,
-        password_confirmation: user.password_confirmation
-      }
+        password_confirmation: user.password_confirmation,
+      },
     },
-    { withCredentials: true }
-    ).then( response => {
-      console.log('Post', response)
-    }).catch(error => {
-      console.log("Error", error)
-    })
+    { withCredentials: true }).then((response) => {
+      console.log('Post', response);
+    }).catch((error) => {
+      console.log('Error', error);
+    });
     e.preventDefault();
   };
   const handleChange = (event) => {
