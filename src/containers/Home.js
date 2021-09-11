@@ -1,10 +1,10 @@
 import React from 'react';
-import TabButton from '../components/TabButton';
+import Signup from './Signup';
 
 const Home = () => (
   <div>
     <h1>Logo </h1>
-    <TabButton />
+    <Signup />
   </div>
 );
 export default Home;

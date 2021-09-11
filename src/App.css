@@ -19,3 +19,7 @@
 .navi-bar {
   width: 18%;
 }
+
+.carousel-item {
+  height: 80vh;
+}
