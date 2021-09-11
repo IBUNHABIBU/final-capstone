@@ -10,7 +10,7 @@ const Models = () => (
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active" data-bs-interval="10000">
-          <img src="..." className="d-block w-100" alt="..." />
+          <img src="https://i.ytimg.com/vi/hwBZWHlFTFw/maxresdefault.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
             <p>Some representative placeholder content for the first slide.</p>
