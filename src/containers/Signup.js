@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
-const Signup = () => {
-  return (
+const Signup = () => (
   <div className="signup container">
     <form className="form" onSubmit={handleSubmit}>
       <div className="form-floating mb-2 col-3">
@@ -30,6 +29,6 @@ const Signup = () => {
       </p>
     </form>
   </div>
-)};
+);
 
 export default Signup;
