@@ -6,6 +6,10 @@ const Signup = () => {
     console.log("submited");
     e.preventDefault();
   }
+  const handleChange = (e) => {
+    console.log("onChange", e.target.value);
+    e.preventDefault();
+  }
   return (
   <div className="signup container">
     <form className="form" onSubmit={handleSubmit}>
