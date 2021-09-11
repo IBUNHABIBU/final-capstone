@@ -1,8 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 const Signup = () => {
+  const { register, handleSubmit } = useForm();
   const [user, setUser] = useState(
     {
       name: '', email: '', password: '', password_confirmation: '',
@@ -39,22 +41,22 @@ const Signup = () => {
             className="form-control"
             name="name"
             onChange={handleChange}
-            value={user.name}
+            ref={register}
             id="floatingInput"
             placeholder="name@example.com"
           />
           <label htmlFor="floatingInput">Username</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="email" name="email" value={user.email} onChange={handleChange} className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
+          <input type="email" name="email" ref={register} onChange={handleChange} className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
           <label htmlFor="floatingInputEmail">Email</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="password" name="password" value={user.password} onChange={handleChange} className="form-control" id="floatingPassword" placeholder="Password" />
+          <input type="password" name="password" ref={register} onChange={handleChange} className="form-control" id="floatingPassword" placeholder="Password" />
           <label htmlFor="floatingPassword">Password</label>
         </div>
         <div className="form-floating mb-3 col-3">
-          <input type="password" name="password_confirmation" value={user.password_confirmation} onChange={handleChange} className="form-control" id="floatingPasswordConfirm" placeholder="Password" />
+          <input type="password" name="password_confirmation" ref={register} onChange={handleChange} className="form-control" id="floatingPasswordConfirm" placeholder="Password" />
           <label htmlFor="floatingPasswordconfirm">Confirm Password</label>
         </div>
         <div className="form-floating mb-3 col-3">
