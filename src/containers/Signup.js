@@ -1,16 +1,19 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import axios from 'axios';
 import React, { useState } from 'react';
 
 const Signup = () => {
-  const [user, setUser] = useState('')
+  const [user, setUser] = useState('');
   const handleSubmit = (e) => {
+    axios.
     console.log('submited');
     e.preventDefault();
   };
-  const handleChange = (e) => {
-    // console.log('onChange', e.target.value);
-    setUser({ name: })
-    e.preventDefault();
+  const handleChange = (event) => {
+    setUser({
+      [event.target.name]: event.target.value,
+    });
+    event.preventDefault();
   };
   return (
     <div className="signup container">
@@ -19,24 +22,24 @@ const Signup = () => {
           <input
             type="text"
             className="form-control"
-            name = "name"
+            name="name"
             onChange={handleChange}
-            value = {user.name}
+            value={user.name}
             id="floatingInput"
             placeholder="name@example.com"
           />
           <label htmlFor="floatingInput">Username</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="email" name="email" value={user.email} onChange={handleChange} className="form-control" id="floatingInput" placeholder="name@example.com" />
-          <label htmlFor="floatingInput">Email</label>
+          <input type="email" name="email" value={user.email} onChange={handleChange} className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
+          <label htmlFor="floatingInputEmail">Email</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="password" value={user.password} onChange={handleChange} className="form-control" id="floatingPassword" placeholder="Password" />
+          <input type="password" name="password" value={user.password} onChange={handleChange} className="form-control" id="floatingPassword" placeholder="Password" />
           <label htmlFor="floatingPassword">Password</label>
         </div>
         <div className="form-floating mb-3 col-3">
-          <input type="password" value={user.password_confirmation} onChange={handleChange} className="form-control" id="floatingPasswordConfirm" placeholder="Password" />
+          <input type="password" name="password_confirmation" value={user.password_confirmation} onChange={handleChange} className="form-control" id="floatingPasswordConfirm" placeholder="Password" />
           <label htmlFor="floatingPasswordconfirm">Confirm Password</label>
         </div>
         <div className="form-floating mb-3 col-3">
