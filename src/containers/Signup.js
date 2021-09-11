@@ -10,8 +10,8 @@ const Signup = () => {
       name: '', email: '', password: '', password_confirmation: '',
     },
   );
-  const onSubmit = (e) => {
-    console.log(user.name);
+  const onSubmit = (data) => {
+    console.log(data);
     console.log(user.email);
     axios.post('http://localhost:3001/users', {
       user: {
@@ -26,7 +26,6 @@ const Signup = () => {
     }).catch((error) => {
       console.log('Error', error);
     });
-    e.preventDefault();
   };
   
   return (
@@ -37,7 +36,7 @@ const Signup = () => {
             type="text"
             className="form-control"
             name="name"
-            onChange={handleChange}
+            
             ref={register}
             id="floatingInput"
             placeholder="name@example.com"
@@ -45,15 +44,15 @@ const Signup = () => {
           <label htmlFor="floatingInput">Username</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="email" name="email" ref={register} onChange={handleChange} className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
+          <input type="email" name="email" ref={register}  className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
           <label htmlFor="floatingInputEmail">Email</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="password" name="password" ref={register} onChange={handleChange} className="form-control" id="floatingPassword" placeholder="Password" />
+          <input type="password" name="password" ref={register}  className="form-control" id="floatingPassword" placeholder="Password" />
           <label htmlFor="floatingPassword">Password</label>
         </div>
         <div className="form-floating mb-3 col-3">
-          <input type="password" name="password_confirmation" ref={register} onChange={handleChange} className="form-control" id="floatingPasswordConfirm" placeholder="Password" />
+          <input type="password" name="password_confirmation" ref={register}  className="form-control" id="floatingPasswordConfirm" placeholder="Password" />
           <label htmlFor="floatingPasswordconfirm">Confirm Password</label>
         </div>
         <div className="form-floating mb-3 col-3">
