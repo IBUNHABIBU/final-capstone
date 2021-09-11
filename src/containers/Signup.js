@@ -3,10 +3,21 @@ import axios from 'axios';
 import React, { useState } from 'react';
 
 const Signup = () => {
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState(
+   { name: '', email: '', password: '', password_confirmation: '' }
+  );
   const handleSubmit = (e) => {
-    axios.post('http://localhost3001/users')
-    console.log('submited');
+    axios.post('http://localhost3001/users', {
+      user: {
+        name: user.name,
+        email: user.email,
+        password: user.password,
+        password_confirmation: user.password_confirmation
+      }
+    },
+    { withCredentials: true }
+    )
+    // console.log('submited');
     e.preventDefault();
   };
   const handleChange = (event) => {
