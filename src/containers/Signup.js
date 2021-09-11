@@ -9,6 +9,8 @@ const Signup = () => {
     },
   );
   const handleSubmit = (e) => {
+    console.log(user.name);
+    console.log(user.email);
     axios.post('http://localhost:3001/users', {
       user: {
         name: user.name,
@@ -25,9 +27,23 @@ const Signup = () => {
     e.preventDefault();
   };
   const handleChange = (event) => {
-    setUser({
-      [event.target.name]: event.target.value,
-    });
+    if (event.target.name === 'name') {
+      setUser({
+        name: event.target.value,
+      });
+    } else if (event.target.name === 'email') {
+      setUser({
+        email: event.target.value,
+      });
+    } else if (event.target.name === 'password') {
+      setUser({
+        password: event.target.value,
+      });
+    } else {
+      setUser({
+        password_confirmation: event.target.value,
+      });
+    }
     event.preventDefault();
   };
   return (
