@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Booking from '../containers/Booking';
 import Lifestyle from '../containers/Lifestyle';
 import Models from '../containers/Models';
 // import PropTypes from 'prop-types';
@@ -24,8 +25,14 @@ const TabButton = () => {
           <div className={tab === 2 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
             <Lifestyle />
           </div>
-          <div className={tab === 3 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-          <div className={tab === 4 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+          <div className={tab === 3 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            <Booking />
+          </div>
+          <div className={tab === 4 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            lorem Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Optio porro nemo aperiam ea alias deserunt voluptatem excepturi, enim officiis dicta
+            nihil natus accusantium quam eum unde ipsam iste dolores laboriosam!
+          </div>
         </div>
       </div>
     </div>
