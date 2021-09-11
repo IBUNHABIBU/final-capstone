@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const Booking = () => {
- return (
+const Booking = () => (
   <div>
     <div className="card text-center">
       <div className="card-header">
@@ -17,7 +16,6 @@ const Booking = () => {
       </div>
     </div>
   </div>
- )
-}
+);
 
-export default Booking
+export default Booking;
