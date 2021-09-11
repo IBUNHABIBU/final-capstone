@@ -17,14 +17,14 @@ const Models = () => (
           </div>
         </div>
         <div className="carousel-item" data-bs-interval="2000">
-          <img src="..." className="d-block w-100" alt="..." />
+          <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2020-cadillac-escalade-001-1567021710.jpg?crop=0.481xw:0.568xh;0.309xw,0.432xh&resize=640:*" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>
           </div>
         </div>
         <div className="carousel-item">
-          <img src="..." className="d-block w-100" alt="..." />
+          <img src="https://cadillacsociety.com/wp-content/uploads/2018/12/2019-Cadillac-Escalade-Sport-Exterior-Los-Angeles-Auto-Show-November-2018-001-Front-Three-Quarters.jpg" className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
             <h5>Third slide label</h5>
             <p>Some representative placeholder content for the third slide.</p>
