@@ -16,8 +16,9 @@ const Signup = () => {
       }
     },
     { withCredentials: true }
-    )
-    // console.log('submited');
+    ).then( response => {
+      console.log('Post', response)
+    })
     e.preventDefault();
   };
   const handleChange = (event) => {
