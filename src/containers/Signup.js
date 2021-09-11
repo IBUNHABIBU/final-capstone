@@ -27,23 +27,7 @@ const Signup = () => {
     e.preventDefault();
   };
   const handleChange = (event) => {
-    if (event.target.name === 'name') {
-      setUser({
-        name: event.target.value,
-      });
-    } else if (event.target.name === 'email') {
-      setUser({
-        email: event.target.value,
-      });
-    } else if (event.target.name === 'password') {
-      setUser({
-        password: event.target.value,
-      });
-    } else {
-      setUser({
-        password_confirmation: event.target.value,
-      });
-    }
+   
     event.preventDefault();
   };
   return (
