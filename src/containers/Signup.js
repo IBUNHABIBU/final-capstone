@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 const Signup = () => {
   const [user, setUser] = useState('');
   const handleSubmit = (e) => {
-    axios.
+    axios.post('http://localhost3001/users')
     console.log('submited');
     e.preventDefault();
   };
