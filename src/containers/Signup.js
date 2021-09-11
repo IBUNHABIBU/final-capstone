@@ -10,7 +10,7 @@ const Signup = () => {
       name: '', email: '', password: '', password_confirmation: '',
     },
   );
-  const handleSubmit = (e) => {
+  const onSubmit = (e) => {
     console.log(user.name);
     console.log(user.email);
     axios.post('http://localhost:3001/users', {
@@ -28,10 +28,7 @@ const Signup = () => {
     });
     e.preventDefault();
   };
-  const handleChange = (event) => {
-   
-    event.preventDefault();
-  };
+  
   return (
     <div className="signup container">
       <form className="form" onSubmit={handleSubmit}>
