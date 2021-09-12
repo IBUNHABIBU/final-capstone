@@ -1,9 +1,12 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 const Login = () => {
-  const [logStatus, setLogStatus] = useState('NOT_LOGGED_IN');
+  // const [logStatus, setLogStatus] = useState('NOT_LOGGED_IN');
   const { register, handleSubmit } = useForm();
   return (
     <div className="Login container">
