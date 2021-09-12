@@ -15,7 +15,10 @@
   background-color: #99c210;
   border-color: #99c210;
 }
-
+.logo img{
+  width: 200px;
+  height: 200px;
+}
 .nav .nav-link.active {
   background-color: #99c210;
   border-color: #99c210;
