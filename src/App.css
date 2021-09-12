@@ -11,15 +11,23 @@
   margin-top: 1rem;
 }
 .btn-primary,
-.btn-primary:hover {
+.btn-primary:hover,
+.link .nav-link.active {
   background-color: #99c210;
   border-color: #99c210;
 }
 
-.navi-bar {
-  width: 18%;
+
+.nav-link {
+  text-transform: uppercase;
 }
 
 .carousel-item {
   height: 80vh;
+}
+
+.sidenav {
+  width: 15%;
+  height: 100vh;
+  background-color: red;
 }
