@@ -3,10 +3,13 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import setUser from '../redux/actions/actions';
 
 const Signup = () => {
   const { register, handleSubmit } = useForm();
+  const dispatch = useDispatch();
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/users', {
       user: {
@@ -19,7 +22,7 @@ const Signup = () => {
     { withCredentials: true }).then((response) => {
       console.log('Post', response.data);
       if (response.data.status === 'created') {
-
+        dispatch(setUser());
       }
     }).catch((error) => {
       console.log('Error', error);
