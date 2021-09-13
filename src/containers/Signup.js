@@ -5,7 +5,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
-const Signup = (props) => {
+const Signup = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/users', {
@@ -19,7 +19,7 @@ const Signup = (props) => {
     { withCredentials: true }).then((response) => {
       console.log('Post', response.data);
       if (response.data.status === 'created') {
-       
+
       }
     }).catch((error) => {
       console.log('Error', error);
