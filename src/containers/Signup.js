@@ -18,8 +18,8 @@ const Signup = (props) => {
     },
     { withCredentials: true }).then((response) => {
       console.log('Post', response.data);
-      if(response.data.status === 'created') {
-        props.handleSuccessfulAuth(response.data)
+      if (response.data.status === 'created') {
+       
       }
     }).catch((error) => {
       console.log('Error', error);
