@@ -39,12 +39,7 @@ const TabButton = () => {
           <div className={tab === 3 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
             <Booking />
           </div>
-          <div className={tab === 4 ? 'tab-pane fade show active' : 'tab-pane fade'} id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-            lorem Lorem, ipsum dolor sit amet consectetur adipisicing
-            elit. Optio porro nemo aperiam ea alias deserunt vol
-            uptatem excepturi, enim officiis dicta
-            nihil natus accusantium quam eum unde ipsam iste dolores laboriosam!
-          </div>
+
         </div>
       </div>
     </div>
