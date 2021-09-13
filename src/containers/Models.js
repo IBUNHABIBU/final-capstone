@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 const Models = () => (
-  <div className="container m-5">
+  <div className="container m-5 model">
     <Carousel>
       <Carousel.Item interval={1000}>
         <img

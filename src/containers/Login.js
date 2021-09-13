@@ -9,7 +9,7 @@ const Login = () => {
   // const [logStatus, setLogStatus] = useState('NOT_LOGGED_IN');
   const { register, handleSubmit } = useForm();
   return (
-    <div className="Login container">
+    <div className="login-page container">
       <form className="form" onSubmit={handleSubmit}>
         <div className="form-floating mb-2 col-3">
           <input type="email" name="email" {...register('email')} className="form-control" id="floatingInputEmail" placeholder="name@example.com" />

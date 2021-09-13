@@ -49,6 +49,19 @@
 .sidenav {
   width: 15.6%;
   height: 100vh;
-  margin-left: 1rem;
+  margin: 1rem;
   border-right: 1px solid #efefef;
+  position: absolute;
+
+}
+
+.login-page {
+  position: relative;
+}
+
+.model {
+  position: relative;
+  left: 12rem;
+  bottom: 10rem;
+  width: 70%;
 }

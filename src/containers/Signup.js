@@ -3,6 +3,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const { register, handleSubmit } = useForm();
@@ -53,7 +54,7 @@ const Signup = () => {
         </div>
         <p>
           Already Member?
-          <span>  Login</span>
+          <Link to="/login" className="link"> Login</Link>
         </p>
       </form>
     </div>
