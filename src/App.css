@@ -19,6 +19,11 @@
   width: 200px;
   height: 200px;
 }
+
+.logo {
+  text-align: left;
+  margin-left: 1rem;
+}
 .nav .nav-link.active {
   background-color: #99c210;
   border-color: #99c210;
