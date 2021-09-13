@@ -4,8 +4,8 @@ const initialState = {
 
 const signUpReducer = (state= initialState, {type, payload}) => {
    switch (type) {
-    case value:
-     
+    case actionTypes.setUser:
+      return { ...state, state.logInStatus: 'LOGGED_IN'}
      break;
    
     default:
