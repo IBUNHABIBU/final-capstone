@@ -1,9 +1,14 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
-const ClickCounter = (props) => (
+const ClickCounter = ({incrementCounter}) => (
   <div>
-    <button type="submit" onClick={props.incrementCounter}>Incrmement counter</button>
+    <button type="submit" onClick={incrementCounter}>Incrmement counter</button>
   </div>
 );
+
+ClickCounter.PropTypes = {
+  incrementCounter: PropTypes.func.isRequired,
+}
 
 export default ClickCounter;
