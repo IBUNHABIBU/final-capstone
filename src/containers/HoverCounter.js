@@ -1,11 +1,11 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-const HoverCounter = ({ incrementCounter }) => (
+const HoverCounter = ({ eventHandler }) => (
   <div>
     <h2
-      onMouseOver={incrementCounter}
-      onFocus={incrementCounter}
+      onMouseOver={eventHandler}
+      onFocus={eventHandler}
     >
       ON mouse hover
     </h2>
@@ -13,7 +13,7 @@ const HoverCounter = ({ incrementCounter }) => (
 );
 
 HoverCounter.propTypes = {
-  incrementCounter: PropTypes.func.isRequired,
+  eventHandler: PropTypes.func.isRequired,
 };
 
 export default HoverCounter;
