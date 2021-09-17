@@ -1,12 +1,14 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-const HoverCounter = (props) => (
+const HoverCounter = ({incrementCounter}) => (
   <div>
     <h2
-    onMouseOver={props.incrementCounter}
-    onFocus={this.props.incrementCounter}
-    >ON mouse hover</h2>
+    onMouseOver={incrementCounter}
+    onFocus={incrementCounter}
+    >
+    ON mouse hover
+    </h2>
   </div>
 );
 
