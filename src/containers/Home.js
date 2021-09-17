@@ -8,12 +8,12 @@ const Home = () => {
   console.log('login', loginStatus);
   const [count, setCount] = useState(0);
   const incrementCount = () => {
-    setCount({count: count + 1});
+    setCount({ count: count + 1 });
   };
 
   return (
     <div>
-      <h1>Logo </h1>
+      <h1>Logo{count} </h1>
       <ClickCounter eventHandler={incrementCount} />
       <HoverCounter eventHandler={incrementCount} />
     </div>
