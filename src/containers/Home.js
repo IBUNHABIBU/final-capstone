@@ -8,7 +8,6 @@ const Home = () => {
   console.log('login', loginStatus);
   const [count, setCount] = useState(0);
   const incrementCount = () => {
-    console.log('heo');
     setCount(count + 1);
   };
 
