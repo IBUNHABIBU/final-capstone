@@ -6,6 +6,7 @@ import React from 'react';
 // import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
+import setUser from '../redux/actions/actions';
 
 const Login = () => {
   // const [logStatus, setLogStatus] = useState('NOT_LOGGED_IN');
