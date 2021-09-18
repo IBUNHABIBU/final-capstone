@@ -15,7 +15,7 @@ const UpdatedComponent = (OriginalComponent) => {
     }
 
     render() {
-      const {count, incrementCount} = this.state;
+      const { count, incrementCount } = this.state;
       return (
         <OriginalComponent
           count={count}
