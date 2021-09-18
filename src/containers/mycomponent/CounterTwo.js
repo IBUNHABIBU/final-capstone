@@ -10,9 +10,7 @@ export default class CounterTwo extends Component {
   }
 
  incrementCount = () => {
-  this.setState(prevState => {
-   return { count: prevState.count + 1 }
-  })
+   this.setState((prevState) => ({ count: prevState.count + 1 }));
  }
 
  render() {
