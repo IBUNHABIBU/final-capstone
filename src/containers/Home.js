@@ -19,7 +19,7 @@ const Home = () => {
       <HoverCounter />
       <CounterTwo />
       <Hover />
-      <User />
+      <User name="Juhudi" />
     </div>
   );
 };
