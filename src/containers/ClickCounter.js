@@ -4,7 +4,11 @@ import UpdatedComponent from './withCounter';
 
 const ClickCounter = ({ eventHandler, count }) => (
   <div>
-    <button type="submit" onClick={eventHandler}>Clicked{count}times</button>
+    <button type="submit" onClick={eventHandler}>
+      Clicked
+      {count}
+      times
+    </button>
   </div>
 );
 

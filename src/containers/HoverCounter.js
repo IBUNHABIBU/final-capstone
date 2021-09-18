@@ -8,7 +8,9 @@ const HoverCounter = ({ eventHandler, count }) => (
       onMouseOver={eventHandler}
       onFocus={eventHandler}
     >
-      Hover{count}times
+      Hover
+      {count}
+      times
     </h2>
   </div>
 );
