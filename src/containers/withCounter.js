@@ -1,5 +1,4 @@
 import { React } from 'react';
-import UpdatedComponent from './HoverCounter';
 const UpdatedComponent = (OriginalComponent) => {
   class NewComponent extends React.Component {
     constructor(props) {
