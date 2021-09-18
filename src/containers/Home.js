@@ -4,6 +4,7 @@ import ClickCounter from './ClickCounter';
 import HoverCounter from './HoverCounter';
 import CounterTwo from './mycomponent/CounterTwo';
 import Hover from './mycomponent/Hover';
+import User from './mycomponent/User';
 
 const Home = () => {
   const loginStatus = useSelector((state) => state);
@@ -18,6 +19,7 @@ const Home = () => {
       <HoverCounter />
       <CounterTwo />
       <Hover />
+      <User />
     </div>
   );
 };
