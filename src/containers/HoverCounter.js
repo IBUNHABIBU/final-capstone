@@ -1,13 +1,13 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-const HoverCounter = ({ eventHandler }) => (
+const HoverCounter = ({ eventHandler, count }) => (
   <div>
     <h2
       onMouseOver={eventHandler}
       onFocus={eventHandler}
     >
-      ON mouse hover
+      Hover{count}times
     </h2>
   </div>
 );
