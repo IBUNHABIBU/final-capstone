@@ -1,7 +1,7 @@
-import { React } from 'react';
+import React, { Component } from 'react';
 
 const UpdatedComponent = (OriginalComponent) => {
-  class NewComponent extends React.Component {
+  class NewComponent extends Component {
     constructor(props) {
       super(props);
 
@@ -15,11 +15,11 @@ const UpdatedComponent = (OriginalComponent) => {
     }
 
     render() {
-      const { count, incrementCount } = this.state;
+      
       return (
         <OriginalComponent
-          count={count}
-          eventHandler={incrementCount}
+          count={this.state.count}
+          eventHandler={this.incrementCount}
         />
       );
     }
