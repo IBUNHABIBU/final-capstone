@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { PropTypes } from 'prop-types';
 
 const User = (props) => {
- return (
+ const { name } = props;
+ return(
   <div>
-   {props.name}
+    {name}
   </div>
- )
-}
+)};
 
-export default User
+User.propTypes = {
+ name: PropTypes.string.isRequired,
+}
+export default User;
