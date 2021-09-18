@@ -1,5 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import UpdatedComponent from './HoverCounter';
 
 const ClickCounter = ({ eventHandler, count }) => (
   <div>
@@ -11,4 +12,4 @@ ClickCounter.propTypes = {
   eventHandler: PropTypes.func.isRequired,
 };
 
-export default ClickCounter;
+export default UpdatedComponent(ClickCounter);

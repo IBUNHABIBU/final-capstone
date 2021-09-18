@@ -1,5 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import UpdatedComponent from './HoverCounter';
 
 const HoverCounter = ({ eventHandler, count }) => (
   <div>
@@ -14,6 +15,7 @@ const HoverCounter = ({ eventHandler, count }) => (
 
 HoverCounter.propTypes = {
   eventHandler: PropTypes.func.isRequired,
+  count: PropTypes.number.isRequired,
 };
 
-export default HoverCounter;
+export default UpdatedComponent(HoverCounter);
