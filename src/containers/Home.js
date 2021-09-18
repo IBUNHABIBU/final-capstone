@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import ClickCounter from './ClickCounter';
 import HoverCounter from './HoverCounter';
 import CounterTwo from './mycomponent/CounterTwo';
+import Hover from './mycomponent/Hover';
 
 const Home = () => {
   const loginStatus = useSelector((state) => state);
@@ -16,7 +17,7 @@ const Home = () => {
       <ClickCounter name="Juma" />
       <HoverCounter />
       <CounterTwo />
-      {/* <Hover /> */}
+      <Hover />
     </div>
   );
 };
