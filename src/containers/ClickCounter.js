@@ -14,6 +14,7 @@ const ClickCounter = ({ eventHandler, count }) => (
 
 ClickCounter.propTypes = {
   eventHandler: PropTypes.func.isRequired,
+  count: PropTypes.number.isRequired,
 };
 
 export default UpdatedComponent(ClickCounter);
