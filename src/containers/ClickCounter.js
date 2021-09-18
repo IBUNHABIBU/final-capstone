@@ -10,7 +10,7 @@ const ClickCounter = ({ eventHandler, count, name }) => (
       {count}
       times
     </button>
-  
+
   </div>
 );
 
