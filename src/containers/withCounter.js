@@ -9,7 +9,11 @@ const UpdatedComponent = (OriginalComponent) => {
       }
     }
     
-    incrementCount
+    incrementCount = () => {
+      this.setState(prevState => {
+        return { count: prevState.count + 1 }
+      })
+    }
     render() {
       return <OriginalComponent />
     }
