@@ -13,7 +13,7 @@ export default class Hover extends Component {
  }
 
  render() {
-  const { count } = this.state;
+   const { count } = this.state;
    return (
      <div>
        <h2 onMouseOver={incrementCount} onFocus={incrementCount}>
