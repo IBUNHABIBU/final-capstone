@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import ClickCounter from './ClickCounter';
 import HoverCounter from './HoverCounter';
@@ -11,9 +11,8 @@ const Home = () => {
     <div>
       <h1>
         Logo
-        {count}
       </h1>
-      <ClickCounter  />
+      <ClickCounter />
       <HoverCounter />
     </div>
   );
