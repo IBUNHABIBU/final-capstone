@@ -14,6 +14,7 @@ const Home = () => {
       </h1>
       <ClickCounter name="Juma" />
       <HoverCounter />
+      
     </div>
   );
 };
