@@ -17,7 +17,7 @@ export default class CounterTwo extends Component {
   const { count } = this.state;
   return (
    <div>
-    <button type="submit">Increment {count} times</button>
+    <button type="submit" onClick={this.incrementCount}>Increment {count} times</button>
    </div>
   )
  }
