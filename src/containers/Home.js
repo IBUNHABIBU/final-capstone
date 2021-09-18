@@ -12,7 +12,7 @@ const Home = () => {
       <h1>
         Logo
       </h1>
-      <ClickCounter />
+      <ClickCounter name="Juma" />
       <HoverCounter />
     </div>
   );

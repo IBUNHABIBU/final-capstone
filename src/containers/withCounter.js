@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { Component } from 'react';
 
 const UpdatedComponent = (OriginalComponent) => {
@@ -20,6 +21,7 @@ const UpdatedComponent = (OriginalComponent) => {
         <OriginalComponent
           count={count}
           eventHandler={this.incrementCount}
+          {...this.props}
         />
       );
     }
