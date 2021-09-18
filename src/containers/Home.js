@@ -19,7 +19,7 @@ const Home = () => {
       <HoverCounter />
       <CounterTwo />
       <Hover />
-      <UserComponent name={(isLogedIn) => (isLogedIn ? 'Juhudi' : 'Makaveli')} />
+      <UserComponent render={(isLogedIn) => (isLogedIn ? 'Juhudi' : 'Makaveli')} />
     </div>
   );
 };
