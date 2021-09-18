@@ -19,4 +19,4 @@ ClickCounter.propTypes = {
   name: string.isRequired,
 };
 
-export default UpdatedComponent(ClickCounter);
+export default UpdatedComponent(ClickCounter, 5);

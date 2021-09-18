@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { Component } from 'react';
 
-const UpdatedComponent = (OriginalComponent) => {
+const UpdatedComponent = (OriginalComponent, incrNumber) => {
   class NewComponent extends Component {
     constructor(props) {
       super(props);
@@ -12,7 +12,7 @@ const UpdatedComponent = (OriginalComponent) => {
     }
 
     incrementCount = () => {
-      this.setState((prevState) => ({ count: prevState.count + 1 }));
+      this.setState((prevState) => ({ count: prevState.count + incrNumber }));
     }
 
     render() {

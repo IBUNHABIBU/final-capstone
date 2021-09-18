@@ -20,4 +20,4 @@ HoverCounter.propTypes = {
   count: PropTypes.number.isRequired,
 };
 
-export default UpdatedComponent(HoverCounter);
+export default UpdatedComponent(HoverCounter, 5);
