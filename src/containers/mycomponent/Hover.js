@@ -1,22 +1,28 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Hover extends Component {
- constructor(props) {
-  super(props)
- 
-  this.state = {
-    
+  constructor(props) {
+    super(props);
+
+    this.state = {
+
+    };
   }
- }
- 
+
  incrementCount = () => {
-  this.setState((prevState) => ({ count: prevState.count + 1 }));
-}
+   this.setState((prevState) => ({ count: prevState.count + 1 }));
+ }
+
  render() {
-  return (
-   <div>
-    <h2 onMouseOver={incrementCounter} onFocus={incrementCounter}>Hovered {count} times</h2>
-   </div>
-  )
+   return (
+     <div>
+       <h2 onMouseOver={incrementCounter} onFocus={incrementCounter}>
+         Hovered
+         {count}
+         {' '}
+         times
+       </h2>
+     </div>
+   );
  }
 }
