@@ -1,4 +1,5 @@
 import { React } from 'react';
+import UpdatedComponent from './HoverCounter';
 const UpdatedComponent = (OriginalComponent) => {
   class NewComponent extends React.Component {
     constructor(props) {
@@ -15,8 +16,12 @@ const UpdatedComponent = (OriginalComponent) => {
       })
     }
     render() {
-      return <OriginalComponent />
+      return <OriginalComponent 
+      count ={this.state.count}
+      eventHandler={this.incrementCount}/>
     }
   }
   return NewComponent;
 }
+
+export default UpdatedComponent;

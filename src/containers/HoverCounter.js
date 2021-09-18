@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import UpdatedComponent from './HoverCounter';
+import UpdatedComponent from './withCounter';
 
 const HoverCounter = ({ eventHandler, count }) => (
   <div>
