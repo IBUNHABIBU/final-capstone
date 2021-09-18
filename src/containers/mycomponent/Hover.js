@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export default class Hover extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       count: 0,
     };
@@ -14,9 +13,10 @@ export default class Hover extends Component {
  }
 
  render() {
+  const { count } = this.state;
    return (
      <div>
-       <h2 onMouseOver={incrementCounter} onFocus={incrementCounter}>
+       <h2 onMouseOver={incrementCount} onFocus={incrementCount}>
          Hovered
          {count}
          {' '}
