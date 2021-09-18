@@ -6,10 +6,6 @@ import HoverCounter from './HoverCounter';
 const Home = () => {
   const loginStatus = useSelector((state) => state);
   console.log('login', loginStatus);
-  const [count, setCount] = useState(0);
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
 
   return (
     <div>
@@ -17,8 +13,8 @@ const Home = () => {
         Logo
         {count}
       </h1>
-      <ClickCounter eventHandler={incrementCount} />
-      <HoverCounter eventHandler={incrementCount} />
+      <ClickCounter  />
+      <HoverCounter />
     </div>
   );
 };

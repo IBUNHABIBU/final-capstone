@@ -1,10 +1,11 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
+import { PropTypes, string } from 'prop-types';
 import UpdatedComponent from './withCounter';
 
-const ClickCounter = ({ eventHandler, count }) => (
+const ClickCounter = ({ eventHandler, count, name }) => (
   <div>
     <button type="submit" onClick={eventHandler}>
+      {name}
       Clicked
       {count}
       times
@@ -15,6 +16,7 @@ const ClickCounter = ({ eventHandler, count }) => (
 ClickCounter.propTypes = {
   eventHandler: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
+  name: string.isRequired,
 };
 
 export default UpdatedComponent(ClickCounter);
