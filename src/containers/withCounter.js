@@ -23,6 +23,7 @@ const UpdatedComponent = (OriginalComponent, incrNumber) => {
           eventHandler={this.incrementCount}
           {...this.props}
         />
+        
       );
     }
   }
