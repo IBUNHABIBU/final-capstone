@@ -13,9 +13,10 @@ incrementCount = () => {
 }
 
  render() {
+  const {count } = this.state;
   return (
    <div>
-    
+    {this.props.render(count, this.incrementCount)}
    </div>
   )
  }

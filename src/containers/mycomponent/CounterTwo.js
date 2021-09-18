@@ -1,22 +1,12 @@
 import React, { Component } from 'react';
 
 export default class CounterTwo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
-
- incrementCount = () => {
-   this.setState((prevState) => ({ count: prevState.count + 1 }));
- }
-
+ 
  render() {
-   const { count } = this.state;
+   const { count, incrementCount } = this.props;
    return (
      <div>
-       <button type="submit" onClick={this.incrementCount}>
+       <button type="submit" onClick={incrementCount}>
          Increment
          {count}
          {' '}
