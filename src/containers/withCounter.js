@@ -1,6 +1,9 @@
 import { React } from 'react';
-const UpdatedComponent = (originalComponent) => {
+const UpdatedComponent = (OriginalComponent) => {
   class NewComponent extends React.Component {
-    return <originalComponent
+    render() {
+      return <OriginalComponent />
+    }
   }
+  return NewComponent;
 }
