@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 const CounterTwo = ({ count, incrementCount }) => (
   <div>
     <button type="submit" onClick={incrementCount}>
-      Increment
+      Render Increment
       {count}
       {' '}
       times
