@@ -3,13 +3,19 @@
 
 import axios from 'axios';
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 // import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
 import setUser from '../redux/actions/actions';
 
 const Login = () => {
-  // const [logStatus, setLogStatus] = useState('NOT_LOGGED_IN');
+  const userLogin = useSelector((state) => state.isLoggedIn);
+  console.log('login', userLogin);
+  const history = useHistory();
+  if (userLogin) {
+    history.push('/models');
+  }
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const onSubmit = (data) => {
