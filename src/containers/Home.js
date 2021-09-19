@@ -18,16 +18,16 @@ const Home = () => {
       </h1>
       <ClickCounter name="Juma" />
       <HoverCounter />
-      <CounterComponent
-        render={
+      <CounterComponent>
+        {
           (count, incrementCount) => <CounterTwo count={count} incrementCount={incrementCount} />
         }
-      />
-      <CounterComponent
-        render={
+      </CounterComponent>
+      <CounterComponent>
+        {
           (count, incrementCount) => <Hover count={count} incrementCount={incrementCount} />
         }
-      />
+      </CounterComponent>
 
     </div>
   );
