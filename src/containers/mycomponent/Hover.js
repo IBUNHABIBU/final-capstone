@@ -1,24 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { PropTypes } from 'prop-types';
 
-const Hover =(props)=> {
-    const { count, incrementCount } = this.props;
-    return (
-      <div>
-        <h2 onMouseOver={incrementCount} onFocus={incrementCount}>
-          Increment
-          {count}
-          {' '}
-          times
-        </h2>
-      </div>
-    );
-  
-}
+const Hover = ({ count, incrementCount }) => (
+  <div>
+    <h2 onMouseOver={incrementCount} onFocus={incrementCount}>
+      Increment
+      {count}
+      {' '}
+      times
+    </h2>
+  </div>
+);
 
-
-Hover.prototype = {
+Hover.propTypes = {
   count: PropTypes.number.isRequired,
   incrementCount: PropTypes.func.isRequired,
-}
+};
 
 export default Hover;

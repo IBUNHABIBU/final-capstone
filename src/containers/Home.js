@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import ClickCounter from './ClickCounter';
 import HoverCounter from './HoverCounter';
-import Counter from './mycomponent/Counter';
+import CounterComponent from './mycomponent/CounterComponent';
 import CounterTwo from './mycomponent/CounterTwo';
 import Hover from './mycomponent/Hover';
 // import UserComponent from './mycomponent/UserComponent';
@@ -21,9 +21,9 @@ const Home = () => {
       {/* <CounterTwo />
       <Hover /> */}
       {/* <UserComponent render={(isLogedIn) => (isLogedIn ? 'Juhudi' : 'Makaveli')} /> */}
-      <Counter render={(count, incrementCount) => <CounterTwo count={count} incrementCount={incrementCount} />} />
-      <Counter render={(count, incrementCount) => <Hover count={count} incrementCount={incrementCount} />} />
-   
+      <CounterComponent render={(count, incrementCount) => <CounterTwo count={count} incrementCount={incrementCount} />} />
+      <CounterComponent render={(count, incrementCount) => <Hover count={count} incrementCount={incrementCount} />} />
+
     </div>
   );
 };

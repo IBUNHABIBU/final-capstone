@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { PropTypes } from 'prop-types';
 
-const CounterTwo =(props)=> {
-    const { count, incrementCount } = this.props;
-    return (
-      <div>
-        <button type="submit" onClick={incrementCount}>
-          Increment
-          {count}
-          {' '}
-          times
-        </button>
-      </div>
-    );
-}
+const CounterTwo = ({ count, incrementCount }) => (
+  <div>
+    <button type="submit" onClick={incrementCount}>
+      Increment
+      {count}
+      {' '}
+      times
+    </button>
+  </div>
+);
 
-CounterTwo.prototype = {
+CounterTwo.propTypes = {
   count: PropTypes.number.isRequired,
   incrementCount: PropTypes.func.isRequired,
-}
+};
 
 export default CounterTwo;
