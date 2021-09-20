@@ -1,13 +1,13 @@
 import SET_USER from '../constants/index';
 
 const initialState = {
-  isLoggedIn: false,
+
 };
 
-const signUpReducer = (state = initialState, { type }) => {
+const signUpReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case SET_USER:
-      return { ...state, isLoggedIn: true };
+      return { ...state, ...payload };
     default:
       return state;
   }

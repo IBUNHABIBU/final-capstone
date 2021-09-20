@@ -3,8 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const TabButton = () => {
-  const userLogin = useSelector((state) => state.isLoggedIn);
-  console.log(userLogin);
+  const account = useSelector((state) => state);
   const [tab, setTab] = useState(1);
   const toggleTab = (index) => {
     setTab(index);
@@ -29,10 +28,15 @@ const TabButton = () => {
             <button onClick={() => toggleTab(4)} className={tab === 4 ? 'nav-link active' : 'nav-link'} id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Test Drive</button>
           </Link>
           <hr />
-          {userLogin ? (
+          {account.logged_in ? (
             <div>
-              <p><strong>Login as </strong></p>
-              <p>LogOut</p>
+              <p>
+                <span className="p-2">Login as</span>
+                <strong>
+                  {account.user.name}
+                </strong>
+              </p>
+              <button type="submit" className="btn btn-primary col-4">Logout</button>
             </div>
           ) : (
             <div className="user-container">

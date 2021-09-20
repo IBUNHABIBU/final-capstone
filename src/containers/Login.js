@@ -10,7 +10,7 @@ import { useForm } from 'react-hook-form';
 import setUser from '../redux/actions/actions';
 
 const Login = () => {
-  const userLogin = useSelector((state) => state.isLoggedIn);
+  const userLogin = useSelector((state) => state.logged_in);
   console.log('login', userLogin);
   const history = useHistory();
   if (userLogin) {
@@ -26,9 +26,8 @@ const Login = () => {
       },
     },
     { withCredentials: true }).then((response) => {
-      console.log('Post', response.data);
       if (response.data.status === 'created') {
-        dispatch(setUser());
+        dispatch(setUser(response.data));
       }
     }).catch((error) => {
       console.log('Error', error);
