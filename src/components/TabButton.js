@@ -8,6 +8,9 @@ const TabButton = () => {
   const toggleTab = (index) => {
     setTab(index);
   };
+  const handleLogout = () => {
+    console.log('logout');
+  };
   return (
     <div className="tab-container">
       <div className="logo">
@@ -36,7 +39,7 @@ const TabButton = () => {
                   {account.user.name}
                 </strong>
               </p>
-              <button type="submit" className="btn btn-primary col-4">Logout</button>
+              <button type="submit" className="btn btn-primary col-4" onClick={handleLogout}>Logout</button>
             </div>
           ) : (
             <div className="user-container">
