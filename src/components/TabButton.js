@@ -29,17 +29,20 @@ const TabButton = () => {
             <button onClick={() => toggleTab(4)} className={tab === 4 ? 'nav-link active' : 'nav-link'} id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Test Drive</button>
           </Link>
           <hr />
-          {userLogin ? (<div>
-            <p><strong>Login as </strong></p>
-            <p>LogOut</p>
-          </div>) : (<div className="user-container">
-            <Link to="/signup" className="link"><button type="submit" className="sinup-btn mb-2 mt-5">Sinup</button></Link>
+          {userLogin ? (
             <div>
-              <p>Already a member?</p>
-              <Link to="/login" className="link">Login</Link>
+              <p><strong>Login as </strong></p>
+              <p>LogOut</p>
             </div>
-          </div>)
-          }
+          ) : (
+            <div className="user-container">
+              <Link to="/signup" className="link "><button type="submit" className="sinup-btn mb-2 mt-5 btn btn-primary col-8">Sinup</button></Link>
+              <div>
+                <p>Already a member?</p>
+                <Link to="/login" className="link">Login</Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
