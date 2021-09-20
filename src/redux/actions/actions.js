@@ -1,8 +1,10 @@
-import SET_USER from '../constants/index';
+import actionTypes from './../constants/index';
 
-const setUser = (user) => ({
-  type: SET_USER,
+export const setUser = (user) => ({
+  type: actionTypes.SET_USER,
   payload: user,
 });
 
-export default setUser;
+export const checkUser = () => ({
+  type: actionTypes.CHECK_USER,
+});

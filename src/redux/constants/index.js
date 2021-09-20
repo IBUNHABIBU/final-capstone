@@ -1,3 +1,7 @@
-const SET_USER = 'SET_USER';
+const actionTypes = {
+ SET_USER :'SET_USER';
+ CHECK_USER: 'CHECK_USER';
+}
 
-export default SET_USER;
+
+export default actionTypes;
