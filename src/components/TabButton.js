@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -10,6 +11,10 @@ const TabButton = () => {
   };
   const handleLogout = () => {
     console.log('logout');
+    axios.delete('http://localhost:3001/logout', { withCredentials: true })
+      .then((response) => {
+        console.log(response.data);
+      });
   };
   return (
     <div className="tab-container">
