@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 // import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import setUser from '../redux/actions/actions';
+import { setUser } from '../redux/actions/actions';
 
 const Login = () => {
   const userLogin = useSelector((state) => state.logged_in);

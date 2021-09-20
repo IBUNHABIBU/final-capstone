@@ -5,7 +5,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import setUser from '../redux/actions/actions';
+import { setUser } from '../redux/actions/actions';
 
 const Signup = () => {
   const { register, handleSubmit } = useForm();

@@ -1,12 +1,13 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
+import { setUser } from '../redux/actions/actions';
 
 const Home = () => {
   const checkLoginStatus = () => {
     axios.get('http://localhost:3001/logged_in', {
       withCredentials: true,
     }).then((response) => {
-      console.log('Islogedin', response);
+      setUser(response.data);
     }).catch((error) => {
       console.log('Error', error);
     });

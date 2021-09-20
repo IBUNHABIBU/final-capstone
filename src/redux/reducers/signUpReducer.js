@@ -1,4 +1,4 @@
-import SET_USER from '../constants/index';
+import actionTypes from '../constants/index';
 
 const initialState = {
 
@@ -6,8 +6,10 @@ const initialState = {
 
 const signUpReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case SET_USER:
+    case actionTypes.SET_USER:
       return { ...state, ...payload };
+    case actionTypes.CHECK_USER:
+      return { ...state, loggedIn: true };
     default:
       return state;
   }
