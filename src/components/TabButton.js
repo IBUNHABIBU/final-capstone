@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import Booking from '../containers/Booking';
-// import Lifestyle from '../containers/Lifestyle';
-// import Models from '../containers/Models';
-// import PropTypes from 'prop-types';
 
 const TabButton = () => {
+  const userLogin = useSelector((state) => state.isLoggedIn);
+  console.log(userLogin);
   const [tab, setTab] = useState(1);
   const toggleTab = (index) => {
     setTab(index);
@@ -30,11 +29,17 @@ const TabButton = () => {
             <button onClick={() => toggleTab(4)} className={tab === 4 ? 'nav-link active' : 'nav-link'} id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Test Drive</button>
           </Link>
           <hr />
-          <Link to="/signup" className="link"><button type="submit" className="sinup-btn mb-2 mt-5">Sinup</button></Link>
-          <div>
-            <p>Already a member?</p>
-            <Link to="/login" className="link">Login</Link>
-          </div>
+          {userLogin ? (<div>
+            <p><strong>Login as </strong></p>
+            <p>LogOut</p>
+          </div>) : (<div className="user-container">
+            <Link to="/signup" className="link"><button type="submit" className="sinup-btn mb-2 mt-5">Sinup</button></Link>
+            <div>
+              <p>Already a member?</p>
+              <Link to="/login" className="link">Login</Link>
+            </div>
+          </div>)
+          }
         </div>
       </div>
     </div>
