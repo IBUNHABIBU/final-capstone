@@ -10,13 +10,13 @@ const Booking = () => {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const onSubmit = (data) => {
-    axios.post('http://localhost:3001/api/v1/cars', {
+    axios.post('http://localhost:3001/api/v1/bookings', {
       booking: {
         name: data.name,
         model: data.model,
         pickup: data.pickup,
         return: data.return,
-        locataion: data.locataion,
+        location: data.location,
       },
     },
     { withCredentials: true }).then((response) => {
@@ -60,7 +60,7 @@ const Booking = () => {
           <label htmlFor="floatingPassword">Location</label>
         </div>
         <div className="form-floating mb-3 col-3">
-          <button type="submit" className="btn btn-primary col-12">Add Car</button>
+          <button type="submit" className="btn btn-primary col-12">Book ride</button>
         </div>
       </form>
     </div>
