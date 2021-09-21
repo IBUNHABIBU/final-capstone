@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import Loading from './Loading';
-import { fetchCars } from '../redux/actions';
+import { fetchCars } from '../redux/actions/fetch';
 const Models = () => {
   const { id } = useParams();
   const dispatch = useDispatch();

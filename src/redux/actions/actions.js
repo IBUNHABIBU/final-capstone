@@ -8,3 +8,8 @@ export const setUser = (user) => ({
 export const checkUser = () => ({
   type: actionTypes.CHECK_USER,
 });
+
+export const setCars = (car) => ({
+  type: actionTypes.SET_CAR,
+  payload: car,
+});
