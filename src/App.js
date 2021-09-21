@@ -9,6 +9,7 @@ import Models from './containers/Models';
 import Booking from './containers/Booking';
 import TabButton from './components/TabButton';
 import { setUser } from './redux/actions/actions';
+import CarForm from './containers/CarForm';
 
 function App() {
   const checkLoginStatus = () => {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/signup" exact component={Signup} />
           <Route path="/models" exact component={Models} />
           <Route path="/booking" exact component={Booking} />
+          <Route path="/newcar" exact component={CarForm} />
         </Switch>
       </Router>
     </div>

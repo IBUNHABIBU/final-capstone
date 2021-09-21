@@ -4,7 +4,7 @@ import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
 
 const CarForm = () => {
@@ -51,16 +51,8 @@ const CarForm = () => {
           <label htmlFor="floatingPassword">Year</label>
         </div>
         <div className="form-floating mb-3 col-3">
-          <input type="password" name="password_confirmation" {...register('password_confirmation')} className="form-control" id="floatingPasswordConfirm" placeholder="Password" />
-          <label htmlFor="floatingPasswordconfirm">Confirm Password</label>
+          <button type="submit" className="btn btn-primary col-12">Add Car</button>
         </div>
-        <div className="form-floating mb-3 col-3">
-          <button type="submit" className="btn btn-primary col-12">Sign Up</button>
-        </div>
-        <p>
-          Already Member?
-          <Link to="/login" className="link"> Login</Link>
-        </p>
       </form>
     </div>
   );
