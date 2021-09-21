@@ -36,12 +36,20 @@ const Booking = () => {
           <input
             type="text"
             className="form-control"
-            name="color"
-            {...register('color')}
+            name="name"
+            {...register('name')}
             id="floatingInput"
             placeholder="Car color"
           />
-          <label htmlFor="floatingInput">Color</label>
+          <label htmlFor="floatingInput">Name</label>
+        </div>
+        <div className="form-floating mb-2 col-3">
+          <input type="text" name="model" {...register('model')} className="form-control" id="floatingInputEmail" placeholder="Enter model type" />
+          <label htmlFor="floatingInputEmail">model</label>
+        </div>
+        <div className="form-floating mb-2 col-3">
+          <input type="text" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup type" />
+          <label htmlFor="floatingInputEmail">Pickup Date</label>
         </div>
         <div className="form-floating mb-2 col-3">
           <input type="text" name="engine" {...register('engine')} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
