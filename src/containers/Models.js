@@ -7,13 +7,13 @@ import Loading from '../components/Loading';
 const Models = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const car = useSelector((state) => state.selected.car);
+  const cars = useSelector((state) => state.selected.car);
 
   useEffect(() => {
-    dispatch(fetchCars(categoryName));
-  }, [categoryName]);
+    dispatch(fetchCars());
+  }, []);
 
-  if (foodList === null) {
+  if (cars === null) {
     return (
       <Loading />
     );
@@ -24,7 +24,7 @@ const Models = () => {
         {
               cars.map((car) => {
                 const {
-                  color, engine, year, thumb,
+                  color, thumb,
                 } = car;
                 return (
                   <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
@@ -51,7 +51,7 @@ const Models = () => {
       <h1 align="center">
         Choose your desired ride
       </h1>
-      { cars }
+      { displayCars }
     </div>
   );
 };
