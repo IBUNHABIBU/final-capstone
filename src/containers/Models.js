@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCars } from '../redux/actions/fetch';
-import Loading from './../components/Loading';
+import Loading from '../components/Loading';
+
 const Models = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const Models = () => {
         {
               cars.map((car) => {
                 const {
-                  color, engine, year, thumb
+                  color, engine, year, thumb,
                 } = car;
                 return (
                   <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
@@ -48,7 +49,7 @@ const Models = () => {
   return (
     <div>
       <h1 align="center">
-       Choose your desired ride
+        Choose your desired ride
       </h1>
       { cars }
     </div>
