@@ -48,17 +48,21 @@ const Booking = () => {
           <label htmlFor="floatingInputEmail">model</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="text" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup type" />
+          <input type="datetime" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup date" />
           <label htmlFor="floatingInputEmail">Pickup Date</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="text" name="engine" {...register('engine')} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
-          <label htmlFor="floatingInputEmail">Engine</label>
+          <input type="datetime" name="return" {...register('return')} className="form-control" id="floatingInputEmail" placeholder="Enter return date" />
+          <label htmlFor="floatingInputEmail">Return Date</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="text" name="year" {...register('year')} className="form-control" id="floatingPassword" placeholder="Enter Year" />
-          <label htmlFor="floatingPassword">Year</label>
+          <input type="text" name="location" {...register('location')} className="form-control" id="floatingPassword" placeholder="Enter location" />
+          <label htmlFor="floatingPassword">Location</label>
         </div>
+        <div className="input-append date" id="datetimepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+        <input className="span2" size="16" type="text" value="12-02-2012" />
+        <span className="add-on"><i className="icon-th"></i></span>
+</div>   
         <div className="form-floating mb-3 col-3">
           <button type="submit" className="btn btn-primary col-12">Add Car</button>
         </div>
