@@ -1,14 +1,19 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 const Booking = () => {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/cars', {
-      car: {
-        color: data.color,
-        engine: data.engine,
-        year: data.year,
+      booking: {
+        name: data.name,
+        model: data.model,
+        pickup: data.pickup,
+        return: data.return,
+        locataion: data.locataion
       },
     },
     { withCredentials: true }).then((response) => {
