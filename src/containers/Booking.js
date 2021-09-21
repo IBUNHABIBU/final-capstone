@@ -16,7 +16,7 @@ const Booking = () => {
         model: data.model,
         pickup: data.pickup,
         return: data.return,
-        locataion: data.locataion
+        locataion: data.locataion,
       },
     },
     { withCredentials: true }).then((response) => {
@@ -57,6 +57,6 @@ const Booking = () => {
       </form>
     </div>
   );
-  };
+};
 
 export default Booking;
