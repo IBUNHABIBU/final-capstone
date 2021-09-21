@@ -14,7 +14,7 @@ const Login = () => {
   console.log('login', userLogin);
   const history = useHistory();
   if (userLogin) {
-    history.push('/models');
+    history.push('/booking');
   }
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
