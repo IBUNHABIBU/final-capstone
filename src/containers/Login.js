@@ -27,6 +27,7 @@ const Login = () => {
     },
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
+        console.log('login response', response.data);
         dispatch(setUser(response.data));
       }
     }).catch((error) => {
