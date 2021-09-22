@@ -20,12 +20,9 @@ const Signup = () => {
       },
     },
     { withCredentials: true }).then((response) => {
-      console.log('Post', response.data);
       if (response.data.status === 'created') {
         dispatch(setUser());
       }
-    }).catch((error) => {
-      console.log('Error', error);
     });
   };
 
