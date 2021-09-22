@@ -11,7 +11,6 @@ import { setUser } from '../redux/actions/actions';
 
 const Login = () => {
   const userLogin = useSelector((state) => state.register);
-  console.log('login', userLogin.logged_in);
   const history = useHistory();
   if (userLogin.logged_in) {
     history.push('/booking');
@@ -27,11 +26,8 @@ const Login = () => {
     },
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
-        console.log('login response', response.data);
         dispatch(setUser(response.data));
       }
-    }).catch((error) => {
-      console.log('Error', error);
     });
   };
   return (

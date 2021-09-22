@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Home from './containers/Home';
 import Login from './containers/Login';
 import Signup from './containers/Signup';
@@ -13,17 +13,12 @@ import { checkUser } from './redux/actions/actions';
 import CarForm from './containers/CarForm';
 
 function App() {
-  const checkIfLogin = useSelector((state) => state.login);
-  console.log('from app.js', checkIfLogin);
   const dispatch = useDispatch();
   const checkLoginStatus = () => {
     axios.get('http://localhost:3001/logged_in', {
       withCredentials: true,
     }).then((response) => {
-      console.log('response from app.js', response.data);
       dispatch(checkUser(response.data));
-    }).catch((error) => {
-      console.log('Error', error);
     });
   };
 

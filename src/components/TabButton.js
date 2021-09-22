@@ -18,7 +18,6 @@ const TabButton = () => {
     console.log('logout');
     axios.delete('http://localhost:3001/logout', { withCredentials: true })
       .then((response) => {
-        console.log(response.data);
         dispatch(checkUser(response.data));
       });
   };
