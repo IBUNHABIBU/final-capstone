@@ -3,11 +3,16 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
 
 const Signup = () => {
+  const userLogin = useSelector((state) => state.register);
+  const history = useHistory();
+  if (userLogin.logged_in) {
+    history.push('/booking');
+  }
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const onSubmit = (data) => {
