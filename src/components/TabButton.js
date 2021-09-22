@@ -38,20 +38,21 @@ const TabButton = () => {
 
           </Link>
           <button onClick={() => toggleTab(3)} className={tab === 3 ? 'nav-link active' : 'nav-link'} id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Shop</button>
-         
+
           <hr />
           {userLoggedIn ? (
             <div>
               <div>
                 {(stayLoggedIn.user.admin || signin.user.admin)
                   ? (
-                    <Link to="/booking" className="link">
+                    <Link to="/newcar" className="link">
 
                       <button onClick={() => toggleTab(4)} className={tab === 4 ? 'nav-link active' : 'nav-link'} id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Add Car</button>
                     </Link>
-                  ) : (<div>Not Admin</div>) }
+                  ) : (<div />) }
                 {' '}
               </div>
+              <hr />
               <p>
                 <span className="p-2">Login as</span>
                 <strong>
