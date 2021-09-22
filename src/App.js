@@ -13,7 +13,7 @@ import { checkUser } from './redux/actions/actions';
 import CarForm from './containers/CarForm';
 
 function App() {
-  const checkIfLogin = useSelector((state) => state);
+  const checkIfLogin = useSelector((state) => state.login);
   console.log('from app.js', checkIfLogin);
   const dispatch = useDispatch();
   const checkLoginStatus = () => {

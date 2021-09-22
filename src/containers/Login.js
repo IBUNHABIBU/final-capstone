@@ -10,10 +10,10 @@ import { useForm } from 'react-hook-form';
 import { setUser } from '../redux/actions/actions';
 
 const Login = () => {
-  const userLogin = useSelector((state) => state.logged_in);
-  console.log('login', userLogin);
+  const userLogin = useSelector((state) => state.register);
+  console.log('login', userLogin.logged_in);
   const history = useHistory();
-  if (userLogin) {
+  if (userLogin.logged_in) {
     history.push('/booking');
   }
   const { register, handleSubmit } = useForm();

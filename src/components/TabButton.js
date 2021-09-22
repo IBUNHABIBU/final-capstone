@@ -1,10 +1,15 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { checkUser } from '../redux/actions/actions';
 
 const TabButton = () => {
-  const account = useSelector((state) => state);
+  const isloggedIn = useSelector((state) => state.login);
+  const signin = useSelector((state) => state.register);
+
+  const userLoggedIn = isloggedIn.logged_in || signin.logged_in;
+  const dispatch = useDispatch();
   const [tab, setTab] = useState(1);
   const toggleTab = (index) => {
     setTab(index);
@@ -14,6 +19,7 @@ const TabButton = () => {
     axios.delete('http://localhost:3001/logout', { withCredentials: true })
       .then((response) => {
         console.log(response.data);
+        dispatch(checkUser(response.data));
       });
   };
   return (
@@ -36,12 +42,12 @@ const TabButton = () => {
             <button onClick={() => toggleTab(4)} className={tab === 4 ? 'nav-link active' : 'nav-link'} id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Test Drive</button>
           </Link>
           <hr />
-          {account.logged_in ? (
+          {userLoggedIn ? (
             <div>
               <p>
                 <span className="p-2">Login as</span>
                 <strong>
-                  {account.user.name}
+                  {isloggedIn.user.name || signin.user.name }
                 </strong>
               </p>
               <button type="submit" className="btn btn-primary col-4" onClick={handleLogout}>Logout</button>
