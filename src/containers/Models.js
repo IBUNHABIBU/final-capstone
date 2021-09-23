@@ -12,48 +12,12 @@ const Models = () => {
   useEffect(() => {
     dispatch(fetchCars());
   }, []);
-
-  if (cars === null) {
-    return (
-      <Loading />
-    );
-  }
-  const displayCars = (
-    <div className="p-2">
-      <div className="row">
-        {
-              cars.map((car) => {
-                const {
-                  color, thumb,
-                } = car;
-                return (
-                  <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
-                    <Link to={`/category/${id}`} className="link">
-                      <div className="card ">
-                        <img src={thumb} className="card-img-top" alt="Thumb" />
-                        <div className="card-body">
-                          <h5 className="card-text">
-                            {' '}
-                            {color}
-                          </h5>
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
-                );
-              })
-        }
-      </div>
-    </div>
-  );
   return (
     <div>
-      <h1 align="center">
-        Choose your desired ride
-      </h1>
-      { displayCars }
+      <h1>Are you admin</h1>
+      <Link to={`/carlist${id}`}>Go to car models</Link>
     </div>
-  );
+  )
 };
 
 export default Models;
