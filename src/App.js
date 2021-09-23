@@ -9,7 +9,7 @@ import Signup from './containers/Signup';
 import Models from './containers/Models';
 import Booking from './containers/Booking';
 import TabButton from './components/TabButton';
-import { checkUser } from './redux/actions/actions';
+import { setUser } from './redux/actions/actions';
 import CarForm from './containers/CarForm';
 
 function App() {
@@ -18,7 +18,8 @@ function App() {
     axios.get('http://localhost:3001/logged_in', {
       withCredentials: true,
     }).then((response) => {
-      dispatch(checkUser(response.data));
+      dispatch(setUser(response.data));
+      console.log('appjs response', response.data);
     });
   };
 

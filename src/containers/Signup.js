@@ -26,7 +26,8 @@ const Signup = () => {
     },
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
-        dispatch(setUser());
+        dispatch(setUser(response.data));
+        console.log('signup response', response.data);
       }
     });
   };

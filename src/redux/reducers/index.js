@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import signUpReducer from './signUpReducer';
-import loginReducer from './loginReducer';
+// import loginReducer from './loginReducer';
 
 const reducers = combineReducers({
   register: signUpReducer,
-  login: loginReducer,
+  // login: loginReducer,
 });
 
 export default reducers;

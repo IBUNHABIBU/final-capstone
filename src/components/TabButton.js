@@ -4,15 +4,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import userIsLogin from '../logics';
 import { checkUser } from '../redux/actions/actions';
-import Loading from './Loading';
+// import Loading from './Loading';
 
 const TabButton = () => {
   const stayLoggedIn = useSelector((state) => state.login);
   const signin = useSelector((state) => state.register);
-
   const userLoggedIn = userIsLogin(stayLoggedIn, signin);
-  console.log('from button page', userLoggedIn, stayLoggedIn.user.admin);
-
   const dispatch = useDispatch();
   const [tab, setTab] = useState(1);
   const toggleTab = (index) => {
@@ -45,7 +42,7 @@ const TabButton = () => {
               <p>
                 <span className="p-2">Login as</span>
                 <strong>
-                  {stayLoggedIn.user.name || signin.user.name }
+                  ad
                 </strong>
               </p>
               <button type="submit" className="btn btn-primary col-4" onClick={handleLogout}>Logout</button>

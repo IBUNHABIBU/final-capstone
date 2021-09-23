@@ -8,6 +8,7 @@ const Models = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const cars = useSelector((state) => state.selected.car);
+  console.log(cars);
 
   useEffect(() => {
     dispatch(fetchCars());
@@ -15,9 +16,10 @@ const Models = () => {
   return (
     <div>
       <h1>Are you admin</h1>
+      <Loading />
       <Link to={`/carlist${id}`}>Go to car models</Link>
     </div>
-  )
+  );
 };
 
 export default Models;
