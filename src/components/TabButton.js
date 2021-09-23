@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import userIsLogin from '../logics';
 import { checkUser } from '../redux/actions/actions';
 import Loading from './Loading';
 
@@ -9,7 +10,7 @@ const TabButton = () => {
   const stayLoggedIn = useSelector((state) => state.login);
   const signin = useSelector((state) => state.register);
 
-  const userLoggedIn = stayLoggedIn.logged_in || signin.logged_in;
+  const userLoggedIn = userIsLogin(stayLoggedIn, signin);
   console.log('from button page', userLoggedIn, stayLoggedIn.user.admin);
 
   const dispatch = useDispatch();
@@ -41,29 +42,6 @@ const TabButton = () => {
           <hr />
           {userLoggedIn ? (
             <div>
-              <div>
-                {(stayLoggedIn.user.admin || signin.user.admin)
-                  ? (
-                    <Link to="/newcar" className="link">
-
-                      <button
-                        onClick={() => toggleTab(4)}
-                        className={tab === 4 ? 'nav-link active' : 'nav-link'}
-                        id="v-pills-settings-tab"
-                        data-bs-toggle="pill"
-                        data-bs-target="#v-pills-settings"
-                        type="button"
-                        role="tab"
-                        aria-controls="v-pills-settings"
-                        aria-selected="false"
-                      >
-                        Add Car
-                      </button>
-                    </Link>
-                  ) : (<Loading />) }
-                {' '}
-              </div>
-              <hr />
               <p>
                 <span className="p-2">Login as</span>
                 <strong>
