@@ -7,7 +7,7 @@ import Loading from '../components/Loading';
 const Models = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const cars = useSelector((state) => state.selected.car);
+  const cars = useSelector((state) => state);
   console.log(cars);
 
   useEffect(() => {

@@ -1,6 +1,5 @@
 import './App.css';
 import { useEffect } from 'react';
-import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Home from './containers/Home';
@@ -9,22 +8,14 @@ import Signup from './containers/Signup';
 import Models from './containers/Models';
 import Booking from './containers/Booking';
 import TabButton from './components/TabButton';
-import { setUser } from './redux/actions/actions';
 import CarForm from './containers/CarForm';
+import { checkLoginStatus } from './redux/actions/fetch';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
-  const checkLoginStatus = () => {
-    axios.get('http://localhost:3001/logged_in', {
-      withCredentials: true,
-    }).then((response) => {
-      dispatch(setUser(response.data));
-      console.log('appjs response', response.data);
-    });
-  };
 
   useEffect(() => {
-    checkLoginStatus();
+    dispatch(checkLoginStatus());
   }, []);
 
   return (
@@ -42,6 +33,6 @@ function App() {
       </Router>
     </div>
   );
-}
+};
 
 export default App;
