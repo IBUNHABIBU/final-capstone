@@ -5,7 +5,6 @@ import axios from 'axios';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-// import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { setUser } from '../redux/actions/actions';
 
@@ -27,7 +26,7 @@ const Login = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
-        console.log('login response', response.data);
+        console.log(response.data);
       }
     });
   };
