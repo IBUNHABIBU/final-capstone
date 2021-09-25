@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCars } from '../redux/actions/fetch';
+import CarList from './CarList';
 
 const Models = () => {
-  const { id } = useParams();
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.register);
 
@@ -14,7 +14,17 @@ const Models = () => {
   return (
     <div>
       {
-        userLogin.details.admin ? (<Link to={`/car${id}`}>Create New car</Link>) : (<div> This is the list of cars</div>)
+        userLogin.logged_in ? [
+          userLogin.details.admin ? [
+            <div><Link to="/newcar">Add new car</Link></div>,
+          ] : [
+            <div>
+              <CarList />
+            </div>,
+          ],
+        ] : [
+          <div>Please login to see all cars</div>,
+        ]
       }
 
     </div>

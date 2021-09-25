@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCars } from '../redux/actions/fetch';
 import Loading from '../components/Loading';
 
-const Models = () => {
-  const { id } = useParams();
+const CarList = () => {
   const dispatch = useDispatch();
   const cars = useSelector((state) => state);
 
@@ -24,7 +23,7 @@ const Models = () => {
         {
               cars.map((car) => {
                 const {
-                  color, thumb,
+                  id, color, thumb,
                 } = car;
                 return (
                   <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
@@ -56,4 +55,4 @@ const Models = () => {
   );
 };
 
-export default Models;
+export default CarList;
