@@ -4,7 +4,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { setUser } from '../redux/actions/actions';
 
@@ -28,6 +28,8 @@ const Login = () => {
         dispatch(setUser(response.data));
         console.log(response.data);
       }
+    }).catch((error) => {
+      console.log('Error', error.message);
     });
   };
   return (
@@ -45,6 +47,10 @@ const Login = () => {
         <div className="form-floating mb-3 col-3">
           <button type="submit" className="btn btn-primary col-12">Login</button>
         </div>
+        <p>
+          New to this site?
+          <Link to="/signup" className="link"> Register</Link>
+        </p>
       </form>
     </div>
   );

@@ -38,7 +38,7 @@ const TabButton = () => {
               <p>
                 <span className="p-2">Login as</span>
                 <strong>
-                  {userLoggedIn.user}
+                  {userLoggedIn.details.name}
                 </strong>
               </p>
               <button type="submit" className="btn btn-primary col-4" onClick={handleLogout}>Logout</button>
