@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { setUser } from '../redux/actions/actions';
+import { createCarBooking } from '../redux/actions/fetch';
 
 const Booking = () => {
   const { register, handleSubmit } = useForm();
@@ -21,7 +22,7 @@ const Booking = () => {
     },
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
-        dispatch(bookRide());
+        dispatch(createCarBooking());
       }
     });
   };

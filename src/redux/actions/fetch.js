@@ -16,3 +16,10 @@ export const checkLoginStatus = () => async (dispatch) => {
   });
   dispatch(setUser(response.data));
 };
+
+export const createCarBooking = () => async (dispatch) => {
+  const response = await axios.get('http://localhost:3001/api/v1/bookings', {
+    withCredentials: true,
+  });
+  dispatch(bookCar(response.data));
+};
