@@ -10,7 +10,7 @@ export const addCar = (data) => ({
   payload: data,
 });
 
-export const setCars = (car) => ({
-  type: actionTypes.SET_CAR,
+export const bookCar = (car) => ({
+  type: actionTypes.BOOK_CAR,
   payload: car,
 });

@@ -21,7 +21,7 @@ const Booking = () => {
     },
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
-        dispatch(setUser());
+        dispatch(bookRide());
       }
     });
   };
