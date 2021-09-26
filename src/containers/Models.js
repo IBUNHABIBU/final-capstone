@@ -19,11 +19,26 @@ const Models = () => {
             <div>
               <Link to="/newcar">Add new car</Link>
               <button
-              type="button"
-              className="btn btn-primaray"
-              data-bs-toggle="model"
-              data-bs-target="#myModel"
-              > Create car</button>
+                type="button"
+                className="btn btn-primaray"
+                data-bs-toggle="model"
+                data-bs-target="#myModel"
+              >
+                {' '}
+                Create car
+              </button>
+              <div className="model" id="myModel">
+                <div className="modal-dialog">
+                  <div className="model-content">
+                    <div className="model-header">
+                      <h5 className="model-title">
+                        Add new car
+                      </h5>
+                      <button />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>,
           ] : [
             <div>
