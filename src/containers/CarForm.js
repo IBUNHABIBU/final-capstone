@@ -16,6 +16,7 @@ const CarForm = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
+        image: data.main_image,
       },
     },
     { withCredentials: true }).then((response) => {
@@ -48,8 +49,8 @@ const CarForm = () => {
           <label htmlFor="floatingPassword">Year</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="text" name="engine" {...register('engine')} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
-          <label htmlFor="floatingInputEmail">Engine</label>
+          <input type="file" name="image" {...register('image')} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
+          <label htmlFor="floatingInputEmail">Image</label>
         </div>
         <div className="form-floating mb-3 col-3">
           <button type="submit" className="btn btn-primary col-12">Add Car</button>
