@@ -21,7 +21,6 @@ const CarForm = () => {
     }, { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(addCar(response.data));
-        console.log('car response', response.data);
       }
     });
   };

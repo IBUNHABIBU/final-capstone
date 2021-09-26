@@ -7,7 +7,6 @@ import Loading from '../components/Loading';
 const CarList = () => {
   const dispatch = useDispatch();
   const cars = useSelector((state) => state.car);
-  console.log('carlist', cars);
 
   useEffect(() => {
     dispatch(fetchCars());
