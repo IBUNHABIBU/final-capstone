@@ -10,6 +10,7 @@ import Booking from './containers/Booking';
 import TabButton from './components/TabButton';
 import CarForm from './containers/CarForm';
 import { checkLoginStatus } from './redux/actions/fetch';
+import CarList from './containers/CarList';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/models" exact component={Models} />
           <Route path="/booking" exact component={Booking} />
           <Route path="/newcar" exact component={CarForm} />
+          <Route path="/carlist" exact component={CarList} />
         </Switch>
       </Router>
     </div>

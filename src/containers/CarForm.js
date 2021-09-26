@@ -16,7 +16,7 @@ const CarForm = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
-        main_image: data.main_image,
+        mainImage: data.mainImage,
       },
     }, { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {

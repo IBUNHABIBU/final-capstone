@@ -24,13 +24,13 @@ const CarList = () => {
         {
               cars.map((car) => {
                 const {
-                  id, color, engine, year, main_image
+                  id, color, engine, year, mainImage
                 } = car;
                 return (
                   <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
                     <Link to={`/category/${id}`} className="link">
                       <div className="card ">
-                        <img src={main_image} className="card-img-top" alt="Thumb" />
+                        <img src={mainImage} className="card-img-top" alt="Thumb" />
                         <div className="card-body">
                           <h5 className="card-text">
                             {' '}

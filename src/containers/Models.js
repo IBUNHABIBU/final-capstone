@@ -18,6 +18,8 @@ const Models = () => {
           userLogin.details.admin ? [
             <div>
               <Link to="/newcar">Add new car</Link>
+              
+              <Link to="/carlist">see cars</Link>
               <button
                 type="button"
                 className="btn btn-primaray"
