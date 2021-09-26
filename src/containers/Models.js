@@ -34,7 +34,7 @@ const Models = () => {
                       <h5 className="model-title">
                         Add new car
                       </h5>
-                      <button />
+                      <button type="button">Add </button>
                     </div>
                   </div>
                 </div>

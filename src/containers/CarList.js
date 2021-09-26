@@ -6,7 +6,8 @@ import Loading from '../components/Loading';
 
 const CarList = () => {
   const dispatch = useDispatch();
-  const cars = useSelector((state) => state);
+  const cars = useSelector((state) => state.car.result);
+  console.log(cars);
 
   useEffect(() => {
     dispatch(fetchCars());
@@ -23,18 +24,20 @@ const CarList = () => {
         {
               cars.map((car) => {
                 const {
-                  id, color, thumb,
+                  id, color, engine, year, main_image
                 } = car;
                 return (
                   <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
                     <Link to={`/category/${id}`} className="link">
                       <div className="card ">
-                        <img src={thumb} className="card-img-top" alt="Thumb" />
+                        <img src={main_image} className="card-img-top" alt="Thumb" />
                         <div className="card-body">
                           <h5 className="card-text">
                             {' '}
                             {color}
                           </h5>
+                          <p>{engine}</p>
+                          <p>{year}</p>
                         </div>
                       </div>
                     </Link>

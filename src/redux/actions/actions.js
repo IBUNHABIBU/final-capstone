@@ -6,7 +6,7 @@ export const setUser = (user) => ({
 });
 
 export const addCar = (data) => ({
-  type: actionTypes.CHECK_USER,
+  type: actionTypes.ADD_CAR,
   payload: data,
 });
 
