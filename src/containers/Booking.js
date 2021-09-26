@@ -4,7 +4,6 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { setUser } from '../redux/actions/actions';
 import { createCarBooking } from '../redux/actions/fetch';
 
 const Booking = () => {
