@@ -18,14 +18,12 @@ const Models = () => {
           userLogin.details.admin ? [
             <div>
               <Link to="/newcar">Add new car</Link>
-              <div className="modal-dialog modal-dialog-centered">
-                ...
-              </div>
-
-              <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                ...
-              </div>
-
+              <button
+              type="button"
+              className="btn btn-primaray"
+              data-bs-toggle="model"
+              data-bs-target="#myModel"
+              > Create car</button>
             </div>,
           ] : [
             <div>
