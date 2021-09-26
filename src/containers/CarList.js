@@ -6,14 +6,14 @@ import Loading from '../components/Loading';
 
 const CarList = () => {
   const dispatch = useDispatch();
-  const cars = useSelector((state) => state.car.result);
-  console.log(cars);
+  const cars = useSelector((state) => state.car);
+  console.log('carlist', cars);
 
   useEffect(() => {
     dispatch(fetchCars());
   }, []);
 
-  if (cars === null) {
+  if (cars === undefined) {
     return (
       <Loading />
     );
@@ -24,13 +24,13 @@ const CarList = () => {
         {
               cars.map((car) => {
                 const {
-                  id, color, engine, year, mainImage
+                  id, color, engine, year,
                 } = car;
                 return (
                   <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
                     <Link to={`/category/${id}`} className="link">
                       <div className="card ">
-                        <img src={mainImage} className="card-img-top" alt="Thumb" />
+                        {/* <img src={mainImage} className="card-img-top" alt="Thumb" /> */}
                         <div className="card-body">
                           <h5 className="card-text">
                             {' '}
