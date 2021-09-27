@@ -5,7 +5,8 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 // import { Link } from 'react-router-dom';
-import { addCar } from '../redux/actions/actions';
+// import { addCar } from '../redux/actions/actions';
+import { createCar } from '../redux/actions/fetch';
 
 const CarForm = () => {
   const { register, handleSubmit } = useForm();
@@ -20,7 +21,7 @@ const CarForm = () => {
       },
     }, { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
-        dispatch(addCar(response.data));
+        dispatch(createCar(response.data));
       }
     });
   };
