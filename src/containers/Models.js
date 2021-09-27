@@ -7,7 +7,21 @@ import CarList from './CarList';
 const Models = () => {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.register);
-
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    axios.post('http://localhost:3001/api/v1/cars', {
+      car: {
+        color: data.color,
+        engine: data.engine,
+        year: data.year,
+        mainImage: data.mainImage,
+      },
+    }, { withCredentials: true }).then((response) => {
+      if (response.data.status === 'created') {
+        dispatch(addCar(response.data));
+      }
+    });
+  };
   useEffect(() => {
     dispatch(fetchCars());
   }, []);
