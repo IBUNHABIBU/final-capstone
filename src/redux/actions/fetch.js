@@ -23,3 +23,10 @@ export const createCarBooking = () => async (dispatch) => {
   });
   dispatch(bookCar(response.data));
 };
+
+export const createCar = () => async (dispatch) => {
+  const response = await axios.get('http://localhost:3001/api/v1/cars', {
+    withCredentials: true,
+  });
+  dispatch(addCar(response.data));
+};

@@ -5,15 +5,16 @@ import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchCars } from '../redux/actions/fetch';
+import { createCar, fetchCars } from '../redux/actions/fetch';
 import CarList from './CarList';
-import { addCar } from '../redux/actions/actions';
+// import { addCar } from '../redux/actions/actions';
 
 const Models = () => {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.register);
   const { register, handleSubmit } = useForm();
   const history = useHistory();
+  console.log(history);
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/cars', {
       car: {
@@ -24,10 +25,10 @@ const Models = () => {
       },
     }, { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
-        dispatch(addCar(response.data));
+        dispatch(createCar(response.data))
       }
     });
-    history.push("/models");
+    // history.push('/models');
   };
   useEffect(() => {
     dispatch(fetchCars());
@@ -86,7 +87,7 @@ const Models = () => {
                             <label htmlFor="floatingInputEmail">Image</label>
                           </div>
                           <div className="form-floating mb-3 col-10">
-                            <button type="submit" className="btn btn-primary col-10" >Add Car</button>
+                            <button type="submit" className="btn btn-primary col-10">Add Car</button>
                           </div>
                         </form>
                       </div>
