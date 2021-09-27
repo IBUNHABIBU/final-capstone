@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
@@ -12,6 +13,7 @@ const Models = () => {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.register);
   const { register, handleSubmit } = useForm();
+  const history = useHistory();
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/cars', {
       car: {
@@ -25,6 +27,7 @@ const Models = () => {
         dispatch(addCar(response.data));
       }
     });
+    history.push("/models");
   };
   useEffect(() => {
     dispatch(fetchCars());
@@ -59,7 +62,7 @@ const Models = () => {
                       </div>
                       <div className="modal-body">
                         <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                          <div className="form-floating mb-2 col-3">
+                          <div className="form-floating mb-2 col-10">
                             <input
                               type="text"
                               className="form-control"
@@ -70,20 +73,20 @@ const Models = () => {
                             />
                             <label htmlFor="floatingInput">Color</label>
                           </div>
-                          <div className="form-floating mb-2 col-3">
+                          <div className="form-floating mb-2 col-10">
                             <input type="text" name="engine" {...register('engine')} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
                             <label htmlFor="floatingInputEmail">Engine</label>
                           </div>
-                          <div className="form-floating mb-2 col-3">
+                          <div className="form-floating mb-2 col-10">
                             <input type="text" name="year" {...register('year')} className="form-control" id="floatingPassword" placeholder="Enter Year" />
                             <label htmlFor="floatingPassword">Year</label>
                           </div>
-                          <div className="form-floating mb-2 col-3">
+                          <div className="form-floating mb-2 col-10">
                             <input type="file" name="image" {...register('image')} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
                             <label htmlFor="floatingInputEmail">Image</label>
                           </div>
-                          <div className="form-floating mb-3 col-3">
-                            <button type="submit" className="btn btn-primary col-12">Add Car</button>
+                          <div className="form-floating mb-3 col-10">
+                            <button type="submit" className="btn btn-primary col-10" >Add Car</button>
                           </div>
                         </form>
                       </div>
