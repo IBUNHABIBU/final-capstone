@@ -20,7 +20,7 @@ const Models = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
-        mainImage: data.mainImage,
+        image: data.image,
       },
     }, { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
@@ -67,23 +67,23 @@ const Models = () => {
                               type="text"
                               className="form-control"
                               name="color"
-                              {...register('color', {required: true})}
+                              {...register('color', { required: true })}
                               id="floatingInput"
                               placeholder="Car color"
                             />
                             <label htmlFor="floatingInput">Color</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
-                            <input type="text" name="engine" {...register('engine', {required: true})} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
+                            <input type="text" name="engine" {...register('engine', { required: true })} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
                             <label htmlFor="floatingInputEmail">Engine</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
-                            <input type="text" name="year" {...register('year', {required: true})} className="form-control" id="floatingPassword" placeholder="Enter Year" />
+                            <input type="text" name="year" {...register('year', { required: true })} className="form-control" id="floatingPassword" placeholder="Enter Year" />
                             <label htmlFor="floatingPassword">Year</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
-                            <input type="file" name="image" {...register('image', {required: true})} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
-                            <label htmlFor="floatingInputEmail">Image</label>
+                            <input type="file" name="image" {...register('image', { required: true })} className="form-control" id="floatingInputImage" placeholder="Enter engine type" accept="image/*" />
+                            <label htmlFor="floatingInputImage">Image</label>
                           </div>
                           <div className="form-floating mb-3 col-10">
                             <button type="submit" className="btn btn-primary col-10">Add Car</button>
