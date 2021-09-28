@@ -45,7 +45,7 @@ const Models = () => {
         userLogin.logged_in ? [
           userLogin.details.admin ? [
             <div>
-              <Link to="/newcar">Add new car</Link>
+              {/* <Link to="/newcar">Add new car</Link> */}
               <br />
               <Link to="/carlist">see cars</Link>
               <div className="container mt-5">
@@ -56,7 +56,7 @@ const Models = () => {
                   data-bs-target="#myModal"
                 >
                   {' '}
-                  Create car
+                  Add new car
                 </button>
                 <div className="modal" id="myModal">
                   <div className="modal-dialog">
