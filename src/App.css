@@ -63,7 +63,16 @@
   position: relative;
   left: 12rem;
   bottom: 10rem;
-  width: 70%;
+  width: 80%;
+  height: 80vh;
+  border: 1rem solid black;
+  display: flex;
+}
+
+.arrows {
+ background-color: green;
+ border: 2px solid green;
+ height: 10%;
 }
 
 .carlist {
