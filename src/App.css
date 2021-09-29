@@ -1,4 +1,6 @@
-
+:root {
+  --app-color: #99c210;
+}
 
 .App {
   text-align: center;
@@ -14,8 +16,8 @@
 }
 .btn-primary,
 .btn-primary:hover {
-  background-color: #99c210;
-  border-color: #99c210;
+  background-color: var(--app-color);
+  border-color: var(--app-color);
 }
 .logo img{
   width: 200px;
@@ -27,8 +29,8 @@
   margin-left: 1rem;
 }
 .nav .nav-link.active {
-  background-color: #99c210;
-  border-color: #99c210;
+  background-color: var(--app-color);
+  border-color: var(--app-color);
   border-radius: 0%;
 }
 
@@ -73,8 +75,8 @@
 }
 
 .arrows {
- background-color: green;
- border: 2px solid green;
+ background-color: var(--app-color);
+ border-color: 2px solid var(--app-color);
  height: 10%;
  width: 10%;
 }
