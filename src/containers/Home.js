@@ -15,10 +15,10 @@ const Home = () => (
       <div>One</div>
       <div>Two</div>
       <div>Three</div>
-      <div>One</div>
+      <div>Eleven</div>
       <div>Four</div>
       <div>Six</div>
-      <div>One</div>
+      <div>One Two </div>
       <div>Seven</div>
     </Carousel>
     <div className="container m-5 model">
