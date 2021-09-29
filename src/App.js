@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/models" exact component={Models} />
           <Route path="/booking" exact component={Booking} />
           <Route path="/newcar" exact component={CarForm} />
-          <Route path="/carlist" exact component={CarList} />
+          <Route path="/cars" exact component={CarList} />
         </Switch>
       </Router>
     </div>

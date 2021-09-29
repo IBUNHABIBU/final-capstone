@@ -49,7 +49,7 @@ const Models = () => {
             <div>
               {/* <Link to="/newcar">Add new car</Link> */}
               <br />
-              <Link to="/carlist">see cars</Link>
+              <Link to="/cars">see cars</Link>
               <div className="container mt-5">
                 <button
                   type="button"

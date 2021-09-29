@@ -28,7 +28,7 @@ const CarList = () => {
                   } = car;
                   return (
                     <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
-                      <Link to={`/category/${id}`} className="link">
+                      <Link to={`/cars/${id}`} className="link">
                         <div className="card ">
                           {/* <img src={mainImage} className="card-img-top" alt="Thumb" /> */}
                           <div className="card-body">
@@ -51,9 +51,6 @@ const CarList = () => {
   );
   return (
     <div>
-      <h1 align="center">
-        Choose your desired ride
-      </h1>
       { displayCars }
     </div>
   );
