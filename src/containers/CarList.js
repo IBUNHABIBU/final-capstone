@@ -34,7 +34,7 @@ const CarList = () => {
   <div className="card-body">
     <h5 className="card-title">{color}</h5>
     <p className="card-text"> {engine}</p>
-    <Link to={`/cars/${id}`} className="btn btn-primary">Go somewhere</Link>
+    <Link to={`/cars/${id}`} className="btn btn-primary">see details</Link>
   </div>
 </div>
                       </Link>
