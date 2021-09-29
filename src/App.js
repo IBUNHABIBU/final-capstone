@@ -33,6 +33,7 @@ const App = () => {
           <Route path="/newcar" exact component={CarForm} />
           <Route path="/cars" exact component={CarList} />
           <Route path="/cars/:id" exact component={CarDetails} />
+          <Route path="/cars/:id" exact component={CarDetails} />
         </Switch>
       </Router>
     </div>
