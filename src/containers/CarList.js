@@ -29,17 +29,14 @@ const CarList = () => {
                   return (
                     <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
                       <Link to={`/cars/${id}`} className="link">
-                        <div className="card ">
-                          {/* <img src={mainImage} className="card-img-top" alt="Thumb" /> */}
-                          <div className="card-body">
-                            <h5 className="card-text">
-                              {' '}
-                              {color}
-                            </h5>
-                            <p>{engine}</p>
-                            <p>{year}</p>
-                          </div>
-                        </div>
+                      <div className="card" style="width: 18rem;">
+  <img src="..." className="card-img-top" alt="..." />
+  <div className="card-body">
+    <h5 className="card-title">{color}</h5>
+    <p className="card-text"> {engine}</p>
+    <Link to={`/cars/${id}`} className="btn btn-primary">Go somewhere</Link>
+  </div>
+</div>
                       </Link>
                     </div>
                   );
