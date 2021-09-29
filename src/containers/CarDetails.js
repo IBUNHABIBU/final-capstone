@@ -1,7 +1,9 @@
 import React from 'react';
 
 const CarDetails = () => (
-  <div />
+  <div>
+    <h1>Car details</h1>
+  </div>
 );
 
 export default CarDetails;
