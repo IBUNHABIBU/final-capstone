@@ -16,7 +16,7 @@ const Models = () => {
   const history = useHistory();
 
   const handleFiChange = (event) => {
-    console.log(event.target.files[0]);
+    console.log(event.target);
   };
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/cars', {
@@ -24,16 +24,18 @@ const Models = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
-        image: data.image[0],
+        image: data.image,
       },
     }, { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(createCar(response.data));
         history.push('/models');
         console.log('respone', response.data);
+      } else {
+        throw Error('could not fetch the data');
       }
     }).catch((error) => {
-      console.log(error);
+      console.log(error.message);
     });
   };
   useEffect(() => {
@@ -89,7 +91,7 @@ const Models = () => {
                             <label htmlFor="floatingPassword">Year</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
-                            <input type="file" name="image" {...register('image', { required: true })} className="form-control" id="floatingInputImage" placeholder="Enter engine type" accept="image/*" onChange={handleFiChange} />
+                            <input type="text" name="image" {...register('image', { required: true })} className="form-control" id="floatingInputImage" placeholder="Enter engine type" accept="image/*" onChange={handleFiChange} />
                             <label htmlFor="floatingInputImage">Image</label>
                           </div>
                           <div className="form-floating mb-3 col-10">

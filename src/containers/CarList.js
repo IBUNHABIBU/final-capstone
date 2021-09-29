@@ -18,7 +18,7 @@ const CarList = () => {
     );
   }
   const displayCars = (
-    <div className="p-2">
+    <div className="p-2 carlist">
       <div className="row">
         {
               cars.map((car) => {
