@@ -82,5 +82,10 @@
   top: 3rem;
   right: 0;
   z-index: 78;
-  background-color: red;
+}
+
+.car-heading {
+  position: absolute;
+  top: 0;
+  left: 24rem;
 }

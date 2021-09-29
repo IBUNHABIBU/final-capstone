@@ -51,6 +51,7 @@ const CarList = () => {
   );
   return (
     <div>
+      <h1 className="car-heading">Select the cars</h1>
       { displayCars }
     </div>
   );
