@@ -24,7 +24,7 @@ const CarList = () => {
           {
                 cars.map((car) => {
                   const {
-                    id, color, engine, year,
+                    id, color, engine,
                   } = car;
                   return (
                     <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
