@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from 'react-elastic-Carousel';
+import Carousel from 'react-elastic-carousel';
 
 const breakPoints = [
   {width: 1, itemsToShow: 1},
