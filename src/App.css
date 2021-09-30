@@ -1,5 +1,6 @@
 :root {
   --app-color: #99c210;
+  --hover-color: #e1f59e;
 }
 
 .App {
@@ -118,4 +119,30 @@
   position: absolute;
   top: 0;
   left: 24rem;
+}
+
+/* .home-container {
+  width: 80%;
+  position: absolute;
+  right: 0;
+  z-index: 138;
+} */
+
+.rec.rec-arrow.rec-arrow-left {
+  background-color: var(--app-color);
+  /* border-bottom-right-radius: 24px;
+  border-top-right-radius: 24px; */
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.rec.rec-arrow.rec-arrow-right {
+  background-color: var(--app-color);
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  color: #efefef;
+}
+
+.rec.rec-arrow:hover {
+  background-color:  var(--hover-color);
 }
