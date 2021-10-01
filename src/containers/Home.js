@@ -9,27 +9,28 @@ const breakPoints = [
 ];
 const Home = () => {
   console.log('home');
-  return(
-  <div className="home-container">
+  return (
+    <div className="home-container">
 
-    <div className="heading-container">
-      <h1 className="">LATEST MODEL</h1>
-      <p className="lead">Please select a car model </p>
+      <div className="heading-container">
+        <h1 className="">LATEST MODEL</h1>
+        <p className="lead">Please select a car model </p>
+      </div>
+      <div className="container m-5 model">
+
+        <Carousel breakPoints={breakPoints}>
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+          <div>Eleven</div>
+          <div>Four</div>
+          <div>Six</div>
+          <div>One Two </div>
+          <div>Seven</div>
+        </Carousel>
+
+      </div>
     </div>
-    <div className="container m-5 model">
-
-      <Carousel breakPoints={breakPoints}>
-        <div>One</div>
-        <div>Two</div>
-        <div>Three</div>
-        <div>Eleven</div>
-        <div>Four</div>
-        <div>Six</div>
-        <div>One Two </div>
-        <div>Seven</div>
-      </Carousel>
-
-    </div>
-  </div>
-)};
+  );
+};
 export default Home;

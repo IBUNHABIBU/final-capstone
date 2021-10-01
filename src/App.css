@@ -60,7 +60,7 @@
 .sidenav {
   width: 15.6%;
   height: 100vh;
-  margin: 1rem;
+  margin-left: 1rem;
   border-right: 1px solid #efefef;
   position: absolute;
 
