@@ -9,6 +9,7 @@ const breakPoints = [
 ];
 const Home = () => {
   console.log('home');
+
   return (
     <div className="home-container">
 
@@ -19,14 +20,14 @@ const Home = () => {
       <div className="container m-5 model">
 
         <Carousel breakPoints={breakPoints}>
-          <div>One</div>
-          <div>Two</div>
-          <div>Three</div>
-          <div>Eleven</div>
-          <div>Four</div>
-          <div>Six</div>
-          <div>One Two </div>
-          <div>Seven</div>
+          <div className="slides">One</div>
+          <div className="slides">Two</div>
+          <div className="slides">Three</div>
+          <div className="slides">Four</div>
+          <div className="slides">Five</div>
+          <div className="slides">six</div>
+          <div className="slides">Seven</div>
+          <div className="slides">Eight</div>
         </Carousel>
 
       </div>

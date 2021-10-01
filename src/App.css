@@ -132,3 +132,10 @@
 .rec.rec-arrow.rec-arrow-left:hover {
   background-color: var(--hover-color);
 }
+
+.slides {
+  border: 2px solid black;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+}
