@@ -72,13 +72,19 @@
 .model {
   position: relative;
   left: 12rem;
-  bottom: 18rem;
+  bottom: 19rem;
   width: 80%;
   height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: 2px solid black;
+}
+
+.heading-container {
+ position: absolute;
+ top: 1rem;
+ right: 28rem;
 }
 
 .carlist {

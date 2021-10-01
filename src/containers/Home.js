@@ -10,8 +10,10 @@ const breakPoints = [
 const Home = () => (
   <div className="home-container">
 
-<h1 className="">LATEST MODEL</h1>
+    <div className="heading-container">
+      <h1 className="">LATEST MODEL</h1>
       <p className="lead">Please select a car model </p>
+    </div>
     <div className="container m-5 model">
 
       <Carousel breakPoints={breakPoints}>
