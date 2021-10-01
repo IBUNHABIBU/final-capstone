@@ -78,8 +78,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 2px solid black;
 }
-
+/* 
 .arrows {
  background-color: var(--app-color);
  border-color: 2px solid var(--app-color);
@@ -95,7 +96,7 @@
 .arrows.right {
   border-bottom-left-radius: 24px;
   border-top-left-radius: 24px;
-}
+} */
 
 .carlist {
   width: 80%;

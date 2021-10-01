@@ -9,21 +9,21 @@ const breakPoints = [
 ];
 const Home = () => (
   <div className="home-container">
-    <h1 className="">LATEST MODEL</h1>
+     <h1 className="">LATEST MODEL</h1>
     <p className="lead">Please select a car model </p>
-    <Carousel breakPoints={breakPoints}>
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Eleven</div>
-      <div>Four</div>
-      <div>Six</div>
-      <div>One Two </div>
-      <div>Seven</div>
-    </Carousel>
-    <div className="container m-5 model">
-      <div className="arrows left" />
-      <div className="arrows right" />
+    
+     <div className="container m-5 model">
+     <Carousel breakPoints={breakPoints}>
+       <div>One</div>
+       <div>Two</div>
+       <div>Three</div>
+       <div>Eleven</div>
+       <div>Four</div>
+       <div>Six</div>
+       <div>One Two </div>
+       <div>Seven</div>
+     </Carousel> 
+   
     </div>
   </div>
 );
