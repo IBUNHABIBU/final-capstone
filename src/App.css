@@ -1,6 +1,7 @@
 :root {
   --app-color: #99c210;
-  --hover-color: #e1f59e;
+  --hover-color: #849e2e;
+  --white: #ffffff;
 }
 
 .App {
@@ -114,15 +115,20 @@
   background-color: var(--app-color);
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+  color: var(--white);
 }
 
 .rec.rec-arrow.rec-arrow-right {
   background-color: var(--app-color);
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  color: #efefef;
+  color: var(--white);
 }
 
-.rec.rec-arrow:hover {
-  background-color:  var(--hover-color);
+.rec.rec-arrow.rec-arrow-right:hover {
+  background-color: var(--hover-color);
+}
+
+.rec.rec-arrow.rec-arrow-left:hover {
+  background-color: var(--hover-color);
 }
