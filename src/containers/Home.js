@@ -9,10 +9,10 @@ const breakPoints = [
 ];
 const Home = () => (
   <div className="home-container">
-    
+
+<h1 className="">LATEST MODEL</h1>
+      <p className="lead">Please select a car model </p>
     <div className="container m-5 model">
-    <h1 className="">LATEST MODEL</h1>
-    <p className="lead">Please select a car model </p>
 
       <Carousel breakPoints={breakPoints}>
         <div>One</div>
