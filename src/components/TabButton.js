@@ -21,7 +21,7 @@ const TabButton = () => {
   return (
     <div className="tab-container">
       <div className="logo">
-        <img src="logo2.png" alt="" />
+        <img src="logo3.jpg" alt="" />
       </div>
       <div className="d-flex align-items-start">
         <div className="nav sidenav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
