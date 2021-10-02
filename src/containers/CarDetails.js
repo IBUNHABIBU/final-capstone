@@ -11,7 +11,7 @@ const CarDetails = () => (
         <p>Rent for low price</p>
       </div>
       <div className="details">
-      
+        details
       </div>
     </div>
   </div>
