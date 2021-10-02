@@ -33,7 +33,7 @@ const Home = () => {
           </div>
           <div className="slides">
             <div className="card">
-              <img src="https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/51/2012-cadillac-cts-inline-678-photo-623583-s-original.jpg?resize=768:*" className="card-img-top" alt="cadillac" />
+              <img src="https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/51/2012-cadillac-cts-inline-678-photo-623583-s-original.jpg?resize=768:*" className="card-img-top image" alt="cadillac" />
               <div className="card-body">
                 <h5 className="card-title">Cadillac CTS</h5>
                 <p className="card-text">V6.</p>
