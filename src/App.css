@@ -146,3 +146,12 @@
   border-radius: 50%;
   border: none;
 }
+
+.details-container {
+  display: flex;
+}
+
+.details-image {
+  width: 40rem;
+  border: 2px solid red;
+}

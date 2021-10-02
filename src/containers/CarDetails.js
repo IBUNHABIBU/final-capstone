@@ -1,8 +1,8 @@
 import React from 'react';
 
 const CarDetails = () => (
-  <div>
-    <div className="ditails-image">
+  <div className="details-container">
+    <div className="details-image">
       <img src="" alt="" />
     </div>
     <div className="details-section">
