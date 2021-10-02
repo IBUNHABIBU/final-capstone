@@ -20,7 +20,7 @@ const Home = () => {
       </div>
       <div className="container m-5 model">
 
-        <Carousel breakPoints={breakPoints}>
+        <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={1500}>
           <div className="slides">
             <div className="card">
               <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg" className="card-img-top" alt="cadillac" />
