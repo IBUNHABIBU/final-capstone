@@ -22,6 +22,12 @@ const CarDetails = () => (
             <tr>
               <td>@twitter</td>
             </tr>
+            <tr>
+              <td>@twitter</td>
+            </tr>
+            <tr>
+              <td>@twitter</td>
+            </tr>
           </tbody>
         </table>
       </div>
