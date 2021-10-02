@@ -32,7 +32,7 @@ const Home = () => {
             </div>
           </div>
           <div className="slides">
-          <div className="card">
+            <div className="card">
               <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
               <div className="card-body">
                 <h5 className="card-title">Cadillac Escalade</h5>
@@ -42,7 +42,7 @@ const Home = () => {
             </div>
           </div>
           <div className="slides">
-          <div className="card">
+            <div className="card">
               <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
               <div className="card-body">
                 <h5 className="card-title">Cadillac Escalade</h5>
@@ -52,7 +52,7 @@ const Home = () => {
             </div>
           </div>
           <div className="slides">
-          <div className="card">
+            <div className="card">
               <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
               <div className="card-body">
                 <h5 className="card-title">Cadillac Escalade</h5>
@@ -62,7 +62,7 @@ const Home = () => {
             </div>
           </div>
           <div className="slides">
-          <div className="card">
+            <div className="card">
               <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
               <div className="card-body">
                 <h5 className="card-title">Cadillac Escalade</h5>
@@ -72,7 +72,7 @@ const Home = () => {
             </div>
           </div>
           <div className="slides">
-          <div className="card">
+            <div className="card">
               <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
               <div className="card-body">
                 <h5 className="card-title">Cadillac Escalade</h5>
@@ -82,7 +82,7 @@ const Home = () => {
             </div>
           </div>
           <div className="slides">
-          <div className="card">
+            <div className="card">
               <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
               <div className="card-body">
                 <h5 className="card-title">Cadillac Escalade</h5>
@@ -92,7 +92,7 @@ const Home = () => {
             </div>
           </div>
           <div className="slides">
-          <div className="card">
+            <div className="card">
               <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
               <div className="card-body">
                 <h5 className="card-title">Cadillac Escalade</h5>

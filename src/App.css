@@ -79,6 +79,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 2px solid red;
 }
 
 .heading-container {
@@ -134,10 +135,15 @@
 }
 
 .slides {
-  border: 2px solid black;
+  /* border: 2px solid black;
   width: 17rem;
   height: 17rem;
   border-radius: 50%;
   background-color: #efefed;
-  z-index: 8;
+  z-index: 8; */
+}
+
+.card {
+  border-radius: 50%;
+  border: none;
 }
