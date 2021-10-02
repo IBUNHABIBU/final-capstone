@@ -146,3 +146,8 @@
   border-radius: 50%;
   border: none;
 }
+
+.card img {
+  width: 200px;
+  height: 200px;
+}
