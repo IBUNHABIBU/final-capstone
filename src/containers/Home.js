@@ -43,7 +43,27 @@ const Home = () => {
           </div>
           <div className="slides">
             <div className="card">
-              <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
+              <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-CTS/2785/1560319395535/front-left-side-47.jpg?impolicy=resize&imwidth=480" className="card-img-top" alt="cadillac" />
+              <div className="card-body">
+                <h5 className="card-title">Cadillac xt5</h5>
+                <p className="card-text">v8</p>
+                <Link to="/cars/id" className="btn btn-primary">Go somewhere</Link>
+              </div>
+            </div>
+          </div>
+          <div className="slides">
+            <div className="card">
+              <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-STS/4449/1560320072554/front-left-side-47.jpg?tr=w-456" className="card-img-top" alt="cadillac" />
+              <div className="card-body">
+                <h5 className="card-title">Cadillac sts</h5>
+                <p className="card-text">v8</p>
+                <Link to="/cars/id" className="btn btn-primary">Go somewhere</Link>
+              </div>
+            </div>
+          </div>
+          <div className="slides">
+            <div className="card">
+              <img src="https://www.ccarprice.com/products/Cadillac-CTS-2.0L-Turbo-2019.png" className="card-img-top" alt="cadillac" />
               <div className="card-body">
                 <h5 className="card-title">Cadillac Escalade</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cardcontent.</p>
@@ -53,9 +73,9 @@ const Home = () => {
           </div>
           <div className="slides">
             <div className="card">
-              <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
+              <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-CTS/2785/1560319395535/front-left-side-47.jpg?impolicy=resize&imwidth=480" className="card-img-top" alt="cadillac" />
               <div className="card-body">
-                <h5 className="card-title">Cadillac Escalade</h5>
+                <h5 className="card-title">Cadillac cts</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cardcontent.</p>
                 <Link to="/cars/id" className="btn btn-primary">Go somewhere</Link>
               </div>
@@ -63,27 +83,7 @@ const Home = () => {
           </div>
           <div className="slides">
             <div className="card">
-              <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
-              <div className="card-body">
-                <h5 className="card-title">Cadillac Escalade</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cardcontent.</p>
-                <Link to="/cars/id" className="btn btn-primary">Go somewhere</Link>
-              </div>
-            </div>
-          </div>
-          <div className="slides">
-            <div className="card">
-              <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
-              <div className="card-body">
-                <h5 className="card-title">Cadillac Escalade</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cardcontent.</p>
-                <Link to="/cars/id" className="btn btn-primary">Go somewhere</Link>
-              </div>
-            </div>
-          </div>
-          <div className="slides">
-            <div className="card">
-              <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Cadillac/Cadillac-Escalade/3027/1560320021838/front-left-side-47.jpg?tr=w-360" className="card-img-top" alt="cadillac" />
+              <img src="" className="card-img-top" alt="cadillac" />
               <div className="card-body">
                 <h5 className="card-title">Cadillac Escalade</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cardcontent.</p>
