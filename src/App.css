@@ -4,6 +4,11 @@
   --white: #ffffff;
 }
 
+body {
+ font-family: 'Nanum Gothic', sans-serif;
+ background-color: #fbfbfb;
+}
+
 .App {
   text-align: center;
 }
@@ -157,4 +162,8 @@
 .details-image {
   width: 40rem;
   border: 2px solid red;
+}
+
+.details-header {
+  text-align: right;
 }

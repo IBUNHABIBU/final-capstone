@@ -7,7 +7,7 @@ const CarDetails = () => (
     </div>
     <div className="details-section">
       <div className="details-header">
-        <h1>Cadillac Escallade</h1>
+        <p className="lead">Cadillac Escallade</p>
         <p>Rent for low price</p>
       </div>
       <div className="details">
@@ -25,9 +25,7 @@ const CarDetails = () => (
             <tr>
               <td>@twitter</td>
             </tr>
-            <tr>
-              <td>@twitter</td>
-            </tr>
+
           </tbody>
         </table>
       </div>
