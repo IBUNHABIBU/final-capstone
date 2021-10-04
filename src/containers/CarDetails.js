@@ -5,13 +5,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { checkLoginStatus } from '../redux/actions/fetch';
 
 const CarDetails = () => {
-  const userLogin = useSelector((state) => state.register);
   const { id } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(checkLoginStatus());
-    const response = axios.get(`http://localhost:3001/api/v1/cars/${id}`);
-    console.log('useEfect', id, userLogin, response);
+    axios.get(`http://localhost:3001/api/v1/cars/${id}`)
+    .then(res => {
+      console.log(res, useSelector);
+    });
   }, [id]);
   return (
     <div className="details-container">
