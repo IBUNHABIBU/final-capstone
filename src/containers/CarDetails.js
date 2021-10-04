@@ -27,7 +27,6 @@ const CarDetails = () => {
             <li>{color}</li>
             <li>{engine}</li>
             <li>{year}</li>
-            <li>gh</li>
           </ul>
         </div>
       </div>

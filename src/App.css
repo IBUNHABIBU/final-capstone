@@ -177,7 +177,9 @@ tr {
   list-style: none;
   border-bottom: 1px solid black;
   text-align: left;
-  padding: 2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+
 }
 
 .details ul li:nth-child(2n+1) {
