@@ -1,7 +1,6 @@
 import actionTypes from '../constants';
 
 const initialState = {
-
 };
 
 const detailsReducer = (state = initialState, { type, payload }) => {

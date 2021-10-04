@@ -20,7 +20,7 @@ export const checkLoginStatus = () => async (dispatch) => {
 };
 
 export const fetchDetails = (id) => async (dispatch) => {
-  const response = await axios.get(`http://localhost:3001/api/v1/cars${id}`);
+  const response = await axios.get(`http://localhost:3001/api/v1/cars/${id}`);
   dispatch(selectCar(response.data));
 };
 
