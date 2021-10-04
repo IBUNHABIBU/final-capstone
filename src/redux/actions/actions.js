@@ -1,5 +1,4 @@
 import actionTypes from '../constants/index';
-import actionTypes from './../constants/index';
 
 export const setUser = (user) => ({
   type: actionTypes.SET_USER,
@@ -19,4 +18,4 @@ export const bookCar = (car) => ({
 export const selectCar = (car) => ({
   type: actionTypes.SELECT_CAR,
   payload: car,
-})
+});

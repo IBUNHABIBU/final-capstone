@@ -1,18 +1,15 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
-import { checkLoginStatus } from '../redux/actions/fetch';
+import { fetchDetails } from '../redux/actions/fetch';
 
 const CarDetails = () => {
+  const det = useSelector(state => state.detail);
+  console.log(det);
   const { id } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(checkLoginStatus());
-    axios.get(`http://localhost:3001/api/v1/cars/${id}`)
-      .then((res) => {
-        console.log(res, useSelector);
-      });
+    dispatch(fetchDetails(id));
   }, [id]);
   return (
     <div className="details-container">

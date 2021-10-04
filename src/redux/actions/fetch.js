@@ -1,5 +1,7 @@
 import axios from 'axios';
-import { addCar, setUser, bookCar } from './actions';
+import {
+  addCar, setUser, bookCar, selectCar,
+} from './actions';
 
 export const fetchCars = () => async (dispatch) => {
   const response = await axios.get('http://localhost:3001/api/v1/cars');
@@ -19,8 +21,8 @@ export const checkLoginStatus = () => async (dispatch) => {
 
 export const fetchDetails = (id) => async (dispatch) => {
   const response = await axios.get(`http://localhost:3001/api/v1/cars${id}`);
-  dispatch()
-}
+  dispatch(selectCar(response.data));
+};
 
 export const createCarBooking = () => async (dispatch) => {
   const response = await axios.get('http://localhost:3001/api/v1/bookings', {
