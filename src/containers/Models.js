@@ -7,7 +7,6 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { createCar, fetchCars } from '../redux/actions/fetch';
 import CarList from './CarList';
-// import { addCar } from '../redux/actions/actions';
 
 const Models = () => {
   const dispatch = useDispatch();
@@ -15,9 +14,6 @@ const Models = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
 
-  const handleFiChange = (event) => {
-    console.log(event.target);
-  };
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/cars', {
       car: {
@@ -30,12 +26,9 @@ const Models = () => {
       if (response.data.status === 'created') {
         dispatch(createCar(response.data));
         history.push('/models');
-        console.log('respone', response.data);
       } else {
         throw Error('could not fetch the data');
       }
-    }).catch((error) => {
-      console.log(error.message);
     });
   };
   useEffect(() => {
@@ -47,8 +40,6 @@ const Models = () => {
         userLogin.logged_in ? [
           userLogin.details.admin ? [
             <div>
-              {/* <Link to="/newcar">Add new car</Link> */}
-              <br />
               <Link to="/cars">see cars</Link>
               <div className="container mt-5">
                 <button

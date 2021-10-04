@@ -8,7 +8,7 @@ const reducers = combineReducers({
   register: signUpReducer,
   car: carReducer,
   booking: bookingReducer,
-  detail: detailsReducer,,
+  detail: detailsReducer,
 });
 
 export default reducers;
