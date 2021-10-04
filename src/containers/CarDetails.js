@@ -1,6 +1,17 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router';
 
-const CarDetails = () => (
+const CarDetails = () => {
+
+  const {id} = useParams();
+  useEffect(() => {
+   axios.get(`http://localhost:3001/api/v1/cars/${id}`)
+   .then(res => {
+     console.log(res);
+   })
+  }, [id])
+  return(
   <div className="details-container">
     <div className="details-image">
       <img src="" alt="" />
@@ -20,6 +31,6 @@ const CarDetails = () => (
       </div>
     </div>
   </div>
-);
+)};
 
 export default CarDetails;
