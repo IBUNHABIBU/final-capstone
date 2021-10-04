@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchDetails } from '../redux/actions/fetch';
 
 const CarDetails = () => {
-  const det = useSelector(state => state.detail);
+  const det = useSelector((state) => state.detail);
   console.log(det);
   const { id } = useParams();
   const dispatch = useDispatch();
