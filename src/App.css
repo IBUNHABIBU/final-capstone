@@ -2,6 +2,7 @@
   --app-color: #99c210;
   --hover-color: #849e2e;
   --white: #ffffff;
+  --shade: #eeeeee;
 }
 
 body {
@@ -166,4 +167,15 @@ body {
 
 .details-header {
   text-align: right;
+}
+
+tr {
+  text-align: left;
+}
+
+.details ul li {
+  list-style: none;
+  border-bottom: 1px solid black;
+  text-align: left;
+  padding: 2rem;
 }
