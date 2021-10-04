@@ -4,13 +4,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchDetails } from '../redux/actions/fetch';
 
 const CarDetails = () => {
-  const det = useSelector((state) => state.detail);
-  console.log(det);
+  const details = useSelector((state) => state.detail);
   const { id } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchDetails(id));
   }, [id]);
+
+  const { color, engine, year } = details;
   return (
     <div className="details-container">
       <div className="details-image">
@@ -23,9 +24,9 @@ const CarDetails = () => {
         </div>
         <div className="details">
           <ul>
-            <li>ab</li>
-            <li>cd</li>
-            <li>ef</li>
+            <li>{color}</li>
+            <li>{engine}</li>
+            <li>{year}</li>
             <li>gh</li>
           </ul>
         </div>
