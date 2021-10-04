@@ -10,9 +10,9 @@ const CarDetails = () => {
   useEffect(() => {
     dispatch(checkLoginStatus());
     axios.get(`http://localhost:3001/api/v1/cars/${id}`)
-    .then(res => {
-      console.log(res, useSelector);
-    });
+      .then((res) => {
+        console.log(res, useSelector);
+      });
   }, [id]);
   return (
     <div className="details-container">
