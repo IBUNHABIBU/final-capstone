@@ -17,8 +17,9 @@ export const checkLoginStatus = () => async (dispatch) => {
   dispatch(setUser(response.data));
 };
 
-export const fetchDetails = () => async (dispatch) => {
-  const response = await axios.get(``)
+export const fetchDetails = (id) => async (dispatch) => {
+  const response = await axios.get(`http://localhost:3001/api/v1/cars${id}`);
+  dispatch()
 }
 
 export const createCarBooking = () => async (dispatch) => {
