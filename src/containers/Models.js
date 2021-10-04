@@ -82,7 +82,7 @@ const Models = () => {
                             <label htmlFor="floatingPassword">Year</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
-                            <input type="text" name="image" {...register('image', { required: true })} className="form-control" id="floatingInputImage" placeholder="Enter engine type" accept="image/*" onChange={handleFiChange} />
+                            <input type="text" name="image" {...register('image', { required: true })} className="form-control" id="floatingInputImage" placeholder="Enter engine type" accept="image/*" />
                             <label htmlFor="floatingInputImage">Image</label>
                           </div>
                           <div className="form-floating mb-3 col-10">
