@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchDetails } from '../redux/actions/fetch';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
   const { id } = useParams();
-  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchDetails(id));
   }, [id]);
@@ -75,38 +76,38 @@ const CarDetails = () => {
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="close" />
               </div>
               <div className="modal-body">
-              <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <div className="form-floating mb-2 col-3">
-          <input
-            type="text"
-            className="form-control"
-            name="name"
-            {...register('name')}
-            id="floatingInput"
-            placeholder="Car color"
-          />
-          <label htmlFor="floatingInput">Name</label>
-        </div>
-        <div className="form-floating mb-2 col-3">
-          <input type="text" name="model" {...register('model')} className="form-control" id="floatingInputEmail" placeholder="Enter model type" />
-          <label htmlFor="floatingInputEmail">model</label>
-        </div>
-        <div className="form-floating mb-2 col-3">
-          <input type="datetime-local" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup date" />
-          <label htmlFor="floatingInputEmail">Pickup Date</label>
-        </div>
-        <div className="form-floating mb-2 col-3">
-          <input type="datetime-local" name="return" {...register('return')} className="form-control" id="floatingInputEmail" placeholder="Enter return date" />
-          <label htmlFor="floatingInputEmail">Return Date</label>
-        </div>
-        <div className="form-floating mb-2 col-3">
-          <input type="text" name="location" {...register('location')} className="form-control" id="floatingPassword" placeholder="Enter location" />
-          <label htmlFor="floatingPassword">Location</label>
-        </div>
-        <div className="form-floating mb-3 col-3">
-          <button type="submit" className="btn btn-primary col-12">Book ride</button>
-        </div>
-      </form>
+                <form className="form" onSubmit={handleSubmit(onSubmit)}>
+                  <div className="form-floating mb-2 col-3">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="name"
+                      {...register('name')}
+                      id="floatingInput"
+                      placeholder="Car color"
+                    />
+                    <label htmlFor="floatingInput">Name</label>
+                  </div>
+                  <div className="form-floating mb-2 col-3">
+                    <input type="text" name="model" {...register('model')} className="form-control" id="floatingInputEmail" placeholder="Enter model type" />
+                    <label htmlFor="floatingInputEmail">model</label>
+                  </div>
+                  <div className="form-floating mb-2 col-3">
+                    <input type="datetime-local" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup date" />
+                    <label htmlFor="floatingInputEmail">Pickup Date</label>
+                  </div>
+                  <div className="form-floating mb-2 col-3">
+                    <input type="datetime-local" name="return" {...register('return')} className="form-control" id="floatingInputEmail" placeholder="Enter return date" />
+                    <label htmlFor="floatingInputEmail">Return Date</label>
+                  </div>
+                  <div className="form-floating mb-2 col-3">
+                    <input type="text" name="location" {...register('location')} className="form-control" id="floatingPassword" placeholder="Enter location" />
+                    <label htmlFor="floatingPassword">Location</label>
+                  </div>
+                  <div className="form-floating mb-3 col-3">
+                    <button type="submit" className="btn btn-primary col-12">Book ride</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
