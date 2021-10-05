@@ -20,14 +20,15 @@ const Models = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
-        image: data.image,
+        image: data.image.FileList,
       },
     }, { withCredentials: true }).then((response) => {
+      console.log(data);
       if (response.data.status === 'created') {
         dispatch(createCar(response.data));
         history.push('/models');
       } else {
-        throw Error('could not fetch the data');
+        console.log('error', response.data.errors);
       }
     });
   };
@@ -82,14 +83,16 @@ const Models = () => {
                             <label htmlFor="floatingPassword">Year</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
-                            <input type="text"
-                            name="file" 
-                            {...register('image', { required: true })}
-                            className="form-control"
-                            id="floatingInputImage"
-                            placeholder="Enter engine type"
-                            accept="image/*" />
-                            <label htmlFor="floatingInputImage">Image</label>
+                            <input
+                              type="file"
+                              name="image"
+                              {...register('image', { required: true })}
+                              className="form-control"
+                              id="floatingInputImage"
+                              placeholder="Enter engine type"
+                              accept="image/png, image/jpeg"
+                            />
+                            <label htmlFor="floatingInputImage">Enter image</label>
                           </div>
                           <div className="form-floating mb-3 col-10">
                             <button type="submit" className="btn btn-primary col-10">Add Car</button>
