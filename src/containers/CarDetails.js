@@ -39,6 +39,7 @@ const CarDetails = () => {
             </li>
           </ul>
         </div>
+        <button type="button" className="btn btn-primary">Book a ride</button>
       </div>
     </div>
   );

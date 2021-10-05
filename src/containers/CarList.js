@@ -35,12 +35,9 @@ const CarList = () => {
                           <div className="card-body">
                             <div className="card-details">
                               <h5 className="card-title">
-
                                 {color}
                               </h5>
                               <p className="card-text">
-
-                                {' '}
                                 {engine}
                               </p>
                             </div>
