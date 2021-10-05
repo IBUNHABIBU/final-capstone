@@ -18,6 +18,8 @@ const CarForm = () => {
         engine: data.engine,
         year: data.year,
         mainImage: data.mainImage,
+        model: data.model,
+        price: data.price,
       },
     }, { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
@@ -29,6 +31,17 @@ const CarForm = () => {
   return (
     <div className="signup container">
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-floating mb-2 col-3">
+          <input
+            type="text"
+            className="form-control"
+            name="model"
+            {...register('model')}
+            id="floatingInput"
+            placeholder="Car model"
+          />
+          <label htmlFor="floatingInput">Model</label>
+        </div>
         <div className="form-floating mb-2 col-3">
           <input
             type="text"
@@ -39,6 +52,17 @@ const CarForm = () => {
             placeholder="Car color"
           />
           <label htmlFor="floatingInput">Color</label>
+        </div>
+        <div className="form-floating mb-2 col-3">
+          <input
+            type="text"
+            className="form-control"
+            name="price"
+            {...register('price')}
+            id="floatingInput"
+            placeholder="Car price"
+          />
+          <label htmlFor="floatingInput">Price</label>
         </div>
         <div className="form-floating mb-2 col-3">
           <input type="text" name="engine" {...register('engine')} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />

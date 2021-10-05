@@ -185,7 +185,7 @@ tr {
   background-color: var(--shade);
 }
 
-.details-wrap{
+.card-details{
   display: flex;
   justify-content: space-around;
 }
