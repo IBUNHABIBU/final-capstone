@@ -189,3 +189,8 @@ tr {
   display: flex;
   justify-content: space-around;
 }
+
+.car-container {
+  border: 1px solid var(--shade);
+  /* background-color: red; */
+}
