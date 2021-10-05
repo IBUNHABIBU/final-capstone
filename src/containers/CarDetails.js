@@ -24,9 +24,19 @@ const CarDetails = () => {
         </div>
         <div className="details">
           <ul>
-            <li>{color}</li>
-            <li>{engine}</li>
-            <li>{year}</li>
+            <li>
+              {' '}
+              <span className="d-span bold">Color:</span>
+              {color}
+            </li>
+            <li>
+              <span className="d-span bold">Engine:</span>
+              {engine}
+            </li>
+            <li>
+              <span className="d-span bold">Engine:</span>
+              {year}
+            </li>
           </ul>
         </div>
       </div>
