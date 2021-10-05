@@ -73,12 +73,15 @@ const CarForm = () => {
           <label htmlFor="floatingPassword">Year</label>
         </div>
         <div className="form-floating mb-2 col-3">
-          <input type="file"
-          name="image" accept="image/png, image/jpeg"
-          {...register('image')}
-          className="form-control"
-          id="floatingInputEmail"
-          placeholder="Enter engine type" />
+          <input
+            type="file"
+            name="image"
+            {...register('image')}
+            className="form-control"
+            id="floatingInputEmail"
+            placeholder="Enter image"
+            accept="image/*"
+          />
           <label htmlFor="floatingInputEmail">Image</label>
         </div>
         <div className="form-floating mb-3 col-3">
