@@ -1,12 +1,16 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDetails } from '../redux/actions/fetch';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { createCarBooking, fetchDetails } from '../redux/actions/fetch';
 
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
+  const dispatch = useDispatch();
   const { id } = useParams();
   useEffect(() => {
     dispatch(fetchDetails(id));
@@ -14,7 +18,6 @@ const CarDetails = () => {
 
   const { color, engine, year } = details;
   const { register, handleSubmit } = useForm();
-  const dispatch = useDispatch();
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/bookings', {
       booking: {
