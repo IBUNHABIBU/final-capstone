@@ -14,6 +14,20 @@ const Profile = () => {
       <th scope="col">Handle</th>
     </tr>
   </thead>
+  {
+   bookings.map(item => {
+    return (
+<tbody>
+    <tr>
+      <th scope="row">{item.model}</th>
+      <td>{item.name}</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    </tbody>
+    )
+   })
+  }
   
    </table>
   </div>
