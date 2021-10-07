@@ -16,7 +16,9 @@ const CarDetails = () => {
     dispatch(fetchDetails(id));
   }, [id]);
 
-  const { color, engine, year, model, price } = details;
+  const {
+    color, engine, year, model, price,
+  } = details;
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/bookings', {
@@ -42,7 +44,7 @@ const CarDetails = () => {
       <div className="details-section">
         <div className="details-header">
           <p className="display-6">Cadillac Escallade</p>
-          <p className="lead">Rent for low price</p>
+          <p className="lead">Price: {price}</p>
         </div>
         <div className="details">
           <ul>
@@ -85,7 +87,7 @@ const CarDetails = () => {
                       type="text"
                       className="form-control"
                       name="name"
-                      value="Admin"
+                      value={model}
                       {...register('name')}
                       id="floatingInput"
                       placeholder="Car color"
@@ -93,7 +95,7 @@ const CarDetails = () => {
                     <label htmlFor="floatingInput">Name</label>
                   </div>
                   <div className="form-floating mb-2 col-8">
-                    <input type="text" name="model" {...register('model')} className="form-control" id="floatingInputEmail" placeholder="Enter model type" />
+                    <input type="text" name="model" value={model} {...register('model')} className="form-control" id="floatingInputEmail" placeholder="Enter model type" />
                     <label htmlFor="floatingInputEmail">model</label>
                   </div>
                   <div className="form-floating mb-2 col-8">

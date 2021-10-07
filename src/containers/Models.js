@@ -22,7 +22,7 @@ const Models = () => {
         year: data.year,
         image: data.image[0].name,
         model: data.model,
-        price: data.price
+        price: data.price,
       },
     }, { withCredentials: true })
       .then((response) => {
