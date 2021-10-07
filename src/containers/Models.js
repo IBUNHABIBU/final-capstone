@@ -97,25 +97,23 @@ const Models = () => {
                           </div>
                           <div className="form-floating mb-2 col-10">
                             <input
-                              type="file"
-                              name="image"
-                              {...register('image', { required: true })}
+                              type="text"
+                              name="model"
+                              {...register('model', { required: true })}
                               className="form-control"
                               id="floatingInputImage"
-                              placeholder="Enter engine type"
-                              accept="image/png, image/jpeg"
+                              placeholder="Enter model"
                             />
                             <label htmlFor="floatingInputImage">Enter image</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
                             <input
-                              type=""
-                              name="image"
-                              {...register('image', { required: true })}
+                              type="text"
+                              name="price"
+                              {...register('price', { required: true })}
                               className="form-control"
-                              id="floatingInputImage"
-                              placeholder="Enter engine type"
-                              accept="image/png, image/jpeg"
+                              id="floatingInputprice"
+                              placeholder="Enter the price"
                             />
                             <label htmlFor="floatingInputImage">Enter image</label>
                           </div>
