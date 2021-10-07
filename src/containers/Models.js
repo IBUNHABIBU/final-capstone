@@ -21,6 +21,8 @@ const Models = () => {
         engine: data.engine,
         year: data.year,
         image: data.image[0].name,
+        model: data.model,
+        price: data.price
       },
     }, { withCredentials: true })
       .then((response) => {
@@ -84,6 +86,30 @@ const Models = () => {
                           <div className="form-floating mb-2 col-10">
                             <input
                               type="file"
+                              name="image"
+                              {...register('image', { required: true })}
+                              className="form-control"
+                              id="floatingInputImage"
+                              placeholder="Enter engine type"
+                              accept="image/png, image/jpeg"
+                            />
+                            <label htmlFor="floatingInputImage">Enter image</label>
+                          </div>
+                          <div className="form-floating mb-2 col-10">
+                            <input
+                              type="file"
+                              name="image"
+                              {...register('image', { required: true })}
+                              className="form-control"
+                              id="floatingInputImage"
+                              placeholder="Enter engine type"
+                              accept="image/png, image/jpeg"
+                            />
+                            <label htmlFor="floatingInputImage">Enter image</label>
+                          </div>
+                          <div className="form-floating mb-2 col-10">
+                            <input
+                              type=""
                               name="image"
                               {...register('image', { required: true })}
                               className="form-control"
