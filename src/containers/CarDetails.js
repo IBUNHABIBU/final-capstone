@@ -16,7 +16,7 @@ const CarDetails = () => {
     dispatch(fetchDetails(id));
   }, [id]);
 
-  const { color, engine, year } = details;
+  const { color, engine, year, model, price } = details;
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/bookings', {
@@ -85,6 +85,7 @@ const CarDetails = () => {
                       type="text"
                       className="form-control"
                       name="name"
+                      value="Admin"
                       {...register('name')}
                       id="floatingInput"
                       placeholder="Car color"
