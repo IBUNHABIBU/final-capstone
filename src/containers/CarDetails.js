@@ -44,7 +44,10 @@ const CarDetails = () => {
       <div className="details-section">
         <div className="details-header">
           <p className="display-6">Cadillac Escallade</p>
-          <p className="lead">Price: {price}</p>
+          <p className="lead">
+            Price:
+            {price}
+          </p>
         </div>
         <div className="details">
           <ul>
