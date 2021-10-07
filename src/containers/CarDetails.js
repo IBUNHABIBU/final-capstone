@@ -80,7 +80,7 @@ const CarDetails = () => {
               </div>
               <div className="modal-body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                  <div className="form-floating mb-2 col-3">
+                  <div className="form-floating mb-2 col-8">
                     <input
                       type="text"
                       className="form-control"
@@ -91,23 +91,23 @@ const CarDetails = () => {
                     />
                     <label htmlFor="floatingInput">Name</label>
                   </div>
-                  <div className="form-floating mb-2 col-3">
+                  <div className="form-floating mb-2 col-8">
                     <input type="text" name="model" {...register('model')} className="form-control" id="floatingInputEmail" placeholder="Enter model type" />
                     <label htmlFor="floatingInputEmail">model</label>
                   </div>
-                  <div className="form-floating mb-2 col-3">
+                  <div className="form-floating mb-2 col-8">
                     <input type="datetime-local" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup date" />
                     <label htmlFor="floatingInputEmail">Pickup Date</label>
                   </div>
-                  <div className="form-floating mb-2 col-3">
+                  <div className="form-floating mb-2 col-8">
                     <input type="datetime-local" name="return" {...register('return')} className="form-control" id="floatingInputEmail" placeholder="Enter return date" />
                     <label htmlFor="floatingInputEmail">Return Date</label>
                   </div>
-                  <div className="form-floating mb-2 col-3">
+                  <div className="form-floating mb-2 col-8">
                     <input type="text" name="location" {...register('location')} className="form-control" id="floatingPassword" placeholder="Enter location" />
                     <label htmlFor="floatingPassword">Location</label>
                   </div>
-                  <div className="form-floating mb-3 col-3">
+                  <div className="form-floating mb-3 col-6">
                     <button type="submit" className="btn btn-primary col-12">Book ride</button>
                   </div>
                 </form>

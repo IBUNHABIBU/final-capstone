@@ -4,8 +4,6 @@ import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-// import { Link } from 'react-router-dom';
-// import { addCar } from '../redux/actions/actions';
 import { createCar } from '../redux/actions/fetch';
 
 const CarForm = () => {

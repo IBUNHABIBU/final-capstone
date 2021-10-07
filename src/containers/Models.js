@@ -20,17 +20,16 @@ const Models = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
-        image: data.image.FileList,
+        image: data.image[0].name,
       },
-    }, { withCredentials: true }).then((response) => {
-      console.log(data);
-      if (response.data.status === 'created') {
+    }, { withCredentials: true })
+      .then((response) => {
+        console.log(response.data);
         dispatch(createCar(response.data));
         history.push('/models');
-      } else {
-        console.log('error', response.data.errors);
-      }
-    });
+      }).catch((error) => {
+        console.log('error', error);
+      });
   };
   useEffect(() => {
     dispatch(fetchCars());
