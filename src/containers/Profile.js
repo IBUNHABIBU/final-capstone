@@ -16,7 +16,7 @@ const Profile = () => {
   </thead>
   {
    bookings.map(item => {
-    const { name, pickup, return, location} = item;
+    const { name, pickup, return_date, location} = item;
     return (
 <tbody>
     <tr>
