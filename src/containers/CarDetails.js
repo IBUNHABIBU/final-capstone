@@ -20,7 +20,7 @@ const CarDetails = () => {
   const {
     color, engine, year, model, price,
   } = details;
-  const { name } = user;
+  const { name } = user.details;
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/bookings', {
@@ -77,6 +77,22 @@ const CarDetails = () => {
         >
           Book a ride
         </button>
+        <button
+          type="button"
+          className="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#myModal"
+        >
+          Book a ride
+        </button>
+        <button
+          type="button"
+          className="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#myModal"
+        >
+          Book a ride
+        </button>
         <div className="modal" id="myModal">
           <div className="modal-dialog">
             <div className="modal-content">
@@ -87,13 +103,14 @@ const CarDetails = () => {
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="close" />
               </div>
               <div className="modal-body">
+                {console.log(name, model)}
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-floating mb-2 col-8">
                     <input
                       type="text"
                       className="form-control"
                       name="name"
-                      value={model}
+                      value={name}
                       {...register('name')}
                       id="floatingInput"
                       placeholder="Car color"
