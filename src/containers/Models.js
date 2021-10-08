@@ -98,8 +98,8 @@ const Models = () => {
                           <div className="form-floating mb-2 col-10">
                             <input
                               type="text"
-                              name="model"
-                              {...register('model', { required: true })}
+                              name="car_model"
+                              {...register('car_model', { required: true })}
                               className="form-control"
                               id="floatingInputImage"
                               placeholder="Enter model"
