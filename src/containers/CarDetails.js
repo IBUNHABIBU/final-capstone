@@ -91,7 +91,8 @@ const CarDetails = () => {
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >
-          Book a ride
+          <i className="fas fa-trash-alt">Book a ride</i>
+
         </button>
         <div className="modal" id="myModal">
           <div className="modal-dialog">
