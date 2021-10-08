@@ -11,7 +11,7 @@ const Signup = () => {
   const userLogin = useSelector((state) => state.register);
   const history = useHistory();
   if (userLogin.logged_in) {
-    history.push('/booking');
+    history.push('/models');
   }
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();

@@ -93,7 +93,7 @@ const Models = () => {
                               placeholder="Enter engine type"
                               accept="image/png, image/jpeg"
                             />
-                            <label htmlFor="floatingInputImage">Enter image</label>
+                            <label htmlFor="floatingInputImage">Image</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
                             <input
@@ -115,7 +115,7 @@ const Models = () => {
                               id="floatingInputprice"
                               placeholder="Enter the price"
                             />
-                            <label htmlFor="floatingInputImage">Enter image</label>
+                            <label htmlFor="floatingInputImage">Price</label>
                           </div>
                           <div className="form-floating mb-3 col-10">
                             <button type="submit" className="btn btn-primary col-10">Add Car</button>
