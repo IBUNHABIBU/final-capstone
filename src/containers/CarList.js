@@ -7,6 +7,7 @@ import Loading from '../components/Loading';
 const CarList = () => {
   const dispatch = useDispatch();
   const cars = useSelector((state) => state.car);
+  // const userLogin = useSelector((state) => state.register);
 
   useEffect(() => {
     dispatch(fetchCars());
@@ -35,12 +36,9 @@ const CarList = () => {
                           <div className="card-body">
                             <div className="card-details">
                               <h5 className="card-title">
-
                                 {color}
                               </h5>
                               <p className="card-text">
-
-                                {' '}
                                 {engine}
                               </p>
                             </div>

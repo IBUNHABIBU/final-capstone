@@ -4,8 +4,6 @@ import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-// import { Link } from 'react-router-dom';
-// import { addCar } from '../redux/actions/actions';
 import { createCar } from '../redux/actions/fetch';
 
 const CarForm = () => {
@@ -73,7 +71,19 @@ const CarForm = () => {
           <label htmlFor="floatingPassword">Year</label>
         </div>
         <div className="form-floating mb-2 col-3">
+<<<<<<< HEAD
           <input type="file" name="image" {...register('image')} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" accept="image/" />
+=======
+          <input
+            type="file"
+            name="image"
+            {...register('image')}
+            className="form-control"
+            id="floatingInputEmail"
+            placeholder="Enter image"
+            accept="image/*"
+          />
+>>>>>>> 07dfc6457d8a672e3e6974710ef0d6ac0f077c99
           <label htmlFor="floatingInputEmail">Image</label>
         </div>
         <div className="form-floating mb-3 col-3">

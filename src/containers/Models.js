@@ -20,16 +20,18 @@ const Models = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
-        image: data.image,
+        image: data.image[0].name,
+        model: data.model,
+        price: data.price,
       },
-    }, { withCredentials: true }).then((response) => {
-      if (response.data.status === 'created') {
+    }, { withCredentials: true })
+      .then((response) => {
+        console.log(response.data);
         dispatch(createCar(response.data));
         history.push('/models');
-      } else {
-        throw Error('could not fetch the data');
-      }
-    });
+      }).catch((error) => {
+        console.log('error', error);
+      });
   };
   useEffect(() => {
     dispatch(fetchCars());
@@ -82,8 +84,38 @@ const Models = () => {
                             <label htmlFor="floatingPassword">Year</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
-                            <input type="text" name="image" {...register('image', { required: true })} className="form-control" id="floatingInputImage" placeholder="Enter engine type" accept="image/*" />
-                            <label htmlFor="floatingInputImage">Image</label>
+                            <input
+                              type="file"
+                              name="image"
+                              {...register('image', { required: true })}
+                              className="form-control"
+                              id="floatingInputImage"
+                              placeholder="Enter engine type"
+                              accept="image/png, image/jpeg"
+                            />
+                            <label htmlFor="floatingInputImage">Enter image</label>
+                          </div>
+                          <div className="form-floating mb-2 col-10">
+                            <input
+                              type="text"
+                              name="model"
+                              {...register('model', { required: true })}
+                              className="form-control"
+                              id="floatingInputImage"
+                              placeholder="Enter model"
+                            />
+                            <label htmlFor="floatingInputImage">Enter image</label>
+                          </div>
+                          <div className="form-floating mb-2 col-10">
+                            <input
+                              type="text"
+                              name="price"
+                              {...register('price', { required: true })}
+                              className="form-control"
+                              id="floatingInputprice"
+                              placeholder="Enter the price"
+                            />
+                            <label htmlFor="floatingInputImage">Enter image</label>
                           </div>
                           <div className="form-floating mb-3 col-10">
                             <button type="submit" className="btn btn-primary col-10">Add Car</button>
