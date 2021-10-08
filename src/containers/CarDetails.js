@@ -10,6 +10,7 @@ import { createCarBooking, fetchDetails } from '../redux/actions/fetch';
 
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
+  const user = useSelector((state) => state.register);
   const dispatch = useDispatch();
   const { id } = useParams();
   useEffect(() => {
@@ -19,6 +20,7 @@ const CarDetails = () => {
   const {
     color, engine, year, model, price,
   } = details;
+  const { name } = user;
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/bookings', {
@@ -26,7 +28,7 @@ const CarDetails = () => {
         name: data.name,
         model: data.model,
         pickup: data.pickup,
-        return: data.return,
+        return_date: data.return_date,
         location: data.location,
       },
     },
