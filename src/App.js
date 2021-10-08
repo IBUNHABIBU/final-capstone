@@ -12,7 +12,6 @@ import CarForm from './containers/CarForm';
 import { checkLoginStatus } from './redux/actions/fetch';
 import CarList from './containers/CarList';
 import CarDetails from './containers/CarDetails';
-import Lifestyle from './containers/Lifestyle';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -34,7 +33,6 @@ const App = () => {
           <Route path="/newcar" exact component={CarForm} />
           <Route path="/cars" exact component={CarList} />
           <Route path="/cars/:id" exact component={CarDetails} />
-          <Route path="/lifestyle" exact component={Lifestyle} />
         </Switch>
       </Router>
     </div>
