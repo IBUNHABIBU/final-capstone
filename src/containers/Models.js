@@ -20,8 +20,8 @@ const Models = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
-        image: data.image[0].name,
-        model: data.model,
+        image: data.image[0],
+        car_model: data.car_model,
         price: data.price,
       },
     }, { withCredentials: true })
@@ -104,7 +104,7 @@ const Models = () => {
                               id="floatingInputImage"
                               placeholder="Enter model"
                             />
-                            <label htmlFor="floatingInputImage">Enter model</label>
+                            <label htmlFor="floatingInputImage">Model</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
                             <input
