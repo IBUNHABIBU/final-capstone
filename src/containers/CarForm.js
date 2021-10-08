@@ -20,6 +20,7 @@ const CarForm = () => {
         price: data.price,
       },
     }, { withCredentials: true }).then((response) => {
+      console.log(response.data);
       if (response.data.status === 'created') {
         dispatch(createCar(response.data));
       }
@@ -71,9 +72,6 @@ const CarForm = () => {
           <label htmlFor="floatingPassword">Year</label>
         </div>
         <div className="form-floating mb-2 col-3">
-<<<<<<< HEAD
-          <input type="file" name="image" {...register('image')} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" accept="image/" />
-=======
           <input
             type="file"
             name="image"
@@ -83,7 +81,6 @@ const CarForm = () => {
             placeholder="Enter image"
             accept="image/*"
           />
->>>>>>> 07dfc6457d8a672e3e6974710ef0d6ac0f077c99
           <label htmlFor="floatingInputEmail">Image</label>
         </div>
         <div className="form-floating mb-3 col-3">
