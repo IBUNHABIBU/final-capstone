@@ -71,7 +71,7 @@ const CarDetails = () => {
         </div>
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-primary m-1"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >
@@ -79,19 +79,19 @@ const CarDetails = () => {
         </button>
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-primary m-1"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >
-          Book a ride
+          Edit
         </button>
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-secondary"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >
-          <i className="fas fa-trash-alt">Book a ride</i>
+          <i className="fas fa-trash-alt">Delete</i>
 
         </button>
         <div className="modal" id="myModal">
