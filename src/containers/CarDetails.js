@@ -79,7 +79,7 @@ const CarDetails = () => {
         </button>
         <button
           type="button"
-          className="btn btn-primary m-1"
+          className="btn btn-success m-1"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >
@@ -87,7 +87,7 @@ const CarDetails = () => {
         </button>
         <button
           type="button"
-          className="btn btn-secondary"
+          className="btn btn-danger"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >
