@@ -71,7 +71,7 @@ const CarDetails = () => {
         </div>
         <button
           type="button"
-          className="btn btn-primary m-1"
+          className="btn btn-primary m-4"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >
@@ -79,20 +79,11 @@ const CarDetails = () => {
         </button>
         <button
           type="button"
-          className="btn btn-success m-1"
-          data-bs-toggle="modal"
-          data-bs-target="#myModal"
-        >
-          Edit
-        </button>
-        <button
-          type="button"
           className="btn btn-danger"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >
-          <i className="fas fa-trash-alt">Delete</i>
-
+          Delete
         </button>
         <div className="modal" id="myModal">
           <div className="modal-dialog">
