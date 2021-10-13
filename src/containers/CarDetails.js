@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { createCarBooking, fetchDetails } from '../redux/actions/fetch';
+import { createCarBooking, fetchDetails, checkLoginStatus } from '../redux/actions/fetch';
 
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
@@ -14,6 +14,7 @@ const CarDetails = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   useEffect(() => {
+    checkLoginStatus();
     dispatch(fetchDetails(id));
   }, [id]);
 
@@ -46,7 +47,7 @@ const CarDetails = () => {
       </div>
       <div className="details-section">
         <div className="details-header">
-          <p className="display-6">Cadillac Escallade</p>
+          <p className="display-6">{model}</p>
           <p className="lead">
             Price:
             {price}
@@ -56,15 +57,15 @@ const CarDetails = () => {
           <ul>
             <li>
               {' '}
-              <span className="d-span bold">Color:</span>
+              <span className="d-span lead mr-4">Color:</span>
               {color}
             </li>
             <li>
-              <span className="d-span bold">Engine:</span>
+              <span className="d-span lead mr-4">Engine:</span>
               {engine}
             </li>
             <li>
-              <span className="d-span bold">Engine:</span>
+              <span className="d-span lead mr-4">Engine:</span>
               {year}
             </li>
           </ul>
