@@ -6,7 +6,6 @@ import Home from './containers/Home';
 import Login from './containers/Login';
 import Signup from './containers/Signup';
 import Models from './containers/Models';
-import Booking from './containers/Booking';
 import TabButton from './components/TabButton';
 import { checkLoginStatus } from './redux/actions/fetch';
 import CarList from './containers/CarList';
@@ -29,7 +28,6 @@ const App = () => {
           <Route path="/login" exact component={Login} />
           <Route path="/signup" exact component={Signup} />
           <Route path="/models" exact component={Models} />
-          <Route path="/booking" exact component={Booking} />
           <Route path="/cars" exact component={CarList} />
           <Route path="/cars/:id" exact component={CarDetails} />
           <Route path="/appointment/" exact component={Appointment} />
