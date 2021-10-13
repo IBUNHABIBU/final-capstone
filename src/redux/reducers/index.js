@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import signUpReducer from './signUpReducer';
 import carReducer from './carReducer';
-import bookingReducer from './bookinReducer';
+import bookingReducer from './bookingReducer';
 import detailsReducer from './detailsReducer';
 
 const reducers = combineReducers({

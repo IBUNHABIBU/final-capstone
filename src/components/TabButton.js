@@ -32,6 +32,11 @@ const TabButton = () => {
             <button onClick={() => toggleTab(2)} className={tab === 2 ? 'nav-link active' : 'nav-link'} id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Models</button>
 
           </Link>
+          <Link to="/appointment" className="link">
+
+            <button onClick={() => toggleTab(3)} className={tab === 3 ? 'nav-link active' : 'nav-link'} id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Appointment</button>
+
+          </Link>
           <hr />
           {userLoggedIn.logged_in ? (
             <div>

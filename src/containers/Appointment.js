@@ -1,7 +1,8 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Appointment = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const bookings = useSelector((state) => state.booking);
   return (
     <div>
@@ -17,14 +18,14 @@ const Appointment = () => {
         {
    bookings.map((item) => {
      const {
-       name, pickup, return_date, location,
+       name, pickup, location,
      } = item;
      return (
        <tbody>
          <tr>
            <th scope="row">{name}</th>
            <td>{pickup}</td>
-           <td>{return_date}</td>
+           <td> Hello </td>
            <td>{location}</td>
          </tr>
        </tbody>
