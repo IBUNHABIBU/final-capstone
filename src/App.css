@@ -146,11 +146,9 @@ body {
 }
 
 .slides {
-  /* border: 2px solid black; */
   width: 17rem;
   height: 17rem;
   border-radius: 50%;
-  /* background-color: #efefed; */
   z-index: 8;
 }
 
