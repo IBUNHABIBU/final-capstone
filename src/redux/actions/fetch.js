@@ -8,8 +8,9 @@ export const fetchCars = () => async (dispatch) => {
   dispatch(addCar(response.data));
 };
 
-export const fetchBooking = () => {
-
+export const fetchBookings = async (dispatch) => {
+  const response = await axios.get('http://localhost:3001/api/v1/bookings');
+  dispatch(bookCar(response.data));
 };
 
 export const checkLoginStatus = () => async (dispatch) => {

@@ -1,11 +1,12 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchBookings } from '../redux/actions/fetch';
 
 const Appointment = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const bookings = useSelector((state) => state.booking);
   useEffect(() => {
-    dispatch(fetchCars());
+    dispatch(fetchBookings());
   }, []);
   return (
     <div>
