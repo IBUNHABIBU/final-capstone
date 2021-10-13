@@ -12,6 +12,7 @@ const Appointment = () => {
   }, []);
   return (
     <div className="main-table-container car-container">
+      <p className="display-6" align="center">All appointment</p>
       <div className="table-container">
         <table className="table">
           <thead>
