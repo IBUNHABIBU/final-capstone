@@ -4,6 +4,9 @@ import { useSelector } from 'react-redux';
 const Appointment = () => {
   // const dispatch = useDispatch();
   const bookings = useSelector((state) => state.booking);
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, []);
   return (
     <div>
       <table className="table table-dark table-striped">
