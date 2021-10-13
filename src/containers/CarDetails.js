@@ -119,7 +119,7 @@ const CarDetails = () => {
                     <label htmlFor="floatingInputEmail">Pickup Date</label>
                   </div>
                   <div className="form-floating mb-2 col-8">
-                    <input type="datetime-local" name="return" {...register('return')} className="form-control" id="floatingInputEmail" placeholder="Enter return date" />
+                    <input type="datetime-local" name="return_date" {...register('return_date')} className="form-control" id="floatingInputEmail" placeholder="Enter return date" />
                     <label htmlFor="floatingInputEmail">Return Date</label>
                   </div>
                   <div className="form-floating mb-2 col-8">
