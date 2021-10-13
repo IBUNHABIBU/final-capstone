@@ -8,7 +8,6 @@ const Appointment = () => {
   const bookings = useSelector((state) => state.booking);
   useEffect(() => {
     dispatch(fetchBookings());
-    console.log('usef');
   }, []);
   return (
     <div className="main-table-container car-container">

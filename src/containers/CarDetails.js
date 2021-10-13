@@ -36,7 +36,6 @@ const CarDetails = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
-        console.log('created', response.data);
       }
     });
   };
@@ -96,7 +95,6 @@ const CarDetails = () => {
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="close" />
               </div>
               <div className="modal-body">
-                {console.log(name, model)}
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-floating mb-2 col-8">
                     <input
