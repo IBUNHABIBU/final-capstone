@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookings } from '../redux/actions/fetch';
@@ -27,7 +27,7 @@ const Appointment = () => {
           {
          bookings.map((item) => {
            const {
-             name, model, pickup, location,
+             name, model, pickup, return_date, location,
            } = item;
            return (
              <tbody>
@@ -35,7 +35,7 @@ const Appointment = () => {
                  <th>{name}</th>
                  <th>{model}</th>
                  <td>{pickup}</td>
-                 <td> Hello </td>
+                 <td>{return_date}</td>
                  <td>{location}</td>
                </tr>
              </tbody>

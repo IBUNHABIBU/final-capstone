@@ -15,7 +15,6 @@ const Models = () => {
   const history = useHistory();
 
   const onSubmit = (data) => {
-    console.log(data.image[0]);
     axios.post('http://localhost:3001/api/v1/cars', {
       car: {
         color: data.color,
@@ -27,7 +26,6 @@ const Models = () => {
       },
     }, { withCredentials: true })
       .then((response) => {
-        console.log(response.data);
         dispatch(createCar(response.data));
         history.push('/models');
       }).catch((error) => {

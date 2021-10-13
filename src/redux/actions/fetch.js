@@ -26,7 +26,6 @@ export const fetchDetails = (id) => async (dispatch) => {
 };
 
 export const createCarBooking = () => async (dispatch) => {
-  console.log('booking api');
   const response = await axios.get('http://localhost:3001/api/v1/bookings', {
     withCredentials: true,
   });

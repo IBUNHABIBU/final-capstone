@@ -8,7 +8,6 @@ import Signup from './containers/Signup';
 import Models from './containers/Models';
 import Booking from './containers/Booking';
 import TabButton from './components/TabButton';
-import CarForm from './containers/CarForm';
 import { checkLoginStatus } from './redux/actions/fetch';
 import CarList from './containers/CarList';
 import CarDetails from './containers/CarDetails';
@@ -31,7 +30,6 @@ const App = () => {
           <Route path="/signup" exact component={Signup} />
           <Route path="/models" exact component={Models} />
           <Route path="/booking" exact component={Booking} />
-          <Route path="/newcar" exact component={CarForm} />
           <Route path="/cars" exact component={CarList} />
           <Route path="/cars/:id" exact component={CarDetails} />
           <Route path="/appointment/" exact component={Appointment} />
