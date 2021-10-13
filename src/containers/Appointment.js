@@ -7,38 +7,42 @@ const Appointment = () => {
   const dispatch = useDispatch();
   const bookings = useSelector((state) => state.booking);
   useEffect(() => {
-    // dispatch(fetchBookings());
+    dispatch(fetchBookings());
     console.log('usef');
   }, []);
   return (
-    <div className="car-container">
-      <table className="table table-dark table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        {
-   bookings.map((item) => {
-     const {
-       name, pickup, location,
-     } = item;
-     return (
-       <tbody>
-         <tr>
-           <th scope="row">{name}</th>
-           <td>{pickup}</td>
-           <td> Hello </td>
-           <td>{location}</td>
-         </tr>
-       </tbody>
-     );
-   })
-  }
-      </table>
+    <div className="main-table-container car-container">
+      <div className="table-container">
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Client Name</th>
+              <th scope="col">Car Model</th>
+              <th scope="col">Pickup Date</th>
+              <th scope="col">Return Date</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          {
+         bookings.map((item) => {
+           const {
+             name, model, pickup, location,
+           } = item;
+           return (
+             <tbody>
+               <tr className="table-activ">
+                 <th>{name}</th>
+                 <th>{model}</th>
+                 <td>{pickup}</td>
+                 <td> Hello </td>
+                 <td>{location}</td>
+               </tr>
+             </tbody>
+           );
+         })
+        }
+        </table>
+      </div>
     </div>
   );
 };
