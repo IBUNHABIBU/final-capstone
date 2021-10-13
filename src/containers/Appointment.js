@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookings } from '../redux/actions/fetch';
@@ -6,10 +7,11 @@ const Appointment = () => {
   const dispatch = useDispatch();
   const bookings = useSelector((state) => state.booking);
   useEffect(() => {
-    dispatch(fetchBookings());
+    // dispatch(fetchBookings());
+    console.log('usef');
   }, []);
   return (
-    <div>
+    <div className="car-container">
       <table className="table table-dark table-striped">
         <thead>
           <tr>
