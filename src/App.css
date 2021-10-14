@@ -212,3 +212,9 @@ tr {
   align-items: center;
   border: none;
 }
+
+.close-button {
+  position: relative;
+  left: -2rem;
+  bottom: 0.5rem;
+}
