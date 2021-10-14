@@ -14,6 +14,7 @@ const Models = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
   const [errors, setErrors] = useState('');
+  const [message, setMessage] = useState('');
 
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/cars', {
@@ -30,10 +31,10 @@ const Models = () => {
         if(response.data.status == 'created') {
           dispatch(createCar(response.data));
           history.push('/models');
+          setMessage('Created successfully close the form');
         }
-      }).catch((error) => {
-        console.log('error', error);
-      });
+        setErrors(response.data.errors);
+      })
   };
   useEffect(() => {
     dispatch(fetchCars());
