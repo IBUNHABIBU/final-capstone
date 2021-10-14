@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
@@ -15,6 +15,7 @@ const Signup = () => {
   }
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
+  const [errors, setErrors] = useState('');
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/users', {
       user: {
@@ -28,12 +29,14 @@ const Signup = () => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
       }
+      setErrors(response.data.error);
     });
   };
 
   return (
     <div className="signup container">
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        {errors && <div className="alert alert-danger col-6" role="alert">{ errors.map((error) => <li className="text-start">{error}</li>) }</div>}
         <div className="form-floating mb-2 col-3">
           <input
             type="text"
