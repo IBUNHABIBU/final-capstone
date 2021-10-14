@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
@@ -13,6 +13,7 @@ const Models = () => {
   const userLogin = useSelector((state) => state.register);
   const { register, handleSubmit } = useForm();
   const history = useHistory();
+  const [errors, setErrors] = useState('');
 
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/cars', {
@@ -26,8 +27,10 @@ const Models = () => {
       },
     }, { withCredentials: true })
       .then((response) => {
-        dispatch(createCar(response.data));
-        history.push('/models');
+        if(response.data.status == 'created') {
+          dispatch(createCar(response.data));
+          history.push('/models');
+        }
       }).catch((error) => {
         console.log('error', error);
       });
