@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
@@ -16,6 +16,7 @@ const Login = () => {
   }
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
+  const [errors, setErrors] = useState('');
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/sessions', {
       user: {
@@ -27,11 +28,13 @@ const Login = () => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
       }
+      setErrors(response.data.error);
     });
   };
   return (
     <div className="login-page container">
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        {errors && <div className="alert alert-danger col-4" role="alert">{errors}</div>}
         <div className="form-floating mb-2 col-3">
           <input type="email" name="email" {...register('email')} className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
           <label htmlFor="floatingInputEmail">Email</label>
