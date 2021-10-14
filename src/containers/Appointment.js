@@ -6,13 +6,14 @@ import { fetchBookings } from '../redux/actions/fetch';
 const Appointment = () => {
   const dispatch = useDispatch();
   const bookings = useSelector((state) => state.booking);
+  // const userLogin = useSelector((state) => state.register);
   useEffect(() => {
     dispatch(fetchBookings());
   }, []);
   return (
     <div className="main-table-container car-container">
-      <p className="display-6" align="center">All appointment</p>
-      <div className="table-container">
+      {(<div className="table-container">
+        <p className="display-6" align="center">All appointment</p>
         <table className="table">
           <thead>
             <tr>
@@ -42,7 +43,7 @@ const Appointment = () => {
          })
         }
         </table>
-      </div>
+      </div>)}
     </div>
   );
 };
