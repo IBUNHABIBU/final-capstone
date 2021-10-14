@@ -20,6 +20,12 @@ export const checkLoginStatus = () => async (dispatch) => {
   dispatch(setUser(response.data));
 };
 
+export const deleteCar = (id) => {
+  axios.delete(`http://localhost:3001/api/v1/cars${id}`, {
+    withCredentials: true,
+  });
+};
+
 export const fetchDetails = (id) => async (dispatch) => {
   const response = await axios.get(`http://localhost:3001/api/v1/cars/${id}`);
   dispatch(selectCar(response.data));

@@ -25,6 +25,9 @@ const CarDetails = () => {
   } = details;
   const { name } = user.details;
   const { register, handleSubmit } = useForm();
+  const handleDelete = (carId) => {
+   deletCar(carId);
+  }
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/bookings', {
       booking: {
@@ -86,6 +89,7 @@ const CarDetails = () => {
           className="btn btn-danger"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
+          onClick={handleDelete(id)}
         >
           Delete
         </button>
