@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
@@ -13,6 +13,8 @@ const CarDetails = () => {
   const user = useSelector((state) => state.register);
   const dispatch = useDispatch();
   const { id } = useParams();
+  const [errors, setErrors] = useState('');
+  const [message, setMessage] = useState('');
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
@@ -36,7 +38,9 @@ const CarDetails = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
+        setMessage('Created successfully close the form');
       }
+      setErrors(response.data.errors);
     });
   };
   return (
@@ -89,12 +93,18 @@ const CarDetails = () => {
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-              <div className="modal-header">
-                        {message && <div className="alert alert-success col-12" role="alert">{message}</div>}
-                        <button type="button" className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
-                      </div>  </div>
+
+                {message && (
+                <div className="modal-header col-12">
+                  <div className="alert alert-success col-12" role="alert">{message}</div>
+                  <button type="button" className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
+                </div>
+                )}
+
+              </div>
               <div className="modal-body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
+                  {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error) => <li className="text-start">{error}</li>) }</div>}
                   <div className="form-floating mb-2 col-8">
                     <input
                       type="text"
