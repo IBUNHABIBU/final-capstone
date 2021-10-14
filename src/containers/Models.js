@@ -60,10 +60,10 @@ const Models = () => {
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header">
-                        <h5 className="modal-title">
-                          {message && <div className="alert alert-danger col-6" role="alert">{message}</div>}
-                        </h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="close" />
+
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="close" >
+                        {message && <span className="alert alert-success col-12" role="alert">{message}</span>}
+                        </button>
                       </div>
                       <div className="modal-body">
                         <form className="form" onSubmit={handleSubmit(onSubmit)}>
