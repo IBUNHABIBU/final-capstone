@@ -12,19 +12,20 @@ const Appointment = () => {
   }, []);
   return (
     <div className="main-table-container car-container">
-      {userLogin.logged_in ? (<div className="table-container">
-        <p className="display-6" align="center">All appointment</p>
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">Client Name</th>
-              <th scope="col">Car Model</th>
-              <th scope="col">Pickup Date</th>
-              <th scope="col">Return Date</th>
-              <th scope="col">Location</th>
-            </tr>
-          </thead>
-          {
+      {userLogin.logged_in ? (
+        <div className="table-container">
+          <p className="display-6" align="center">All appointment</p>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">Client Name</th>
+                <th scope="col">Car Model</th>
+                <th scope="col">Pickup Date</th>
+                <th scope="col">Return Date</th>
+                <th scope="col">Location</th>
+              </tr>
+            </thead>
+            {
          bookings.map((item) => {
            const {
              name, model, pickup, return_date, location,
@@ -42,8 +43,9 @@ const Appointment = () => {
            );
          })
         }
-        </table>
-      </div>) : (<div>Please login to see all appointments</div>)}
+          </table>
+        </div>
+      ) : (<div>Please login to see all appointments</div>)}
     </div>
   );
 };

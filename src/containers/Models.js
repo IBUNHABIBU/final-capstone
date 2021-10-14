@@ -132,7 +132,7 @@ const Models = () => {
             </div>,
           ],
         ] : [
-          <div>Please login to see all cars</div>,
+          <div>Please login to see all car details</div>,
         ]
       }
 
