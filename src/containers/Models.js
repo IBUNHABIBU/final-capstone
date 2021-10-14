@@ -61,12 +61,13 @@ const Models = () => {
                     <div className="modal-content">
                       <div className="modal-header">
                         <h5 className="modal-title">
-                          Add new car
+                        {message && <div className="alert alert-danger col-6" role="alert">{message}</div>}
                         </h5>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="close" />
                       </div>
                       <div className="modal-body">
                         <form className="form" onSubmit={handleSubmit(onSubmit)}>
+                        {errors && <div className="alert alert-danger col-6" role="alert">{ errors.map((error) => <li className="text-start">{error}</li>) }</div>}
                           <div className="form-floating mb-2 col-10">
                             <input
                               type="text"
