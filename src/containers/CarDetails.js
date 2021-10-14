@@ -89,11 +89,10 @@ const CarDetails = () => {
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title">
-                  Add new car
-                </h5>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="close" />
-              </div>
+              <div className="modal-header">
+                        {message && <div className="alert alert-success col-12" role="alert">{message}</div>}
+                        <button type="button" className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
+                      </div>  </div>
               <div className="modal-body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-floating mb-2 col-8">
