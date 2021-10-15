@@ -5,7 +5,7 @@ const initialState = [];
 const carReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case actionTypes.ADD_CAR:
-      return [...state, ...payload];
+      return [...payload];
     default:
       return state;
   }

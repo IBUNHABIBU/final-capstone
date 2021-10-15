@@ -5,7 +5,6 @@ import {
 
 export const fetchCars = () => async (dispatch) => {
   const response = await axios.get('http://localhost:3001/api/v1/cars');
-  console.log(response.data);
   dispatch(addCar(response.data));
 };
 
