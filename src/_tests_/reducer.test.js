@@ -2,6 +2,7 @@
 import actionTypes from '../redux/constants';
 import bookingReducer from './../redux/reducers/bookingReducer';
 import carReducer from './../redux/reducers/carReducer';
+import detailsReducer from './../redux/reducers/detailsReducer';
 describe('Reducers', () => {
   describe('bookingReducer', () => {
    it('Should return default state when there is no action', () => {
@@ -52,29 +53,28 @@ describe('Reducers', () => {
 
    })
   })
-  describe('bookingReducer', () => {
+  describe('detailsReducer', () => {
    it('Should return default state when there is no action', () => {
-    const newState = bookingReducer(undefined, []);
-    const defaultState = [];
+    const newState = detailsReducer(undefined, {});
+    const defaultState = {};
     expect(newState).toEqual(defaultState);
    });
+
    it('Should return new state when given action', () => {
-    const data = [
+    const data =
      {
       name: "Juma",
       model: 'New model',
       pickup_date: '2021-10-17 23:00',
       return_date: '2021-10-18 23:00',
       year: '2008',
-     },
-    ]
-    const newState = bookingReducer(undefined, {
-     type: actionTypes.BOOK_CAR,
+     }
+    const newState = detailsReducer(undefined, {
+     type: actionTypes.SELECT_CAR,
      payload: data,
     });
-
     expect(newState).toEqual(data);
-
    })
+
   })
 });
