@@ -94,6 +94,8 @@ Enjoy playing it.
 | `npm install` | Install project dependencies |
 | `npm start` | Build project and open web server running project |
 | `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
+| `npm run test` | Run all test suites |
+| `npm run lint -- --fix` | Fix all lint errors automatically |
 
 <!-- ### How to play -->
 
