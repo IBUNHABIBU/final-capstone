@@ -6,7 +6,9 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import { createCarBooking, fetchDetails, checkLoginStatus } from '../redux/actions/fetch';
+import {
+  createCarBooking, fetchDetails, checkLoginStatus,
+} from '../redux/actions/fetch';
 
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
@@ -25,9 +27,7 @@ const CarDetails = () => {
   } = details;
   const { name } = user.details;
   const { register, handleSubmit } = useForm();
-  const handleDelete = (carId) => {
-   deletCar(carId);
-  }
+
   const onSubmit = (data) => {
     axios.post('http://localhost:3001/api/v1/bookings', {
       booking: {
@@ -84,15 +84,7 @@ const CarDetails = () => {
         >
           Book a ride
         </button>
-        <button
-          type="button"
-          className="btn btn-danger"
-          data-bs-toggle="modal"
-          data-bs-target="#myModal"
-          onClick={handleDelete(id)}
-        >
-          Delete
-        </button>
+
         <div className="modal" id="myModal">
           <div className="modal-dialog">
             <div className="modal-content">

@@ -152,9 +152,9 @@ body {
   z-index: 8;
 }
 
-.card {
-  border-radius: 50%;
-  border: none;
+.slides .card {
+  border-radius: 50%; 
+  border: none; 
 }
 
 .details-container {
