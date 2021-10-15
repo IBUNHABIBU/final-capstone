@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Model Renders Model page correctly 1`] = `
+<div>
+  <div>
+    Please login to see all car details
+  </div>
+</div>
+`;
