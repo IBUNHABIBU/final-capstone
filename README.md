@@ -34,6 +34,8 @@
 ## About The Project
 Car rental is the react front end application which uses rails api to book car rent.
 
+[Link of the backend api](https://final-capstone-rails-api.herokuapp.com/api/v1/cars)
+
 ### Story
 
 ### Features
