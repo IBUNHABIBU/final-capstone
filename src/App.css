@@ -115,6 +115,7 @@ body {
   top: 3rem;
   right: 0;
   z-index: 78;
+  border: 1px solid var(--shade);
 }
 
 .car-heading {
@@ -153,8 +154,8 @@ body {
 }
 
 .slides .card {
-  border-radius: 50%; 
-  border: none; 
+  border-radius: 50%;
+  border: none;
 }
 
 .details-container {
@@ -192,10 +193,6 @@ tr {
 .card-details {
   display: flex;
   justify-content: space-around;
-}
-
-.car-container {
-  border: 1px solid var(--shade);
 }
 
 .car-container .table-success.table-stripped {
