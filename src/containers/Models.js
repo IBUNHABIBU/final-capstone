@@ -7,6 +7,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { createCar, fetchCars } from '../redux/actions/fetch';
 import CarList from './CarList';
+import { urlBase } from '../redux/actions/fetch';
 
 const Models = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Models = () => {
   const [message, setMessage] = useState('');
 
   const onSubmit = (data) => {
-    axios.post('http://localhost:3001/api/v1/cars', {
+    axios.post(`${urlBase}/api/v1/cars`, {
       car: {
         color: data.color,
         engine: data.engine,
