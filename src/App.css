@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 :root {
   --app-color: #99c210;
   --hover-color: #849e2e;
