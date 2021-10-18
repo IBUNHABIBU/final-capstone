@@ -32,20 +32,15 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Magic-books Inc. is a fictional company based in Germany. They have requested your help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic and responsive to their actions and therefore you decided to build it with React & Redu
+Car rental is the react front end application which uses rails api to book car rent.
 
 ### Story
 
 ### Features
 
-#### Milestone 2
-- Creating container folder
-  - Creating BookForm component
-  - Creating BookList component
-- Creating component folder
-  - creating Book component
-  - creating store
-  - creating action and reducers
+- User authentication
+- Create cars and display them to the carlist page
+- Create appointment and display to the list of appointment
     
 <!-- BUILD WITH -->
 ## Built With
