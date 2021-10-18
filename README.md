@@ -97,7 +97,7 @@ Enjoy playing it.
 <!-- CONTACT -->
 
 
-## link to  [Live Demo ](https://salim-tz-bookstore.herokuapp.com/)
+## link to  [Live Demo ](https://slm-final-capstone.herokuapp.com/)
 
 ## Authors
 
