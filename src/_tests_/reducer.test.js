@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import actionTypes from '../redux/constants';
 import bookingReducer from '../redux/reducers/bookingReducer';
 import carReducer from '../redux/reducers/carReducer';
