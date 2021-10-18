@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import {
-  createCarBooking, fetchDetails, checkLoginStatus,
+  createCarBooking, fetchDetails, checkLoginStatus, urlBase,
 } from '../redux/actions/fetch';
 
 const CarDetails = () => {
@@ -29,7 +29,7 @@ const CarDetails = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    axios.post('http://localhost:3001/api/v1/bookings', {
+    axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
         name: data.name,
         model: data.model,
