@@ -1,13 +1,13 @@
 :root {
   --app-color: #99c210;
   --hover-color: #849e2e;
-  --white: #ffffff;
-  --shade: #eeeeee;
+  --white: #fff;
+  --shade: #eee;
 }
 
 body {
- font-family: 'Nanum Gothic', sans-serif;
- background-color: #fbfbfb;
+  font-family: 'Nanum Gothic', sans-serif;
+  background-color: #fbfbfb;
 }
 
 .App {
