@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { setUser } from '../redux/actions/actions';
+import { urlBase } from '../redux/actions/fetch';
 
 const Login = () => {
   const userLogin = useSelector((state) => state.register);
@@ -18,7 +19,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
   const onSubmit = (data) => {
-    axios.post('http://localhost:3001/sessions', {
+    axios.post(`${urlBase}/sessions`, {
       user: {
         email: data.email,
         password: data.password,
