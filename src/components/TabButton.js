@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
-import { urlBase } from './../redux/actions/fetch';
+import { urlBase } from '../redux/actions/fetch';
 
 const TabButton = () => {
   const userLoggedIn = useSelector((state) => state.register);

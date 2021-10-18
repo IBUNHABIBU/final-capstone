@@ -5,9 +5,8 @@ import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
-import { createCar, fetchCars } from '../redux/actions/fetch';
+import { createCar, fetchCars, urlBase } from '../redux/actions/fetch';
 import CarList from './CarList';
-import { urlBase } from '../redux/actions/fetch';
 
 const Models = () => {
   const dispatch = useDispatch();
