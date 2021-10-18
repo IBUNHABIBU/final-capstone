@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
+import { urlBase } from '../redux/actions/fetch';
 
 const Signup = () => {
   const userLogin = useSelector((state) => state.register);
@@ -17,7 +18,7 @@ const Signup = () => {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
   const onSubmit = (data) => {
-    axios.post('http://localhost:3001/users', {
+    axios.post(`${urlBase}/users`, {
       user: {
         name: data.name,
         email: data.email,

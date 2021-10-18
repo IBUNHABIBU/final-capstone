@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
+import { urlBase } from './../redux/actions/fetch';
 
 const TabButton = () => {
   const userLoggedIn = useSelector((state) => state.register);
@@ -12,7 +13,7 @@ const TabButton = () => {
     setTab(index);
   };
   const handleLogout = () => {
-    axios.delete('http://localhost:3001/logout', { withCredentials: true })
+    axios.delete(`${urlBase}/logout`, { withCredentials: true })
       .then((response) => {
         dispatch(setUser(response.data));
       });
