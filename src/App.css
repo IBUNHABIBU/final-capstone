@@ -37,7 +37,7 @@ body {
   border-color: var(--app-color);
 }
 
-.logo img{
+.logo img {
   width: 200px;
   height: 200px;
 }
@@ -94,9 +94,9 @@ body {
 }
 
 .heading-container {
- position: absolute;
- top: 1rem;
- right: 28rem;
+  position: absolute;
+  top: 1rem;
+  right: 28rem;
 }
 
 .carlist {
@@ -189,7 +189,7 @@ tr {
   background-color: var(--shade);
 }
 
-.card-details{
+.card-details {
   display: flex;
   justify-content: space-around;
 }
