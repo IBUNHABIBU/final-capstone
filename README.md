@@ -23,6 +23,8 @@
   </p>
 </p>
 
+![screenshot](https://github.com/IBUNHABIBU/catalogue_of_recipes/blob/react-redux-mealDb-fetch-api/public/home.PNG)
+
 ## Table of Contents
 
 * [About the Project](#about-the-project)
