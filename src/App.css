@@ -226,7 +226,6 @@ tr {
   height: 80px;
   cursor: pointer;
   transition: all .5s ease-in-out;
-  border: 3px solid var(--app-color);
 }
 
 .menu-btn-burger {
@@ -242,7 +241,7 @@ tr {
 .menu-btn-burger::after {
   content: '';
   position: absolute;
-  right: 1.4rem;
+  right: 1.55rem;
   width: 30px;
   height: 6px;
   background: var(--app-color);
