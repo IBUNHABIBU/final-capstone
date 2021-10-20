@@ -230,7 +230,7 @@ tr {
 }
 
 .menu-btn-burger {
-  width: 50px;
+  width: 30px;
   height: 6px;
   background: var(--app-color);
   border-radius: 5px;
@@ -242,8 +242,8 @@ tr {
 .menu-btn-burger::after {
   content: '';
   position: absolute;
-  right: 12px;
-  width: 50px;
+  right: 1.4rem;
+  width: 30px;
   height: 6px;
   background: var(--app-color);
   border-radius: 5px;
