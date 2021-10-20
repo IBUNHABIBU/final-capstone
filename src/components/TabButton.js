@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -25,7 +26,9 @@ const TabButton = () => {
         <img src="logo4.jpg" alt="" />
       </div>
       <div className="menubar">
-      <i className="fas fa-bars"></i>
+        <div className="menu-btn-burger">
+          
+        </div>
       </div>
       <div className="d-flex align-items-start">
         <div className="nav sidenav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
