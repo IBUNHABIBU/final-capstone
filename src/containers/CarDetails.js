@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable camelcase */
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -23,7 +24,7 @@ const CarDetails = () => {
   }, [id]);
 
   const {
-    color, engine, year, model, price,
+    color, engine, year, car_model, price,
   } = details;
   const { name } = user.details;
   const { register, handleSubmit } = useForm();
@@ -50,12 +51,15 @@ const CarDetails = () => {
     <div className="details-container">
       <div className="details-image">
         <img src="" alt="" />
+        <h6>Image required ....</h6>
       </div>
       <div className="details-section">
         <div className="details-header">
-          <p className="display-6">{model}</p>
+          <p className="display-6">
+            {car_model}
+          </p>
           <p className="lead">
-            Price:
+            Price per hour:
             {price}
           </p>
         </div>
@@ -71,7 +75,7 @@ const CarDetails = () => {
               {engine}
             </li>
             <li>
-              <span className="d-span lead mr-4">Engine:</span>
+              <span className="d-span lead mr-4">Year:</span>
               {year}
             </li>
           </ul>
@@ -114,7 +118,7 @@ const CarDetails = () => {
                     <label htmlFor="floatingInput">Name</label>
                   </div>
                   <div className="form-floating mb-2 col-8">
-                    <input type="text" name="model" value={model} {...register('model')} className="form-control" id="floatingInputEmail" placeholder="Enter model type" />
+                    <input type="text" name="model" value={car_model} {...register('model')} className="form-control" id="floatingInputEmail" placeholder="Enter model type" />
                     <label htmlFor="floatingInputEmail">model</label>
                   </div>
                   <div className="form-floating mb-2 col-8">

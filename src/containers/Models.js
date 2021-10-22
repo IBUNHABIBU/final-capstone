@@ -95,7 +95,7 @@ const Models = () => {
                               className="form-control"
                               id="floatingInputImage"
                               placeholder="Enter engine type"
-                              accept="image/png, image/jpeg"
+                              accept="image/*"
                             />
                             <label htmlFor="floatingInputImage">Image</label>
                           </div>
