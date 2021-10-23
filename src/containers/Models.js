@@ -93,11 +93,11 @@ const Models = () => {
                               name="image"
                               {...register('image', { required: true })}
                               className="form-control"
-                              id="floatingInputImage"
+                              id="floatingInputimage"
                               placeholder="Enter engine type"
                               accept="image/*"
                             />
-                            <label htmlFor="floatingInputImage">Image</label>
+                            <label htmlFor="floatingInputimage">image</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
                             <input

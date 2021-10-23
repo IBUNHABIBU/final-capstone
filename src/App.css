@@ -218,7 +218,7 @@ tr {
 .menu-btn {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;

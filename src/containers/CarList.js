@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import uuid from 'react-uuid';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Loading from '../components/Loading';
+import { fetchCars } from '../redux/actions/fetch';
 
 const CarList = () => {
-  const cars = useSelector((state) => state.car);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, []);
 
+  const cars = useSelector((state) => state.car);
   if (cars === undefined) {
     return (
       <Loading />
@@ -24,7 +29,7 @@ const CarList = () => {
                   return (
                     <div className=" col-6 col-lg-3 col-md-6 p-1" key={uuid()}>
                       <div className="card">
-                        <h6>Image required ....</h6>
+                        <img alt="car" src="https://images.dealer.com/ddc/vehicles/2021/CADILLAC/Escalade%20ESV/SUV/color/Black%20Raven-GBA-5,5,7-640-en_US.jpg" />
                         <div className="card-body bg-light">
                           <h5>Model Type: new </h5>
                           <h5 className="card-title" key={uuid()}>

@@ -50,8 +50,7 @@ const CarDetails = () => {
   return (
     <div className="details-container">
       <div className="details-image">
-        <img src="" alt="" />
-        <h6>Image required ....</h6>
+        <img alt="car" src="https://images.dealer.com/ddc/vehicles/2021/CADILLAC/Escalade%20ESV/SUV/color/Black%20Raven-GBA-5,5,7-640-en_US.jpg" />
       </div>
       <div className="details-section">
         <div className="details-header">
