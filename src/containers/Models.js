@@ -22,7 +22,6 @@ const Models = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
-        image: data.image[0],
         car_model: data.car_model,
         price: data.price,
       },
@@ -86,18 +85,6 @@ const Models = () => {
                           <div className="form-floating mb-2 col-10">
                             <input type="text" name="year" {...register('year', { required: true })} className="form-control" id="floatingPassword" placeholder="Enter Year" />
                             <label htmlFor="floatingPassword">Year</label>
-                          </div>
-                          <div className="form-floating mb-2 col-10">
-                            <input
-                              type="file"
-                              name="image"
-                              {...register('image', { required: true })}
-                              className="form-control"
-                              id="floatingInputimage"
-                              placeholder="Enter engine type"
-                              accept="image/*"
-                            />
-                            <label htmlFor="floatingInputimage">image</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
                             <input
