@@ -224,7 +224,7 @@ tr {
   width: 80px;
   height: 80px;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn-burger {
@@ -232,8 +232,8 @@ tr {
   height: 6px;
   background: var(--app-color);
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-  transition: all .5s ease-in-out;
+  box-shadow: 0 2px 5px rgba(122, 94, 84, 0.2);
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn-burger::before,
@@ -245,8 +245,8 @@ tr {
   height: 6px;
   background: var(--app-color);
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-  transition: all .5s ease-in-out;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn-burger::before {
