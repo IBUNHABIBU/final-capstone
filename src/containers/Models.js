@@ -22,7 +22,6 @@ const Models = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
-        car_model: data.car_model,
         price: data.price,
       },
     }, { withCredentials: true })
@@ -87,14 +86,7 @@ const Models = () => {
                             <label htmlFor="floatingPassword">Year</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
-                            <input
-                              type="text"
-                              name="car_model"
-                              {...register('car_model', { required: true })}
-                              className="form-control"
-                              id="floatingInputImage"
-                              placeholder="Enter model"
-                            />
+                           
                             <label htmlFor="floatingInputImage">Model</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
