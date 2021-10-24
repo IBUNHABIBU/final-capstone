@@ -86,10 +86,6 @@ const Models = () => {
                             <label htmlFor="floatingPassword">Year</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
-                           
-                            <label htmlFor="floatingInputImage">Model</label>
-                          </div>
-                          <div className="form-floating mb-2 col-10">
                             <input
                               type="text"
                               name="price"
