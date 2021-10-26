@@ -89,6 +89,17 @@ const Models = () => {
                           <div className="form-floating mb-2 col-10">
                             <input
                               type="text"
+                              name="title"
+                              {...register('title', { required: true })}
+                              className="form-control"
+                              id="floatingInputtitle"
+                              placeholder="Enter the Model"
+                            />
+                            <label htmlFor="floatingInputImage">Model</label>
+                          </div>
+                          <div className="form-floating mb-2 col-10">
+                            <input
+                              type="text"
                               name="price"
                               {...register('price', { required: true })}
                               className="form-control"
