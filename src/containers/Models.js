@@ -22,6 +22,7 @@ const Models = () => {
         color: data.color,
         engine: data.engine,
         year: data.year,
+        title: data.title,
         price: data.price,
       },
     }, { withCredentials: true })
