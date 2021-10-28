@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/no-array-index-key */
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -37,7 +38,7 @@ const Signup = () => {
   return (
     <div className="signup container">
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        {errors && <div className="alert alert-danger col-6" role="alert">{ errors.map((error) => <li className="text-start">{error}</li>) }</div>}
+        {errors && <div className="alert alert-danger col-6" role="alert">{ errors.map((error, id) => <li key={id} className="text-start">{error}</li>) }</div>}
         <div className="form-floating mb-2 col-3">
           <input
             type="text"

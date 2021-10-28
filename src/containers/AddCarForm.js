@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
-import { uuid } from 'react-uuid';
 import { createCar, urlBase } from '../redux/actions/fetch';
 
 const AddCarForm = () => {
@@ -31,7 +31,6 @@ const AddCarForm = () => {
           history.push('/models');
           setMessage('Created successfully close the form');
         }
-        console.log(response.data.errors);
         setErrors(response.data.errors);
       });
   };
@@ -59,7 +58,7 @@ const AddCarForm = () => {
               )}
               <div className="modal-body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                  {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error) => <li className="text-start" key={uuid()}>{error}</li>) }</div>}
+                  {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error, id) => <li key={id} className="text-start">{error}</li>) }</div>}
                   <div className="form-floating mb-2 col-10">
                     <input
                       type="text"
