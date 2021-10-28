@@ -28,11 +28,11 @@ const Appointment = () => {
             {
          bookings.map((item) => {
            const {
-             name, model, pickup, return_date, location,
+             id, name, model, pickup, return_date, location,
            } = item;
            return (
              <tbody>
-               <tr className="table-activ">
+               <tr className="table-activ" key={id}>
                  <th>{name}</th>
                  <th>{model}</th>
                  <td>{pickup}</td>
