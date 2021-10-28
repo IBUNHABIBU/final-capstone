@@ -8,7 +8,6 @@ import NameList from './NameList';
 
 const CarList = () => {
   const cars = useSelector((state) => state.car);
-  console.log(cars);
   if (cars.length === 0) {
     return (
       <Loading />

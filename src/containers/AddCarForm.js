@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { createCar, urlBase } from '../redux/actions/fetch';
@@ -11,6 +12,7 @@ const AddCarForm = () => {
   const history = useHistory();
   const [errors, setErrors] = useState('');
   const [message, setMessage] = useState('');
+  const dispatch = useDispatch();
 
   const onSubmit = (data) => {
     axios.post(`${urlBase}/api/v1/cars`, {
@@ -28,6 +30,7 @@ const AddCarForm = () => {
           history.push('/models');
           setMessage('Created successfully close the form');
         }
+        console.log(response.data.errors);
         setErrors(response.data.errors);
       });
   };
@@ -57,49 +60,49 @@ const AddCarForm = () => {
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
                   {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error) => <li className="text-start">{error}</li>) }</div>}
                   <div className="form-floating mb-2 col-10">
-                   <input
-                    type="text"
-                    className="form-control"
-                    name="color"
-                    {...register('color', { required: true })}
-                    id="floatingInput"
-                    placeholder="Car color"
-                  />
-                   <label htmlFor="floatingInput">Color</label>
-                 </div>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="color"
+                      {...register('color', { required: true })}
+                      id="floatingInput"
+                      placeholder="Car color"
+                    />
+                    <label htmlFor="floatingInput">Color</label>
+                  </div>
                   <div className="form-floating mb-2 col-10">
-                   <input type="text" name="engine" {...register('engine', { required: true })} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
-                   <label htmlFor="floatingInputEmail">Engine</label>
-                 </div>
+                    <input type="text" name="engine" {...register('engine', { required: true })} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
+                    <label htmlFor="floatingInputEmail">Engine</label>
+                  </div>
                   <div className="form-floating mb-2 col-10">
-                   <input type="text" name="year" {...register('year', { required: true })} className="form-control" id="floatingPassword" placeholder="Enter Year" />
-                   <label htmlFor="floatingPassword">Year</label>
-                 </div>
+                    <input type="text" name="year" {...register('year', { required: true })} className="form-control" id="floatingPassword" placeholder="Enter Year" />
+                    <label htmlFor="floatingPassword">Year</label>
+                  </div>
                   <div className="form-floating mb-2 col-10">
-                   <input
-                    type="text"
-                    name="title"
-                    {...register('title', { required: true })}
-                    className="form-control"
-                    id="floatingInputtitle"
-                    placeholder="Enter the Model"
-                  />
-                   <label htmlFor="floatingInputtitle">Model</label>
-                 </div>
+                    <input
+                      type="text"
+                      name="title"
+                      {...register('title', { required: true })}
+                      className="form-control"
+                      id="floatingInputtitle"
+                      placeholder="Enter the Model"
+                    />
+                    <label htmlFor="floatingInputtitle">Model</label>
+                  </div>
                   <div className="form-floating mb-2 col-10">
-                   <input
-                    type="text"
-                    name="price"
-                    {...register('price', { required: true })}
-                    className="form-control"
-                    id="floatingInputprice"
-                    placeholder="Enter the price"
-                  />
-                   <label htmlFor="floatingInputImage">Price</label>
-                 </div>
+                    <input
+                      type="text"
+                      name="price"
+                      {...register('price', { required: true })}
+                      className="form-control"
+                      id="floatingInputprice"
+                      placeholder="Enter the price"
+                    />
+                    <label htmlFor="floatingInputImage">Price</label>
+                  </div>
                   <div className="form-floating mb-3 col-10">
-                   <button type="submit" className="btn btn-primary col-10">Add Car</button>
-                 </div>
+                    <button type="submit" className="btn btn-primary col-10">Add Car</button>
+                  </div>
                 </form>
               </div>
             </div>

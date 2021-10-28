@@ -16,14 +16,14 @@ const Models = () => {
       {
         userLogin.logged_in ? [
           userLogin.details.admin ? [
-            <AddCarForm />,
+            <AddCarForm key="carForm" />,
           ] : [
             <div>
               <CarList />
             </div>,
           ],
         ] : [
-          <div>Please login to see all car details</div>,
+          <div key="log">Please login to see all car details</div>,
         ]
       }
 
