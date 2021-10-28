@@ -5,6 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import { uuid } from 'react-uuid';
 import { createCar, urlBase } from '../redux/actions/fetch';
 
 const AddCarForm = () => {
@@ -58,7 +59,7 @@ const AddCarForm = () => {
               )}
               <div className="modal-body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                  {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error) => <li className="text-start">{error}</li>) }</div>}
+                  {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error) => <li className="text-start" key={uuid()}>{error}</li>) }</div>}
                   <div className="form-floating mb-2 col-10">
                     <input
                       type="text"
