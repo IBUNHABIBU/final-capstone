@@ -15,7 +15,7 @@ const CarList = () => {
     );
   }
   const nameList = cars.map((car) => (
-    <NameList details={car} />
+    <NameList car={car} />
   ));
   return (
     <div>
