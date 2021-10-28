@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCars } from '../redux/actions/fetch';
@@ -7,7 +6,7 @@ import CarList from './CarList';
 const Models = () => {
   const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.register);
-  
+
   useEffect(() => {
     dispatch(fetchCars());
   }, []);
@@ -16,7 +15,7 @@ const Models = () => {
       {
         userLogin.logged_in ? [
           userLogin.details.admin ? [
-            
+           <div>Hello AddMin</div>
           ] : [
             <div>
               <CarList />
