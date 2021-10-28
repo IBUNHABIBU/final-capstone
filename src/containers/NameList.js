@@ -11,6 +11,6 @@ NameList.propTypes = {
   car: PropTypes.shape({
    color: PropTypes.string.isRequired,
    engine: PropTypes.string.isRequired,
-  })
+  }).isRequired,
 }
 export default NameList;
