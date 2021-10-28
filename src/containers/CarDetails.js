@@ -24,7 +24,7 @@ const CarDetails = () => {
   }, [id]);
 
   const {
-    color, engine, year, car_model, price,
+    color, engine, year, title, price,
   } = details;
   const { name } = user.details;
   const { register, handleSubmit } = useForm();
@@ -55,7 +55,7 @@ const CarDetails = () => {
       <div className="details-section">
         <div className="details-header">
           <p className="display-6">
-            {car_model}
+            {title}
           </p>
           <p className="lead">
             Price per hour:
@@ -117,8 +117,8 @@ const CarDetails = () => {
                     <label htmlFor="floatingInput">Name</label>
                   </div>
                   <div className="form-floating mb-2 col-8">
-                    <input type="text" name="model" value={car_model} {...register('model')} className="form-control" id="floatingInputEmail" placeholder="Enter model type" />
-                    <label htmlFor="floatingInputEmail">model</label>
+                    <input type="text" name="title" value={title} {...register('title')} className="form-control" id="floatingInputTitle" placeholder="Enter model type" />
+                    <label htmlFor="floatingInputTitle">model</label>
                   </div>
                   <div className="form-floating mb-2 col-8">
                     <input type="datetime-local" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup date" />

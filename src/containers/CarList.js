@@ -13,22 +13,20 @@ const CarList = () => {
       <Loading />
     );
   }
-  
-  <div className="car-container">
-  <div className="p-2 carlist">
-    <div className="row">
+
   const nameList = cars.map((car) => (
-          <NameList key={car.id} car={car} />
-      
-       ));
-  </div>
-      </div>
-    </div>
+    <NameList key={car.id} car={car} />
+  ));
+
   return (
-    <div>
-      {
+    <div className="car-container">
+      <div className="p-2 carlist">
+        <div className="row">
+          {
         nameList
       }
+        </div>
+      </div>
     </div>
   );
 };
