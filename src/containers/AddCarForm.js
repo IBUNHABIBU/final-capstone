@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -11,7 +10,6 @@ import { createCar, urlBase } from '../redux/actions/fetch';
 const AddCarForm = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
-  const [errors, setErrors] = useState('');
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
 
@@ -31,7 +29,6 @@ const AddCarForm = () => {
           history.push('/models');
           setMessage('Created successfully close the form');
         }
-        setErrors(response.data.errors);
       });
   };
   return (
@@ -58,8 +55,7 @@ const AddCarForm = () => {
               )}
               <div className="modal-body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                  {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error, id) => <li key={id} className="text-start">{error}</li>) }</div>}
-                  <div className="form-floating mb-2 col-10">
+                   <div className="form-floating mb-2 col-10">
                     <input
                       type="text"
                       className="form-control"
