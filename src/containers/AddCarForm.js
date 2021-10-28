@@ -1,7 +1,19 @@
-import React from 'react'
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { createCar, urlBase } from '../redux/actions/fetch';
+import { useHistory } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 const AddCarForm = () => {
+ 
+ const { register, handleSubmit } = useForm();
+ const history = useHistory();
+ const [errors, setErrors] = useState('');
+ const [message, setMessage] = useState('');
+
  const onSubmit = (data) => {
   axios.post(`${urlBase}/api/v1/cars`, {
     car: {
