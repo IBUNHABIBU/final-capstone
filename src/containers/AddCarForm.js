@@ -55,7 +55,7 @@ const AddCarForm = () => {
               )}
               <div className="modal-body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                   <div className="form-floating mb-2 col-10">
+                  <div className="form-floating mb-2 col-10">
                     <input
                       type="text"
                       className="form-control"
