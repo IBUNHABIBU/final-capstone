@@ -31,7 +31,7 @@ const Appointment = () => {
              id, name, model, pickup, return_date, location,
            } = item;
            return (
-             <tbody>
+             <tbody key={id}>
                <tr className="table-activ" key={id}>
                  <th>{name}</th>
                  <th>{model}</th>
