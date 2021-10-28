@@ -95,7 +95,7 @@ const Models = () => {
                               id="floatingInputtitle"
                               placeholder="Enter the Model"
                             />
-                            <label htmlFor="floatingInputImage">Model</label>
+                            <label htmlFor="floatingInputtitle">Model</label>
                           </div>
                           <div className="form-floating mb-2 col-10">
                             <input
