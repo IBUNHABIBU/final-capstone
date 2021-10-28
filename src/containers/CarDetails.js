@@ -117,7 +117,7 @@ const CarDetails = () => {
                     <label htmlFor="floatingInput">Name</label>
                   </div>
                   <div className="form-floating mb-2 col-8">
-                    <input type="text" name="title" value={title} {...register('title')} className="form-control" id="floatingInputTitle" placeholder="Enter model type" />
+                    <input type="text" name="model" value={title} {...register('model')} className="form-control" id="floatingInputTitle" placeholder="Enter model type" />
                     <label htmlFor="floatingInputTitle">model</label>
                   </div>
                   <div className="form-floating mb-2 col-8">

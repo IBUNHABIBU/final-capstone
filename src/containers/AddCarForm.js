@@ -80,10 +80,10 @@ const AddCarForm = () => {
                       name="title"
                       {...register('title', { required: true })}
                       className="form-control"
-                      id="floatingInputtitle"
+                      id="floatingInputTitle"
                       placeholder="Enter the Model"
                     />
-                    <label htmlFor="floatingInputtitle">Model</label>
+                    <label htmlFor="floatingInputTitle">Model</label>
                   </div>
                   <div className="form-floating mb-2 col-10">
                     <input
