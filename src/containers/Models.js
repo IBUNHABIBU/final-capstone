@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCars } from '../redux/actions/fetch';
 import CarList from './CarList';
+import AddCarForm from './AddCarForm';
 
 const Models = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Models = () => {
       {
         userLogin.logged_in ? [
           userLogin.details.admin ? [
-           <div>Hello AddMin</div>
+            <AddCarForm />,
           ] : [
             <div>
               <CarList />
