@@ -3,9 +3,7 @@ import {
   addCar, setUser, bookCar, selectCar,
 } from './actions';
 
-// export const urlBase = 'https://finalcapstone-rails-api.herokuapp.com';
-
-export const urlBase = 'http://localhost:3001';
+export const urlBase = 'https://finalcapstone-rails-api.herokuapp.com';
 
 export const fetchCars = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/cars`);

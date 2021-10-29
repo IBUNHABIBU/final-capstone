@@ -1,22 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CarList Renders CarList page correctly 1`] = `
-<div>
-  <h1
-    className="car-heading"
-  >
-    Select the cars
-  </h1>
-  <div
-    className="car-container"
-  >
-    <div
-      className="p-2 carlist"
-    >
-      <div
-        className="row"
-      />
-    </div>
-  </div>
-</div>
-`;
+exports[`CarList Renders CarList page correctly 1`] = `<div />`;
