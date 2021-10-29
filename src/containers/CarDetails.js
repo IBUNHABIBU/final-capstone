@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable camelcase */
+/* eslint-disable react/no-array-index-key */
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -103,13 +103,13 @@ const CarDetails = () => {
               </div>
               <div className="modal-body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                  {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error) => <li className="text-start">{error}</li>) }</div>}
+                  {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error, index) => <li key={index} className="text-start">{error}</li>) }</div>}
                   <div className="form-floating mb-2 col-8">
                     <input
                       type="text"
                       className="form-control"
                       name="name"
-                      value={name}
+                      defaultValue={name}
                       {...register('name')}
                       id="floatingInput"
                       placeholder="Car color"
@@ -117,8 +117,8 @@ const CarDetails = () => {
                     <label htmlFor="floatingInput">Name</label>
                   </div>
                   <div className="form-floating mb-2 col-8">
-                    <input type="text" name="model" value={title} {...register('model')} className="form-control" id="floatingInputTitle" placeholder="Enter model type" />
-                    <label htmlFor="floatingInputTitle">model</label>
+                    <input type="text" name="model" defaultValue={title} {...register('model')} className="form-control" id="floatingInput" placeholder="Enter model type" />
+                    <label htmlFor="floatingInput">model</label>
                   </div>
                   <div className="form-floating mb-2 col-8">
                     <input type="datetime-local" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup date" />
