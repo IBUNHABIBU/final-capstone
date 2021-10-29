@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import Loading from './../components/Loading';
 import {
   createCarBooking, fetchDetails, checkLoginStatus, urlBase,
 } from '../redux/actions/fetch';
@@ -18,6 +19,11 @@ const CarDetails = () => {
   const { id } = useParams();
   const [errors, setErrors] = useState('');
   const [message, setMessage] = useState('');
+  if (user=== undefined) {
+    return (
+      <Loading />
+    );
+  }
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
