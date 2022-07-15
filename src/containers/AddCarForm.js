@@ -14,21 +14,38 @@ const AddCarForm = () => {
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    axios.post(`${urlBase}/api/v1/cars`, {
-      car: {
-        color: data.color,
-        engine: data.engine,
-        year: data.year,
-        title: data.title,
-        price: data.price,
-      },
-    }, { withCredentials: true })
+    const car = { ...data, image: data.image[0] };
+    const formData = new FormData();
+    formData.append('color', car.color);
+    formData.append('engine', car.engine);
+    formData.append('year', car.year);
+    formData.append('title', car.title);
+    formData.append('price', car.price);
+    formData.append('image', car.image);
+    console.log(Array.from(formData));
+    axios.post(`${urlBase}/api/v1/cars`,
+    // {
+    //   car: {
+    //     color: data.color,
+    //     engine: data.engine,
+    //     year: data.year,
+    //     title: data.title,
+    //     price: data.price,
+    //     image: data.image[0],
+    //   },
+    // },
+      formData, {
+        headers: { 'content-type': 'multipart/form-data' },
+      })
       .then((response) => {
+        console.log(response.data);
         if (response.data.status === 'created') {
           dispatch(createCar(response.data));
           history.push('/models');
           setMessage('Created successfully close the form');
         }
+      }).catch((error) => {
+        console.log(error);
       });
   };
   return (
@@ -95,6 +112,18 @@ const AddCarForm = () => {
                       placeholder="Enter the price"
                     />
                     <label htmlFor="floatingInputImage">Price</label>
+                  </div>
+                  <div className="form-floating mb-2 col-10">
+                    <input
+                      type="file"
+                      name="image"
+                      {...register('image', { required: true })}
+                      className="form-control"
+                      id="floatingInputprice"
+                      placeholder="Upload image"
+                      accept="image/*"
+                    />
+                    <label htmlFor="floatingInputImage">Image</label>
                   </div>
                   <div className="form-floating mb-3 col-10">
                     <button type="submit" className="btn btn-primary col-10">Add Car</button>
