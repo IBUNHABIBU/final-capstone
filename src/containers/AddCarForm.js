@@ -21,7 +21,7 @@ const AddCarForm = () => {
     // formData.append('year', car.year);
     // formData.append('title', car.title);
     // formData.append('price', car.price);
-    formData.append("post['image']", car.image);
+    // formData.append("post['image']", car.image);
     console.log(Array.from(formData));
     axios.post(`${urlBase}/api/v1/cars`,
     // {
