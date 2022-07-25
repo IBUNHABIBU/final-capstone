@@ -16,12 +16,12 @@ const AddCarForm = () => {
   const onSubmit = (data) => {
     const car = { ...data, image: data.image[0] };
     const formData = new FormData();
-    formData.append('color', car.color);
-    formData.append('engine', car.engine);
-    formData.append('year', car.year);
-    formData.append('title', car.title);
-    formData.append('price', car.price);
-    formData.append('image', car.image);
+    formData.append("post['color']", car.color);
+    // formData.append('engine', car.engine);
+    // formData.append('year', car.year);
+    // formData.append('title', car.title);
+    // formData.append('price', car.price);
+    formData.append("post['image']", car.image);
     console.log(Array.from(formData));
     axios.post(`${urlBase}/api/v1/cars`,
     // {
@@ -45,7 +45,7 @@ const AddCarForm = () => {
           setMessage('Created successfully close the form');
         }
       }).catch((error) => {
-        console.log(error);
+        console.log('Here is the Error', error);
       });
   };
   return (
@@ -83,12 +83,17 @@ const AddCarForm = () => {
                     />
                     <label htmlFor="floatingInput">Color</label>
                   </div>
-                  <div className="form-floating mb-2 col-10">
-                    <input type="text" name="engine" {...register('engine', { required: true })} className="form-control" id="floatingInputEmail" placeholder="Enter engine type" />
+                  {/* <div className="form-floating mb-2 col-10">
+                    <input type="text" name="engine"
+                     {...register('engine', { required: true })}
+                      className="form-control"
+                       id="floatingInputEmail" placeholder="Enter engine type" />
                     <label htmlFor="floatingInputEmail">Engine</label>
                   </div>
                   <div className="form-floating mb-2 col-10">
-                    <input type="text" name="year" {...register('year', { required: true })} className="form-control" id="floatingPassword" placeholder="Enter Year" />
+                    <input type="text" name="year"
+                    {...register('year', { required: true })}
+                    className="form-control" id="floatingPassword" placeholder="Enter Year" />
                     <label htmlFor="floatingPassword">Year</label>
                   </div>
                   <div className="form-floating mb-2 col-10">
@@ -112,7 +117,7 @@ const AddCarForm = () => {
                       placeholder="Enter the price"
                     />
                     <label htmlFor="floatingInputImage">Price</label>
-                  </div>
+                  </div> */}
                   <div className="form-floating mb-2 col-10">
                     <input
                       type="file"
