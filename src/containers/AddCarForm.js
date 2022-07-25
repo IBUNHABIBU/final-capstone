@@ -14,27 +14,37 @@ const AddCarForm = () => {
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    // const car = { ...data, image: data.image[0] };
+    const formData = new FormData();
+    const car = { ...data, image: data.image[0] };
+    formData.append('car[color]', car.color);
     // formData.append('engine', car.engine);
     // formData.append('year', car.year);
     // formData.append('title', car.title);
     // formData.append('price', car.price);
-    // formData.append("post['image']", car.image);
-    // console.log(Array.from(formData));
+    formData.append('car[image]', car.image);
+    console.log(Array.from(formData));
     axios.post(`${urlBase}/api/v1/cars`,
-      {
-        car: {
-          color: data.color,
-          // engine: data.engine,
-          // year: data.year,
-          // title: data.title,
-          // price: data.price,
-          // image: data.image[0],
-        },
-      }, { withCredentials: true })
-      // formData, {
-      //   headers: { 'content-type': 'multipart/form-data' },
-      // })
+    //   {
+    //     car: {
+    //       color: data.color,
+    // engine: data.engine,
+    // year: data.year,
+    // title: data.title,
+    // price: data.price,
+    // image: data.image[0],
+    //   },
+    // })
+      formData, {
+        headers: { 'content-type': 'multipart/form-data' },
+        withCredentials: true,
+      })
+    // axios({
+    //   method: 'post',
+    //   url: `${urlBase}/api/v1/cars`,
+    //   data: formData,
+    //   headers: { 'Content-Type': 'multipart/form-data' },
+    //   withCredentials: true,
+    // })
       .then((response) => {
         console.log(response.data);
         if (response.data.status === 'created') {
