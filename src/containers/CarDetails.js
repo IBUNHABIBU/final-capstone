@@ -24,7 +24,7 @@ const CarDetails = () => {
   }, []);
 
   const {
-    color, engine, year, title, price,
+    color, engine, year, title, price, imageUrl,
   } = details;
   const { name } = user.details;
   const { register, handleSubmit } = useForm();
@@ -50,7 +50,7 @@ const CarDetails = () => {
   return (
     <div className="details-container">
       <div className="details-image">
-        <img alt="car" src="https://images.dealer.com/ddc/vehicles/2021/CADILLAC/Escalade%20ESV/SUV/color/Black%20Raven-GBA-5,5,7-640-en_US.jpg" />
+        <img alt="car" src={imageUrl} />
       </div>
       <div className="details-section">
         <div className="details-header">
