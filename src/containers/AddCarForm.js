@@ -17,10 +17,10 @@ const AddCarForm = () => {
     const formData = new FormData();
     const car = { ...data, image: data.image[0] };
     formData.append('car[color]', car.color);
-    formData.append('engine', car.engine);
-    formData.append('year', car.year);
-    formData.append('title', car.title);
-    formData.append('price', car.price);
+    formData.append('car[engine]', car.engine);
+    formData.append('car[year]', car.year);
+    formData.append('car[title]', car.title);
+    formData.append('car[price]', car.price);
     formData.append('car[image]', car.image);
     console.log(Array.from(formData));
     axios.post(`${urlBase}/api/v1/cars`,
@@ -29,13 +29,6 @@ const AddCarForm = () => {
         headers: { 'content-type': 'multipart/form-data' },
         withCredentials: true,
       })
-    // axios({
-    //   method: 'post',
-    //   url: `${urlBase}/api/v1/cars`,
-    //   data: formData,
-    //   headers: { 'Content-Type': 'multipart/form-data' },
-    //   withCredentials: true,
-    // })
       .then((response) => {
         console.log(response.data);
         if (response.data.status === 'created') {
