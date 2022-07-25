@@ -22,7 +22,6 @@ const AddCarForm = () => {
     formData.append('car[title]', car.title);
     formData.append('car[price]', car.price);
     formData.append('car[image]', car.image);
-    console.log(Array.from(formData));
     axios.post(`${urlBase}/api/v1/cars`,
 
       formData, {
@@ -30,14 +29,13 @@ const AddCarForm = () => {
         withCredentials: true,
       })
       .then((response) => {
-        console.log(response.data);
         if (response.data.status === 'created') {
           dispatch(createCar(response.data));
           history.push('/models');
           setMessage('Created successfully close the form');
         }
       }).catch((error) => {
-        console.log('Here is the Error', error);
+        setMessage(error.response.data.message);
       });
   };
   return (
