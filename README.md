@@ -107,6 +107,16 @@ Enjoy playing it.
 
 ## link to  [Live Demo ](https://slm-final-capstone.herokuapp.com/)
 
+## Challenges faced
+
+It was hard to implement image upload due to the following reasons
+
+* in the front end these methods solved the issues
+    
+    I used formData
+    I used withCredentials: true
+    in the formData.append("modelname[attribue]", data)
+
 ## Authors
 
 👤 **Salum Habibu** 

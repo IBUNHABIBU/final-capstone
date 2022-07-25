@@ -1,7 +1,7 @@
 /* eslint-disable  no-unused-vars */
+/* eslint-disable camelcase */
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import uuid from 'react-uuid';
 import { useSelector } from 'react-redux';
 import Loading from '../components/Loading';
 import NameList from './NameList';

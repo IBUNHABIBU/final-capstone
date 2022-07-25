@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const NameList = ({ car }) => {
   const {
-    id, color, engine,
+    id, color, engine, imageUrl,
   } = car;
   return (
     <div className=" col-6 col-lg-3 col-md-6 p-1" key={id}>
       <div className="card">
-        <img alt="car" src="https://images.dealer.com/ddc/vehicles/2021/CADILLAC/Escalade%20ESV/SUV/color/Black%20Raven-GBA-5,5,7-640-en_US.jpg" />
+        <img alt="car" src={imageUrl} />
         <div className="card-body bg-light">
           <h5>Model Type: new </h5>
           <h5 className="card-title">
@@ -33,6 +33,7 @@ NameList.propTypes = {
     id: PropTypes.number.isRequired,
     color: PropTypes.string.isRequired,
     engine: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
   }).isRequired,
 };
 export default NameList;
