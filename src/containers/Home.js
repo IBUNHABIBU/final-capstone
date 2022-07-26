@@ -7,7 +7,9 @@ const breakPoints = [
   { width: 768, itemsToShow: 3 },
   { width: 1200, itemsToShow: 4 },
 ];
-const Home = () => (
+const Home = () => {
+  const recents= useSelector((state) => state.recent);
+  return (
   <div className="home-container">
 
     <div className="heading-container">
@@ -61,5 +63,5 @@ const Home = () => (
 
     </div>
   </div>
-);
+)};
 export default Home;
