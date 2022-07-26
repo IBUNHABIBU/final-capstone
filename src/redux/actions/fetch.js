@@ -11,7 +11,7 @@ export const fetchCars = () => async (dispatch) => {
   dispatch(addCar(response.data));
 };
 
-export const recentCar = () => async (dispatch) => {
+export const recentCars = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/cars/recent`);
   dispatch(addRecentCar(response.data));
 };
