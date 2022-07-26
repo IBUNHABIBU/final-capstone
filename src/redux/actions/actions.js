@@ -10,6 +10,11 @@ export const addCar = (data) => ({
   payload: data,
 });
 
+export const addRecentCar = (data) => ({
+  type: actionTypes.ADD_RECENT_CAR,
+  payload: data,
+});
+
 export const bookCar = (car) => ({
   type: actionTypes.BOOK_CAR,
   payload: car,
