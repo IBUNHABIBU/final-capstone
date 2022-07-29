@@ -15,7 +15,6 @@ const Home = () => {
   useEffect(() => {
     dispatch(recentCars());
   }, []);
-  console.log('Recent', recents);
   return (
     <div className="home-container">
 
