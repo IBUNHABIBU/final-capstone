@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import uuid from 'react-uuid';
 import { fetchBookings } from '../redux/actions/fetch';
 
 const Appointment = () => {
@@ -28,11 +29,11 @@ const Appointment = () => {
             {
          bookings.map((item) => {
            const {
-             id, name, model, pickup, return_date, location,
+             name, model, pickup, return_date, location,
            } = item;
            return (
-             <tbody key={id}>
-               <tr className="table-activ" key={id}>
+             <tbody key={uuid()}>
+               <tr className="table-activ" key={uuid()}>
                  <th>{name}</th>
                  <th>{model}</th>
                  <td>{pickup}</td>

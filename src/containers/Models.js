@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import uuid from 'react-uuid';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCars } from '../redux/actions/fetch';
 import CarList from './CarList';
@@ -16,9 +17,9 @@ const Models = () => {
       {
         userLogin.logged_in ? [
           userLogin.details.admin ? [
-            <AddCarForm key="carForm" />,
+            <AddCarForm key={uuid()} />,
           ] : [
-            <div key="carlist">
+            <div key={uuid()}>
               <CarList />
             </div>,
           ],
