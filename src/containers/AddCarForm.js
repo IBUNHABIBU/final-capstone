@@ -15,13 +15,13 @@ const AddCarForm = () => {
 
   const onSubmit = (data) => {
     const formData = new FormData();
-    const car = { ...data };
+    const car = { ...data, image: data.image[0] };
     formData.append('car[color]', car.color);
     formData.append('car[engine]', car.engine);
     formData.append('car[year]', car.year);
     formData.append('car[title]', car.title);
     formData.append('car[price]', car.price);
-    // formData.append('car[image]', car.image);
+    formData.append('car[image]', car.image);
     axios.post(`${urlBase}/api/v1/cars`,
 
       formData, {
@@ -117,7 +117,7 @@ const AddCarForm = () => {
                     />
                     <label htmlFor="floatingInputImage">Price</label>
                   </div>
-                  {/* <div className="form-floating mb-2 col-10">
+                  <div className="form-floating mb-2 col-10">
                     <input
                       type="file"
                       name="image"
@@ -128,7 +128,7 @@ const AddCarForm = () => {
                       accept="image/*"
                     />
                     <label htmlFor="floatingInputImage">Image</label>
-                  </div> */}
+                  </div>
                   <div className="form-floating mb-3 col-10">
                     <button type="submit" className="btn btn-primary col-10">Add Car</button>
                   </div>
