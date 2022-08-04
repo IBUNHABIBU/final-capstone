@@ -79,10 +79,10 @@ const AddCarForm = () => {
                       name="engine"
                       {...register('engine', { required: true })}
                       className="form-control"
-                      id="floatingInputEmail"
+                      id="floatingInput"
                       placeholder="Enter engine type"
                     />
-                    <label htmlFor="floatingInputEmail">Engine</label>
+                    <label htmlFor="floatingInput">Engine</label>
                   </div>
                   <div className="form-floating mb-2 col-10">
                     <input
@@ -90,10 +90,10 @@ const AddCarForm = () => {
                       name="year"
                       {...register('year', { required: true })}
                       className="form-control"
-                      id="floatingPassword"
+                      id="floatingInput"
                       placeholder="Enter Year"
                     />
-                    <label htmlFor="floatingPassword">Year</label>
+                    <label htmlFor="floatingInput">Year</label>
                   </div>
                   <div className="form-floating mb-2 col-10">
                     <input
@@ -101,11 +101,12 @@ const AddCarForm = () => {
                       name="title"
                       {...register('title', { required: true })}
                       className="form-control"
-                      id="floatingInputTitle"
-                      placeholder="Enter the Model"
+                      id="floatingInput"
+                      placeholder="Enter car model"
                     />
-                    <label htmlFor="floatingInputTitle">Model</label>
+                    <label htmlFor="floatingInput">Model</label>
                   </div>
+
                   <div className="form-floating mb-2 col-10">
                     <input
                       type="text"
