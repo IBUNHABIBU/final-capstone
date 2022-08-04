@@ -15,7 +15,7 @@ const AddCarForm = () => {
 
   const onSubmit = (data) => {
     const formData = new FormData();
-    const car = { ...data, image: data.image[0] };
+    const car = { ...data };
     formData.append('car[color]', car.color);
     formData.append('car[engine]', car.engine);
     formData.append('car[year]', car.year);
