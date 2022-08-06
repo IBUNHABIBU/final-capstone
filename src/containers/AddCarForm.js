@@ -31,11 +31,13 @@ const AddCarForm = () => {
       .then((response) => {
         if (response.data.status === 'created') {
           dispatch(createCar(response.data));
+          console.log(response.data);
           history.push('/models');
           setMessage('Created successfully close the form');
         }
       }).catch((error) => {
         setMessage(error.response.data.message);
+        console.log(error.response.data.message);
       });
   };
   return (
