@@ -5,8 +5,6 @@ import {
 
 export const urlBase = 'https://final-car-rent-api.herokuapp.com';
 
-// export const urlBase = 'http://localhost:3000';
-
 export const fetchCars = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/cars`);
   dispatch(addCar(response.data));
