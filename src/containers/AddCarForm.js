@@ -30,9 +30,7 @@ const AddCarForm = () => {
       .then((response) => {
         if (response.data.status === 'created') {
           dispatch(createCar(response.data));
-          // history.push('/models');
           setMessage('Car created successfully');
-          console.log('after set message', message);
         }
       });
     reset();
@@ -54,12 +52,12 @@ const AddCarForm = () => {
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                {/* {message && ( */}
+                {message && (
                 <div className="modal-header col-12">
                   <div className="alert alert-success col-12" role="alert">{message}</div>
-                  <button type="button" className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
+                  <button type="button" onClick={() => { setMessage(''); }} className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
                 </div>
-                {/* )} */}
+                )}
               </div>
               <div className="modal-body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
