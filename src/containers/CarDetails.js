@@ -46,6 +46,7 @@ const CarDetails = () => {
       }
       setErrors(response.data.errors);
     });
+    reset();
   };
   return (
     <div className="details-container">

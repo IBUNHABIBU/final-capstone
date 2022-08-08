@@ -13,7 +13,6 @@ const AddCarForm = () => {
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    reset();
     const formData = new FormData();
     const car = { ...data, image: data.image[0] };
     formData.append('car[color]', car.color);
@@ -36,6 +35,7 @@ const AddCarForm = () => {
           console.log('after set message', message);
         }
       });
+    reset();
   };
   return (
     <div>
