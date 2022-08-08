@@ -31,7 +31,6 @@ const CarDetails = () => {
 
   const onSubmit = (data) => {
     axios.post(`${urlBase}/api/v1/bookings`, {
-
       name: data.name,
       model: data.model,
       pickup: data.pickup,
