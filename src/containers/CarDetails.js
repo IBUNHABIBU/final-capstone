@@ -42,7 +42,7 @@ const CarDetails = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
-        setMessage('Created successfully close the form');
+        setMessage(' close the form');
       }
       setErrors(response.data.errors);
     });

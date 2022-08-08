@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
@@ -9,7 +9,6 @@ import { createCar, urlBase } from '../redux/actions/fetch';
 
 const AddCarForm = () => {
   const { register, handleSubmit } = useForm();
-  const history = useHistory();
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
 
@@ -31,7 +30,7 @@ const AddCarForm = () => {
       .then((response) => {
         if (response.data.status === 'created') {
           dispatch(createCar(response.data));
-          history.push('/models');
+          // history.push('/models');
           setMessage('Car created successfully');
           console.log('after set message', message);
         }
@@ -54,12 +53,12 @@ const AddCarForm = () => {
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                {message && (
+                {/* {message && ( */}
                 <div className="modal-header col-12">
                   <div className="alert alert-success col-12" role="alert">{message}</div>
                   <button type="button" className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
                 </div>
-                )}
+                {/* )} */}
               </div>
               <div className="modal-body">
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
