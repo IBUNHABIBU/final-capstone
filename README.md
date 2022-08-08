@@ -117,6 +117,10 @@ It was hard to implement image upload due to the following reasons
     I used withCredentials: true
     in the formData.append("modelname[attribue]", data)
 
+* setMessage was not working due to history.push(/models)
+
+    after removing it it worked
+
 ## Authors
 
 👤 **Salum Habibu** 

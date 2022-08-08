@@ -8,11 +8,12 @@ import { useForm } from 'react-hook-form';
 import { createCar, urlBase } from '../redux/actions/fetch';
 
 const AddCarForm = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
+    reset();
     const formData = new FormData();
     const car = { ...data, image: data.image[0] };
     formData.append('car[color]', car.color);

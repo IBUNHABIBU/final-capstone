@@ -27,7 +27,7 @@ const CarDetails = () => {
     color, engine, year, title, price, imageUrl,
   } = details;
   const { name } = user.details;
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
     axios.post(`${urlBase}/api/v1/bookings`, {
@@ -42,7 +42,7 @@ const CarDetails = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
-        setMessage(' close the form');
+        setMessage('created successfully close the form');
       }
       setErrors(response.data.errors);
     });
