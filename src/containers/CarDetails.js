@@ -27,7 +27,7 @@ const CarDetails = () => {
     color, engine, year, title, price, imageUrl,
   } = details;
   const { name } = user.details;
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
     axios.post(`${urlBase}/api/v1/bookings`, {
@@ -46,7 +46,7 @@ const CarDetails = () => {
       }
       setErrors(response.data.errors);
     });
-    // reset();
+    reset();
   };
   return (
     <div className="details-container">
@@ -97,7 +97,7 @@ const CarDetails = () => {
                 {message && (
                 <div className="modal-header col-12">
                   <div className="alert alert-success col-12" role="alert">{message}</div>
-                  <button type="button" className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
+                  <button type="button" onClick={() => { setMessage(''); }} className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
                 </div>
                 )}
 
