@@ -31,13 +31,12 @@ const CarDetails = () => {
 
   const onSubmit = (data) => {
     axios.post(`${urlBase}/api/v1/bookings`, {
-      booking: {
-        name: data.name,
-        model: data.model,
-        pickup: data.pickup,
-        return_date: data.return_date,
-        location: data.location,
-      },
+
+      name: data.name,
+      model: data.model,
+      pickup: data.pickup,
+      return_date: data.return_date,
+      location: data.location,
     },
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
