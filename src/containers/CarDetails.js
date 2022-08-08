@@ -27,7 +27,7 @@ const CarDetails = () => {
     color, engine, year, title, price, imageUrl,
   } = details;
   const { name } = user.details;
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     axios.post(`${urlBase}/api/v1/bookings`, {
@@ -46,7 +46,7 @@ const CarDetails = () => {
       }
       setErrors(response.data.errors);
     });
-    reset();
+    // reset();
   };
   return (
     <div className="details-container">
