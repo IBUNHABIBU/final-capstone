@@ -105,7 +105,7 @@ Enjoy playing it.
 <!-- CONTACT -->
 
 
-## link to  [Live Demo ](https://slm-final-capstone.herokuapp.com/)
+## link to  [Live Demo ](https://salu-final-capstone.herokuapp.com/)
 
 ## Challenges faced
 
