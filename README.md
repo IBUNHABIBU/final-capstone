@@ -23,7 +23,7 @@
   </p>
 </p>
 
-![screenshot](https://github.com/IBUNHABIBU/final-capstone/blob/capstone-react-frontend/public/HomePage.PNG)
+![screenshot](https://github.com/IBUNHABIBU/final-capstone/blob/dev/public/HomePage.PNG)
 
 ## Table of Contents
 
