@@ -106,7 +106,8 @@ Enjoy playing it.
 <!-- CONTACT -->
 
 
-## link to  [Live Demo ](https://salu-final-capstone.herokuapp.com/)
+## Live Demo 
+[Live Demo ](https://salu-final-capstone.herokuapp.com/)
 
 ## Challenges faced
 
