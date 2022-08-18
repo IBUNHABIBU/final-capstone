@@ -1,8 +1,8 @@
 /* eslint-disable camelcase */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import uuid from 'react-uuid';
 import { fetchBookings } from '../redux/actions/fetch';
+import Bookings from './Bookings';
 
 const Appointment = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,6 @@ const Appointment = () => {
       {userLogin.logged_in ? (
         <div className="table-container">
           <Bookings />
-          
         </div>
       ) : (<div>Please login to see all appointments</div>)}
     </div>
