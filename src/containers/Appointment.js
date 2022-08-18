@@ -34,8 +34,8 @@ const Appointment = () => {
            return (
              <tbody key={uuid()}>
                <tr className="table-activ" key={uuid()}>
-                 <th>{name}</th>
-                 <th>{model}</th>
+                 <td>{name}</td>
+                 <td>{model}</td>
                  <td>{pickup}</td>
                  <td>{return_date}</td>
                  <td>{location}</td>

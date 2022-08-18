@@ -33,6 +33,7 @@
   * [Features](#features)
   * [Requirements](#requirements)
   * [Useful commands](#useful-commands)
+  * [Live Demo](#live-demo)
 * [Contact](#Authors)
 * [Acknowledgements](#Acknowledgements)
 
