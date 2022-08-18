@@ -6,7 +6,6 @@ import { fetchBookings } from '../redux/actions/fetch';
 
 const Appointment = () => {
   const dispatch = useDispatch();
-  const bookings = useSelector((state) => state.booking);
   const userLogin = useSelector((state) => state.register);
   useEffect(() => {
     dispatch(fetchBookings());
@@ -15,36 +14,8 @@ const Appointment = () => {
     <div className="main-table-container car-container">
       {userLogin.logged_in ? (
         <div className="table-container">
-          <p className="display-6" align="center">All appointment</p>
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col">Client Name</th>
-                <th scope="col">Car Model</th>
-                <th scope="col">Pickup Date</th>
-                <th scope="col">Return Date</th>
-                <th scope="col">Location</th>
-              </tr>
-            </thead>
-            {
-         bookings.map((item) => {
-           const {
-             name, model, pickup, return_date, location,
-           } = item;
-           return (
-             <tbody key={uuid()}>
-               <tr className="table-activ" key={uuid()}>
-                 <td>{name}</td>
-                 <td>{model}</td>
-                 <td>{pickup}</td>
-                 <td>{return_date}</td>
-                 <td>{location}</td>
-               </tr>
-             </tbody>
-           );
-         })
-        }
-          </table>
+          <Bookings />
+          
         </div>
       ) : (<div>Please login to see all appointments</div>)}
     </div>
