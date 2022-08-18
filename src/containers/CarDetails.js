@@ -88,63 +88,67 @@ const CarDetails = () => {
         >
           Book a ride
         </button>
+        <div className="model-container">
+          <div className="modal" id="myModal">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
 
-        <div className="modal" id="myModal">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
+                  {message && (
+                  <div className="modal-header col-12">
+                    <div className="alert alert-success col-12" role="alert">{message}</div>
+                    <button type="button" onClick={() => { setMessage(''); }} className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
+                  </div>
+                  )}
 
-                {message && (
-                <div className="modal-header col-12">
-                  <div className="alert alert-success col-12" role="alert">{message}</div>
-                  <button type="button" onClick={() => { setMessage(''); }} className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
                 </div>
-                )}
+                <div className="modal-body">
+                  <form className="form" onSubmit={handleSubmit(onSubmit)}>
+                    {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error, index) => <li key={index} className="text-start">{error}</li>) }</div>}
+                    <div className="form-floating mb-2 col-8">
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="name"
+                        defaultValue={name}
+                        {...register('name')}
+                        id="floatingInput"
+                        placeholder="Car color"
+                      />
+                      <label htmlFor="floatingInput">Name</label>
+                    </div>
+                    <div className="form-floating mb-2 col-8">
+                      <input type="text" name="model" defaultValue={title} {...register('model')} className="form-control" id="floatingInput" placeholder="Enter model type" />
+                      <label htmlFor="floatingInput">model</label>
+                    </div>
+                    <div className="form-floating mb-2 col-8">
+                      <input type="datetime-local" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup date" />
+                      <label htmlFor="floatingInputEmail">Pickup Date</label>
+                    </div>
+                    <div className="form-floating mb-2 col-8">
+                      <input type="datetime-local" name="return_date" {...register('return_date')} className="form-control" id="floatingInputEmail" placeholder="Enter return date" />
+                      <label htmlFor="floatingInputEmail">Return Date</label>
+                    </div>
+                    <div className="form-floating mb-2 col-8">
+                      <input type="text" name="location" {...register('location')} className="form-control" id="floatingPassword" placeholder="Enter location" />
+                      <label htmlFor="floatingPassword">Location</label>
+                    </div>
+                    <div className="form-floating mb-3 col-6">
+                      <button type="submit" className="btn btn-primary col-12">Book ride</button>
+                    </div>
+                  </form>
+
+                </div>
 
               </div>
-              <div className="modal-body">
-                <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                  {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error, index) => <li key={index} className="text-start">{error}</li>) }</div>}
-                  <div className="form-floating mb-2 col-8">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="name"
-                      defaultValue={name}
-                      {...register('name')}
-                      id="floatingInput"
-                      placeholder="Car color"
-                    />
-                    <label htmlFor="floatingInput">Name</label>
-                  </div>
-                  <div className="form-floating mb-2 col-8">
-                    <input type="text" name="model" defaultValue={title} {...register('model')} className="form-control" id="floatingInput" placeholder="Enter model type" />
-                    <label htmlFor="floatingInput">model</label>
-                  </div>
-                  <div className="form-floating mb-2 col-8">
-                    <input type="datetime-local" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup date" />
-                    <label htmlFor="floatingInputEmail">Pickup Date</label>
-                  </div>
-                  <div className="form-floating mb-2 col-8">
-                    <input type="datetime-local" name="return_date" {...register('return_date')} className="form-control" id="floatingInputEmail" placeholder="Enter return date" />
-                    <label htmlFor="floatingInputEmail">Return Date</label>
-                  </div>
-                  <div className="form-floating mb-2 col-8">
-                    <input type="text" name="location" {...register('location')} className="form-control" id="floatingPassword" placeholder="Enter location" />
-                    <label htmlFor="floatingPassword">Location</label>
-                  </div>
-                  <div className="form-floating mb-3 col-6">
-                    <button type="submit" className="btn btn-primary col-12">Book ride</button>
-                  </div>
-                </form>
-                <div className="form-floating mb-3 col-6">
-                  <button type="submit" className="btn btn-primary col-12">Edit car</button>
-                </div>
-                <div className="form-floating mb-3 col-6">
-                  <button type="submit" className="btn btn-primary col-12">Delete car</button>
-                </div>
-              </div>
+
             </div>
+          </div>
+          <div className="form-floating mb-3 col-6">
+            <button type="submit" className="btn btn-primary col-12">Edit car</button>
+          </div>
+          <div className="form-floating mb-3 col-6">
+            <button type="submit" className="btn btn-primary col-12">Delete car</button>
           </div>
         </div>
       </div>
