@@ -113,7 +113,7 @@ Enjoy playing it.
 
 
 ## Live Demo
-[Live Demo ](https://salu-final-capstone.herokuapp.com/)
+[Live Demo ](salum-microverse-final-capstone.netlify.app)
 
 ## Challenges faced
 
