@@ -146,6 +146,8 @@ Give a :star: if you like this project!
 Credits go to  <!--Mr Christian Ceamatu who helped me when I'm stuck. -->
 all my standup team for their help.
 
+[Murat Kormaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for his design idea
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/final-capstone.svg?style=flat-square
