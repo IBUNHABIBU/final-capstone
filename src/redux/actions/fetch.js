@@ -3,7 +3,7 @@ import {
   addCar, setUser, bookCar, selectCar, addRecentCar,
 } from './actions';
 
-export const urlBase = 'https://final-car-rent-api.herokuapp.com';
+export const urlBase = 'https://atown-rentals.onrender.com/';
 // export const urlBase = 'http://localhost:3000';
 
 export const fetchCars = () => async (dispatch) => {
