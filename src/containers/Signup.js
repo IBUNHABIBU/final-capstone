@@ -20,13 +20,11 @@ const Signup = () => {
   const [errors, setErrors] = useState('');
   const onSubmit = (data) => {
     axios.post(`${urlBase}/users`, {
-      user: {
         name: data.name,
         email: data.email,
         password: data.password,
         password_confirmation: data.password_confirmation,
-      },
-    },
+        },
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
