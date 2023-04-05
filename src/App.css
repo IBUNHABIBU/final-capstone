@@ -200,11 +200,11 @@ tr {
 }
 
 .car-container .table-success.table-stripped {
-  background-color: var(--hover-color);
+  /* background-color: var(--hover-color); */
 }
 
 .table-container {
-  border: 1px solid rgb(243, 217, 217);
+  /* border: 1px solid rgb(243, 217, 217); */
   width: 90%;
 }
 

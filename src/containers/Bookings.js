@@ -8,8 +8,8 @@ const Bookings = () => {
   return (
     <>
       <p className="display-6" align="center">All appointment</p>
-      <table className="table">
-        <thead>
+      <table className="table table-light">
+        <thead className="thead-dark">
           <tr>
             <th scope="col">Client Name</th>
             <th scope="col">Car Model</th>
@@ -25,7 +25,7 @@ const Bookings = () => {
            } = item;
            return (
              <tbody key={uuid()}>
-               <tr className="table-activ" key={uuid()}>
+               <tr key={uuid()}>
                  <td>{name}</td>
                  <td>{model}</td>
                  <td>{pickup}</td>
