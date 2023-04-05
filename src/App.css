@@ -149,7 +149,7 @@ body {
   width: 17rem;
   height: 17rem;
   border-radius: 50%;
-  z-index: 8;
+  /* z-index: 8; */
 }
 
 .slides img {
