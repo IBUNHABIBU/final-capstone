@@ -150,7 +150,7 @@ body {
   height: 17rem;
   border-radius: 50%;
   z-index: 8;
-  border: 4px solid black;
+  /* border: 0.4px solid black; */
 }
 
 .slides img {
