@@ -34,9 +34,8 @@ const Home = () => {
                   </div>
                 </div>
                 <h1>
-                    carname
-                  </h1>
-                  <p>watu</p>
+                  {car.title}
+                </h1>
               </div>
             ))
           }
