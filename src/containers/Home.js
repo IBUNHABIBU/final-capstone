@@ -27,14 +27,16 @@ const Home = () => {
         <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={1500}>
           {
             recents.map((car) => (
-              <div key={car.id} className="slide">
-                <div className="card">
-                  <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
+              <div key={car.id} className="slide-container">
+                <div className="slides">
+                  <div className="card">
+                    <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
+                  </div>
                 </div>
                 <h1>
-                  carname
-                </h1>
-                <p>watu</p>
+                    carname
+                  </h1>
+                  <p>watu</p>
               </div>
             ))
           }
