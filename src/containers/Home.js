@@ -33,9 +33,9 @@ const Home = () => {
                     <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
                   </div>
                 </div>
-                <h1>
+                <h4>
                   {car.title}
-                </h1>
+                </h4>
               </div>
             ))
           }
