@@ -129,6 +129,11 @@ It was hard to implement image upload due to the following reasons
 
     after removing it it worked
 
+ After deploying my api to linode server my front end was not showingup
+ after inspecting the element I found the following error
+ `r.js:187 Mixed Content: The page at 'https://salum-microverse-final-capstone.netlify.app/' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://car.darlive.cyou/logged_in'. This request has been blocked; the content must be served over HTTPS.`
+ the solution is to use ssl certificate
+
 ## Authors
 
 👤 **Salum Habibu** 
