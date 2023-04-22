@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, createBrowserRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Home from './containers/Home';
 import Login from './containers/Login';
@@ -11,14 +11,21 @@ import { checkLoginStatus } from './redux/actions/fetch';
 import CarList from './containers/CarList';
 import CarDetails from './containers/CarDetails';
 import Appointment from './containers/Appointment';
+import layout from './layouts';
 
 const App = () => {
   const dispatch = useDispatch();
+  const HomeComponent = layout(Home);
 
   useEffect(() => {
     dispatch(checkLoginStatus());
   }, []);
 
+  const router = createBrowserRouter(
+    [
+      { path: '/', element: <HomeComponent /> },
+    ]
+  )
   return (
     <div className="App">
       <Router>
