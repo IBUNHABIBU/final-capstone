@@ -1,13 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { setUser } from '../redux/actions/actions';
 import list from '../costants';
 import { urlBase } from '../redux/actions/fetch';
 
 const Nav = () => {
-  const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   const handleLogout = () => {
@@ -35,7 +34,7 @@ const Nav = () => {
           </NavLink>
         ))
       }
-        { user.logged_in && (<button type="submit" className="btn" onClick={handleLogout}>Logout</button>)}
+        <button type="submit" className="btn" onClick={handleLogout}>Logout</button>
       </div>
     </div>
   );
