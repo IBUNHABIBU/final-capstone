@@ -19,7 +19,7 @@ const App = () => {
   const LoginComponent = layout(Login);
   const SignupComponent = layout(Signup);
   const ModelsComponent = layout(Models);
-  const CarlistComponent = layout(Carlist);
+  const CarListComponent = layout(CarList);
   const CarDetailsComponent = layout(CarDetails);
   const AppointmentComponent = layout(Appointment);
 
@@ -32,6 +32,9 @@ const App = () => {
       { path: '/', element: <HomeComponent /> },
       { path: '/login', element: <LoginComponent /> },
       { path: '/signup', element: <SignupComponent /> },
+      { path: '/models', element: <ModelsComponent /> },
+      { path: '/cars', element: <CarListComponent /> },
+      { path: '/cars/:id', element: <CarDetailsComponent /> },
     ]
   )
   return (
