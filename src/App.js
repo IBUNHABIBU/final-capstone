@@ -16,6 +16,9 @@ import layout from './layouts';
 const App = () => {
   const dispatch = useDispatch();
   const HomeComponent = layout(Home);
+  const LoginComponent = layout(Login);
+  const SignupComponent = layout(Signup);
+  const HomeComponent = layout(Home);
 
   useEffect(() => {
     dispatch(checkLoginStatus());
@@ -24,6 +27,7 @@ const App = () => {
   const router = createBrowserRouter(
     [
       { path: '/', element: <HomeComponent /> },
+      { path: '/login', element: <loginComponent /> },
     ]
   )
   return (
