@@ -10,7 +10,6 @@ const layout = (Component) => () => (
         <Component />
       </div>
     </div>
-    <Footer />
   </div>
 );
 
