@@ -18,7 +18,10 @@ const App = () => {
   const HomeComponent = layout(Home);
   const LoginComponent = layout(Login);
   const SignupComponent = layout(Signup);
-  const HomeComponent = layout(Home);
+  const ModelsComponent = layout(Models);
+  const CarlistComponent = layout(Carlist);
+  const CarDetailsComponent = layout(CarDetails);
+  const AppointmentComponent = layout(Appointment);
 
   useEffect(() => {
     dispatch(checkLoginStatus());
@@ -27,7 +30,8 @@ const App = () => {
   const router = createBrowserRouter(
     [
       { path: '/', element: <HomeComponent /> },
-      { path: '/login', element: <loginComponent /> },
+      { path: '/login', element: <LoginComponent /> },
+      { path: '/signup', element: <SignupComponent /> },
     ]
   )
   return (
