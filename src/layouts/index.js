@@ -13,5 +13,4 @@ const layout = (Component) => () => (
   </div>
 );
 
-layout.DisplayName = 'BaseComponent';
 export default layout;
