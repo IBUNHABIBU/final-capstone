@@ -35,22 +35,12 @@ const App = () => {
       { path: '/models', element: <ModelsComponent /> },
       { path: '/cars', element: <CarListComponent /> },
       { path: '/cars/:id', element: <CarDetailsComponent /> },
+      { path: '/appointment', element: <AppointmentComponent /> },
     ]
   )
   return (
     <div className="App">
-      <Router>
-        <TabButton />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/login" exact component={Login} />
-          <Route path="/signup" exact component={Signup} />
-          <Route path="/models" exact component={Models} />
-          <Route path="/cars" exact component={CarList} />
-          <Route path="/cars/:id" exact component={CarDetails} />
-          <Route path="/appointment/" exact component={Appointment} />
-        </Switch>
-      </Router>
+      
     </div>
   );
 };
