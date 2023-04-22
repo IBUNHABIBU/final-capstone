@@ -5,15 +5,15 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
 import { urlBase } from '../redux/actions/fetch';
 
 const Signup = () => {
   const userLogin = useSelector((state) => state.register);
-  const history = useHistory();
+  const navigate = useNavigate();
   if (userLogin.logged_in) {
-    history.push('/models');
+    navigate.push('/models');
   }
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
