@@ -1,4 +1,3 @@
-import './App.css';
 import { useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -11,6 +10,7 @@ import CarList from './containers/CarList';
 import CarDetails from './containers/CarDetails';
 import Appointment from './containers/Appointment';
 import layout from './layouts';
+import './App.scss';
 
 const App = () => {
   const dispatch = useDispatch();
