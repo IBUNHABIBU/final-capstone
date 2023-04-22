@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/display-name
 import React from 'react';
 import Nav from '../components/Nav';
 
