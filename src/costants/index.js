@@ -14,16 +14,6 @@ const list = [
       name: 'APPOINTMENTS',
       path: '/appointments',
     },
-    {
-      id: 4,
-      name: 'Contact',
-      path: '/contact',
-    },
-    {
-      id: 5,
-      name: 'Admin Panel',
-      path: '/admin',
-    },
   ];
   
   export default list;
