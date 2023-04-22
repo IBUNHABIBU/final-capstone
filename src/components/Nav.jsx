@@ -8,15 +8,14 @@ import list from '../costants';
 const Nav = () => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
- 
-//   const handleLogout = () => {
-//     axios.delete(`${urlBase}/logout`, { withCredentials: true })
-//       .then((response) => {
-//         dispatch(setUser(response.data));
-//       });
-//   };
 
- 
+  //   const handleLogout = () => {
+  //     axios.delete(`${urlBase}/logout`, { withCredentials: true })
+  //       .then((response) => {
+  //         dispatch(setUser(response.data));
+  //       });
+  //   };
+
   return (
     <div className="nav">
       <div className="nav__logo">

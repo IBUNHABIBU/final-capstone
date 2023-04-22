@@ -4,16 +4,16 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory, Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { setUser } from '../redux/actions/actions';
 import { urlBase } from '../redux/actions/fetch';
 
 const Login = () => {
   const userLogin = useSelector((state) => state.register);
-  const history = useHistory();
+  const navigate = useNavigate();
   if (userLogin.logged_in) {
-    history.push('/models');
+    navigate.push('/models');
   }
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();

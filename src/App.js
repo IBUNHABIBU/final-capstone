@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect } from 'react';
-import {createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Home from './containers/Home';
 import Login from './containers/Login';
@@ -35,8 +35,8 @@ const App = () => {
       { path: '/cars', element: <CarListComponent /> },
       { path: '/cars/:id', element: <CarDetailsComponent /> },
       { path: '/appointment', element: <AppointmentComponent /> },
-    ]
-  )
+    ],
+  );
   return (
     <div className="App">
       <RouterProvider router={router} />
