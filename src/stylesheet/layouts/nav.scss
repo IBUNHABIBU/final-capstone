@@ -1,4 +1,9 @@
 .nav {
     display: flex;
     flex-direction: column;
+
+    &__lists {
+        display: flex;
+        flex-direction: column;
+    }
 }
