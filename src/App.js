@@ -1,12 +1,11 @@
 import './App.css';
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route, createBrowserRouter } from 'react-router-dom';
+import {createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Home from './containers/Home';
 import Login from './containers/Login';
 import Signup from './containers/Signup';
 import Models from './containers/Models';
-import TabButton from './components/TabButton';
 import { checkLoginStatus } from './redux/actions/fetch';
 import CarList from './containers/CarList';
 import CarDetails from './containers/CarDetails';
@@ -40,7 +39,7 @@ const App = () => {
   )
   return (
     <div className="App">
-      
+      <RouterProvider router={router} />
     </div>
   );
 };
