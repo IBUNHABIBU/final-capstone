@@ -16,10 +16,9 @@ const Login = () => {
   if (userLogin.logged_in) {
     navigate.push('/models');
   }
-  const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
-  const onSubmit = (data) => {
+  const handleSubmit = (data) => {
     axios.post(`${urlBase}/sessions`, {
       user: {
         email: data.email,
@@ -35,14 +34,15 @@ const Login = () => {
   };
   return (
     <div className="login-page container">
-      <Form fields= {
+      <Form
+        fields={
         [
-          {name: "email", type: "email", label: "Email" },
-          {name: "password", type: "password", label: "Password" },
+          { name: 'email', type: 'email', label: 'Email' },
+          { name: 'password', type: 'password', label: 'Password' },
         ]
       }
-      onSubmit={handleSubmit(onSubmit)}
-      
+        onSubmit={handleSubmit}
+      />
       <p>
         New to this site?
         <Link to="/signup" className="link"> Register</Link>
