@@ -33,7 +33,7 @@ const Nav = () => {
             {list.name}
           </NavLink>
         ))
-      }
+        }
         <div className="user">
           <NavLink to="/signup" className="link ">
             <button type="submit" className="btn">Sinup</button>
