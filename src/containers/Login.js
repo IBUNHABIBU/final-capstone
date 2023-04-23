@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { setUser } from '../redux/actions/actions';
 import { urlBase } from '../redux/actions/fetch';
+import Form from '../components/Form';
 
 const Login = () => {
   const userLogin = useSelector((state) => state.register);
@@ -34,26 +35,15 @@ const Login = () => {
   };
   return (
     <div className="login-page container">
-      <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        {errors && <div className="alert alert-danger col-4" role="alert">{errors}</div>}
-        <div className="form-floating mb-2 col-3">
-          <input type="email" name="email" {...register('email')} className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
-          <label htmlFor="floatingInputEmail">Email</label>
-        </div>
-        <div className="form-floating mb-2 col-3">
-          <input type="password" name="password" {...register('password')} className="form-control" id="floatingPassword" placeholder="Password" />
-          <label htmlFor="floatingPassword">Password</label>
-        </div>
-
-        <div className="form-floating mb-3 col-3">
-          <button type="submit" className="btn btn-primary col-12">Login</button>
-        </div>
-        
-      </form>
+      <Form fields= {
+        [
+          {}
+        ]
+      }
       <p>
-          New to this site?
-          <Link to="/signup" className="link"> Register</Link>
-        </p>
+        New to this site?
+        <Link to="/signup" className="link"> Register</Link>
+      </p>
     </div>
   );
 };
