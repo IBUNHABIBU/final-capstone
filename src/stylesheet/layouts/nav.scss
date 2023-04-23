@@ -31,4 +31,11 @@
     .user {
         border-top: #efefef 1px solid;
     }
+
+    &__logo {
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
 }
