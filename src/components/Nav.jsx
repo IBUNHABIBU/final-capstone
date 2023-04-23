@@ -36,7 +36,7 @@ const Nav = () => {
         ))
         }
         {
-        user ? (
+        user.logged_in ? (
           <div>
             <p>
               <span className="p-2">Login as</span>
