@@ -54,7 +54,7 @@ const Nav = () => {
         ) : (
           <div className="user">
             <NavLink to="/signup" className="link ">
-              <button type="submit" className="btn btn--signup">Sing Up</button>
+              <button type="submit" className="btn btn--signup">Sign Up</button>
             </NavLink>
             <div>
               <p>Already a member?</p>
