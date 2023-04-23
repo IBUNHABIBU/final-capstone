@@ -39,7 +39,7 @@ const Nav = () => {
           <button type="submit" className="btn">Sinup</button></Link>
               <div>
                 <p>Already a member?</p>
-                <NavLink to="/login" className="link">Login</Link>
+                <NavLink to="/login" className="link">Login</NavLink>
               </div>   </div>
       </div>
     </div>
