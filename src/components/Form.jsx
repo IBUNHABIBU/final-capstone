@@ -7,6 +7,12 @@ const Form = ({ field, onSubmit }) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(formData);
+ };
+
   return (
     <div />
   );
