@@ -14,7 +14,23 @@ const Form = ({ field, onSubmit }) => {
  };
 
   return (
-    <div />
+    <form onSubmit={handleSubmit}>
+        {field.map((input) => (
+            <div key={input.id}>
+                <label htmlFor={input.name}>{input.label}</label>
+                <input
+
+                    type={input.type}
+                    name={input.name}
+                    id={input.name}
+                    value={formData[input.name] || ''}
+                    onChange={handleChange}
+                />
+            </div>
+        ))}
+        <button type="submit">Submit</button>
+    </form>
+    
   );
 };
 
