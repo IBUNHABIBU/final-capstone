@@ -58,7 +58,7 @@ const Nav = () => {
             </NavLink>
             <div className="user__member">
               <p>Already a member?</p>
-              <NavLink to="/login" className="">Login</NavLink>
+              <NavLink to="/login" className="user__member__link">Login</NavLink>
             </div>
           </div>
         )
