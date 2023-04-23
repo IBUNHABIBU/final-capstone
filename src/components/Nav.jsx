@@ -51,11 +51,11 @@ const Nav = () => {
         ) : (
           <div className="user">
             <NavLink to="/signup" className="link ">
-              <button type="submit" className="btn">Sinup</button>
+              <button type="submit" className="btn btn--signup">Sinup</button>
             </NavLink>
             <div>
               <p>Already a member?</p>
-              <NavLink to="/login" className="link">Login</NavLink>
+              <NavLink to="/login" className="">Login</NavLink>
             </div>
           </div>
         )
