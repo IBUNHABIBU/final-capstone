@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Form = () => {
+const Form = ({field, onSubmit}) => {
+    const [formData, setFormData] = useState({})
   return (
-    <div>Form</div>
+    <div></div>
   )
 }
 
