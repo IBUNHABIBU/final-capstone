@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const Form = ({field, onSubmit}) => {
-    const [formData, setFormData] = useState({})
+const Form = ({ field, onSubmit }) => {
+  const [formData, setFormData] = useState({});
 
-    const handleChange = (e) => {
-        const { name, value } = e.target
-        setFormData((prevState) => ({ ...prevState, [name]: value }))
-    }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
   return (
-    <div></div>
-  )
-}
+    <div />
+  );
+};
 
-export default Form
+export default Form;
