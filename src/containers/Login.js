@@ -37,9 +37,12 @@ const Login = () => {
     <div className="login-page container">
       <Form fields= {
         [
-          {}
+          {name: "email", type: "email", label: "Email" },
+          {name: "password", type: "password", label: "Password" },
         ]
       }
+      onSubmit={handleSubmit(onSubmit)}
+      
       <p>
         New to this site?
         <Link to="/signup" className="link"> Register</Link>
