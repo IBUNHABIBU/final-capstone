@@ -35,8 +35,11 @@ const Nav = () => {
         ))
       }
         <div className="user">
-          <button type="submit" className="btn" onClick={handleLogout}>Logout</button>
-        </div>
+        <Link to="/signup" className="link "><button type="submit" className="sinup-btn mb-2 mt-5 btn btn-primary col-8">Sinup</button></Link>
+              <div>
+                <p>Already a member?</p>
+                <Link to="/login" className="link">Login</Link>
+              </div>   </div>
       </div>
     </div>
   );
