@@ -19,10 +19,14 @@ const Nav = () => {
 
   return (
     <div className="nav">
-      <div className="nav__logo">
-        <span />
-        <NavLink to="/" className="link">Salum Habibu</NavLink>
-      </div>
+      <NavLink to="/" className="link">
+        <div className="nav__logo">
+          <img src="logo.jpg" alt="" />
+          <div className="menu-btn">
+            <div className="menu-btn-burger" />
+          </div>
+        </div>
+      </NavLink>
       <div className="nav__lists">
         {
         list.map((list) => (
