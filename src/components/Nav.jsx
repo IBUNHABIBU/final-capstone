@@ -35,12 +35,14 @@ const Nav = () => {
         ))
       }
         <div className="user">
-        <Link to="/signup" className="link ">
-          <button type="submit" className="btn">Sinup</button></Link>
-              <div>
-                <p>Already a member?</p>
-                <NavLink to="/login" className="link">Login</NavLink>
-              </div>   </div>
+          <NavLink to="/signup" className="link ">
+            <button type="submit" className="btn">Sinup</button>
+          </NavLink>
+          <div>
+            <p>Already a member?</p>
+            <NavLink to="/login" className="link">Login</NavLink>
+          </div>
+        </div>
       </div>
     </div>
   );
