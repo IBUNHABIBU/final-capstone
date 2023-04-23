@@ -8,8 +8,7 @@ import { urlBase } from '../redux/actions/fetch';
 
 const Nav = () => {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
-  console.log('user', user);
+  const user = useSelector((state) => state.register);
 
   const handleLogout = () => {
     axios.delete(`${urlBase}/logout`, { withCredentials: true })
