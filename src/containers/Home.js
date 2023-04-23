@@ -16,18 +16,18 @@ const Home = () => {
     dispatch(recentCars());
   }, []);
   return (
-    <div className="home-container">
+    <div className="homecontainer">
 
-      <div className="heading-container">
+      <div className="headingcontainer">
         <h1 className="">LATEST MODEL</h1>
         <p className="lead">Please select a car model </p>
       </div>
-      <div className="container m-5 model">
+      <div className=" m-5 model">
 
         <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={1500}>
           {
             recents.map((car) => (
-              <div key={car.id} className="slide-container">
+              <div key={car.id} className="slidecontainer">
                 <div className="slides">
                   <div className="card">
                     <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
