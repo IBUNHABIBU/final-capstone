@@ -56,7 +56,7 @@ const Nav = () => {
             <NavLink to="/signup" className="link ">
               <button type="submit" className="btn btn--signup">Sign Up</button>
             </NavLink>
-            <div>
+            <div className='user__member'>
               <p>Already a member?</p>
               <NavLink to="/login" className="">Login</NavLink>
             </div>

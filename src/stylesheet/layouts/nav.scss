@@ -30,6 +30,11 @@
     .user {
         border-top: #efefef 1px solid;
         padding-top: 1.4rem;
+
+        &__member {
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__logo {
