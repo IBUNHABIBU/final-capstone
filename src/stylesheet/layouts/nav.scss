@@ -5,7 +5,14 @@
     &__lists {
         display: flex;
         flex-direction: column;
-        padding: 1rem;
-        font-size: 2rem;
+
+        .link {
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 13rem;
+            color: black;
+            font-weight: bolder;
+            text-align: left;
+        }
     }
 }
