@@ -18,8 +18,8 @@
 
             &--active {
                 background-color: $app-color;
+                border-color: $app-color;
                 border-radius: 0%;
-                color: red;
             }
         }
     }
