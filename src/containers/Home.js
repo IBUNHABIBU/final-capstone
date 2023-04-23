@@ -16,11 +16,11 @@ const Home = () => {
     dispatch(recentCars());
   }, []);
   return (
-    <div className="homecontainer">
+    <div className="home">
 
-      <div className="headingcontainer">
-        <h1 className="">LATEST MODEL</h1>
-        <p className="lead">Please select a car model </p>
+      <div className="home__header">
+        <h1 className="heading">LATEST MODEL</h1>
+        <p>Please select a car model </p>
       </div>
       <div className=" m-5 model">
 
