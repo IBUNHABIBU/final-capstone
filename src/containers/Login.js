@@ -48,11 +48,12 @@ const Login = () => {
         <div className="form-floating mb-3 col-3">
           <button type="submit" className="btn btn-primary col-12">Login</button>
         </div>
-        <p>
+        
+      </form>
+      <p>
           New to this site?
           <Link to="/signup" className="link"> Register</Link>
         </p>
-      </form>
     </div>
   );
 };
