@@ -42,6 +42,7 @@ const Login = () => {
         ]
       }
         onSubmit={handleSubmit}
+        action="Login"
       />
       <p>
         New to this site?
