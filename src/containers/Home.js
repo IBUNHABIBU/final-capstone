@@ -25,8 +25,22 @@ const Home = () => {
         <p className="home__header__subtitle">Please select a car model </p>
       </div>
       <div className=" m-5 model">
-
-        <ImageDisplay images={recents} />
+      <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={1500}>
+          {
+            recents.map((car) => (
+              <div key={car.id} className="slide-container">
+                <div className="slides">
+                  <div className="card">
+                    <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
+                  </div>
+                </div>
+                <h4>
+                  {car.title}
+                </h4>
+              </div>
+            ))
+          }
+        </Carousel>
       </div>
     </div>
   );
