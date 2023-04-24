@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/no-array-index-key */
+/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
