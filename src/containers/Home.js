@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import ImageDisplay from '../components/ImageDisplay';
 import { useDispatch, useSelector } from 'react-redux';
+import ImageDisplay from './ImageDisplay';
 import { recentCars } from '../redux/actions/fetch';
 
 const breakPoints = [
@@ -11,6 +11,7 @@ const breakPoints = [
 ];
 const Home = () => {
   const recents = useSelector((state) => state.recent);
+  console.log(recents);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(recentCars());

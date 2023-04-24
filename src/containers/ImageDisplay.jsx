@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 
 const ImageSlider = ({ images }) => {
@@ -28,10 +29,11 @@ const ImageSlider = ({ images }) => {
         ))}
       </div>
       <div className="slider-controls">
-        <button disabled={currentIndex === 0} onClick={prev}>
+        <button type="submit" disabled={currentIndex === 0} onClick={prev}>
           Prev
         </button>
         <button
+          type="submit"
           disabled={currentIndex === images.length - 3}
           onClick={next}
         >
