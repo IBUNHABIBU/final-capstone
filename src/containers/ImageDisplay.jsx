@@ -8,15 +8,11 @@ const ImageSlider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const next = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 3 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 3 ? 0 : prevIndex + 1));
   };
 
   const prev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 3 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 3 : prevIndex - 1));
   };
 
   const visibleImages = images.slice(currentIndex, currentIndex + 3);
@@ -41,10 +37,11 @@ const ImageSlider = ({ images }) => {
         ))}
       </div>
       <div className="slider-controls">
-        <button disabled={currentIndex === 0} onClick={prev}>
+        <button type="submit" disabled={currentIndex === 0} onClick={prev}>
           Prev
         </button>
         <button
+          type="submit"
           disabled={currentIndex === images.length - 3}
           onClick={next}
         >
