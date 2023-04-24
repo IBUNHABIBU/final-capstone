@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 /* eslint-disable react/prop-types */
-const Form = ({ field, onSubmit }) => {
+const Form = ({ field, onSubmit, action }) => {
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
@@ -27,7 +27,7 @@ const Form = ({ field, onSubmit }) => {
           />
         </div>
       ))}
-      <button type="submit" className='btn'>Submit</button>
+      <button type="submit" className="btn">{action}</button>
     </form>
 
   );
