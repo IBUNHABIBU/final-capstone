@@ -26,7 +26,7 @@ const ImageSlider = ({ images }) => {
   return (
     <div className="slider-container">
       <div className="slider" style={slideStyle}>
-      {
+        {
             images.map((car) => (
               <div key={car.id} className="slide-container">
                 <div className="slides">
