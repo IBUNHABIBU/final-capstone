@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+/* eslint-disable react/prop-types */
 const Form = ({ field, onSubmit }) => {
   const [formData, setFormData] = useState({});
 
@@ -19,7 +19,6 @@ const Form = ({ field, onSubmit }) => {
         <div key={input.id}>
           <label htmlFor={input.name}>{input.label}</label>
           <input
-
             type={input.type}
             name={input.name}
             id={input.name}

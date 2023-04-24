@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
 
 const ImageSlider = ({ images }) => {
