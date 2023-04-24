@@ -34,40 +34,20 @@ const Signup = () => {
   };
 
   return (
-    <div className="signup container">
-      <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        {errors && <div className="alert alert-danger col-6" role="alert">{ errors.map((error, id) => <li key={id} className="text-start">{error}</li>) }</div>}
-        <div className="form-floating mb-2 col-3">
-          <input
-            type="text"
-            className="form-control"
-            name="name"
-            {...register('name')}
-            id="floatingInput"
-            placeholder="name@example.com"
-          />
-          <label htmlFor="floatingInput">Username</label>
-        </div>
-        <div className="form-floating mb-2 col-3">
-          <input type="email" name="email" {...register('email')} className="form-control" id="floatingInputEmail" placeholder="name@example.com" />
-          <label htmlFor="floatingInputEmail">Email</label>
-        </div>
-        <div className="form-floating mb-2 col-3">
-          <input type="password" name="password" {...register('password')} className="form-control" id="floatingPassword" placeholder="Password" />
-          <label htmlFor="floatingPassword">Password</label>
-        </div>
-        <div className="form-floating mb-3 col-3">
-          <input type="password" name="password_confirmation" {...register('password_confirmation')} className="form-control" id="floatingPasswordConfirm" placeholder="Password" />
-          <label htmlFor="floatingPasswordconfirm">Confirm Password</label>
-        </div>
-        <div className="form-floating mb-3 col-3">
-          <button type="submit" className="btn btn-primary col-12">Sign Up</button>
-        </div>
-        <p>
-          Already Member?
-          <Link to="/login" className="link"> Login</Link>
-        </p>
-      </form>
+    <div className="signup">
+       <div className="signup__header">
+        <h1>Login</h1>
+      </div>
+      <Form
+        field={
+        [
+          { name: 'email', type: 'email', label: 'Email' },
+          { name: 'password', type: 'password', label: 'Password' },
+        ]
+      }
+        onSubmit={handleSubmit}
+        action="Login"
+      />
     </div>
   );
 };
