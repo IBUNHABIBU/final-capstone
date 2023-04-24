@@ -53,9 +53,9 @@ const Signup = () => {
         action="Signup"
       />
       <p>
-          Already Member?
-          <Link to="/login" className="link"> Login</Link>
-        </p>
+        Already Member?
+        <Link to="/login" className="link"> Login</Link>
+      </p>
     </div>
   );
 };
