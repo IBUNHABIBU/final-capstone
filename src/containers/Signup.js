@@ -20,7 +20,7 @@ const Signup = () => {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
-  const onSubmit = (data) => {
+  const handleSubmit = (data) => {
     axios.post(`${urlBase}/users`, {
       name: data.name,
       email: data.email,
