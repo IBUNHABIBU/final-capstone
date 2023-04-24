@@ -26,7 +26,7 @@ const Home = () => {
       </div>
       <div className=" m-5 model">
 
-        <ImageDisplay />
+        <ImageDisplay images={recents} />
       </div>
     </div>
   );
