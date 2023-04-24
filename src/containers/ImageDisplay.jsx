@@ -24,11 +24,17 @@ const ImageSlider = ({ images }) => {
   return (
     <div className="slider-container">
       <div className="slider" style={slideStyle}>
-        {images.map((image, index) => (
-          <div key={index} className="slide">
-            <img src={image} alt={`Slide ${index}`} />
-          </div>
-        ))}
+        {<div key={car.id} className="slide-container">
+                <div className="slides">
+                  <div className="card">
+                    <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
+                  </div>
+                </div>
+                <h4>
+                  {car.title}
+                </h4>
+              </div>
+            ))}
       </div>
       <div className="slider-controls">
         <button type="submit" disabled={currentIndex === 0} onClick={prev}>
