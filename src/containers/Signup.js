@@ -41,9 +41,10 @@ const Signup = () => {
       <Form
         field={
         [
+          { name: 'username', type: 'username', label: 'Username' },
           { name: 'email', type: 'email', label: 'Email' },
-          { name: 'password', type: 'password', label: 'Password' },{ name: 'email', type: 'email', label: 'Email' },
           { name: 'password', type: 'password', label: 'Password' },
+          { name: 'password_confirmation', type: 'password_confirmation', label: 'Password_confirmation' },
         ]
       }
         onSubmit={handleSubmit}
