@@ -32,8 +32,10 @@ const Login = () => {
     });
   };
   return (
-    <div className="login-page container">
-      <h1>Login</h1>
+    <div className="login">
+      <div className="login__header">
+        <h1>Login</h1>
+      </div>
       <Form
         field={
         [
