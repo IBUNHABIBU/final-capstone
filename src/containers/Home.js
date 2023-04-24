@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ImageDisplay from './ImageDisplay';
+import Carousel from 'react-elastic-carousel';
 import { recentCars } from '../redux/actions/fetch';
-
+// import ImageDisplay from './ImageDisplay';
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 2 },
@@ -25,7 +25,7 @@ const Home = () => {
         <p className="home__header__subtitle">Please select a car model </p>
       </div>
       <div className=" m-5 model">
-      <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={1500}>
+        <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={1500}>
           {
             recents.map((car) => (
               <div key={car.id} className="slide-container">
