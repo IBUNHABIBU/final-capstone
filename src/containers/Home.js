@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Carousel from 'react-elastic-carousel';
+import ImageDisplay from '../components/ImageDisplay';
 import { useDispatch, useSelector } from 'react-redux';
 import { recentCars } from '../redux/actions/fetch';
 
