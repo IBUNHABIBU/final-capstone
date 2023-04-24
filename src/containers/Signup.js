@@ -36,17 +36,18 @@ const Signup = () => {
   return (
     <div className="signup">
        <div className="signup__header">
-        <h1>Login</h1>
+        <h1>Register</h1>
       </div>
       <Form
         field={
         [
           { name: 'email', type: 'email', label: 'Email' },
+          { name: 'password', type: 'password', label: 'Password' },{ name: 'email', type: 'email', label: 'Email' },
           { name: 'password', type: 'password', label: 'Password' },
         ]
       }
         onSubmit={handleSubmit}
-        action="Login"
+        action="Signup"
       />
     </div>
   );
