@@ -34,7 +34,7 @@ const Login = () => {
   return (
     <div className="login-page container">
       <Form
-        fields={
+        field={
         [
           { name: 'email', type: 'email', label: 'Email' },
           { name: 'password', type: 'password', label: 'Password' },
