@@ -24,7 +24,7 @@ const Home = () => {
       </div>
       <div className=" m-5 model">
 
-       <ImageDisplay />
+        <ImageDisplay />
       </div>
     </div>
   );
