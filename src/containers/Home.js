@@ -24,22 +24,7 @@ const Home = () => {
       </div>
       <div className=" m-5 model">
 
-        <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={1500}>
-          {
-            recents.map((car) => (
-              <div key={car.id} className="slidecontainer">
-                <div className="slides">
-                  <div className="card">
-                    <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
-                  </div>
-                </div>
-                <h4>
-                  {car.title}
-                </h4>
-              </div>
-            ))
-          }
-        </Carousel>
+       <ImageDisplay />
       </div>
     </div>
   );
