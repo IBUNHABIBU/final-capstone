@@ -49,7 +49,7 @@ const Signup = () => {
           { name: 'password_confirmation', type: 'password_confirmation', label: 'Password_confirmation' },
         ]
       }
-        onSubmit={handleSubmit}
+        onSubmit={(formData) => handleSubmit(formData)}
         action="Signup"
       />
       <p>
