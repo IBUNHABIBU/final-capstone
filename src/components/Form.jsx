@@ -27,7 +27,7 @@ const Form = ({ field, onSubmit }) => {
           />
         </div>
       ))}
-      <button type="submit">Submit</button>
+      <button type="submit" className='btn'>Submit</button>
     </form>
 
   );
