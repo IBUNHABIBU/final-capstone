@@ -27,7 +27,7 @@ const ImageSlider = ({ images }) => {
     <div className="slider-container">
       <div className="slider" style={slideStyle}>
       {
-            recents.map((car) => (
+            images.map((car) => (
               <div key={car.id} className="slide-container">
                 <div className="slides">
                   <div className="card">
