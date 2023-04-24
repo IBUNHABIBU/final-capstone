@@ -14,7 +14,7 @@ const Form = ({ field, onSubmit, action }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       {field.map((input) => (
         <div key={input.id}>
           <label htmlFor={input.name}>{input.label}</label>
