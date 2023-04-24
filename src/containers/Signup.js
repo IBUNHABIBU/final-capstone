@@ -52,6 +52,10 @@ const Signup = () => {
         onSubmit={handleSubmit}
         action="Signup"
       />
+      <p>
+          Already Member?
+          <Link to="/login" className="link"> Login</Link>
+        </p>
     </div>
   );
 };
