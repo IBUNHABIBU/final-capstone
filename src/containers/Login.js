@@ -44,7 +44,7 @@ const Login = () => {
           { name: 'password', type: 'password', label: 'Password' },
         ]
       }
-        onSubmit={(FormData) => handleSubmit(FormData)}
+        onSubmit={(formData) => handleSubmit(formData)}
         action="Login"
       />
       <p>

@@ -17,7 +17,6 @@ const Signup = () => {
   if (userLogin.logged_in) {
     navigate.push('/models');
   }
-  const { register, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
   const handleSubmit = (data) => {
