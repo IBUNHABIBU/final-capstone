@@ -27,6 +27,7 @@ const Login = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
+        console.log(response.data);
       }
       setErrors(response.data.error);
     });
@@ -43,7 +44,7 @@ const Login = () => {
           { name: 'password', type: 'password', label: 'Password' },
         ]
       }
-        onSubmit={handleSubmit}
+        onSubmit={(FormData) => console.log(FormData)}
         action="Login"
       />
       <p>
