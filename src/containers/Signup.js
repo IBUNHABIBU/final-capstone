@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
 import { urlBase } from '../redux/actions/fetch';
+import Form from '../components/Form';
 
 const Signup = () => {
   const userLogin = useSelector((state) => state.register);
