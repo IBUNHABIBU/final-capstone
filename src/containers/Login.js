@@ -11,7 +11,7 @@ import Form from '../components/Form';
 
 const Login = () => {
   const userLogin = useSelector((state) => state.register);
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(true);
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -35,7 +35,9 @@ const Login = () => {
     });
   };
 
-  useEffect(() => () => setIsMounted(true), []);
+  useEffect(() => {
+    return () => setIsMounted(false);
+  }, []);
 
   return (
     <div className="login">
