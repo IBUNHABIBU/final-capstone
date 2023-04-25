@@ -7,7 +7,7 @@ const Bookings = () => {
   const bookings = useSelector((state) => state.booking);
   return (
     <>
-      <p className="display-6" align="center">All appointment</p>
+      <p className="display-6">All appointment</p>
       <table className="table table-light">
         <thead className="thead-dark">
           <tr>

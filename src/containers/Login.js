@@ -3,8 +3,8 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
 import React, { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
 import { urlBase } from '../redux/actions/fetch';
 import Form from '../components/Form';
@@ -12,7 +12,7 @@ import Form from '../components/Form';
 const Login = () => {
   const userLogin = useSelector((state) => state.register);
   const navigate = useNavigate();
- 
+
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
   const handleSubmit = (data) => {
@@ -25,7 +25,8 @@ const Login = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
-        navigate.push('/models');
+        console.log(response.data);
+        navigate('/models');
       }
       setErrors(response.data.error);
     });
@@ -47,7 +48,7 @@ const Login = () => {
       />
       <p>
         New to this site?
-        <Link to="/signup" className="link"> Register</Link>
+        <NavLink to="/signup" className="Link"> Register</NavLink>
       </p>
     </div>
   );
