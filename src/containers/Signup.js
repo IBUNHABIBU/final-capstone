@@ -20,6 +20,7 @@ const Signup = () => {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
   const handleSubmit = (data) => {
+    console.log(data);
     axios.post(`${urlBase}/users`, {
       name: data.name,
       email: data.email,
@@ -27,6 +28,7 @@ const Signup = () => {
       password_confirmation: data.password_confirmation,
     },
     { withCredentials: true }).then((response) => {
+      console.log(response.data);
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
         console.log(response.data);
@@ -49,7 +51,7 @@ const Signup = () => {
           { name: 'password_confirmation', type: 'password_confirmation', label: 'Password_confirmation' },
         ]
       }
-        onSubmit={(FormData) => handleSubmit(FormData)}
+        onSubmit={handleSubmit}
         action="Signup"
       />
       <p>
