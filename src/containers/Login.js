@@ -35,9 +35,7 @@ const Login = () => {
     });
   };
 
-  useEffect(() => {
-    return () => setIsMounted(false);
-  }, []);
+  useEffect(() => () => setIsMounted(false), []);
 
   return (
     <div className="login">
