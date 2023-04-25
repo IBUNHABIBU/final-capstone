@@ -19,9 +19,8 @@ const MyComponent = () => {
         <p>Modal content goes here...</p>
       </Modal>
       {showModal && (
-        <Modal onClose={handleCloseModal} title="My Modal">
-          <p>Modal content goes here...</p>
-        </Modal>
+        <Modal onClose={handleCloseModal} title="My Modal" children="hello" />
+
       )}
     </div>
   );

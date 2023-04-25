@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Modal = ({ onClose, title, children }) => {
+const Modal = ({ onClose, title, content }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const handleClose = () => {
@@ -27,7 +27,7 @@ const Modal = ({ onClose, title, children }) => {
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  content: PropTypes.string.isRequired,
 };
 
 export default Modal;
