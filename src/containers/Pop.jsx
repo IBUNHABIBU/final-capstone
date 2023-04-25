@@ -26,4 +26,4 @@ const Pop = () => {
   );
 };
 
-export default pop;
+export default Pop;
