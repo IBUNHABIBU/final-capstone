@@ -36,12 +36,12 @@ const AddCarForm = () => {
     reset();
   };
   return (
-    <div>
-      <Link to="/cars">see cars</Link>
+    <div className="carform">
+      <Link to="/cars" className="btn btn--list">see cars</Link>
       <div className="container mt-5">
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn--primary"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >

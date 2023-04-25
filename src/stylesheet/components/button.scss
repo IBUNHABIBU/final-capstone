@@ -10,6 +10,12 @@
   margin: 4px 2px;
   cursor: pointer;
 
+  &--list {
+    background-color: #3498db;
+    color: #fff;
+    margin-right: 10px;
+  }
+
   &:hover {
     background-color: $hover-color;
     color: white;
