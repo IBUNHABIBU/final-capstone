@@ -17,7 +17,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
   const handleSubmit = (data) => {
-    console.log("Data", data);
+    console.log('Data', data);
     axios.post(`${urlBase}/sessions`, {
       user: {
         email: data.email,
@@ -25,9 +25,9 @@ const Login = () => {
       },
     },
     { withCredentials: true }).then((response) => {
-      console.log("Response", response.data);
+      console.log('Response', response.data, isMounted);
       if (isMounted) {
-        console.log("After is mounted", response.data);
+        console.log('After is mounted', response.data);
         if (response.data.status === 'created') {
           dispatch(setUser(response.data));
           console.log(response.data);
