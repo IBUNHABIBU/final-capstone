@@ -5,7 +5,7 @@ const MyComponent = () => {
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => {
-    setShowModal(true);
+    setShowModal(false);
   };
 
   const handleCloseModal = () => {

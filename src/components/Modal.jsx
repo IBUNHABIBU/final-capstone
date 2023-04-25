@@ -14,7 +14,7 @@ const Modal = ({ onClose, title, children }) => {
       <div className="modal-content">
         <div className="modal-header">
           <h2>{title}</h2>
-          <button type="submit" close-btn" onClick={handleClose}>
+          <button type="submit" className="close-btn" onClick={handleClose}>
             &times;
           </button>
         </div>
