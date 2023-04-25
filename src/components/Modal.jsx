@@ -5,7 +5,7 @@ const Modal = ({ title, content, onClose }) => {
   const [showModal, setShowModal] = useState(true);
 
   const handleClose = () => {
-    setShowModal(false);
+    setShowModal(true);
     onClose();
   };
 
