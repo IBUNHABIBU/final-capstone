@@ -11,7 +11,7 @@ import Form from '../components/Form';
 
 const Login = () => {
   const userLogin = useSelector((state) => state.register);
-  const isMounted = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -24,20 +24,18 @@ const Login = () => {
       },
     },
     { withCredentials: true }).then((response) => {
-      if(isMounted) {
-      if (response.data.status === 'created') {
-        dispatch(setUser(response.data));
-        console.log(response.data);
-        navigate('/models');
+      if (isMounted) {
+        if (response.data.status === 'created') {
+          dispatch(setUser(response.data));
+          console.log(response.data);
+          navigate('/models');
+        }
+        setErrors(response.data.error);
       }
-      setErrors(response.data.error);
-    }
     });
   };
 
-  useEffect(() => {
-    return () => setIsMounted(true);
-  },[])
+  useEffect(() => () => setIsMounted(true), []);
 
   return (
     <div className="login">
