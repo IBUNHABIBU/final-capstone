@@ -14,7 +14,7 @@ const Pop = () => {
 
   return (
     <div>
-      <button onClick={handleOpenModal}>Open Modal</button>
+      <button onClick={handleOpenModal} type="submit">Open Modal</button>
       {showModal && (
         <Modal
           title="My Modal"
