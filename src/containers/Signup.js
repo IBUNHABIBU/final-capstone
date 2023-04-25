@@ -4,7 +4,6 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { setUser } from '../redux/actions/actions';
@@ -20,7 +19,6 @@ const Signup = () => {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
   const handleSubmit = (data) => {
-    console.log(data);
     axios.post(`${urlBase}/users`, {
       name: data.name,
       email: data.email,
@@ -28,10 +26,8 @@ const Signup = () => {
       password_confirmation: data.password_confirmation,
     },
     { withCredentials: true }).then((response) => {
-      console.log(response.data);
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
-        console.log(response.data);
       }
       setErrors(response.data.error);
     });
@@ -45,13 +41,13 @@ const Signup = () => {
       <Form
         field={
         [
-          { name: 'username', type: 'username', label: 'Username' },
+          { name: 'name', type: 'name', label: 'name' },
           { name: 'email', type: 'email', label: 'Email' },
           { name: 'password', type: 'password', label: 'Password' },
-          { name: 'password_confirmation', type: 'password_confirmation', label: 'Password_confirmation' },
+          { name: 'password_confirmation', type: 'password', label: 'Password_confirmation' },
         ]
       }
-        onSubmit={handleSubmit}
+        onSubmit={(formData) => handleSubmit(formData)}
         action="Signup"
       />
       <p>
