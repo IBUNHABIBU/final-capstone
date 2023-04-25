@@ -44,8 +44,12 @@ const Login = () => {
       <Form
         field={
         [
-          { name: 'email', type: 'email', label: 'Email', required: true },
-          { name: 'password', type: 'password', label: 'Password', required: true },
+          {
+            name: 'email', type: 'email', label: 'Email', required: true,
+          },
+          {
+            name: 'password', type: 'password', label: 'Password', required: true,
+          },
         ]
       }
         onSubmit={(formData) => handleSubmit(formData)}
