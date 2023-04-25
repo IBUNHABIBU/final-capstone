@@ -21,6 +21,7 @@ const App = () => {
   const CarListComponent = layout(CarList);
   const CarDetailsComponent = layout(CarDetails);
   const AppointmentComponent = layout(Appointment);
+  const PopComponent = layout(Pop);
 
   useEffect(() => {
     dispatch(checkLoginStatus());
@@ -35,6 +36,7 @@ const App = () => {
       { path: '/cars', element: <CarListComponent /> },
       { path: '/cars/:id', element: <CarDetailsComponent /> },
       { path: '/appointments', element: <AppointmentComponent /> },
+      { path: '/pop', element: <PopComponent /> },
     ],
   );
   return (
