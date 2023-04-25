@@ -41,7 +41,7 @@ const AddCarForm = () => {
       <div className="container mt-5">
         <button
           type="button"
-          className="btn btn--primary"
+          className="btn btn--add"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >

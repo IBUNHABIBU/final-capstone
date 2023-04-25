@@ -16,6 +16,11 @@
     margin-right: 10px;
   }
 
+  &--add {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+
   &:hover {
     background-color: $hover-color;
     color: white;
