@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import Modal from '../components/Modal';
 
-const Pop = () => {
+const MyComponent = () => {
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => {
-    console.log('Modal closed', showModal);
     setShowModal(true);
-    console.log('Modal closed after', showModal);
   };
 
   const handleCloseModal = () => {
@@ -18,14 +16,12 @@ const Pop = () => {
     <div>
       <button onClick={handleOpenModal} type="submit">Open Modal</button>
       {showModal && (
-        <Modal
-          title="My Modal"
-          content="This is the content of my modal."
-          onClose={handleCloseModal}
-        />
+        <Modal onClose={handleCloseModal} title="My Modal">
+          <p>Modal content goes here...</p>
+        </Modal>
       )}
     </div>
   );
 };
 
-export default Pop;
+export default MyComponent;
