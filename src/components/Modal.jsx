@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './Modal.css';
 
 const Modal = ({ title, content, onClose }) => {
@@ -16,7 +17,7 @@ const Modal = ({ title, content, onClose }) => {
           <div className="modal">
             <div className="modal-header">
               <h3>{title}</h3>
-              <button onClick={handleClose}>X</button>
+              <button onClick={handleClose} type="submit">X</button>
             </div>
             <div className="modal-content">{content}</div>
           </div>
@@ -25,5 +26,11 @@ const Modal = ({ title, content, onClose }) => {
     </>
   );
 };
+
+Modal.propTypes = {
+    onClose: PropTypes.func.isRequired,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+}
 
 export default Modal;
