@@ -18,7 +18,7 @@ const Modal = ({ onClose, title, content }) => {
             &times;
           </button>
         </div>
-        <div className="modal-body">{children}</div>
+        <div className="modal-body">{content}</div>
       </div>
     </div>
   );
