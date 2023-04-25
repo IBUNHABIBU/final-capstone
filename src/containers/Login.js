@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setUser } from '../redux/actions/actions';
@@ -11,6 +11,7 @@ import Form from '../components/Form';
 
 const Login = () => {
   const userLogin = useSelector((state) => state.register);
+  const isMounted = useState(false);
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -23,14 +24,21 @@ const Login = () => {
       },
     },
     { withCredentials: true }).then((response) => {
+      if(isMounted) {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
         console.log(response.data);
         navigate('/models');
       }
       setErrors(response.data.error);
+    }
     });
   };
+
+  useEffect(() => {
+    return () => setIsMounted(true);
+  },[])
+
   return (
     <div className="login">
       <div className="login__header">
