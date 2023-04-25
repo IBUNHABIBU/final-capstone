@@ -25,7 +25,7 @@ const Signup = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
-        navigate('/modules');
+        navigate('/models');
       }
       setErrors(response.data.error);
     });
