@@ -5,7 +5,9 @@ const Pop = () => {
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => {
+    console.log('Modal closed', showModal);
     setShowModal(true);
+    console.log('Modal closed after', showModal);
   };
 
   const handleCloseModal = () => {

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './Modal.css';
 
 const Modal = ({ title, content, onClose }) => {
   const [showModal, setShowModal] = useState(true);
@@ -28,9 +27,9 @@ const Modal = ({ title, content, onClose }) => {
 };
 
 Modal.propTypes = {
-    onClose: PropTypes.func.isRequired,
-    title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
-}
+  onClose: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};
 
 export default Modal;
