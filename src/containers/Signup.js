@@ -39,10 +39,18 @@ const Signup = () => {
       <Form
         field={
         [
-          { name: 'name', type: 'name', label: 'name', required: true },
-          { name: 'email', type: 'email', label: 'Email', required: true },
-          { name: 'password', type: 'password', label: 'Password', required: true },
-          { name: 'password_confirmation', type: 'password', label: 'Password_confirmation', required: true },
+          {
+            name: 'name', type: 'name', label: 'name', required: true,
+          },
+          {
+            name: 'email', type: 'email', label: 'Email', required: true,
+          },
+          {
+            name: 'password', type: 'password', label: 'Password', required: true,
+          },
+          {
+            name: 'password_confirmation', type: 'password', label: 'Password_confirmation', required: true,
+          },
         ]
       }
         onSubmit={(formData) => handleSubmit(formData)}
