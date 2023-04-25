@@ -13,9 +13,6 @@ import Form from '../components/Form';
 const Signup = () => {
   const userLogin = useSelector((state) => state.register);
   const navigate = useNavigate();
-  if (userLogin.logged_in) {
-    navigate.push('/models');
-  }
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
   const handleSubmit = (data) => {
@@ -28,6 +25,7 @@ const Signup = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
+        navigate('/modules');
       }
       setErrors(response.data.error);
     });
