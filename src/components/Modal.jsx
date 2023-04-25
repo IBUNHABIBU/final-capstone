@@ -1,35 +1,33 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Modal = ({ title, content, onClose }) => {
-  const [showModal, setShowModal] = useState(true);
+const Modal = ({ onClose, title, children }) => {
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleClose = () => {
-    setShowModal(true);
+    setIsOpen(false);
     onClose();
   };
 
   return (
-    <>
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <div className="modal-header">
-              <h3>{title}</h3>
-              <button onClick={handleClose} type="submit">X</button>
-            </div>
-            <div className="modal-content">{content}</div>
-          </div>
+    <div className={`modal ${isOpen ? 'open' : ''}`}>
+      <div className="modal-content">
+        <div className="modal-header">
+          <h2>{title}</h2>
+          <button className="close-btn" onClick={handleClose}>
+            &times;
+          </button>
         </div>
-      )}
-    </>
+        <div className="modal-body">{children}</div>
+      </div>
+    </div>
   );
 };
 
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Modal;
