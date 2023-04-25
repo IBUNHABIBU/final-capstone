@@ -16,8 +16,8 @@ const MyComponent = () => {
     <div>
       <button onClick={handleOpenModal} type="submit">Open Modal</button>
       <Modal onClose={handleCloseModal} title="My Modal">
-          <p>Modal content goes here...</p>
-        </Modal>
+        <p>Modal content goes here...</p>
+      </Modal>
       {showModal && (
         <Modal onClose={handleCloseModal} title="My Modal">
           <p>Modal content goes here...</p>
