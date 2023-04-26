@@ -66,87 +66,25 @@ const AddCarForm = () => {
                             },
                             {
                               name: 'engine', type: 'text', label: 'Engine', required: true,
-                            }, {
+                            },
+                            {
                               name: 'year', type: 'text', label: 'Year', required: true,
+                            },
+                            {
+                              name: 'title', type: 'text', label: 'Car model', required: true,
+                            },
+                            {
+                              name: 'price', type: 'text', label: 'Price', required: true,
+                            },
+                            {
+                              name: 'image', type: 'file', label: 'Image', required: true,
                             },
                           ]
                         }
                   onSubmit={(formData) => handleSubmit(formData)}
-                  action="Login"
+                  action="Add Car"
                 />
-                <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                  <div className="form-floating mb-2 col-10">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="color"
-                      {...register('color', { required: true })}
-                      id="floatingInput"
-                      placeholder="Car color"
-                    />
-                    <label htmlFor="floatingInput">Color</label>
-                  </div>
-                  <div className="form-floating mb-2 col-10">
-                    <input
-                      type="text"
-                      name="engine"
-                      {...register('engine', { required: true })}
-                      className="form-control"
-                      id="floatingInput"
-                      placeholder="Enter engine type"
-                    />
-                    <label htmlFor="floatingInput">Engine</label>
-                  </div>
-                  <div className="form-floating mb-2 col-10">
-                    <input
-                      type="text"
-                      name="year"
-                      {...register('year', { required: true })}
-                      className="form-control"
-                      id="floatingInput"
-                      placeholder="Enter Year"
-                    />
-                    <label htmlFor="floatingInput">Year</label>
-                  </div>
-                  <div className="form-floating mb-2 col-10">
-                    <input
-                      type="text"
-                      name="title"
-                      {...register('title', { required: true })}
-                      className="form-control"
-                      id="floatingInput"
-                      placeholder="Enter car model"
-                    />
-                    <label htmlFor="floatingInput">Model</label>
-                  </div>
-
-                  <div className="form-floating mb-2 col-10">
-                    <input
-                      type="text"
-                      name="price"
-                      {...register('price', { required: true })}
-                      className="form-control"
-                      id="floatingInputprice"
-                      placeholder="Enter the price"
-                    />
-                    <label htmlFor="floatingInputImage">Price</label>
-                  </div>
-                  <div className="form-floating mb-2 col-10">
-                    <input
-                      type="file"
-                      name="image"
-                      {...register('image', { required: true })}
-                      className="form-control"
-                      id="floatingInputprice"
-                      placeholder="Upload image"
-                      accept="image/*"
-                    />
-                    <label htmlFor="floatingInputImage">Image</label>
-                  </div>
-                  <div className="form-floating mb-3 col-10">
-                    <button type="submit" className="btn btn-primary col-10">Add Car</button>
-                  </div>
-                </form>
+               
               </div>
             </div>
           </div>
