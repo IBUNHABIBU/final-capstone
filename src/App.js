@@ -40,7 +40,7 @@ const App = () => {
       { path: '/cars/:id', element: <CarDetailsComponent /> },
       { path: '/appointments', element: <AppointmentComponent /> },
       { path: '/pop', element: <PopComponent /> },
-      { path: '/projects', element: <ProjectComponent />}
+      { path: '/projects', element: <ProjectComponent /> },
     ],
   );
   return (
