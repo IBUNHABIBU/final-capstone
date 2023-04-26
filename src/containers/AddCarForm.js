@@ -62,10 +62,10 @@ const AddCarForm = () => {
                   field={
                           [
                             {
-                              name: 'email', type: 'email', label: 'Email', required: true,
+                              name: 'color', type: 'text', label: 'Color', required: true,
                             },
                             {
-                              name: 'password', type: 'password', label: 'Password', required: true,
+                              name: 'Engine', type: 'text', label: 'Engine', required: true,
                             },
                           ]
                         }
