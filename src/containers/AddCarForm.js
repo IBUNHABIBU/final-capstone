@@ -11,7 +11,7 @@ const AddCarForm = () => {
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
 
-  const onSubmit = (data) => {
+  const handleSubmit = (data) => {
     const formData = new FormData();
     const car = { ...data, image: data.image[0] };
     formData.append('car[color]', car.color);
@@ -32,7 +32,6 @@ const AddCarForm = () => {
           setMessage('Car created successfully');
         }
       });
-    reset();
   };
   return (
     <div className="carform">
@@ -45,17 +44,14 @@ const AddCarForm = () => {
           Add new car
         </button>
         <div className="modal">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
                 {message && (
                 <div className="modal-header col-12">
                   <div className="alert alert-success col-12" role="alert">{message}</div>
                   <button type="button" onClick={() => { setMessage(''); }} className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
                 </div>
                 )}
-              </div>
-              <div className="modal-body">
+              
+              <div className="m">
                 <Form
                   field={
                           [
@@ -84,8 +80,6 @@ const AddCarForm = () => {
                 />
 
               </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
