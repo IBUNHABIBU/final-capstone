@@ -65,7 +65,7 @@ const AddCarForm = () => {
                               name: 'color', type: 'text', label: 'Color', required: true,
                             },
                             {
-                              name: 'Engine', type: 'text', label: 'Engine', required: true,
+                              name: 'engine', type: 'text', label: 'Engine', required: true,
                             },
                           ]
                         }
