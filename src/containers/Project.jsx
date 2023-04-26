@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Project = ({ trigger, children }) => {
+const Project = ({ trigger, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ const Project = ({ trigger, children }) => {
           <button type="submit" className="popup__close" onClick={() => setIsOpen(false)}>
             &times;
           </button>
-          {children}
+          {content}
         </div>
       )}
     </div>
@@ -23,7 +23,7 @@ const Project = ({ trigger, children }) => {
 
 Project.propTypes = {
   trigger: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 };
 
 export default Project;
