@@ -4,12 +4,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import { useForm } from 'react-hook-form';
 import { createCar, urlBase } from '../redux/actions/fetch';
 import Form from '../components/Form';
 
 const AddCarForm = () => {
-  const { register, handleSubmit, reset } = useForm();
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
 
@@ -84,7 +82,7 @@ const AddCarForm = () => {
                   onSubmit={(formData) => handleSubmit(formData)}
                   action="Add Car"
                 />
-               
+
               </div>
             </div>
           </div>
