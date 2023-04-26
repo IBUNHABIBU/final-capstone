@@ -10,7 +10,7 @@ const PopupModal = ({ onClose, title, content }) => {
   };
 
   return (
-    <div className={`modal ${isOpen ? 'open' : ''}`}>
+    <div className="modal">
       <div className="modal-content">
         <div className="modal-header">
           <h1>Title</h1>
