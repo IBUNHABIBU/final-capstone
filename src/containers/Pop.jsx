@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from '../components/Modal';
+import Modal from '../components/PopupModal';
 import Project from './Project';
 import AddCarForm from './AddCarForm';
 

@@ -38,17 +38,14 @@ const AddCarForm = () => {
   return (
     <div className="carform">
       <Link to="/cars" className="btn btn--list">see cars</Link>
-      <div className="container mt-5">
+      <div className="container">
         <button
           type="button"
-          className="btn btn--add"
-          data-bs-toggle="modal"
-          data-bs-target="#myModal"
         >
           {' '}
           Add new car
         </button>
-        <div className="modal" id="myModal">
+        <div className="modal">
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
