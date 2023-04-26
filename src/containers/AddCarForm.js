@@ -66,7 +66,7 @@ const AddCarForm = () => {
                             },
                             {
                               name: 'engine', type: 'text', label: 'Engine', required: true,
-                            },{
+                            }, {
                               name: 'year', type: 'text', label: 'Year', required: true,
                             },
                           ]
