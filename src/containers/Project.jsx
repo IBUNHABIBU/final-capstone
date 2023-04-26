@@ -83,9 +83,9 @@ const Project = () => {
     setProjectModal(false);
   };
   return (
-    <div className="Project">
+    <div className="admin">
       <h2>Project Panel</h2>
-      <div className="Project__buttons">
+      <div className="admin__buttons">
         <button className="btn skills" type="submit" onClick={handleClick}>Add Skills</button>
         <button className="btn project" type="submit" onClick={handleClickProject}>Add Project</button>
       </div>
