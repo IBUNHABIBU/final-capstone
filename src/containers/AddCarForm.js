@@ -44,16 +44,16 @@ const AddCarForm = () => {
           Add new car
         </button>
         <div className="modal">
-                {message && (
-                <div className="modal-header col-12">
-                  <div className="alert alert-success col-12" role="alert">{message}</div>
-                  <button type="button" onClick={() => { setMessage(''); }} className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
-                </div>
-                )}
-              
-              <div className="m">
-                <Form
-                  field={
+          {message && (
+          <div className="modal-header col-12">
+            <div className="alert alert-success col-12" role="alert">{message}</div>
+            <button type="button" onClick={() => { setMessage(''); }} className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
+          </div>
+          )}
+
+          <div className="m">
+            <Form
+              field={
                           [
                             {
                               name: 'color', type: 'text', label: 'Color', required: true,
@@ -75,11 +75,11 @@ const AddCarForm = () => {
                             },
                           ]
                         }
-                  onSubmit={(formData) => handleSubmit(formData)}
-                  action="Add Car"
-                />
+              onSubmit={(formData) => handleSubmit(formData)}
+              action="Add Car"
+            />
 
-              </div>
+          </div>
         </div>
       </div>
     </div>
