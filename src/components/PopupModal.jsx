@@ -13,7 +13,7 @@ const PopupModal = ({ onClose, title, content }) => {
     <div className={`modal ${isOpen ? 'open' : ''}`}>
       <div className="modal-content">
         <div className="modal-header">
-          <h1>Titlee</h1>
+          <h1>Title</h1>
           <h2>{title}</h2>
           <button type="submit" className="close-btn" onClick={handleClose}>
             &times;
