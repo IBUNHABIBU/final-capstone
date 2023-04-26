@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from '../components/Modal';
 import Project from './Project';
-import Signup from './Signup';
+import AddCarForm from './AddCarForm';
 
 const Pop = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,7 +16,7 @@ const Pop = () => {
 
   return (
     <div>
-      <Project trigger="Click me" content={<Signup />} />
+      <Project trigger="Click me" content={<AddCarForm />} />
       <button onClick={handleOpenModal} type="submit">Open Modal</button>
       <Modal onClose={handleCloseModal} title="My Modal" content="hello" />
       {showModal && (
