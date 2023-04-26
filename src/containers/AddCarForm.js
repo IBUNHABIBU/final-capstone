@@ -57,6 +57,20 @@ const AddCarForm = () => {
                 )}
               </div>
               <div className="modal-body">
+              <Form
+        field={
+        [
+          {
+            name: 'email', type: 'email', label: 'Email', required: true,
+          },
+          {
+            name: 'password', type: 'password', label: 'Password', required: true,
+          },
+        ]
+      }
+        onSubmit={(formData) => handleSubmit(formData)}
+        action="Login"
+      />
                 <form className="form" onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-floating mb-2 col-10">
                     <input
