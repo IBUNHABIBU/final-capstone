@@ -6,7 +6,7 @@ const Project = ({ trigger, children }) => {
 
   return (
     <div className="popup">
-      <button className="popup__button" onClick={() => setIsOpen(true)}>
+      <button type="submit" className="popup__button" onClick={() => setIsOpen(true)}>
         {trigger}
       </button>
       {isOpen && (
