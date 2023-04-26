@@ -43,7 +43,7 @@ const AddCarForm = () => {
           {' '}
           Add new car
         </button>
-        <div className="modal">
+        <div className="modl">
           {message && (
           <div className="modal-header col-12">
             <div className="alert alert-success col-12" role="alert">{message}</div>
