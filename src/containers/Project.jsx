@@ -1,13 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addProject, addSkills } from '../redux/actions/actions';
 import { urlBase } from '../redux/actions/fetch';
 
 const Project = () => {
   const [skillsModal, setSkillsModal] = useState(false);
   const [projectModal, setProjectModal] = useState(false);
-  const dispatch = useDispatch();
   const [skills, setSkills] = useState({
     name: '',
   });
@@ -46,7 +43,6 @@ const Project = () => {
       .then((res) => {
         if (res.data.status === 'created') {
           setSkillsModal(false);
-          dispatch(addSkills(res.data));
         }
       });
   };
@@ -68,7 +64,6 @@ const Project = () => {
       .then((res) => {
         if (res.data.status === 'created') {
           setProjectModal(false);
-          dispatch(addProject(res.data));
         }
       });
   };
