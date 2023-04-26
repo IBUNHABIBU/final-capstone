@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const PopupModal = ({ onClose, title, content }) => {
-  const [isOpen, setIsOpen] = useState(true);
-
   const handleClose = () => {
-    setIsOpen(true);
     onClose();
   };
 
   return (
-    <div className="modal">
-      <div className="modal-content">
-        <div className="modal-header">
+    <div className="moda">
+      <div className="mod">
+        <div className="mo">
           <h1>Title</h1>
           <h2>{title}</h2>
           <button type="submit" className="close-btn" onClick={handleClose}>
