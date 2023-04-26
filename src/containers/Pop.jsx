@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../components/Modal';
+import Project from './Project';
 
 const Pop = () => {
   const [showModal, setShowModal] = useState(false);
@@ -14,7 +15,7 @@ const Pop = () => {
 
   return (
     <div>
-      <Modal onClose={handleCloseModal} title="My Modal" content="hello" />
+      <Project />
       <button onClick={handleOpenModal} type="submit">Open Modal</button>
       <Modal onClose={handleCloseModal} title="My Modal" content="hello" />
       {showModal && (
