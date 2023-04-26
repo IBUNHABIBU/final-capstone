@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { createCar, urlBase } from '../redux/actions/fetch';
+import Form from '../components/Form';
 
 const AddCarForm = () => {
   const { register, handleSubmit, reset } = useForm();
