@@ -55,16 +55,13 @@ const CarDetails = () => {
                 name: 'model', type: 'text', label: 'Model', required: true,
               },
               {
-                name: 'pickup', type: 'text', label: 'Pickup', required: true,
+                name: 'pickup', type: 'datetime', label: 'Pickup', required: true,
               },
               {
-                name: 'return_date', type: 'text', label: 'Return Date', required: true,
+                name: 'return_date', type: 'datetime', label: 'Return Date', required: true,
               },
               {
                 name: 'location', type: 'text', label: 'Location', required: true,
-              },
-              {
-                name: 'image', type: 'file', label: 'Image', required: true,
               },
             ]
           }
@@ -105,11 +102,7 @@ const CarDetails = () => {
             </li>
           </ul>
         </div>
-        <button
-          type="button"
-        >
-          Book a ride
-        </button>
+
         <div className="model-container">
           <Pop trigger="Book a ride" content={form} />
           <div className="form-floating mb-3 col-6">
