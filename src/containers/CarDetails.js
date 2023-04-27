@@ -40,11 +40,8 @@ const CarDetails = () => {
     { withCredentials: true }).then((response) => {
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
-        setMessage('created successfully close the form');
       }
-      setErrors(response.data.errors);
     });
-    reset();
   };
 
   const form = (
