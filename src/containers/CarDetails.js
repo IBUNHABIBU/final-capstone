@@ -90,9 +90,6 @@ const CarDetails = () => {
         </button>
         <div className="details">
           <div className="modal" id="myModal">
-            <div className="modal-dialog">
-              <div className="modal-content">
-                <div className="modal-header">
 
 
                 </div>
@@ -144,8 +141,7 @@ const CarDetails = () => {
           <div className="form-floating mb-3 col-6">
             <button type="submit" className="btn btn-primary col-12">Delete car</button>
           </div>
-        </div>
-      </div>
+        
     </div>
   );
 };
