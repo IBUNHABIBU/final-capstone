@@ -10,6 +10,7 @@ import axios from 'axios';
 import {
   createCarBooking, fetchDetails, checkLoginStatus, urlBase,
 } from '../redux/actions/fetch';
+import Form from '../components/Form';
 
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
@@ -116,15 +117,7 @@ const CarDetails = () => {
           Book a ride
         </button>
         <div className="model-container">
-          <div className="modal" id="myModal">
-            <div className="modal-dialog">
-              <div className="modal-content">
-                <div className="modal-body" />
-
-              </div>
-
-            </div>
-          </div>
+          <Pop trigger="Book a ride" content={form} />
           <div className="form-floating mb-3 col-6">
             <button type="submit" className="btn btn-primary col-12">Edit car</button>
           </div>
