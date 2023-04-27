@@ -34,8 +34,9 @@ const AddCarForm = () => {
       });
   };
 
-  const form = (<Form
-    field={
+  const form = (
+    <Form
+      field={
                 [
                   {
                     name: 'color', type: 'text', label: 'Color', required: true,
@@ -57,32 +58,19 @@ const AddCarForm = () => {
                   },
                 ]
               }
-    onSubmit={(formData) => handleSubmit(formData)}
-    action="Add Car"
-  />)
-  
+      onSubmit={(formData) => handleSubmit(formData)}
+      action="Add Car"
+    />
+  );
+
   return (
     <div className="carform">
       <Link to="/cars" className="btn btn--list">see cars</Link>
       <div className="container">
-        <button
-          type="button"
-        >
-          {' '}
-          Add new car
-        </button>
+        
         <div className="modl">
-          {message && (
-          <div className="modal-header col-12">
-            <div className="alert alert-success col-12" role="alert">{message}</div>
-            <button type="button" onClick={() => { setMessage(''); }} className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
-          </div>
-          )}
+          
 
-          <div className="m">
-           
-
-          </div>
         </div>
       </div>
     </div>
