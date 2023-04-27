@@ -30,6 +30,7 @@ const AddCarForm = () => {
       })
       .then((response) => {
         if (response.data.status === 'created') {
+          console.log(response.data);
           dispatch(createCar(response.data));
           setMessage('Car created successfully');
         }
