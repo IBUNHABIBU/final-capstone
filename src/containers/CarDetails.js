@@ -11,6 +11,7 @@ import {
   createCarBooking, fetchDetails, checkLoginStatus, urlBase,
 } from '../redux/actions/fetch';
 import Form from '../components/Form';
+import Pop from './Pop';
 
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
@@ -28,7 +29,6 @@ const CarDetails = () => {
     color, engine, year, title, price, imageUrl,
   } = details;
   const { name } = user.details;
-  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
     axios.post(`${urlBase}/api/v1/bookings`, {
