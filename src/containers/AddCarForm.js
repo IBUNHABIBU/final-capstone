@@ -38,12 +38,12 @@ const AddCarForm = () => {
 
   const form = (
     <div className="carform">
-    <div className="message">
-      <p>{message}</p>
-    </div>
-
-    <Form
-      field={
+      <div className="message">
+        <p>{message}</p>
+      </div>
+      <h1 className="carform__title">Add a new car</h1>
+      <Form
+        field={
                 [
                   {
                     name: 'color', type: 'text', label: 'Color', required: true,
@@ -65,16 +65,16 @@ const AddCarForm = () => {
                   },
                 ]
               }
-      onSubmit={(formData) => handleSubmit(formData)}
-      action="Add Car"
-    />
+        onSubmit={(formData) => handleSubmit(formData)}
+        action="Add Car"
+      />
     </div>
   );
 
   return (
-    <div className="carform">
+    <div className="models">
       <Link to="/cars" className="btn btn--list">see cars</Link>
-      <div className="container">
+      <div className="carform">
         <Project trigger="Create Car" content={form} />
       </div>
     </div>

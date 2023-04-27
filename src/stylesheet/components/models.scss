@@ -1,6 +1,13 @@
-.carform {
+.models {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     align-items: baseline;
     height: 100vh;
+
+    .carform {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
