@@ -91,18 +91,33 @@ const CarDetails = () => {
               <div className="modal-content">
                 <div className="modal-body">
                   <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-floating mb-2 col-8">
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="name"
-                        defaultValue={name}
-                        {...register('name')}
-                        id="floatingInput"
-                        placeholder="Car color"
-                      />
-                      <label htmlFor="floatingInput">Name</label>
-                    </div>
+                  <Form
+        field={
+                [
+                  {
+                    name: 'color', type: 'text', label: 'Color', required: true,
+                  },
+                  {
+                    name: 'engine', type: 'text', label: 'Engine', required: true,
+                  },
+                  {
+                    name: 'year', type: 'text', label: 'Year', required: true,
+                  },
+                  {
+                    name: 'title', type: 'text', label: 'Car model', required: true,
+                  },
+                  {
+                    name: 'price', type: 'text', label: 'Price', required: true,
+                  },
+                  {
+                    name: 'image', type: 'file', label: 'Image', required: true,
+                  },
+                ]
+              }
+        onSubmit={(formData) => handleSubmit(formData)}
+        action="Book Appointment"
+      />
+                    
                     <div className="form-floating mb-2 col-8">
                       <input type="text" name="model" defaultValue={title} {...register('model')} className="form-control" id="floatingInput" placeholder="Enter model type" />
                       <label htmlFor="floatingInput">model</label>
