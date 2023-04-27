@@ -11,6 +11,7 @@ import Project from './Project';
 const AddCarForm = () => {
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
+  console.log(message);
 
   const handleSubmit = (data) => {
     const formData = new FormData();
