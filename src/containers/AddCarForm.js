@@ -22,6 +22,7 @@ const AddCarForm = () => {
     formData.append('car[title]', car.title);
     formData.append('car[price]', car.price);
     formData.append('car[image]', car.image);
+    console.log('formdata', formData);
     axios.post(`${urlBase}/api/v1/cars`,
 
       formData, {
@@ -30,7 +31,7 @@ const AddCarForm = () => {
       })
       .then((response) => {
         if (response.data.status === 'created') {
-          console.log(response.data);
+          console.log('car', response.data);
           dispatch(createCar(response.data));
           setMessage('Car created successfully');
         }
