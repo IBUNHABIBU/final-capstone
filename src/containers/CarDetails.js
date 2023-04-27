@@ -48,6 +48,34 @@ const CarDetails = () => {
     });
     reset();
   };
+
+  const form = (<Form
+    field={
+            [
+              {
+                name: 'name', type: 'text', label: 'Name', required: true,
+              },
+              {
+                name: 'model', type: 'text', label: 'Model', required: true,
+              },
+              {
+                name: 'pickup', type: 'text', label: 'Pickup', required: true,
+              },
+              {
+                name: 'return_date', type: 'text', label: 'Return Date', required: true,
+              },
+              {
+                name: 'location', type: 'text', label: 'Location', required: true,
+              },
+              {
+                name: 'image', type: 'file', label: 'Image', required: true,
+              },
+            ]
+          }
+    onSubmit={(formData) => handleSubmit(formData)}
+    action="Book Appointment"
+  />);
+
   return (
     <div className="details">
       <div className="details__image">
@@ -90,54 +118,10 @@ const CarDetails = () => {
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-body">
-                  <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                  <Form
-        field={
-                [
-                  {
-                    name: 'name', type: 'text', label: 'Name', required: true,
-                  },
-                  {
-                    name: 'model', type: 'text', label: 'Model', required: true,
-                  },
-                  {
-                    name: 'pickup', type: 'text', label: 'Pickup', required: true,
-                  },
-                  {
-                    name: 'return_date', type: 'text', label: 'Return Date', required: true,
-                  },
-                  {
-                    name: 'location', type: 'text', label: 'Location', required: true,
-                  },
-                  {
-                    name: 'image', type: 'file', label: 'Image', required: true,
-                  },
-                ]
-              }
-        onSubmit={(formData) => handleSubmit(formData)}
-        action="Book Appointment"
-      />
+
                     
-                    <div className="form-floating mb-2 col-8">
-                      <input type="text" name="model" defaultValue={title} {...register('model')} className="form-control" id="floatingInput" placeholder="Enter model type" />
-                      <label htmlFor="floatingInput">model</label>
-                    </div>
-                    <div className="form-floating mb-2 col-8">
-                      <input type="datetime-local" name="pickup" {...register('pickup')} className="form-control" id="floatingInputEmail" placeholder="Enter pickup date" />
-                      <label htmlFor="floatingInputEmail">Pickup Date</label>
-                    </div>
-                    <div className="form-floating mb-2 col-8">
-                      <input type="datetime-local" name="return_date" {...register('return_date')} className="form-control" id="floatingInputEmail" placeholder="Enter return date" />
-                      <label htmlFor="floatingInputEmail">Return Date</label>
-                    </div>
-                    <div className="form-floating mb-2 col-8">
-                      <input type="text" name="location" {...register('location')} className="form-control" id="floatingPassword" placeholder="Enter location" />
-                      <label htmlFor="floatingPassword">Location</label>
-                    </div>
-                    <div className="form-floating mb-3 col-6">
-                      <button type="submit" className="btn btn-primary col-12">Book ride</button>
-                    </div>
-                  </form>
+                   
+                 
 
                 </div>
 
