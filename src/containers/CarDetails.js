@@ -95,19 +95,19 @@ const CarDetails = () => {
         field={
                 [
                   {
-                    name: 'color', type: 'text', label: 'Color', required: true,
+                    name: 'name', type: 'text', label: 'Name', required: true,
                   },
                   {
-                    name: 'engine', type: 'text', label: 'Engine', required: true,
+                    name: 'model', type: 'text', label: 'Model', required: true,
                   },
                   {
-                    name: 'year', type: 'text', label: 'Year', required: true,
+                    name: 'pickup', type: 'text', label: 'Pickup', required: true,
                   },
                   {
-                    name: 'title', type: 'text', label: 'Car model', required: true,
+                    name: 'return_date', type: 'text', label: 'Return Date', required: true,
                   },
                   {
-                    name: 'price', type: 'text', label: 'Price', required: true,
+                    name: 'location', type: 'text', label: 'Location', required: true,
                   },
                   {
                     name: 'image', type: 'file', label: 'Image', required: true,
