@@ -82,9 +82,6 @@ const CarDetails = () => {
         </div>
         <button
           type="button"
-          className="btn btn-primary m-4"
-          data-bs-toggle="modal"
-          data-bs-target="#myModal"
         >
           Book a ride
         </button>
@@ -92,16 +89,6 @@ const CarDetails = () => {
           <div className="modal" id="myModal">
             <div className="modal-dialog">
               <div className="modal-content">
-                <div className="modal-header">
-
-                  {message && (
-                  <div className="modal-header col-12">
-                    <div className="alert alert-success col-12" role="alert">{message}</div>
-                    <button type="button" onClick={() => { setMessage(''); }} className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
-                  </div>
-                  )}
-
-                </div>
                 <div className="modal-body">
                   <form className="form" onSubmit={handleSubmit(onSubmit)}>
                     {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error, index) => <li key={index} className="text-start">{error}</li>) }</div>}
