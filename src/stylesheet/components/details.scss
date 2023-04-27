@@ -1,8 +1,13 @@
-.details__section {
+
     .popup {
-        position: absolute;
-        display: inline-block;
-        top: -1rem;
+
+        &:active ~ .details__section {
+            .popup {
+                position: absolute;
+                display: inline-block;
+                top: -4rem;
+            }
+        }
+        
 
     }
-}
