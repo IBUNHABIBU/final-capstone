@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
-import Modal from '../components/PopupModal';
-import Project from './Project';
-import AddCarForm from './AddCarForm';
+import PropTypes from 'prop-types';
 
-const Pop = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleOpenModal = () => {
-    setShowModal(false);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+const Pop = ({ trigger, content }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
-      <Project trigger="Click me" content={<AddCarForm />} />
-      <button onClick={handleOpenModal} type="submit">Open Modal</button>
-      <Modal onClose={handleCloseModal} title="My Modal" content="hello" />
-      {showModal && (
-        <Modal onClose={handleCloseModal} title="My Modal" content="hello" />
+    <div className="popup">
+      <button type="submit" className="popup__button" onClick={() => setIsOpen(true)}>
+        {trigger}
+      </button>
+      {isOpen && (
+        <div className="popup__content">
+          <button type="submit" className="popup__close" onClick={() => setIsOpen(false)}>
+            &times;
+          </button>
+          {content}
+        </div>
       )}
     </div>
   );
+};
+
+Pop.propTypes = {
+  trigger: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 };
 
 export default Pop;

@@ -7,6 +7,7 @@ import axios from 'axios';
 import { createCar, urlBase } from '../redux/actions/fetch';
 import Form from '../components/Form';
 import Project from './Project';
+import Pop from './Pop';
 
 const AddCarForm = () => {
   const [message, setMessage] = useState('');
@@ -75,7 +76,7 @@ const AddCarForm = () => {
     <div className="models">
       <Link to="/cars" className="btn btn--list">see cars</Link>
       <div className="carform">
-        <Project trigger="Create Car" content={form} />
+        <Pop trigger="Create Car" content={form} />
       </div>
     </div>
   );
