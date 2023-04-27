@@ -5,7 +5,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import {
   createCarBooking, fetchDetails, checkLoginStatus, urlBase,
@@ -18,8 +17,6 @@ const CarDetails = () => {
   const user = useSelector((state) => state.register);
   const dispatch = useDispatch();
   const { id } = useParams();
-  const [errors, setErrors] = useState('');
-  const [message, setMessage] = useState('');
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
@@ -30,7 +27,7 @@ const CarDetails = () => {
   } = details;
   const { name } = user.details;
 
-  const onSubmit = (data) => {
+  const handleSubmit = (data) => {
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
         name: data.name,
@@ -55,7 +52,7 @@ const CarDetails = () => {
       field={
             [
               {
-                name: 'name', type: 'text', label: 'Name', required: true,
+                name: 'name', type: 'text', label: 'Name', required: true, value: name,
               },
               {
                 name: 'model', type: 'text', label: 'Model', required: true,
