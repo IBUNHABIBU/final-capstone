@@ -37,6 +37,11 @@ const AddCarForm = () => {
   };
 
   const form = (
+    <div className="carform">
+    <div className="message">
+      <p>{message}</p>
+    </div>
+
     <Form
       field={
                 [
@@ -63,6 +68,7 @@ const AddCarForm = () => {
       onSubmit={(formData) => handleSubmit(formData)}
       action="Add Car"
     />
+    </div>
   );
 
   return (
