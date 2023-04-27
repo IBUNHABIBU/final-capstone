@@ -1,13 +1,10 @@
 
     .popup {
 
-        &:active ~ .details__section {
-            .popup {
-                position: absolute;
-                display: inline-block;
-                top: -4rem;
-            }
-        }
+        &:active 
+             {
+                color: red;
+                background-color: blueviolet;
+             }
         
-
     }
