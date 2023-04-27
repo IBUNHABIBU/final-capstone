@@ -49,8 +49,9 @@ const CarDetails = () => {
     reset();
   };
 
-  const form = (<Form
-    field={
+  const form = (
+    <Form
+      field={
             [
               {
                 name: 'name', type: 'text', label: 'Name', required: true,
@@ -72,9 +73,10 @@ const CarDetails = () => {
               },
             ]
           }
-    onSubmit={(formData) => handleSubmit(formData)}
-    action="Book Appointment"
-  />);
+      onSubmit={(formData) => handleSubmit(formData)}
+      action="Book Appointment"
+    />
+  );
 
   return (
     <div className="details">
@@ -117,13 +119,7 @@ const CarDetails = () => {
           <div className="modal" id="myModal">
             <div className="modal-dialog">
               <div className="modal-content">
-                <div className="modal-body">
-
-                    
-                   
-                 
-
-                </div>
+                <div className="modal-body" />
 
               </div>
 
