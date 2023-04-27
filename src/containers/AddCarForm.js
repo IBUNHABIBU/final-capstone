@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { createCar, urlBase } from '../redux/actions/fetch';
 import Form from '../components/Form';
+import Project from './Project';
 
 const AddCarForm = () => {
   const [message, setMessage] = useState('');
@@ -67,11 +68,7 @@ const AddCarForm = () => {
     <div className="carform">
       <Link to="/cars" className="btn btn--list">see cars</Link>
       <div className="container">
-        
-        <div className="modl">
-          
-
-        </div>
+        <Project trigger="Create Car" content={form} />
       </div>
     </div>
   );
