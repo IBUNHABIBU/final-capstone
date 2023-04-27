@@ -33,6 +33,34 @@ const AddCarForm = () => {
         }
       });
   };
+
+  const form = (<Form
+    field={
+                [
+                  {
+                    name: 'color', type: 'text', label: 'Color', required: true,
+                  },
+                  {
+                    name: 'engine', type: 'text', label: 'Engine', required: true,
+                  },
+                  {
+                    name: 'year', type: 'text', label: 'Year', required: true,
+                  },
+                  {
+                    name: 'title', type: 'text', label: 'Car model', required: true,
+                  },
+                  {
+                    name: 'price', type: 'text', label: 'Price', required: true,
+                  },
+                  {
+                    name: 'image', type: 'file', label: 'Image', required: true,
+                  },
+                ]
+              }
+    onSubmit={(formData) => handleSubmit(formData)}
+    action="Add Car"
+  />)
+  
   return (
     <div className="carform">
       <Link to="/cars" className="btn btn--list">see cars</Link>
@@ -52,32 +80,7 @@ const AddCarForm = () => {
           )}
 
           <div className="m">
-            <Form
-              field={
-                          [
-                            {
-                              name: 'color', type: 'text', label: 'Color', required: true,
-                            },
-                            {
-                              name: 'engine', type: 'text', label: 'Engine', required: true,
-                            },
-                            {
-                              name: 'year', type: 'text', label: 'Year', required: true,
-                            },
-                            {
-                              name: 'title', type: 'text', label: 'Car model', required: true,
-                            },
-                            {
-                              name: 'price', type: 'text', label: 'Price', required: true,
-                            },
-                            {
-                              name: 'image', type: 'file', label: 'Image', required: true,
-                            },
-                          ]
-                        }
-              onSubmit={(formData) => handleSubmit(formData)}
-              action="Add Car"
-            />
+           
 
           </div>
         </div>
