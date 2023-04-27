@@ -49,7 +49,7 @@ const CarDetails = () => {
     reset();
   };
   return (
-    <div className="details-container">
+    <div className="details">
       <div className="details-image">
         <img alt="car" src={imageUrl} />
       </div>
@@ -88,9 +88,18 @@ const CarDetails = () => {
         >
           Book a ride
         </button>
-        <div className="details">
+        <div className="model-container">
           <div className="modal" id="myModal">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
 
+                  {message && (
+                  <div className="modal-header col-12">
+                    <div className="alert alert-success col-12" role="alert">{message}</div>
+                    <button type="button" onClick={() => { setMessage(''); }} className="btn-close alert-success close-button" data-bs-dismiss="modal" aria-label="close" />
+                  </div>
+                  )}
 
                 </div>
                 <div className="modal-body">
@@ -141,7 +150,8 @@ const CarDetails = () => {
           <div className="form-floating mb-3 col-6">
             <button type="submit" className="btn btn-primary col-12">Delete car</button>
           </div>
-        
+        </div>
+      </div>
     </div>
   );
 };
