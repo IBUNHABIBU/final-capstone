@@ -103,7 +103,7 @@ const CarDetails = () => {
           </ul>
         </div>
 
-        <div className="model-container">
+        <div className="details__actions">
           <Pop trigger="Book a ride" content={form} />
           <div className="form-floating mb-3 col-6">
             <button type="submit" className="btn btn-primary col-12">Edit car</button>
