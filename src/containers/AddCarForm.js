@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { createCar, urlBase } from '../redux/actions/fetch';
 import Form from '../components/Form';
-import Project from './Project';
 import Pop from './Pop';
 
 const AddCarForm = () => {
