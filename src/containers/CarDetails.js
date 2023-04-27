@@ -91,7 +91,6 @@ const CarDetails = () => {
               <div className="modal-content">
                 <div className="modal-body">
                   <form className="form" onSubmit={handleSubmit(onSubmit)}>
-                    {errors && <div className="alert alert-danger col-12" role="alert">{ errors.map((error, index) => <li key={index} className="text-start">{error}</li>) }</div>}
                     <div className="form-floating mb-2 col-8">
                       <input
                         type="text"
