@@ -50,20 +50,20 @@ const CarDetails = () => {
   };
   return (
     <div className="details">
-      <div className="details-image">
+      <div className="details__image">
         <img alt="car" src={imageUrl} />
       </div>
-      <div className="details-section">
-        <div className="details-header">
-          <p className="display-6">
+      <div className="details__section">
+        <div className="details__section__header">
+          <p>
             {title}
           </p>
-          <p className="lead">
+          <p>
             Price per hour:
             {price}
           </p>
         </div>
-        <div className="details">
+        <div className="details__section__lists">
           <ul>
             <li>
               {' '}
