@@ -53,7 +53,6 @@ Car rental is the react front end application that uses rails api to book car re
 
 ## Version2 features
 - Edit, delete cars
-- Remove duplicate in appointment
 - Mobile version
 - Good Ui
     
@@ -62,6 +61,16 @@ Car rental is the react front end application that uses rails api to book car re
 
 This project was built using these technologies.
 * React
+   - Higher order component to make the sidebar nav
+   - Reusable component like popup modal, form
+* Redux
+* Rails api
+* Bootstrap
+* SASS
+  -BEM
+* ES6
+
+
 
 
 ### Requirement
