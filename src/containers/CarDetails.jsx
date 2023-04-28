@@ -44,16 +44,15 @@ const CarDetails = () => {
     });
   };
 
-  console.log(name);
   const form = (
     <Form
       field={
             [
               {
-                name: 'name', type: 'text', label: 'Name', required: true, defaultValue: 'car',
+                name: 'name', type: 'text', label: 'Name', required: true, defaultValue: name,
               },
               {
-                name: 'model', type: 'text', label: 'Model', required: true, defaultValue: 'mercedes',
+                name: 'model', type: 'text', label: 'Model', required: true, defaultValue: title,
               },
               {
                 name: 'pickup', type: 'datetime-local', label: 'Pickup', required: true,
