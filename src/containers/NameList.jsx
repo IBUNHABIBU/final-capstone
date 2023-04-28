@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import uuid from 'react-uuid';
+import slugify from 'slugify';
 
 const NameList = ({ car }) => {
   const {
     id, color, engine, imageUrl, title,
   } = car;
-  console.log('Title', title);
+  const slug = slugify(title, { lower: true })
   return (
     <div className=" col-6 col-lg-3 col-md-6 p-1" key={uuid()}>
       <div className="card">
