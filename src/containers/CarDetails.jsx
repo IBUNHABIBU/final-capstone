@@ -6,6 +6,7 @@ import React, { useEffect } from 'react';
 // import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import {
   createCarBooking, fetchDetails, checkLoginStatus, urlBase,
 } from '../redux/actions/fetch';
@@ -115,6 +116,15 @@ const CarDetails = (props) => {
       </div>
     </div>
   );
+};
+
+CarDetails.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      slug: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default CarDetails;
