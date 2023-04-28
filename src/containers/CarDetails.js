@@ -28,6 +28,7 @@ const CarDetails = () => {
   const { name } = user.details;
 
   const handleSubmit = (data) => {
+    console.log(data);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
         name: data.name,
@@ -38,8 +39,10 @@ const CarDetails = () => {
       },
     },
     { withCredentials: true }).then((response) => {
+      console.log(response);
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
+        console.log(response.data);
       }
     });
   };
@@ -55,10 +58,10 @@ const CarDetails = () => {
                 name: 'model', type: 'text', label: 'Model', required: true,
               },
               {
-                name: 'pickup', type: 'datetime', label: 'Pickup', required: true,
+                name: 'pickup', type: 'datetime-local', label: 'Pickup', required: true,
               },
               {
-                name: 'return_date', type: 'datetime', label: 'Return Date', required: true,
+                name: 'return_date', type: 'datetime-local', label: 'Return Date', required: true,
               },
               {
                 name: 'location', type: 'text', label: 'Location', required: true,
