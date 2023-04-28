@@ -23,7 +23,7 @@ const Pop = ({ trigger, content }) => {
 
 Pop.propTypes = {
   trigger: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired,
 };
 
 export default Pop;
