@@ -28,7 +28,6 @@ const CarDetails = () => {
   const { name } = user.details;
 
   const handleSubmit = (data) => {
-    console.log(data);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
         name: data.name,
@@ -39,10 +38,8 @@ const CarDetails = () => {
       },
     },
     { withCredentials: true }).then((response) => {
-      console.log(response);
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
-        console.log(response.data);
       }
     });
   };
