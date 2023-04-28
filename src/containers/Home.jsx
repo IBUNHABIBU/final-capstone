@@ -12,7 +12,6 @@ const breakPoints = [
 ];
 const Home = () => {
   const recents = useSelector((state) => state.recent);
-  console.log(recents);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(recentCars());
