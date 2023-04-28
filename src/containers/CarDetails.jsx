@@ -3,7 +3,7 @@
 /* eslint-disable react/no-array-index-key */
 
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import {
@@ -20,7 +20,7 @@ const CarDetails = (props) => {
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id, slug));
-  }, []);
+  }, [id, slug]);
 
   const {
     color, engine, year, title, price, imageUrl,
