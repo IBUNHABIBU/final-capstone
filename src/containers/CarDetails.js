@@ -53,7 +53,7 @@ const CarDetails = () => {
                 name: 'name', type: 'text', label: 'Name', required: true, defaultValue: 'car',
               },
               {
-                name: 'model', type: 'text', label: 'Model', required: true, defaultValue: "mercedes"",
+                name: 'model', type: 'text', label: 'Model', required: true, defaultValue: 'mercedes',
               },
               {
                 name: 'pickup', type: 'datetime-local', label: 'Pickup', required: true,

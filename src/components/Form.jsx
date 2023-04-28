@@ -22,7 +22,6 @@ const Form = ({ field, onSubmit, action }) => {
             type={input.type}
             name={input.name}
             id={input.name}
-            value={formData[input.name] || ''}
             defaultValue={input.defaultValue || ''}
             onChange={handleChange}
             required={input.required}
