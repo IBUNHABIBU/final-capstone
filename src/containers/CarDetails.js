@@ -49,10 +49,10 @@ const CarDetails = () => {
       field={
             [
               {
-                name: 'name', type: 'text', label: 'Name', required: true, value: name,
+                name: 'name', type: 'text', label: 'Name', required: true, value: { name },
               },
               {
-                name: 'model', type: 'text', label: 'Model', required: true,
+                name: 'model', type: 'text', label: 'Model', required: true, value: { title },
               },
               {
                 name: 'pickup', type: 'datetime-local', label: 'Pickup', required: true,
