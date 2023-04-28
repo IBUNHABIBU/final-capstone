@@ -8,7 +8,7 @@ const NameList = ({ car }) => {
   const {
     id, color, engine, imageUrl, title,
   } = car;
-  const slug = slugify(title, { lower: true })
+  const slug = slugify(title, { lower: true });
   return (
     <div className=" col-6 col-lg-3 col-md-6 p-1" key={uuid()}>
       <div className="card">
