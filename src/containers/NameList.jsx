@@ -5,7 +5,7 @@ import uuid from 'react-uuid';
 
 const NameList = ({ car }) => {
   const {
-    id, color, engine, imageUrl, 
+    id, color, engine, imageUrl, title
   } = car;
   console.log(car);
   return (
