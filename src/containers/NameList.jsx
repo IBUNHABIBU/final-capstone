@@ -36,6 +36,7 @@ NameList.propTypes = {
     color: PropTypes.string.isRequired,
     engine: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }).isRequired,
 };
 export default NameList;
