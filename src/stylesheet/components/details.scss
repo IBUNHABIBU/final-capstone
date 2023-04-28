@@ -1,10 +1,10 @@
-
-    .popup {
-
-        &:active 
-             {
-                color: red;
-                background-color: blueviolet;
-             }
+.popup {
+     &:active ~ .details__actions {
+        .popup {
+            color: red;
+            background-color: blueviolet;
+            position: absolute;
+        }
         
-    }
+    }            
+}
