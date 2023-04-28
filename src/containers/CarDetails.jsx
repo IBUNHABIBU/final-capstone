@@ -19,7 +19,7 @@ const CarDetails = (props) => {
   const { id, slug } = props.match.params();
   useEffect(() => {
     checkLoginStatus();
-    dispatch(fetchDetails(id));
+    dispatch(fetchDetails(id, slug));
   }, []);
 
   const {
