@@ -25,7 +25,7 @@ const NameList = ({ car }) => {
             {' '}
             {engine}
           </p>
-          <Link to={`/cars/:${id}-${slug}`} className="btn btn-primary">see details</Link>
+          <Link to={`/cars/${id}/${slug}`} className="btn btn-primary">see details</Link>
         </div>
       </div>
     </div>

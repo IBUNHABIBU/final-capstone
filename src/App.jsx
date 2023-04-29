@@ -37,7 +37,7 @@ const App = () => {
       { path: '/signup', element: <SignupComponent /> },
       { path: '/models', element: <ModelsComponent /> },
       { path: '/cars', element: <CarListComponent /> },
-      { path: '/cars/:id/slug', element: <CarDetailsComponent /> },
+      { path: '/cars/:id/:slug', element: <CarDetailsComponent /> },
       { path: '/appointments', element: <AppointmentComponent /> },
       { path: '/pop', element: <PopComponent /> },
       { path: '/projects', element: <ProjectComponent /> },
