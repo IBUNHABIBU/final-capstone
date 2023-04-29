@@ -5,7 +5,7 @@
 /* eslint-disable react/destructuring-assignment */
 
 import React, { useEffect } from 'react';
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import PropTypes from 'prop-types';
@@ -15,11 +15,11 @@ import {
 import Form from '../components/Form';
 import Pop from './Pop';
 
-const CarDetails = (props) => {
+const CarDetails = () => {
   const details = useSelector((state) => state.detail);
   const user = useSelector((state) => state.register);
   const dispatch = useDispatch();
-  console.log('props', props.match.params);
+  const { id, slug } = useParams();
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
