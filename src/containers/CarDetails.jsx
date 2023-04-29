@@ -15,16 +15,17 @@ import {
 import Form from '../components/Form';
 import Pop from './Pop';
 
-const CarDetails = () => {
+const CarDetails = (props) => {
   const details = useSelector((state) => state.detail);
   const user = useSelector((state) => state.register);
   const dispatch = useDispatch();
-  const { id, slug } = useParams();
-  console.log('details', id);
+  const id = useParams();
+  const hist = props.match.params;
+  console.log('details', id, hist);
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
-  }, [id, slug]);
+  }, [id]);
 
   const {
     color, engine, year, title, price, imageUrl,
