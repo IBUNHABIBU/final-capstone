@@ -24,5 +24,11 @@
 
     &__display {
       border: 2px solid red;
+
+      .slide {
+        width: 90%;
+        border-radius: 85px;
+        // border: 2px solid red;
+      }
     }
 }
