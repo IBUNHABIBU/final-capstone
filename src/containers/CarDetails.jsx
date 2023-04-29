@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/no-array-index-key */
+/* eslint-disable no-undef */
+/* eslint-disable react/destructuring-assignment */
 
 import React, { useEffect } from 'react';
 // import { useParams } from 'react-router-dom';
@@ -13,12 +15,11 @@ import {
 import Form from '../components/Form';
 import Pop from './Pop';
 
-const CarDetails = ({ match }) => {
+const CarDetails = (props) => {
   const details = useSelector((state) => state.detail);
   const user = useSelector((state) => state.register);
   const dispatch = useDispatch();
-  const { id, slug } = match.params;
-  console.log(id, slug);
+  console.log(props.match.params);
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
