@@ -1,4 +1,3 @@
-/* eslint-disable  no-unused-vars */
 /* eslint-disable camelcase */
 import React from 'react';
 import uuid from 'react-uuid';
