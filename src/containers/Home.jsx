@@ -23,11 +23,11 @@ const Home = () => {
         <h1 className="home__header__title">LATEST MODEL</h1>
         <p className="home__header__subtitle">Please select a car model </p>
       </div>
-      <div className=" m-5 model">
+      <div className="">
         <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={1500}>
           {
             recents.map((car) => (
-              <div key={car.id} className="slide-container">
+              <div key={car.id} className="slide">
                 <div className="slides">
                   <div className="card">
                     <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
