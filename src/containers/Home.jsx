@@ -29,7 +29,7 @@ const Home = () => {
             recents.map((car) => (
               <div key={car.id} className="slide">
                 {/* <div className="slides"> */}
-                <div className="card">
+                <div className="slide__image">
                   <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
                 </div>
                 {/* </div> */}

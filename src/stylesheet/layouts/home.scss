@@ -27,8 +27,12 @@
 
       .slide {
         width: 90%;
-        border-radius: 85px;
+        border-radius: 50%;
         // border: 2px solid red;
+
+        img {
+            border-radius: 50%;
+        }
       }
     }
 }
