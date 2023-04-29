@@ -18,6 +18,7 @@ const CarDetails = ({ match }) => {
   const user = useSelector((state) => state.register);
   const dispatch = useDispatch();
   const { id, slug } = match.params;
+  console.log(id, slug);
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
