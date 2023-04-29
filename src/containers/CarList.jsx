@@ -2,7 +2,6 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import uuid from 'react-uuid';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Loading from '../components/Loading';
 import NameList from './NameList';
