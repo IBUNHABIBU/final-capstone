@@ -8,7 +8,7 @@ const NameList = ({ car }) => {
   const {
     id, color, engine, imageUrl, title,
   } = car;
-  const slug = slugify(title, id, { lower: true });
+  const slug = slugify(title, { lower: true });
   return (
     <div className=" col-6 col-lg-3 col-md-6 p-1" key={uuid()}>
       <div className="card">
@@ -25,7 +25,7 @@ const NameList = ({ car }) => {
             {' '}
             {engine}
           </p>
-          <Link to={`/cars/${slug}`} className="btn btn-primary">see details</Link>
+          <Link to={`/cars/${slug}-${id}`} className="btn btn-primary">see details</Link>
         </div>
       </div>
     </div>

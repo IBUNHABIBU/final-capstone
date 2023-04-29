@@ -20,11 +20,11 @@ const CarDetails = () => {
   const user = useSelector((state) => state.register);
   const dispatch = useDispatch();
   const { slug } = useParams();
-  console.log('details', id);
+  const id = parseInt(slug.split('-')[1], 10);
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
-  }, [id]);
+  }, [id, slug]);
 
   const {
     color, engine, year, title, price, imageUrl,
