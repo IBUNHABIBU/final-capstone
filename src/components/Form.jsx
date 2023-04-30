@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 /* eslint-disable react/prop-types */
-const Form = ({ field, onSubmit, action, message }) => {
+const Form = ({
+  field, onSubmit, action, message,
+}) => {
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
