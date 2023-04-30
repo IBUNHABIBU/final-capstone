@@ -37,12 +37,10 @@ const AddCarForm = () => {
 
   const form = (
     <div className="carform">
-      <div className="message">
-        <p>{message}</p>
-      </div>
+
       <h3 className="carform__title">Add a new car</h3>
       <Form
-      message={message}
+        message={message}
         field={
                 [
                   {
