@@ -8,6 +8,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import {
   createCarBooking, fetchDetails, checkLoginStatus, urlBase,
 } from '../redux/actions/fetch';
@@ -19,7 +20,7 @@ const CarDetails = () => {
   const user = useSelector((state) => state.register);
   const dispatch = useDispatch();
   const { slug } = useParams();
-  const id = parseInt(slug.split('-').pop, 10);
+  const id = parseInt(slug.split('-')[1], 10);
 
   useEffect(() => {
     checkLoginStatus();
@@ -119,6 +120,15 @@ const CarDetails = () => {
       </div>
     </div>
   );
+};
+
+CarDetails.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      slug: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default CarDetails;
