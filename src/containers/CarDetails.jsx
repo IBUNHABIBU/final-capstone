@@ -21,6 +21,9 @@ const CarDetails = () => {
   const dispatch = useDispatch();
   const { slug } = useParams();
   const id = parseInt(slug.split('-')[1], 10);
+  
+  const ido = slug.split('-')[1];
+  console.log(ido);
 
   useEffect(() => {
     checkLoginStatus();
