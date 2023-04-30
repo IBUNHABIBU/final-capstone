@@ -33,7 +33,7 @@ const AddCarForm = () => {
           setMessage('Car created successfully');
         }
       }).catch((error) => {
-        console.log(error);
+        setMessage(error.response.data.error);
       });
   };
 
