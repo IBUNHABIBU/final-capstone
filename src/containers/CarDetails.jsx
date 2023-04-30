@@ -45,6 +45,8 @@ const CarDetails = () => {
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
       }
+    }).catch((error) => {
+      console.log(error);
     });
   };
 
