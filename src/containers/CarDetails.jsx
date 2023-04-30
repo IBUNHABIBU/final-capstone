@@ -122,13 +122,5 @@ const CarDetails = () => {
   );
 };
 
-CarDetails.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      slug: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
 
 export default CarDetails;
