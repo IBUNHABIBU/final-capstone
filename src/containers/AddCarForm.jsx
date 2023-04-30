@@ -32,6 +32,8 @@ const AddCarForm = () => {
           dispatch(createCar(response.data));
           setMessage('Car created successfully');
         }
+      }).catch((error) => {
+        console.log(error);
       });
   };
 
