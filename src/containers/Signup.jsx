@@ -15,6 +15,7 @@ const Signup = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [errors, setErrors] = useState('');
+  const [message, setMessage] = useState('');
   const handleSubmit = (data) => {
     axios.post(`${urlBase}/users`, {
       name: data.name,
@@ -26,6 +27,7 @@ const Signup = () => {
       if (response.data.status === 'created') {
         dispatch(setUser(response.data));
         navigate('/models');
+        setMessage('User created successfully');
       }
       setErrors(response.data.error);
     });
@@ -37,6 +39,7 @@ const Signup = () => {
         <h1>Register</h1>
       </div>
       <Form
+        message={message}
         field={
         [
           {

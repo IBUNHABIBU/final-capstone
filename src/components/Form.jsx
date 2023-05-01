@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 /* eslint-disable react/prop-types */
 const Form = ({
-  field, onSubmit, action, message,
+  field, onSubmit, action, message, errors,
 }) => {
   const [formData, setFormData] = useState({});
 
@@ -18,6 +18,7 @@ const Form = ({
   return (
     <form onSubmit={handleSubmit} className="form">
       <span>{message}</span>
+      <span>{errors}</span>
       {field.map((input) => (
         <div key={input.name}>
           <label htmlFor={input.name}>{input.label}</label>
