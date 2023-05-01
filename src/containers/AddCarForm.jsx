@@ -14,6 +14,7 @@ const AddCarForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (data) => {
+    console.log('Data', data);
     const formData = new FormData();
     const car = { ...data, image: data.image[0] };
     formData.append('car[color]', car.color);
@@ -22,6 +23,7 @@ const AddCarForm = () => {
     formData.append('car[title]', car.title);
     formData.append('car[price]', car.price);
     formData.append('car[image]', car.image);
+    console.log(formData);
     axios.post(`${urlBase}/api/v1/cars`,
 
       formData, {
@@ -33,7 +35,9 @@ const AddCarForm = () => {
           dispatch(createCar(response.data));
           setMessage('Car created successfully');
         }
+        console.log('Response error', response.data.error);
       }).catch((error) => {
+        console.log('Error', error);
         setErrors(error.response.data.message);
       });
   };
