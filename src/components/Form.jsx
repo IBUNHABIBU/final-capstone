@@ -41,7 +41,6 @@ const Form = ({
               defaultValue={input.defaultValue || ''}
               onChange={handleChange}
               required={input.required}
-              accept="image/*"
             />
           </div>
         ))}
