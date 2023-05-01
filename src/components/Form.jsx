@@ -20,7 +20,8 @@ const Form = ({
       { message && <span className="msg">{message}</span> }
       {errors?.length ? (
         <div  className="error">
-          <h4></h4>
+          <h4>Oops! your form could not be saved</h4>
+          <p>Please correct the following errors:</p>
         <ul>
           {errors.map((error) => (
             <li key={error}>{error}</li>
