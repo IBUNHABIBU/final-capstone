@@ -17,34 +17,24 @@ const Form = ({
 
   return (
     <div className="form">
-        <form onSubmit={handleSubmit}>
-          { message && <span className="msg">{message}</span> }
-          {errors?.length ? (
-            <div className="error">
-              <h4>Oops! your form could not be saved</h4>
-              <p>Please correct the following errors:</p>
-              <ul>
-                {errors.map((error) => (
-                  <li key={error}>{error}</li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
-          {field.map((input) => (
-            <div key={input.name}>
-              <label htmlFor={input.name}>{input.label}</label>
-              <input
-                type={input.type}
-                name={input.name}
-                id={input.name}
-                defaultValue={input.defaultValue || ''}
-                onChange={handleChange}
-                required={input.required}
-              />
-            </div>
-          ))}
-          <button type="submit" className="btn">{action}</button>
-        </form>
+      
+      <form onSubmit={handleSubmit}>
+       
+        {field.map((input) => (
+          <div key={input.name}>
+            <label htmlFor={input.name}>{input.label}</label>
+            <input
+              type={input.type}
+              name={input.name}
+              id={input.name}
+              defaultValue={input.defaultValue || ''}
+              onChange={handleChange}
+              required={input.required}
+            />
+          </div>
+        ))}
+        <button type="submit" className="btn">{action}</button>
+      </form>
     </div>
   );
 };
