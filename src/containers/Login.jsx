@@ -30,7 +30,6 @@ const Login = () => {
           navigate('/models');
         }
         setErrors(response.data.error);
-        console.log(response.data.error);
       }
     });
   };
@@ -43,6 +42,7 @@ const Login = () => {
         <h1>Login</h1>
       </div>
       <Form
+        errors={errors}
         field={
         [
           {
