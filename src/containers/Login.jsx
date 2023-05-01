@@ -30,6 +30,7 @@ const Login = () => {
           navigate('/models');
         }
         setErrors(response.data.error);
+        console.log(response.data.error);
       }
     });
   };
