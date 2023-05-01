@@ -42,7 +42,7 @@ const Login = () => {
         <h1>Login</h1>
       </div>
       <Form
-        message={errors}
+        errors={errors}
         field={
         [
           {

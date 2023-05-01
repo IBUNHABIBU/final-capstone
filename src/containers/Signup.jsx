@@ -39,7 +39,6 @@ const Signup = () => {
         <h1>Register</h1>
       </div>
       <Form
-        message={message}
         errors={errors}
         field={
         [
