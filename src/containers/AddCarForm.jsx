@@ -10,6 +10,7 @@ import Pop from './Pop';
 
 const AddCarForm = () => {
   const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState('');
   const dispatch = useDispatch();
 
   const handleSubmit = (data) => {
@@ -33,7 +34,7 @@ const AddCarForm = () => {
           setMessage('Car created successfully');
         }
       }).catch((error) => {
-        setMessage(error.response.data.message);
+        setErrors(error.response.data.message);
       });
   };
 
