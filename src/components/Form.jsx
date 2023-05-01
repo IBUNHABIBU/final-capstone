@@ -22,12 +22,12 @@ const Form = ({
       <span className="msg">{message}</span>
       )
       {errors?.length ? (
-  <ul>
-    {errors.map((error) => (
-      <li key={error} className="error">{error}</li>
-    ))}
-  </ul>
-) : null}
+        <ul>
+          {errors.map((error) => (
+            <li key={error} className="error">{error}</li>
+          ))}
+        </ul>
+      ) : null}
       {field.map((input) => (
         <div key={input.name}>
           <label htmlFor={input.name}>{input.label}</label>
