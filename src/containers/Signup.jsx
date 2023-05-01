@@ -29,7 +29,7 @@ const Signup = () => {
         navigate('/models');
         setMessage('User created successfully');
       }
-      setErrors(response.data.error.length);
+      setErrors(response.data.error);
     });
   };
 
