@@ -17,7 +17,7 @@ const Form = ({
 
   return (
     <div>
-        <form onSubmit={handleSubmit} className="form">
+        <form onSubmit={handleSubmit}>
           { message && <span className="msg">{message}</span> }
           {errors?.length ? (
             <div className="error">
