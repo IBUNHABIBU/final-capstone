@@ -17,13 +17,18 @@ const Form = ({
 
   return (
     <form onSubmit={handleSubmit} className="form">
-      (message && <span className="msg">{message}</span>)
-      (errors && (<ul>
+      (message &&
+      {' '}
+      <span className="msg">{message}</span>
+      )
+      (errors && (
+      <ul>
         {errors.map((error) => (
           <li key={error} className="error">{error}</li>
         ))}
 
-        </ul>))
+      </ul>
+      ))
       {field.map((input) => (
         <div key={input.name}>
           <label htmlFor={input.name}>{input.label}</label>
