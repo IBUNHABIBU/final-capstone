@@ -40,6 +40,7 @@ const Signup = () => {
       </div>
       <Form
         message={message}
+        errors={errors}
         field={
         [
           {

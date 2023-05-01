@@ -17,8 +17,8 @@ const Form = ({
 
   return (
     <form onSubmit={handleSubmit} className="form">
-      <span>{message}</span>
-      <span>{errors}</span>
+      <span className='msg'>{message}</span>
+      <span className='err'>{errors}</span>
       {field.map((input) => (
         <div key={input.name}>
           <label htmlFor={input.name}>{input.label}</label>
