@@ -67,7 +67,7 @@ const AddCarForm = () => {
                     name: 'price', type: 'text', label: 'Price', required: true,
                   },
                   {
-                    name: 'image', type: 'file', label: 'Image', required: true, accept: 'image/*',
+                    name: 'image', type: 'file', label: 'Image', required: true,
                   },
                 ]
               }
