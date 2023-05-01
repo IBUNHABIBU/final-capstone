@@ -3,7 +3,16 @@
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
+    
+    .msg {
+        background-color: #d4edda;
+    }
 
+    .error {
+        background-color: #f8d7da;
+        width: 500px;
+        padding: 1rem;
+    }
     form {
             display: flex;
             flex-direction: column;
@@ -22,16 +31,6 @@
                 font-size: 1rem;
                 margin-bottom: 0.1rem;
                 width: 100%;
-            }
-
-            .msg {
-                background-color: #d4edda;
-            }
-
-            .error {
-                background-color: #f8d7da;
-                width: 500px;
-                padding: 1rem;
             }
         }
 }
