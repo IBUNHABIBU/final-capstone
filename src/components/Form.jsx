@@ -17,20 +17,20 @@ const Form = ({
 
   return (
     <div className="form">
-       { message && <span className="msg">{message}</span> }
-        {errors?.length ? (
-          <div className="error">
-            <h4>Oops! your form could not be saved</h4>
-            <p>Please correct the following errors:</p>
-            <ul>
-              {errors.map((error) => (
-                <li key={error}>{error}</li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+      { message && <span className="msg">{message}</span> }
+      {errors?.length ? (
+        <div className="error">
+          <h4>Oops! your form could not be saved</h4>
+          <p>Please correct the following errors:</p>
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
       <form onSubmit={handleSubmit}>
-       
+
         {field.map((input) => (
           <div key={input.name}>
             <label htmlFor={input.name}>{input.label}</label>
