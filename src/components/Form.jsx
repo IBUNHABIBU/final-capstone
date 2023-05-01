@@ -17,10 +17,10 @@ const Form = ({
 
   return (
     <form onSubmit={handleSubmit} className="form">
-      (message &&
+      {message &&
       {' '}
       <span className="msg">{message}</span>
-      )
+      }
       {errors?.length ? (
         <ul>
           {errors.map((error) => (
