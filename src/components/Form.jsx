@@ -17,16 +17,16 @@ const Form = ({
 
   return (
     <form onSubmit={handleSubmit} className="form">
-      {message &&
-      {' '}
-      <span className="msg">{message}</span>
-      }
+      { message && <span className="msg">{message}</span> }
       {errors?.length ? (
+        <div  className="error">
+          <h4></h4>
         <ul>
           {errors.map((error) => (
-            <li key={error} className="error">{error}</li>
+            <li key={error}>{error}</li>
           ))}
         </ul>
+        </div>
       ) : null}
       {field.map((input) => (
         <div key={input.name}>
