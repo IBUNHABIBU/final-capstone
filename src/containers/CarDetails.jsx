@@ -46,6 +46,7 @@ const CarDetails = () => {
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
+  console.log(formData);
   const handleSubmit = (data) => {
     data.preventDefault();
     console.log('Data', data, user.details);
@@ -86,7 +87,7 @@ const CarDetails = () => {
           </ul>
         </div>
       ) : null}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={(formData) => handleSubmit(formData)}>
         <input
           name="name"
           type="text"
