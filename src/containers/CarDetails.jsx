@@ -46,10 +46,8 @@ const CarDetails = () => {
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  console.log(formData);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Data', formData);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
         name: formData.name,
@@ -60,13 +58,11 @@ const CarDetails = () => {
       },
     },
     { withCredentials: true }).then((response) => {
-      console.log('Response', response);
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
         setMessage('Booking created successfully');
         console.log('Response', response, message);
       }
-      console.log('Response error', response.data.error);
     }).catch((error) => {
       console.log(error);
       setErrors(error.response.data.message);
@@ -164,6 +160,7 @@ const CarDetails = () => {
 
         <div className="details__section__actions">
           <Pop trigger="Book a ride" content={form} />
+          { form }
           <div className="form-floating mb-3 col-6">
             <button type="submit" className="btn btn-primary col-12">Edit car</button>
           </div>
