@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/destructuring-assignment */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
@@ -17,6 +17,7 @@ import Pop from './Pop';
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
   const user = useSelector((state) => state.register);
+  const message = useState('');
   const dispatch = useDispatch();
   const { slug } = useParams();
   const id = parseInt(slug.split('-').pop(), 10);
@@ -32,6 +33,7 @@ const CarDetails = () => {
   const { name } = user.details;
 
   const handleSubmit = (data) => {
+    console.log('Data', data);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
         name: data.name,
@@ -42,9 +44,13 @@ const CarDetails = () => {
       },
     },
     { withCredentials: true }).then((response) => {
+      console.log('Response', response);
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
+        setMessage('Booking created successfully');
+        console.log('Response', response, message);
       }
+      console.log('Response error', response.data.error);
     }).catch((error) => {
       console.log(error);
     });
@@ -74,7 +80,30 @@ const CarDetails = () => {
           }
       onSubmit={(formData) => handleSubmit(formData)}
       action="Book Appointment"
-    />
+    /> <Form
+    message={message}
+    field={
+          [
+            {
+              name: 'name', type: 'text', label: 'Name', required: true, defaultValue: name,
+            },
+            {
+              name: 'model', type: 'text', label: 'Model', required: true, defaultValue: title,
+            },
+            {
+              name: 'pickup', type: 'datetime-local', label: 'Pickup', required: true,
+            },
+            {
+              name: 'return_date', type: 'datetime-local', label: 'Return Date', required: true,
+            },
+            {
+              name: 'location', type: 'text', label: 'Location', required: true,
+            },
+          ]
+        }
+    onSubmit={(formData) => handleSubmit(formData)}
+    action="Book Appointment"
+  />
   );
 
   return (
