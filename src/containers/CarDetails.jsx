@@ -89,7 +89,19 @@ const CarDetails = () => {
         required="true"
         defaultValue={name}
       />
-
+      <input
+        name="title"
+        type="text"
+        label="Model"
+        required="true"
+        defaultValue={title}
+      />
+<input
+        name="pickup"
+        type="datetime-local"
+        label="Pickup date"
+        required="true"
+      />
     </form>
   );
 
