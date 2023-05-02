@@ -85,6 +85,7 @@ const CarDetails = () => {
           label="Name"
           required
           defaultValue={name}
+          onChange={handleChange}
         />
         <input
           name="title"
@@ -92,24 +93,27 @@ const CarDetails = () => {
           label="Model"
           required
           defaultValue={title}
+          onChange={handleChange}
         />
         <input
           name="pickup"
           type="datetime-local"
           label="Pickup date"
-          required
+          onChange={handleChange}
         />
         <input
           name="return_date"
           type="datetime-local"
           label="Return date"
           required
+          onChange={handleChange}
         />
         <input
           name="location"
           type="text"
           label="Location"
           required
+          onChange={handleChange}
         />
         <button type="submit" className="btn btn-primary col-12">Book Appointment</button>
       </form>
