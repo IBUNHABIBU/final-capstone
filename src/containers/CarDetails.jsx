@@ -47,16 +47,16 @@ const CarDetails = () => {
   };
 
   console.log(formData);
-  const handleSubmit = (data) => {
-    data.preventDefault();
-    console.log('Data', data, user.details);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Data', formData, user.details);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
-        name: data.name,
-        model: data.model,
-        pickup: data.pickup,
-        return_date: data.return_date,
-        location: data.location,
+        name: formData.name,
+        model: formData.model,
+        pickup: formData.pickup,
+        return_date: formData.return_date,
+        location: formData.location,
       },
     },
     { withCredentials: true }).then((response) => {
