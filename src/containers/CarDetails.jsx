@@ -81,14 +81,17 @@ const CarDetails = () => {
     //   onSubmit={(formData) => handleSubmit(formData)}
     //   action="Book Appointment"
     // />
-     <form onSubmit={(formData) => handleSubmit(formData)}>
-    
-            <input
-              name='name' type= 'text' label='Name' required='true' defaultValue= {name}
-            />
-   
-    
-     </form>
+    <form onSubmit={(formData) => handleSubmit(formData)}>
+
+      <input
+        name="name"
+        type="text"
+        label="Name"
+        required="true"
+        defaultValue={name}
+      />
+
+    </form>
   );
 
   return (
