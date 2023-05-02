@@ -19,6 +19,14 @@ const CarDetails = () => {
   const user = useSelector((state) => state.register);
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    model: '',
+    pickup: '',
+    return_date: '',
+    location: '',
+  });
+
   const dispatch = useDispatch();
   const { slug } = useParams();
   const id = parseInt(slug.split('-').pop(), 10);
