@@ -12,8 +12,8 @@ const AddCarForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (data) => {
-    console.log('Data', data);
     const formData = new FormData();
+    console.log("File", data.target.files[0]);
     const car = { ...data, image: data.image[0] };
 
     formData.append('car[color]', car.color);
