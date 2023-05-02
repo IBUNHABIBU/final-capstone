@@ -44,7 +44,6 @@ const CarDetails = () => {
       },
     },
     { withCredentials: true }).then((response) => {
-      console.log('Response', response);
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
         setMessage('Booking created successfully');
