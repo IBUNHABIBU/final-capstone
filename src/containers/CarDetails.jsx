@@ -11,7 +11,7 @@ import axios from 'axios';
 import {
   createCarBooking, fetchDetails, checkLoginStatus, urlBase,
 } from '../redux/actions/fetch';
-import Form from '../components/Form';
+// import Form from '../components/Form';
 import Pop from './Pop';
 
 const CarDetails = () => {
@@ -57,41 +57,55 @@ const CarDetails = () => {
   };
 
   const form = (
-    <form onSubmit={(formData) => handleSubmit(formData)}>
-      <input
-        name="name"
-        type="text"
-        label="Name"
-        required="true"
-        defaultValue={name}
-      />
-      <input
-        name="title"
-        type="text"
-        label="Model"
-        required="true"
-        defaultValue={title}
-      />
-      <input
-        name="pickup"
-        type="datetime-local"
-        label="Pickup date"
-        required="true"
-      />
-      <input
-        name="return_date"
-        type="datetime-local"
-        label="Return date"
-        required="true"
-      />
-      <input
-        name="location"
-        type="text"
-        label="Location"
-        required="true"
-      />
-      <button type="submit" className="btn btn-primary col-12">Book Appointment</button>
-    </form>
+    <div className="form">
+       { message && <span className="msg">{message}</span> }
+      {errors?.length ? (
+        <div className="error">
+          <h4>Oops! your form could not be saved</h4>
+          <p>Please correct the following errors:</p>
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+      <form onSubmit={(formData) => handleSubmit(formData)}>
+        <input
+          name="name"
+          type="text"
+          label="Name"
+          required="true"
+          defaultValue={name}
+        />
+        <input
+          name="title"
+          type="text"
+          label="Model"
+          required="true"
+          defaultValue={title}
+        />
+        <input
+          name="pickup"
+          type="datetime-local"
+          label="Pickup date"
+          required="true"
+        />
+        <input
+          name="return_date"
+          type="datetime-local"
+          label="Return date"
+          required="true"
+        />
+        <input
+          name="location"
+          type="text"
+          label="Location"
+          required="true"
+        />
+        <button type="submit" className="btn btn-primary col-12">Book Appointment</button>
+      </form>
+    </div>
   );
 
   return (
