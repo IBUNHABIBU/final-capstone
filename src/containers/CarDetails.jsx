@@ -96,12 +96,25 @@ const CarDetails = () => {
         required="true"
         defaultValue={title}
       />
-<input
+      <input
         name="pickup"
         type="datetime-local"
         label="Pickup date"
         required="true"
       />
+       <input
+        name="return_date"
+        type="datetime-local"
+        label="Return date"
+        required="true"
+      />
+      <input
+        name="location"
+        type="text"
+        label="Location"
+        required="true"
+      />
+      <button type="submit" className="btn btn-primary col-12">Book Appointment</button>
     </form>
   );
 
