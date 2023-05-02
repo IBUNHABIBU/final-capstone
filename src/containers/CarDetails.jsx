@@ -33,7 +33,13 @@ const CarDetails = () => {
   } = details;
   const { name } = user.details;
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
+
   const handleSubmit = (data) => {
+    data.preventDefault();
     console.log('Data', data, user.details);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
@@ -72,38 +78,38 @@ const CarDetails = () => {
           </ul>
         </div>
       ) : null}
-      <form onSubmit={(formData) => handleSubmit(formData)}>
+      <form onSubmit={handleSubmit}>
         <input
           name="name"
           type="text"
           label="Name"
-          required={true}
+          required
           defaultValue={name}
         />
         <input
           name="title"
           type="text"
           label="Model"
-          required={true}
+          required
           defaultValue={title}
         />
         <input
           name="pickup"
           type="datetime-local"
           label="Pickup date"
-          required={true}
+          required
         />
         <input
           name="return_date"
           type="datetime-local"
           label="Return date"
-          required={true}
+          required
         />
         <input
           name="location"
           type="text"
           label="Location"
-          required={true}
+          required
         />
         <button type="submit" className="btn btn-primary col-12">Book Appointment</button>
       </form>
