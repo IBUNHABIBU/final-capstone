@@ -82,7 +82,6 @@ const CarDetails = () => {
     //   action="Book Appointment"
     // />
     <form onSubmit={(formData) => handleSubmit(formData)}>
-
       <input
         name="name"
         type="text"
