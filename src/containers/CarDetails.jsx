@@ -17,7 +17,8 @@ import Pop from './Pop';
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
   const user = useSelector((state) => state.register);
-  const message = useState('');
+  const [message, setMessage ] = useState('');
+  const [errors, setErrors] = useState('');
   const dispatch = useDispatch();
   const { slug } = useParams();
   const id = parseInt(slug.split('-').pop(), 10);
@@ -53,6 +54,7 @@ const CarDetails = () => {
       console.log('Response error', response.data.error);
     }).catch((error) => {
       console.log(error);
+      setErrors(error.response.data.message);
     });
   };
 
