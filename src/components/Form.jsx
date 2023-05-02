@@ -6,11 +6,11 @@ const Form = ({
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
+    const { name, value, files } = e.target;
     if (files && files.length > 0) {
-      console.log("Wao you uploaded a file");
-    console.log(e.target.files[0]);
+      console.log('Wao you uploaded a file');
+      console.log(e.target.files[0]);
     }
-    const { name, value } = e.target;
     setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
