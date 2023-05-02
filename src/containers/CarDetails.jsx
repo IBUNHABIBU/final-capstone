@@ -55,6 +55,7 @@ const CarDetails = () => {
   const form = (
     <Form
       message={message}
+      errors={errors}
       field={
             [
               {
