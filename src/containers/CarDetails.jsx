@@ -48,7 +48,6 @@ const CarDetails = () => {
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
         setMessage('Booking created successfully');
-        console.log('Response', response, message, name);
       }
     }).catch((error) => {
       console.log(error);
