@@ -20,8 +20,8 @@ const CarDetails = () => {
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState('');
   const [formData, setFormData] = useState({
-    name: '',
-    model: '',
+    name: user.details.name,
+    model: details.title,
     pickup: '',
     return_date: '',
     location: '',
@@ -49,7 +49,7 @@ const CarDetails = () => {
   console.log(formData);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Data', formData, user.details);
+    console.log('Data', formData);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
         name: formData.name,
