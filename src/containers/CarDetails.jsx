@@ -50,7 +50,6 @@ const CarDetails = () => {
         setMessage('Booking created successfully');
         console.log('Response', response, message, name);
       }
-      console.log('Response error', response.data.error);
     }).catch((error) => {
       console.log(error);
     });
