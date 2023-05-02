@@ -12,7 +12,7 @@ const AddCarForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (car) => {
-    const fcar = new Fcar();
+    const formData = new FormData();
     console.log('File', car);
     // const car = { ...data, image: data.image[0] };
 
