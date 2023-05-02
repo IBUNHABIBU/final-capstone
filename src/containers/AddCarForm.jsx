@@ -11,10 +11,10 @@ const AddCarForm = () => {
   const [errors, setErrors] = useState('');
   const dispatch = useDispatch();
 
-  const handleSubmit = (data) => {
-    const formData = new FormData();
-    console.log('File', data.target);
-    const car = { ...data, image: data.image[0] };
+  const handleSubmit = (car) => {
+    const fcar = new Fcar();
+    console.log('File', car);
+    // const car = { ...data, image: data.image[0] };
 
     formData.append('car[color]', car.color);
     formData.append('car[engine]', car.engine);

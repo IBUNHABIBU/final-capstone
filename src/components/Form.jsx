@@ -10,8 +10,10 @@ const Form = ({
     if (files && files.length > 0) {
       console.log('Wao you uploaded a file');
       console.log(e.target.files[0]);
+      setFormData((prevState) => ({ ...prevState, [name]: files[0] }));
+    } else {
+      setFormData((prevState) => ({ ...prevState, [name]: value }));
     }
-    setFormData((prevState) => ({ ...prevState, [name]: value }));
   };
 
   const handleSubmit = (e) => {
