@@ -17,7 +17,7 @@ import Pop from './Pop';
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
   const user = useSelector((state) => state.register);
-  const [message, setMessage ] = useState('');
+  const [message, setMessage] = useState('');
   const [errors, setErrors] = useState('');
   const dispatch = useDispatch();
   const { slug } = useParams();
@@ -60,7 +60,7 @@ const CarDetails = () => {
 
   const form = (
     <div className="form">
-       { message && <span className="msg">{message}</span> }
+      { message && <span className="msg">{message}</span> }
       {errors?.length ? (
         <div className="error">
           <h4>Oops! your form could not be saved</h4>
