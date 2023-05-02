@@ -33,7 +33,6 @@ const CarDetails = () => {
   const { name } = user.details;
 
   const handleSubmit = (data) => {
-    console.log('Data', data);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
         name,
