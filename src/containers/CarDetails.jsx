@@ -11,22 +11,13 @@ import axios from 'axios';
 import {
   createCarBooking, fetchDetails, checkLoginStatus, urlBase,
 } from '../redux/actions/fetch';
-// import Form from '../components/Form';
+import Form from '../components/Form';
 import Pop from './Pop';
 
 const CarDetails = () => {
   const details = useSelector((state) => state.detail);
   const user = useSelector((state) => state.register);
-  const [message, setMessage] = useState('');
-  const [errors, setErrors] = useState('');
-  const [formData, setFormData] = useState({
-    name: user.details.name,
-    model: details.title,
-    pickup: '',
-    return_date: '',
-    location: '',
-  });
-
+  const message = useState('');
   const dispatch = useDispatch();
   const { slug } = useParams();
   const id = parseInt(slug.split('-').pop(), 10);
@@ -41,88 +32,55 @@ const CarDetails = () => {
   } = details;
   const { name } = user.details;
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({ ...prevState, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (data) => {
+    console.log('Data', data);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
-        name: formData.name,
-        model: formData.model,
-        pickup: formData.pickup,
-        return_date: formData.return_date,
-        location: formData.location,
+        name: data.name,
+        model: data.model,
+        pickup: data.pickup,
+        return_date: data.return_date,
+        location: data.location,
       },
     },
     { withCredentials: true }).then((response) => {
+      console.log('Response', response);
       if (response.data.status === 'created') {
         dispatch(createCarBooking(response.data));
         setMessage('Booking created successfully');
-        console.log('Response', response, message);
+        console.log('Response', response, message, name);
       }
+      console.log('Response error', response.data.error);
     }).catch((error) => {
       console.log(error);
-      setErrors(error.response.data.message);
     });
   };
 
   const form = (
-    <div className="form">
-      { message && <span className="msg">{message}</span> }
-      {errors?.length ? (
-        <div className="error">
-          <h4>Oops! your form could not be saved</h4>
-          <p>Please correct the following errors:</p>
-          <ul>
-            {errors.map((error) => (
-              <li key={error}>{error}</li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
-      <form onSubmit={(formData) => handleSubmit(formData)}>
-        <input
-          name="name"
-          type="text"
-          label="Name"
-          required
-          defaultValue={name}
-          onChange={handleChange}
-        />
-        <input
-          name="title"
-          type="text"
-          label="Model"
-          required
-          defaultValue={title}
-          onChange={handleChange}
-        />
-        <input
-          name="pickup"
-          type="datetime-local"
-          label="Pickup date"
-          onChange={handleChange}
-        />
-        <input
-          name="return_date"
-          type="datetime-local"
-          label="Return date"
-          required
-          onChange={handleChange}
-        />
-        <input
-          name="location"
-          type="text"
-          label="Location"
-          required
-          onChange={handleChange}
-        />
-        <button type="submit" className="btn btn-primary col-12">Book Appointment</button>
-      </form>
-    </div>
+    <Form
+      message={message}
+      field={
+            [
+              {
+                name: 'name', type: 'text', label: 'Name', required: true,
+              },
+              {
+                name: 'model', type: 'text', label: 'Model', required: true,
+              },
+              {
+                name: 'pickup', type: 'datetime-local', label: 'Pickup', required: true,
+              },
+              {
+                name: 'return_date', type: 'datetime-local', label: 'Return Date', required: true,
+              },
+              {
+                name: 'location', type: 'text', label: 'Location', required: true,
+              },
+            ]
+          }
+      onSubmit={(formData) => handleSubmit(formData)}
+      action="Book Appointment"
+    />
   );
 
   return (
