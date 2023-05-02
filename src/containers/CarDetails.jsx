@@ -36,7 +36,7 @@ const CarDetails = () => {
     console.log('Data', data);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
-        name: name,
+        name,
         model: title,
         pickup: data.pickup,
         return_date: data.return_date,
@@ -62,10 +62,10 @@ const CarDetails = () => {
       field={
             [
               {
-                name: 'name', type: 'text', label: 'Name', required: true,
+                name: 'name', type: 'text', label: 'Name', required: true, defaultValue: name,
               },
               {
-                name: 'model', type: 'text', label: 'Model', required: true,
+                name: 'model', type: 'text', label: 'Model', required: true, defaultValue: title,
               },
               {
                 name: 'pickup', type: 'datetime-local', label: 'Pickup', required: true,
