@@ -57,30 +57,6 @@ const CarDetails = () => {
   };
 
   const form = (
-    // <Form
-    //   message={message}
-    //   field={
-    //         [
-    //           {
-    //             name: 'name', type: 'text', label: 'Name', required: true, defaultValue: name,
-    //           },
-    //           {
-    //             name: 'model', type: 'text', label: 'Model', required: true, defaultValue: title,
-    //           },
-    //           {
-    //             name: 'pickup', type: 'datetime-local', label: 'Pickup', required: true,
-    //           },
-    //           {
-    //             name: 'return_date', type: 'datetime-local', label: 'Return Date', required: true,
-    //           },
-    //           {
-    //             name: 'location', type: 'text', label: 'Location', required: true,
-    //           },
-    //         ]
-    //       }
-    //   onSubmit={(formData) => handleSubmit(formData)}
-    //   action="Book Appointment"
-    // />
     <form onSubmit={(formData) => handleSubmit(formData)}>
       <input
         name="name"
@@ -102,7 +78,7 @@ const CarDetails = () => {
         label="Pickup date"
         required="true"
       />
-       <input
+      <input
         name="return_date"
         type="datetime-local"
         label="Return date"
