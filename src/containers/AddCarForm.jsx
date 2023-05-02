@@ -17,16 +17,13 @@ const AddCarForm = () => {
     console.log('Data', data);
     const formData = new FormData();
     // const car = { ...data, image: data.image[0] };
-    const car = {
-      ...data,
-      image: data.image[0] ? data.image[0].name : null,
-    };
-    formData.append('car[color]', data.color);
-    formData.append('car[engine]', data.engine);
-    formData.append('car[year]', data.year);
-    formData.append('car[title]', data.title);
-    formData.append('car[price]', data.price);
-    formData.append('car[image]', car.image[0]);
+   
+    formData.append('car[color]', car.color);
+    formData.append('car[engine]', car.engine);
+    formData.append('car[year]', car.year);
+    formData.append('car[title]', car.title);
+    formData.append('car[price]', car.price);
+    formData.append('car[image]', car.image);
     console.log('FormData log', formData);
     axios.post(`${urlBase}/api/v1/cars`,
 
