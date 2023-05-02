@@ -34,7 +34,7 @@ const CarDetails = () => {
   const { name } = user.details;
 
   const handleSubmit = (data) => {
-    console.log('Data', data);
+    console.log('Data', data, user.details);
     axios.post(`${urlBase}/api/v1/bookings`, {
       booking: {
         name: data.name,
@@ -77,33 +77,33 @@ const CarDetails = () => {
           name="name"
           type="text"
           label="Name"
-          required="true"
+          required={true}
           defaultValue={name}
         />
         <input
           name="title"
           type="text"
           label="Model"
-          required="true"
+          required={true}
           defaultValue={title}
         />
         <input
           name="pickup"
           type="datetime-local"
           label="Pickup date"
-          required="true"
+          required={true}
         />
         <input
           name="return_date"
           type="datetime-local"
           label="Return date"
-          required="true"
+          required={true}
         />
         <input
           name="location"
           type="text"
           label="Location"
-          required="true"
+          required={true}
         />
         <button type="submit" className="btn btn-primary col-12">Book Appointment</button>
       </form>
