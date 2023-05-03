@@ -4,14 +4,17 @@ import PropTypes from 'prop-types';
 const Pop = ({
   trigger, content, setIsOpen, isOpen,
 }) => {
-  // const [isOpen, setIsOpen] = useState(false);
   const handleClose = () => {
     setIsOpen(false);
   };
 
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
   return (
     <div className="popup">
-      <button type="submit" className="popup__button" onClick={() => setIsOpen(true)}>
+      <button type="submit" className="popup__button" onClick={handleOpen}>
         {trigger}
       </button>
       {isOpen && (
