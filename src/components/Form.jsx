@@ -25,7 +25,7 @@ const Form = ({
       {errors.length ? (
         console.log('errors', errors, errors.length),
           <div className="error">
-            {(errors.typeOf === 'string') ? [(<h4 key={errors}>{errors}</h4>)]
+            {(!Array.isArray(errors)) ? [(<h4 key={errors}>{errors}</h4>)]
 
               : [
                 (
