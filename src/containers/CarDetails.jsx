@@ -19,6 +19,7 @@ const CarDetails = () => {
   const user = useSelector((state) => state.register);
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const { slug } = useParams();
   const id = parseInt(slug.split('-').pop(), 10);
@@ -26,7 +27,8 @@ const CarDetails = () => {
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
-  }, [id, slug]);
+    setMessage('');
+  }, [id, slug, isOpen]);
 
   const {
     color, engine, year, title, price, imageUrl,
@@ -115,7 +117,7 @@ const CarDetails = () => {
         </div>
 
         <div className="details__section__actions">
-          <Pop trigger="Book a ride" content={form} />
+          <Pop trigger="Book a ride" content={form} setIsOpen={setIsOpen} />
           <div className="form-floating mb-3 col-6">
             <button type="submit" className="btn btn-primary col-12">Edit car</button>
           </div>
