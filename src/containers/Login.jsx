@@ -28,8 +28,9 @@ const Login = () => {
         if (response.data.status === 'created') {
           dispatch(setUser(response.data));
           navigate('/models');
+        } else {
+          setErrors(response.data.error);
         }
-        setErrors(response.data.error);
       }
     });
   };
