@@ -28,7 +28,6 @@ const CarDetails = () => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
     setMessage('');
-    console.log('useEffect', message, isOpen);
   }, [id, slug, isOpen]);
 
   const {
