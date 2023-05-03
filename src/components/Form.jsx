@@ -22,7 +22,7 @@ const Form = ({
   return (
     <div className="form">
       { message && <span className="msg">{message}</span> }
-      {errors?.length ? (
+      {errors.length ? (
         <div className="error">
           <h4>Oops! your form could not be saved</h4>
           <p>Please correct the following errors:</p>
