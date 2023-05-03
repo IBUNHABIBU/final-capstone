@@ -25,21 +25,23 @@ const Form = ({
       {errors.length ? (
         console.log('errors', errors, errors.length),
           <div className="error">
-            { [(errors.typeOf === 'string') ? (<h4>{errors}</h4>)] :[
-             <>
-              <h4>Oops! your form could not be saved</h4>
-            <p>Please correct the following errors:</p>
+            {(errors.typeOf === 'string') ? [(<h4 key={errors}>{errors}</h4>)]
 
-            <ul>
-              {errors.map((error) => (
-                <li key={error}>{error}</li>
-              ))}
-            </ul>
-             </> 
-             
-            ] }
+              : [
+                (
+                  <>
+                    <h4>Oops! your form could not be saved</h4>
+                    <p>Please correct the following errors:</p>
 
-            
+                    <ul>
+                      {errors.map((error) => (
+                        <li key={error}>{error}</li>
+                      ))}
+                    </ul>
+                  </>
+                ),
+
+              ]}
           </div>
       ) : null }
       <form onSubmit={handleSubmit}>
