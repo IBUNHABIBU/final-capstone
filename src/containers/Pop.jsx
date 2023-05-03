@@ -5,10 +5,10 @@ import { useDispatch } from 'react-redux';
 const Pop = ({ trigger, content }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
-
+  
   const handleClose = () => {
     setIsOpen(false);
-    dispatch(isOpen);
+    // dispatch(isOpen);
   };
 
   return (
