@@ -23,7 +23,6 @@ const Form = ({
     <div className="form">
       { message && <span className="msg">{message}</span> }
       {errors.length ? (
-        console.log('errors', errors, errors.length),
           <div className="error">
             {(!Array.isArray(errors)) ? [(<h4 key={errors}>{errors}</h4>)]
 
