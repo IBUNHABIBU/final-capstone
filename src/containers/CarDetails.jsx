@@ -116,7 +116,6 @@ const CarDetails = () => {
 
         <div className="details__section__actions">
           <Pop trigger="Book a ride" content={form} />
-          { form }
           <div className="form-floating mb-3 col-6">
             <button type="submit" className="btn btn-primary col-12">Edit car</button>
           </div>
