@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-const Pop = ({ trigger, content }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Pop = ({ trigger, content, setIsOpen }) => {
+  // const [isOpen, setIsOpen] = useState(false);
   const handleClose = () => {
     setIsOpen(false);
   };
