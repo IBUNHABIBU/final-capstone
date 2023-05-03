@@ -5,7 +5,6 @@ const Pop = ({ trigger, content }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClose = () => {
     setIsOpen(false);
-    // dispatch(isOpen);
   };
 
   return (
