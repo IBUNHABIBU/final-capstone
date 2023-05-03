@@ -55,9 +55,9 @@ Car rental is the react front end application that uses rails api to book car re
 - Edit, delete cars
 - Mobile version
 - Good Ui
-- Admin panel
-- Dashboard to show the number of cars, number of appointments, number of users and total income earned
+- Admin panel and be able to add another admin
 - Admin can approve or reject appointment
+- Dashboard to show the number of cars, number of appointments, number of users and total income earned
 - User can see the status of appointment and can pay online
 - User can see the history of appointment
 - User can see the history of payment
