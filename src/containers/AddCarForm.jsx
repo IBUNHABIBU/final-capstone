@@ -13,8 +13,6 @@ const AddCarForm = () => {
 
   const handleSubmit = (car) => {
     const formData = new FormData();
-    console.log('File', car);
-    // const car = { ...data, image: data.image[0] };
 
     formData.append('car[color]', car.color);
     formData.append('car[engine]', car.engine);
