@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
@@ -9,7 +9,12 @@ import Pop from './Pop';
 const AddCarForm = () => {
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    setMessage('');
+  }, [isOpen]);
 
   const handleSubmit = (car) => {
     const formData = new FormData();
@@ -74,7 +79,7 @@ const AddCarForm = () => {
     <div className="models">
       <Link to="/cars" className="btn btn--list">see cars</Link>
       <div className="carform">
-        <Pop trigger="Create Car" content={form} />
+        <Pop trigger="Create Car" content={form} isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </div>
   );
