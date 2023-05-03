@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 
 const Pop = ({ trigger, content }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleClose = () => {
+    setIsOpen(false);
+    dispatch(isOpen);
+  };
 
   return (
     <div className="popup">
@@ -11,7 +18,7 @@ const Pop = ({ trigger, content }) => {
       </button>
       {isOpen && (
         <div className="popup__content">
-          <button type="submit" className="popup__close" onClick={() => setIsOpen(false)}>
+          <button type="submit" className="popup__close" onClick={handleClose}>
             &times;
           </button>
           {content}
