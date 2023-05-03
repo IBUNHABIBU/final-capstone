@@ -26,7 +26,7 @@ const CarDetails = () => {
   useEffect(() => {
     checkLoginStatus();
     dispatch(fetchDetails(id));
-  }, [id, slug]);
+  }, [id, slug, Pop]);
 
   const {
     color, engine, year, title, price, imageUrl,
