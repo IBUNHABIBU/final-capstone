@@ -23,25 +23,25 @@ const Form = ({
     <div className="form">
       { message && <span className="msg">{message}</span> }
       {errors.length ? (
-          <div className="error">
-            {(!Array.isArray(errors)) ? [(<h4 key={errors}>{errors}</h4>)]
+        <div className="error">
+          {(!Array.isArray(errors)) ? [(<h4 key={errors}>{errors}</h4>)]
 
-              : [
-                (
-                  <>
-                    <h4>Oops! your form could not be saved</h4>
-                    <p>Please correct the following errors:</p>
+            : [
+              (
+                <>
+                  <h4>Oops! your form could not be saved</h4>
+                  <p>Please correct the following errors:</p>
 
-                    <ul>
-                      {errors.map((error) => (
-                        <li key={error}>{error}</li>
-                      ))}
-                    </ul>
-                  </>
-                ),
+                  <ul>
+                    {errors.map((error) => (
+                      <li key={error}>{error}</li>
+                    ))}
+                  </ul>
+                </>
+              ),
 
-              ]}
-          </div>
+            ]}
+        </div>
       ) : null }
       <form onSubmit={handleSubmit}>
 
