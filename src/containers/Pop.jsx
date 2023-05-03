@@ -6,10 +6,12 @@ const Pop = ({
 }) => {
   const handleClose = () => {
     setIsOpen(false);
+    console.log('handleClose', isOpen);
   };
 
   const handleOpen = () => {
     setIsOpen(true);
+    console.log('handleOpen', isOpen);
   };
 
   return (
