@@ -30,7 +30,7 @@ const Login = () => {
           navigate('/models');
         } else {
           setErrors(response.data.error);
-          console.log("Error", errors);
+          console.log('Error', errors);
         }
       }
     });
