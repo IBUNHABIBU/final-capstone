@@ -73,13 +73,13 @@ React
   -ES6
   -Higher-order component to make the sidebar nav with the help of React Router v6
   -DRY principle
-  -Reusable Form component used all over the application, such as login, signup, create car,   and create appointment
-  -Reusable Popup modal component used all over the application
-Redux
-Rails API
-Bootstrap
-SASS
-BEM
+    -Reusable Form component used all over the application, such as login, signup, create   car,   and create appointment
+    -Reusable Popup modal component used all over the application
+-Redux
+-Rails API
+-Bootstrap
+-SASS
+  -BEM
 
 
 ### Requirement
