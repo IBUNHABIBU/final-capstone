@@ -66,19 +66,21 @@ Car Rental is a full-stack web application built with React and Rails API to pro
 <!-- BUILD WITH -->
 ## Built With
 
-This project was built using these technologies.
-* React
-   - Higher order component to make the sidebar nav with the help of react router v6
-   - Dry principle
-      - Reusable Form component which is used all over the application
-         such as login, signup, create car, create appointment
-      - Reusable Popup modal component which is used all over the application
-* Redux
-* Rails api
-* Bootstrap
-* SASS
-  -BEM
-* ES6
+Built With
+This project was built using the following technologies:
+
+React
+  -ES6
+  -Higher-order component to make the sidebar nav with the help of React Router v6
+  -DRY principle
+  -Reusable Form component used all over the application, such as login, signup, create car,   and create appointment
+  -Reusable Popup modal component used all over the application
+Redux
+Rails API
+Bootstrap
+SASS
+BEM
+
 
 ### Requirement
 
