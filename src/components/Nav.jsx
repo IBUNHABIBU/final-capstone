@@ -9,6 +9,7 @@ import { urlBase } from '../redux/actions/fetch';
 const Nav = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.register);
+  console.log(user.name);
 
   const handleLogout = () => {
     axios.delete(`${urlBase}/logout`, { withCredentials: true })
@@ -41,11 +42,11 @@ const Nav = () => {
         }
         {
         user.logged_in ? (
-          <div>
+          <div className="user">
             <p>
               <span className="p-2">Login as</span>
               <strong>
-                {user.name}
+                {user.details.name}
               </strong>
             </p>
             <button type="submit" className="btn" onClick={handleLogout}>Logout</button>
