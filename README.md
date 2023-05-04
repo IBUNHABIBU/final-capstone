@@ -81,9 +81,6 @@ This project was built using these technologies.
   -BEM
 * ES6
 
-
-
-
 ### Requirement
 
 - Node.js
