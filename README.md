@@ -39,8 +39,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Car Rental is a full-stack web application built with React and Rails API to provide a user-friendly interface for booking car rentals.
-
+Car Rental is a full-stack web application built with React and Rails API to provide a user-friendly interface for booking car rentals.This project's frontend is built with React while the backend API can be found at the below
 [Link of the backend api](https://github.com/IBUNHABIBU/car-rent-booking-api)
 
 ### Story
