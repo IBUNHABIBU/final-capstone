@@ -48,7 +48,7 @@ Car Rental is a full-stack web application built with React and Rails API to pro
 
 - User authentication
 - Create cars and display them to the carlist page
-- Create appointment and display to the list of appointment
+- Create appointments and display them to the list of appointments
 - SEO friendly url using slugify
 
 ## Version2 features
