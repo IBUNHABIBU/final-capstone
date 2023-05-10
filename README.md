@@ -130,7 +130,7 @@ Enjoy playing it.
 
 
 ## Live Demo
-[Live Demo ](salum-microverse-final-capstone.netlify.app)
+[Live Demo ](https://salum-microverse-final-capstone.netlify.app/)
 
 ## Challenges faced
 
