@@ -16,3 +16,10 @@
         @content;
     }
 }
+
+// form mobile very small
+@mixin for-mobile-vs {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}
