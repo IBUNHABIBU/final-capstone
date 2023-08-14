@@ -52,16 +52,17 @@ Car Rental is a full-stack web application built with React and Rails API to pro
 - SEO-friendly URl using slugify
 
 ## Version2 features
- -Edit and delete cars
- -Mobile version
- -Improved UI
- -Admin panel with the ability to add another admin
- -Admin can approve or reject appointments
- -Dashboard to show the number of cars, appointments, users, and total income earned
- -Users can see the status of appointments and can pay online
- -Users can see the history of appointments
- -Users can see the history of payment
- -Search cars by name, model, year, price, color
+ - Google, facebook, Github and OTP authentication with sms and email
+ - Edit and delete cars
+ - Mobile version
+ - Improved UI
+ - Admin panel with the ability to add another admin
+ - Admin can approve or reject appointments
+ - Dashboard to show the number of cars, appointments, users, and total income earned
+ - Users can see the status of appointments and can pay online
+ - Users can see the history of appointments
+ - Users can see the history of payment
+ - Search cars by name, model, year, price, color
     
 <!-- BUILD WITH -->
 ## Built With
@@ -129,7 +130,7 @@ Enjoy playing it.
 
 
 ## Live Demo
-[Live Demo ](salum-microverse-final-capstone.netlify.app)
+[Live Demo ](https://salum-microverse-final-capstone.netlify.app/)
 
 ## Challenges faced
 
