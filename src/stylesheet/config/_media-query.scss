@@ -2,9 +2,10 @@
 
 // Path: src\stylesheet\config\_mixins.scss
 //mixins
-@media screen and (min-width: 768px) {
-    .container {
-        width: 750px;
+
+// for mobile
+@mixin for-mobile {
+    @media screen and (max-width: 767px) {
+        @content;
     }
 }
- 
