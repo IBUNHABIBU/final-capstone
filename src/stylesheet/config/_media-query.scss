@@ -3,9 +3,16 @@
 // Path: src\stylesheet\config\_mixins.scss
 //mixins
 
-// for mobile
+// for mobile 
 @mixin for-mobile {
     @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+// for tablet
+@mixin for-tablet {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
         @content;
     }
 }
