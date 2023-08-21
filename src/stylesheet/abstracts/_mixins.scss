@@ -1,0 +1,57 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin centerposition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Media queries Manager
+
+// ORDER: base > typography > general layout + grid,  page layout, components
+/* 
+    0 - 600px: Phone
+    600px - 900px: Tab-portrait
+    900px - 1200px: Tab-landscape
+    1200px - 1800px: normal desktop
+    1800px + : big desktop
+*/
+
+/*
+    
+    ```breakpoint choices```
+    -phone
+    -tab-port
+    -tab-land
+    -desktop
+    -big-desktop
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone { // 0 - 600px
+        @media only screen and (max-width: 37.5em) { @content };
+    }
+
+    @if $breakpoint == tab-port { // 600px - 900px
+        @media only screen and (max-width: 56.25em) { @content };
+    }
+
+    @if $breakpoint == tab-land { // 900px - 1200px
+        @media only screen and (max-width: 75em) { @content };
+    }
+
+    @if $breakpoint == desktop { // 1200px - 1800px
+        @media only screen and (min-width: 112.5em) { @content };
+    }
+
+    // @if $breakpoint == big-desktop {
+    //     @media(min-width: 1800px) { @content };
+    // }
+}
