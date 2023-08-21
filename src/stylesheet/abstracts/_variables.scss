@@ -1,0 +1,105 @@
+$font-family: "Inter", "Roboto", sans-serif;
+
+// Spacing
+$spacing-xs: 0.4rem;
+$spacing-sm: 0.8rem;
+$spacing-md: 1.6rem;
+$spacing-lg: 2.4rem;
+$spacing-xl: 3.2rem;
+$spacing-xxl: 4.0rem;
+
+// Margin
+$margin-xs: $spacing-xs;
+$margin-sm: $spacing-sm;
+$margin-md: $spacing-md;
+$margin-lg: $spacing-lg;
+$margin-xl: $spacing-xl;
+$margin-xxl: $spacing-xxl;
+
+// Padding
+$padding-xs: $spacing-xs;
+$padding-sm: $spacing-sm;
+$padding-md: $spacing-md;
+$padding-lg: $spacing-lg;
+$padding-xl: $spacing-xl;
+
+// Letter Spacing
+$letter-spacing-xs: 0.5px;
+$letter-spacing-sm: 1px;
+$letter-spacing-md: 1.5px;
+$letter-spacing-lg: 2px;
+$letter-spacing-xl: 3px;
+
+// Line Height
+$line-height-xs: 1.1;
+$line-height-sm: 1.4;
+$line-height-md: 1.6;
+$line-height-lg: 1.8;
+$line-height-xl: 2;
+
+// Font Sizes
+$font-size-xs: 1.2rem;
+$font-size-sm: 1.4rem;
+$font-size-md: 1.6rem;
+$font-size-lg: 1.8rem;
+$font-size-xl: 2rem;
+$font-size-xxl: 4rem;
+
+// Heading Sizes
+$h1-font-size: $font-size-xxl;
+$h2-font-size: $font-size-xl;
+$h3-font-size: $font-size-lg;
+$h4-font-size: $font-size-md;
+$h5-font-size: $font-size-sm;
+$h6-font-size: $font-size-xs;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+
+// Primary Colors
+// $color-primary: #007bff;
+// $color-primary-dark: #0056b3;
+// $color-primary-light: #66baff;
+
+// Secondary Colors
+// $color-secondary: #6c757d;
+// $color-secondary-dark: #343a40;
+// $color-secondary-light: #adb5bd;
+
+// Background Colors
+$color-background-card: rgba(201, 197, 222, 0.51);
+$color-background-button: #000;
+$color-background-option: #f6f6f6;
+$default-bg: #ffffff;
+$neutral-800: rgba(25, 29, 35, 1);
+$color-text-audio: #1e88e5;
+
+// Text Colors
+$color-default: #000000;
+$color-text-light: #ffffff;
+$color-text-muted: #6c757d;
+$color-text-audio: #1e88e5;
+
+// Small border radius (used for buttons, inputs, etc.)
+$border-radius-sm: 4px;
+
+// Medium border radius (used for cards, panels, etc.)
+$border-radius-md: 8px;
+
+// Large border radius (used for modal windows, rounded containers, etc.)
+$border-radius-lg: 16px;
+
+// Circle border radius (used for avatars, circular elements, etc.)
+$border-radius-circle: 50%;
+
+//  box shadow variables
+$shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
