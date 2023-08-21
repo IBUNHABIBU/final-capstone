@@ -53,6 +53,8 @@ Car Rental is a full-stack web application built with React and Rails API to pro
 
 ## Version2 features
  - Google, facebook, Github and OTP authentication with sms and email
+ - animation
+ - box shadow
  - Edit and delete cars
  - Mobile version
  - Improved UI
