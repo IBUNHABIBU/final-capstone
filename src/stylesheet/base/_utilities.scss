@@ -1,0 +1,24 @@
+// its normal practice to use important in the utility classes
+.u-center-text {
+    text-align: center !important;
+}
+
+.u-mb-lg {
+    margin-bottom: 8rem !important;
+
+    @include respond(tab-port) {
+        margin-bottom: 6rem !important;
+    }
+}
+
+.u-mb-sm {
+    margin-bottom: 2rem !important;
+}
+
+.u-mt-xl {
+    margin-top: 10rem !important;
+
+    @include respond(tab-port) {
+        margin-top: 8rem !important;
+    }
+}
