@@ -1,13 +1,35 @@
-@import 'stylesheet/layouts/nav.scss';
-@import 'stylesheet/layouts/layout.scss';
-@import 'stylesheet/components/button.scss';
-@import 'stylesheet/layouts/home.scss';
+
+
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/button';
+@import 'components/card';
+@import 'components/bg-video';
+@import 'components/story';
+@import 'components/form';
+@import 'components/popup';
 @import 'stylesheet/components/display.scss';
 @import 'stylesheet/components/login.scss';
 @import 'stylesheet/components/signup.scss';
 @import 'stylesheet/components/form.scss';
 @import 'stylesheet/components/models.scss';
 @import 'stylesheet/components/details.scss';
+
+@import 'layouts/grid';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/navigation';
+@import 'stylesheet/layouts/nav.scss';
+@import 'stylesheet/layouts/layout.scss';
+@import 'stylesheet/layouts/home.scss';
+@import 'pages/home';
 
 
 body {
