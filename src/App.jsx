@@ -10,7 +10,7 @@ import CarList from './containers/CarList';
 import CarDetails from './containers/CarDetails';
 import Appointment from './containers/Appointment';
 import layout from './layouts';
-import './App.scss';
+import './stylesheet/App.scss';
 import Pop from './containers/Pop';
 import Project from './containers/Project';
 
