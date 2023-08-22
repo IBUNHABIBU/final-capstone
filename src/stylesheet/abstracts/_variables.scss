@@ -61,16 +61,23 @@ $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 
 // Primary Colors
-// $color-primary: #007bff;
-// $color-primary-dark: #0056b3;
-// $color-primary-light: #66baff;
-
+// $color-primary: #99c210;
+// $color-primary-dark: #849e2e;
+// $color-primary-light:  #bfbfbf;
+$app-color: #99c210;
+$nav-color: #849e2e;
+$bg-color:  #fbfbfb;
+$hover-color: #849e2e;
+$secondary-color: #bfbfbf;
 // Secondary Colors
 // $color-secondary: #6c757d;
 // $color-secondary-dark: #343a40;
 // $color-secondary-light: #adb5bd;
 
 // Background Colors
+$color-background: #fbfbfb;
+
+
 $color-background-card: rgba(201, 197, 222, 0.51);
 $color-background-button: #000;
 $color-background-option: #f6f6f6;
