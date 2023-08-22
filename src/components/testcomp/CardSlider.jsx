@@ -16,26 +16,23 @@ const CardSlider = ({ cards }) => {
     <div className="card-slider">
       <div className="card-slider-wrapper">
         {cards.map((card) => (
-            {
-                const { id, content } = card;
-                return (
-                    <div key={id} className={`card ${index === currentIndex ? 'active' : ''}`}>
-                        {content}
-                    </div>
-                );
-            }
-          <div
-            key={index}
-            className={`card ${index === currentIndex ? 'active' : ''}`}
-          >
-            {card}
-          </div>
+          // {
+          //     const { id, content } = card;
+          //     return (
+          //         <div key={id} className={`card ${id === currentIndex ? 'active' : ''}`}>
+          //             {content}
+          //         </div>
+          //     );
+          // }
+          console.log(card)
+
         ))}
       </div>
       <button
         className="arrow prev"
         onClick={handlePrevClick}
         disabled={currentIndex === 0}
+        type='button'
       >
         &lt;
       </button>
@@ -43,6 +40,7 @@ const CardSlider = ({ cards }) => {
         className="arrow next"
         onClick={handleNextClick}
         disabled={currentIndex === cards.length - 3}
+        type='button'
       >
         &gt;
       </button>
