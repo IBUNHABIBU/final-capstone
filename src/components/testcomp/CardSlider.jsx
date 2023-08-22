@@ -32,7 +32,7 @@ const CardSlider = ({ cards }) => {
         className="arrow prev"
         onClick={handlePrevClick}
         disabled={currentIndex === 0}
-        type='button'
+        type="button"
       >
         &lt;
       </button>
@@ -40,7 +40,7 @@ const CardSlider = ({ cards }) => {
         className="arrow next"
         onClick={handleNextClick}
         disabled={currentIndex === cards.length - 3}
-        type='button'
+        type="button"
       >
         &gt;
       </button>

@@ -13,6 +13,7 @@ import layout from './layouts';
 import './stylesheet/App.scss';
 import Pop from './containers/Pop';
 import Project from './containers/Project';
+import SliderMain from './components/testcomp/SliderMain';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const App = () => {
   const AppointmentComponent = layout(Appointment);
   const PopComponent = layout(Pop);
   const ProjectComponent = layout(Project);
+  const SliderComponent = layout(SliderMain);
 
   useEffect(() => {
     dispatch(checkLoginStatus());
@@ -41,6 +43,7 @@ const App = () => {
       { path: '/appointments', element: <AppointmentComponent /> },
       { path: '/pop', element: <PopComponent /> },
       { path: '/projects', element: <ProjectComponent /> },
+      { path: '/images', element: <SliderComponent /> },
     ],
   );
   return (
