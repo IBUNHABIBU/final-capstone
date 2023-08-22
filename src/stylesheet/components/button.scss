@@ -1,7 +1,7 @@
 .btn {
   background-color: $app-color;
   border: none;
-  color: white;
+  color: $color-white;
   padding: 8px 48px;
   text-align: center;
   text-decoration: none;
@@ -12,7 +12,7 @@
 
   &--list {
     background-color: #3498db;
-    color: #fff;
+    color: $color-white;
     margin-right: 10px;
     width: 20%;
   }
@@ -23,8 +23,8 @@
   }
 
   &:hover {
-    background-color: $hover-color;
-    color: white;
+    background-color: $color-primary-light;
+    color: $color-$color-white;
   }
 
 }
