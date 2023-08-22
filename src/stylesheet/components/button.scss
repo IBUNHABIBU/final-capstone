@@ -1,5 +1,5 @@
 .btn {
-  background-color: $app-color;
+  background-color: $color-primary;
   border: none;
   color: $color-white;
   padding: 8px 48px;
@@ -24,7 +24,7 @@
 
   &:hover {
     background-color: $color-primary-light;
-    color: $color-$color-white;
+    color: $color-white;
   }
 
 }
