@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchCars } from '../redux/actions/fetch';
 import CarList from './CarList';
 import AddCarForm from './AddCarForm';
+import PleaseLogin from '../components/PleaseLogin';
 
 const Models = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const Models = () => {
             </div>,
           ],
         ] : [
-          <div key="log">Please login to see all car details</div>,
+          <PleaseLogin key={uuid()} />,
         ]
       }
 
