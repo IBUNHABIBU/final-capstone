@@ -20,8 +20,8 @@ const Home = () => {
     <div className="home">
 
       <div className="home__header">
-        <h1 className="home__header__title">LATEST MODEL</h1>
-        <p className="home__header__subtitle">Please select a car model </p>
+        <h1 className="heading-primary">LATEST MODEL</h1>
+        <p className="paragraph">Please select a car model </p>
       </div>
       <div className="home__display">
         <Carousel breakPoints={breakPoints} enableAutoPlay autoPlaySpeed={1500}>

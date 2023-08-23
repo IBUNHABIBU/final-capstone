@@ -6,11 +6,16 @@ body {
 }
 
 .heading-primary {
-    
+    color: $color-gray-dark;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
 }
 
 .heading-secondary {
- 
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .heading-tertiary {
@@ -18,5 +23,5 @@ body {
 }
 
 .paragraph {
-  
+   font-size: $default-font-size;
 }
