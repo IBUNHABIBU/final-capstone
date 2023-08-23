@@ -21,7 +21,7 @@ const Nav = () => {
     <div className="nav">
       <NavLink to="/" className="link">
         <div className="nav__logo">
-          <img src="logo.jpg" alt="" />
+          <img src="logo.jpg" alt="nav logo" />
           <div className="menu-btn">
             <div className="menu-btn-burger" />
           </div>

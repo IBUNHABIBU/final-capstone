@@ -34,9 +34,12 @@ const ImageSlider = ({ images }) => {
                     <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
                   </div>
                 </div>
-                <h4>
-                  {car.title}
-                </h4>
+                <div className="slide__details">
+                  <h4>
+                    {car.title}
+                  </h4>
+                  
+                </div>
               </div>
             ))
           }
