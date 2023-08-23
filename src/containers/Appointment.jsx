@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookings } from '../redux/actions/fetch';
 import Bookings from './Bookings';
+import PleaseLogin from '../components/PleaseLogin';
 
 const Appointment = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const Appointment = () => {
         <div className="table-container">
           <Bookings />
         </div>
-      ) : (<div>Please login to see all appointments</div>)}
+      ) : (<PleaseLogin />)}
     </div>
   );
 };
