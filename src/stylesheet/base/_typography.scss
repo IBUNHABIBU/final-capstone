@@ -8,8 +8,7 @@ body {
 .heading-primary {
     color: $color-gray-dark;
     text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
+    font-weight: $font-weight-extra-bold;
 }
 
 .heading-secondary {
@@ -24,4 +23,6 @@ body {
 
 .paragraph {
    font-size: $default-font-size;
+   color: $color-gray-dark;
+   font-weight: $font-weight-medium;
 }
