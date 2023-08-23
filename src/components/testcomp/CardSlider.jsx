@@ -5,34 +5,36 @@ const CardSlider = ({ cards }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevClick = () => {
-    setCurrentIndex(currentIndex - 1);
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? cards.length - 1 : prevIndex - 1));
   };
 
   const handleNextClick = () => {
-    setCurrentIndex(currentIndex + 1);
+    setCurrentIndex((prevIndex) => (prevIndex === cards.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
     <div className="card-slider">
-      <div className="card-slider-wrapper">
+      <div
+        className="card-slider-wrapper"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
         {cards.map((card) => (
-         
-
+          <div key={card.id} className="card">
+            {card.content}
+          </div>
         ))}
       </div>
       <button
+        type="button"
         className="arrow prev"
         onClick={handlePrevClick}
-        disabled={currentIndex === 0}
-        type="button"
       >
         &lt;
       </button>
       <button
+        type="button"
         className="arrow next"
         onClick={handleNextClick}
-        disabled={currentIndex === cards.length - 3}
-        type="button"
       >
         &gt;
       </button>
