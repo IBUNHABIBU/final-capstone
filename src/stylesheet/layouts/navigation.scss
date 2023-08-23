@@ -6,6 +6,10 @@
     margin-left: 1rem;
     border-right: 1px solid #efefef;
 
+    @include respond(tab-land) {
+       display: none;
+    }
+
     &__lists {
         display: flex;
         flex-direction: column;
