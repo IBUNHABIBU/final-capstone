@@ -2,6 +2,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const ImageSlider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,9 +38,14 @@ const ImageSlider = ({ images }) => {
                 </div>
                 <div className="slide__details">
                   <h4>
-                    {car.title}
+                    rav
                   </h4>
-                  
+                  <p className="paragraph">{car.description}</p>
+                  <div className="social-links">
+                    <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
+                    <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+                    <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+                  </div>
                 </div>
               </div>
             ))

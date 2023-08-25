@@ -2,7 +2,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Carousel from 'react-elastic-carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { recentCars } from '../redux/actions/fetch';
+
 // import ImageDisplay from './ImageDisplay';
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -33,9 +36,17 @@ const Home = () => {
                   <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
                 </div>
                 {/* </div> */}
-                <h4>
-                  {car.title}
-                </h4>
+                <div className="slide__details">
+                  <h4>
+                    {car.title}
+                  </h4>
+                  <p className="paragraph">{car.description}</p>
+                  <div className="social-links">
+                    <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
+                    <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+                    <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+                  </div>
+                </div>
               </div>
             ))
           }
