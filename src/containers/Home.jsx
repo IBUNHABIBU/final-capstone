@@ -43,13 +43,13 @@ const Home = () => {
                   </h4>
                   <p className="paragraph">{car.description}</p>
                   <div className="social--links">
-                    <a href="https://github.com/IBUNHABIBU">
+                    <a href="https://github.com/IBUNHABIBU" target='_blank'>
                       <FontAwesomeIcon icon={faGithub} className="social--icon" />
                     </a>
-                    <a href="https://twitter.com/ibunhabibu">
+                    <a href="https://twitter.com/ibunhabibu" target='_blank'>
                       <FontAwesomeIcon icon={faTwitter} className="social--icon" />
                     </a>
-                    <a href="https://www.instagram.com/ibunhabibu/">
+                    <a href="https://www.instagram.com/ibunhabibu/" target='_blank'>
                       <FontAwesomeIcon icon={faInstagram} className="social--icon" />
                     </a>
                   </div>
