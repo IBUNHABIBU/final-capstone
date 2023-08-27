@@ -5,24 +5,26 @@
     transform: translate(-50%, -50%);
 }
 
-@mixin popup($top, $left) {
+@mixin popup{
 
-    .popup {
-        // height: 90vh;
-        // width: 100%;
-    }
     .popup.active {
-        width: 110vw;
-        height: 110vh;
+        width: 100vw;
+        height: 100vh;
         background-color: rgba($gray-very-dark, 0.9);
         z-index: 99;
         position: fixed;
         top: 0;
         left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
        .popup__content {
            position: absolute;
-           top: $top;
-           left: $left;
+           width: 40rem;
+       }
+
+       .btn.hide {
+        display: none;
        }
    }
 }

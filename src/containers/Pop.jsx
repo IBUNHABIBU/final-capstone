@@ -14,7 +14,7 @@ const Pop = ({
 
   return (
     <div className={isOpen ? 'popup active' : 'popup'}>
-      <button type="submit" className="btn" onClick={handleOpen}>
+      <button type="submit" className={isOpen ? 'btn hide' : 'btn'} onClick={handleOpen}>
         {trigger}
       </button>
       {isOpen && (
