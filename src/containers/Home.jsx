@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Carousel from 'react-elastic-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {  faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { recentCars } from '../redux/actions/fetch';
 
 // import ImageDisplay from './ImageDisplay';
@@ -43,8 +43,8 @@ const Home = () => {
                   </h4>
                   <p className="paragraph">{car.description}</p>
                   <div className="social--links">
-                    <a href="www.google.com">
-                      <FontAwesomeIcon icon={faFacebookF} className="social--icon" />
+                    <a href="https://github.com/IBUNHABIBU">
+                      <FontAwesomeIcon icon={faGithub} className="social--icon" />
                     </a>
                     <a href="www.google.com">
                       <FontAwesomeIcon icon={faTwitter} className="social--icon" />
