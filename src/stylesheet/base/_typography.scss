@@ -6,7 +6,7 @@ body {
 }
 
 .heading-primary {
-    color: $color-gray-dark;
+    color: $gray-very-dark;
     text-transform: uppercase;
     font-weight: 900;
     font-size: $h1-font-size;
@@ -21,6 +21,6 @@ body {
 
 .paragraph {
    font-size: $font-size-xs;
-   color: $color-gray-light;
+   color: $gray-very-light;
    font-weight: $font-weight-bold;
 }
