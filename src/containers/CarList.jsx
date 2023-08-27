@@ -19,6 +19,8 @@ const CarList = () => {
   return (
     <div className="car-container">
       <div className="p-2 carlist">
+        <h2 className='heading-secondary'>See all latest cars</h2>
+        <p className="paragraph">Try your ride to test our services</p>
         <div className="row">
           {
         nameList
