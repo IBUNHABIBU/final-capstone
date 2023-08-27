@@ -7,15 +7,15 @@ const Bookings = () => {
   const bookings = useSelector((state) => state.booking);
   return (
     <>
-      <p className="display-6">All appointment</p>
-      <table className="table table-light">
-        <thead className="thead-dark">
+      <h2 className="u-center-text u-mb-sm u-mt-lg">All appointment</h2>
+      <table className="thead">
+        <thead>
           <tr>
-            <th scope="col">Client Name</th>
-            <th scope="col">Car Model</th>
-            <th scope="col">Pickup Date</th>
-            <th scope="col">Return Date</th>
-            <th scope="col">Location</th>
+            <th>Client Name</th>
+            <th>Car Model</th>
+            <th>Pickup Date</th>
+            <th>Return Date</th>
+            <th>Location</th>
           </tr>
         </thead>
         {
