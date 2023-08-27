@@ -124,8 +124,21 @@ $padding-xl: $spacing-xl;
 
 // Typography
 $base-font-size: 16px;  // 1.6rem
-$base-line-height: 1.5;
-$base-letter-spacing: 0.01rem;
+
+// Line Height
+$line-height-small: 1.2;
+$line-height-normal: 1.5;
+$line-height-medium: 1.7;
+$line-height-large: 2;
+$line-height-xl: 2.5;
+$line-height-xxl: 3;
+
+// Letter Spacing
+$letter-spacing-xs: 0.5px;
+$letter-spacing-sm: 1px;
+$letter-spacing-md: 1.5px;
+$letter-spacing-lg: 2px;
+$letter-spacing-xl: 3px;
 
 $font-sizes: (
   'xs': $base-font-size * 0.75,
@@ -152,6 +165,13 @@ $color-primary: #007bff;
 $color-secondary: #6c757d;
 $color-text: #333;
 $color-background: #fff;
+
+// gray color
+$gray-very-light: #f5f5f5;
+$gray-light: #e0e0e0;
+$gray-medium: #ccc;
+$gray-dark: #999;
+$gray-very-dark: #666;
 
 // Background and Borders
 $border-radius: 0.25rem;     // 2.5px
