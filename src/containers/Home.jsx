@@ -43,15 +43,15 @@ const Home = () => {
                   </h4>
                   <p className="paragraph">{car.description}</p>
                   <div className="social--links">
-                    <NavLink to='www.google.com'>
+                    <a href="www.google.com">
                       <FontAwesomeIcon icon={faFacebookF} className="social--icon" />
-                    </NavLink>
-                    <NavLink>
+                    </a>
+                    <a href="www.google.com">
                       <FontAwesomeIcon icon={faTwitter} className="social--icon" />
-                    </NavLink>
-                    <NavLink>
+                    </a>
+                    <a href="www.google.com">
                       <FontAwesomeIcon icon={faInstagram} className="social--icon" />
-                    </NavLink>
+                    </a>
                   </div>
                 </div>
               </div>
