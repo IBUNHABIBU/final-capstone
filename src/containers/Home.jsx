@@ -54,9 +54,6 @@ const Home = () => {
                     </a>
                     <a href="www.google.com">Google</a>
                   </div>
-
-
-
                 </div>
               </div>
             ))
