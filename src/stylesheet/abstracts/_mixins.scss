@@ -8,12 +8,17 @@
 @mixin popup($top, $left) {
 
     .popup {
-        &:target {
-            border: 2px solid red;
-        }
+        // height: 90vh;
+        // width: 100%;
     }
     .popup.active {
-        width: 60vw;
+        width: 110vw;
+        height: 110vh;
+        background-color: rgba($gray-very-dark, 0.1);
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        left: 0;
        .popup__content {
            position: absolute;
            top: $top;
