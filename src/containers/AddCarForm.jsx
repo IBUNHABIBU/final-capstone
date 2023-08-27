@@ -44,7 +44,7 @@ const AddCarForm = () => {
 
   const form = (
     <div className="carform">
-      <h3 className="carform__title">Add a new car</h3>
+      <h3 className="carform__title  u-center-text">Add a new car</h3>
       <Form
         message={message}
         errors={errors}
