@@ -26,10 +26,10 @@ table {
   }
 
   tbody tr:nth-child(odd) {
-    background-color: red;
+    background-color: #D8F47B;
   }
 
   tbody tr:nth-child(odd):hover {
-    background-color: blue;
-    color: white;
+    background-color: #E3F7A1;
+    color: black;
   }
