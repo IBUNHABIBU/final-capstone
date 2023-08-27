@@ -46,10 +46,10 @@ const Home = () => {
                     <a href="https://github.com/IBUNHABIBU">
                       <FontAwesomeIcon icon={faGithub} className="social--icon" />
                     </a>
-                    <a href="www.google.com">
+                    <a href="https://twitter.com/ibunhabibu">
                       <FontAwesomeIcon icon={faTwitter} className="social--icon" />
                     </a>
-                    <a href="www.google.com">
+                    <a href="https://www.instagram.com/ibunhabibu/">
                       <FontAwesomeIcon icon={faInstagram} className="social--icon" />
                     </a>
                   </div>
