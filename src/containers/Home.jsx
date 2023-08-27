@@ -36,8 +36,8 @@ const Home = () => {
                   <img src={car.imageUrl} className="card-img-top" alt="cadillac" />
                 </div>
                 {/* </div> */}
-                <div className="slide__details">
-                  <h4>
+                <div className="slide__details u-mt-lg">
+                  <h4 className="heading-secondary border-line">
                     {car.title}
                   </h4>
                   <p className="paragraph">{car.description}</p>

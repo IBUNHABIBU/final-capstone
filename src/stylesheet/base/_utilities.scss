@@ -22,3 +22,13 @@
         margin-top: 8rem !important;
     }
 }
+
+.u-mt-lg {
+    margin-top: $margin-xl;
+}
+
+.border-line {
+    border-bottom: 1px dotted $color-gray-light;
+    padding-bottom: $padding-xl;
+    margin-bottom: $margin-lg;
+}

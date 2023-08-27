@@ -35,6 +35,13 @@
        
         img {
             border-radius: 50%;
+            width: 30rem;
+        }
+
+        &__details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
       }
     }
@@ -43,9 +50,7 @@
         &--links {
             display: flex;
             flex-direction: row;
-            // width: 20rem;
-            // margin-top: 1rem;
-            // margin-bottom: 1rem;
+            gap: $spacing-sm;
             justify-content: space-around;
         }
 
