@@ -1,12 +1,112 @@
-$font-family: "Inter", "Roboto", sans-serif;
+// $font-family: "Inter", "Roboto", sans-serif;
+
+// // Spacing
+// $spacing-xs: 0.4rem;
+// $spacing-sm: 0.8rem;
+// $spacing-md: 1.6rem;
+// $spacing-lg: 2.4rem;
+// $spacing-xl: 3.2rem;
+// $spacing-xxl: 4.0rem;
+
+// // Margin
+// $margin-xs: $spacing-xs;
+// $margin-sm: $spacing-sm;
+// $margin-md: $spacing-md;
+// $margin-lg: $spacing-lg;
+// $margin-xl: $spacing-xl;
+// $margin-xxl: $spacing-xxl;
+
+// // Padding
+// $padding-xs: $spacing-xs;
+// $padding-sm: $spacing-sm;
+// $padding-md: $spacing-md;
+// $padding-lg: $spacing-lg;
+// $padding-xl: $spacing-xl;
+
+// // Letter Spacing
+// $letter-spacing-xs: 0.5px;
+// $letter-spacing-sm: 1px;
+// $letter-spacing-md: 1.5px;
+// $letter-spacing-lg: 2px;
+// $letter-spacing-xl: 3px;
+
+// // Line Height
+// $line-height-xs: 1.1;
+// $line-height-sm: 1.4;
+// $line-height-md: 1.6;
+// $line-height-lg: 1.8;
+// $line-height-xl: 2;
+
+// // Font Sizes
+// $default-font-size: 1.6rem;
+// $font-size-xs: 1.2rem;
+// $font-size-sm: 1.4rem;
+// $font-size-md: 1.6rem;
+// $font-size-lg: 1.8rem;
+// $font-size-xl: 2rem;
+// $font-size-xxl: 4rem;
+
+// // Heading Sizes
+// $h1-font-size: $font-size-xxl;
+// $h2-font-size: $font-size-xl;
+// $h3-font-size: $font-size-lg;
+// $h4-font-size: $font-size-md;
+// $h5-font-size: $font-size-sm;
+// $h6-font-size: $font-size-xs;
+
+// // Font Weights
+// $font-weight-light: 300;
+// $font-weight-regular: 400;
+// $font-weight-medium: 500;
+// $font-weight-bold: 700;
+// $font-weight-extra-bold: 800;
+
+// // Primary Colors
+// $color-primary: #99c210;
+// $color-primary-dark: #849e2e;
+// $color-primary-light:  #bfbfbf;
+// $color-white: #ffffff;
+
+// // Secondary Colors
+
+// // gray colors
+// $color-gray-light: #999;
+// $color-gray: #666;
+// $color-gray-dark: #333;
+
+
+// // Text Colors
+// // $color-default: #000000;
+// // $color-text-light: #ffffff;
+// // $color-text-muted: #6c757d;
+// // $color-text-audio: #1e88e5;
+
+// // Small border radius (used for buttons, inputs, etc.)
+// $border-radius-sm: 4px;
+
+// // Medium border radius (used for cards, panels, etc.)
+// $border-radius-md: 8px;
+
+// // Large border radius (used for modal windows, rounded containers, etc.)
+// $border-radius-lg: 16px;
+
+// // Circle border radius (used for avatars, circular elements, etc.)
+// $border-radius-circle: 50%;
+
+// //  box shadow variables
+// $shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+// $shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+// $shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+// $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+// $shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+// $shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
 // Spacing
-$spacing-xs: 0.4rem;
-$spacing-sm: 0.8rem;
-$spacing-md: 1.6rem;
-$spacing-lg: 2.4rem;
-$spacing-xl: 3.2rem;
-$spacing-xxl: 4.0rem;
+$spacing-xs: 0.5rem;    // 5px
+$spacing-sm: 1rem;      // 10px
+$spacing-md: 1.5rem;    // 15px
+$spacing-lg: 2rem;      // 20px
+$spacing-xl: 3rem;      // 30px
 
 // Margin
 $margin-xs: $spacing-xs;
@@ -14,7 +114,6 @@ $margin-sm: $spacing-sm;
 $margin-md: $spacing-md;
 $margin-lg: $spacing-lg;
 $margin-xl: $spacing-xl;
-$margin-xxl: $spacing-xxl;
 
 // Padding
 $padding-xs: $spacing-xs;
@@ -23,80 +122,39 @@ $padding-md: $spacing-md;
 $padding-lg: $spacing-lg;
 $padding-xl: $spacing-xl;
 
-// Letter Spacing
-$letter-spacing-xs: 0.5px;
-$letter-spacing-sm: 1px;
-$letter-spacing-md: 1.5px;
-$letter-spacing-lg: 2px;
-$letter-spacing-xl: 3px;
+// Typography
+$base-font-size: 16px;  // 1.6rem
+$base-line-height: 1.5;
+$base-letter-spacing: 0.01rem;
 
-// Line Height
-$line-height-xs: 1.1;
-$line-height-sm: 1.4;
-$line-height-md: 1.6;
-$line-height-lg: 1.8;
-$line-height-xl: 2;
+$font-sizes: (
+  'xs': $base-font-size * 0.75,
+  'sm': $base-font-size * 0.875,
+  'md': $base-font-size,
+  'lg': $base-font-size * 1.25,
+  'xl': $base-font-size * 1.5,
+);
 
-// Font Sizes
-$default-font-size: 1.6rem;
-$font-size-xs: 1.2rem;
-$font-size-sm: 1.4rem;
-$font-size-md: 1.6rem;
-$font-size-lg: 1.8rem;
-$font-size-xl: 2rem;
-$font-size-xxl: 4rem;
-
-// Heading Sizes
-$h1-font-size: $font-size-xxl;
-$h2-font-size: $font-size-xl;
-$h3-font-size: $font-size-lg;
-$h4-font-size: $font-size-md;
-$h5-font-size: $font-size-sm;
-$h6-font-size: $font-size-xs;
-
-// Font Weights
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-medium: 500;
+$font-weight-normal: 400;
 $font-weight-bold: 700;
-$font-weight-extra-bold: 800;
 
-// Primary Colors
-$color-primary: #99c210;
-$color-primary-dark: #849e2e;
-$color-primary-light:  #bfbfbf;
-$color-white: #ffffff;
+$heading-sizes: (
+  'h1': 2.5rem,
+  'h2': 2rem,
+  'h3': 1.75rem,
+  'h4': 1.5rem,
+  'h5': 1.25rem,
+  'h6': 1rem,
+);
 
-// Secondary Colors
+// Colors
+$color-primary: #007bff;
+$color-secondary: #6c757d;
+$color-text: #333;
+$color-background: #fff;
 
-// gray colors
-$color-gray-light: #999;
-$color-gray: #666;
-$color-gray-dark: #333;
+// Background and Borders
+$border-radius: 0.25rem;     // 2.5px
+$box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 
 
-// Text Colors
-// $color-default: #000000;
-// $color-text-light: #ffffff;
-// $color-text-muted: #6c757d;
-// $color-text-audio: #1e88e5;
-
-// Small border radius (used for buttons, inputs, etc.)
-$border-radius-sm: 4px;
-
-// Medium border radius (used for cards, panels, etc.)
-$border-radius-md: 8px;
-
-// Large border radius (used for modal windows, rounded containers, etc.)
-$border-radius-lg: 16px;
-
-// Circle border radius (used for avatars, circular elements, etc.)
-$border-radius-circle: 50%;
-
-//  box shadow variables
-$shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-$shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
