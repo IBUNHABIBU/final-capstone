@@ -81,10 +81,22 @@ const AddCarForm = () => {
 
   return (
     <div className="models">
-      <Link to="/cars" className="btn btn--list">see cars</Link>
-      <div className="carform">
-        <Pop trigger="Create Car" content={form} isOpen={isOpen} setIsOpen={setIsOpen} />
-      </div>
+
+       <div className="options">
+         <div className="option">
+           <h2>View Products</h2>
+              <p>Explore our list of products.</p>
+                 <Link to="/cars" className="btn btn--list">see cars</Link>
+         </div>
+         
+               <div className="option">
+          <h2>Add New Product</h2>
+              <p>Admins can add new products here.</p>
+          <div className="carform">
+            <Pop trigger="Create Car" content={form} isOpen={isOpen} setIsOpen={setIsOpen} />
+          </div>
+               </div>
+       </div>
     </div>
   );
 };
