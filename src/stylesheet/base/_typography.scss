@@ -8,17 +8,18 @@ body {
 .heading-primary {
     color: $color-gray-dark;
     text-transform: uppercase;
-    font-weight: $font-weight-extra-bold;
+    font-weight: 900;
+    font-size: 4rem;
+    letter-spacing: $spacing-xs;
 }
 
 .heading-secondary {
-    font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
 }
 
 .paragraph {
    font-size: $default-font-size;
-   color: $color-gray-dark;
-   font-weight: $font-weight-medium;
+   color: $color-gray-light;
+   font-weight: $font-weight-bold;
 }
