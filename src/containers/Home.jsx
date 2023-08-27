@@ -52,7 +52,6 @@ const Home = () => {
                     <a href="www.google.com">
                       <FontAwesomeIcon icon={faInstagram} className="social--icon" />
                     </a>
-                    <a href="www.google.com">Google</a>
                   </div>
                 </div>
               </div>
