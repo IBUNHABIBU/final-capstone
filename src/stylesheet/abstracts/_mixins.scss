@@ -6,6 +6,12 @@
 }
 
 @mixin popup($top, $left) {
+
+    .popup {
+        &:target {
+            border: 2px solid red;
+        }
+    }
     .popup.active {
         width: 60vw;
        .popup__content {
