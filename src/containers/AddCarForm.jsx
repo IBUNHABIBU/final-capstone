@@ -80,13 +80,13 @@ const AddCarForm = () => {
   );
 
   return (
-    <div className="models" id='page-container'>
+    <div className="models" id="page-container">
 
       <div className="options">
         <div className="option">
-          <h2>View Products</h2>
-          <p>Explore our list of products.</p>
-          <Link to="/cars" className="btn btn--list" id='add-button'>see cars</Link>
+          <h2>View Cars</h2>
+          <p>Explore our list of cars.</p>
+          <Link to="/cars" className="btn btn--list">View</Link>
         </div>
 
         <div className="option">
