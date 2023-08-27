@@ -80,7 +80,7 @@ const AddCarForm = () => {
   );
 
   return (
-    <div className="models" id="page-container">
+    <div className="models">
 
       <div className="options">
         <div className="option">
@@ -90,7 +90,7 @@ const AddCarForm = () => {
         </div>
 
         <div className="option">
-          <h2 className='heading-secondary'>Add New Car</h2>
+          <h2 className="heading-secondary">Add New Car</h2>
           <p className="paragraph">Admins can add new cars here.</p>
           <div className="carform">
             <Pop trigger="Create Car" content={form} isOpen={isOpen} setIsOpen={setIsOpen} />
