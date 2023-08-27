@@ -85,13 +85,13 @@ const AddCarForm = () => {
       <div className="options">
         <div className="option">
           <h2 className="heading-secondary">View All Cars</h2>
-          <p className='paragraph'>Explore our list of cars.</p>
+          <p className="paragraph">Explore our list of cars.</p>
           <Link to="/cars" className="btn">View</Link>
         </div>
 
         <div className="option">
-          <h2>Add New Car</h2>
-          <p className='paragraph'>Admins can add new cars here.</p>
+          <h2 className='heading-secondary'>Add New Car</h2>
+          <p className="paragraph">Admins can add new cars here.</p>
           <div className="carform">
             <Pop trigger="Create Car" content={form} isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
