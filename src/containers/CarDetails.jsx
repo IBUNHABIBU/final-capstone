@@ -56,31 +56,35 @@ const CarDetails = () => {
   };
 
   const form = (
-    <Form
-      message={message}
-      errors={errors}
-      field={
-            [
-              {
-                name: 'name', type: 'text', label: 'Name', required: true, defaultValue: name,
-              },
-              {
-                name: 'model', type: 'text', label: 'Model', required: true, defaultValue: title,
-              },
-              {
-                name: 'pickup', type: 'datetime-local', label: 'Pickup', required: true,
-              },
-              {
-                name: 'return_date', type: 'datetime-local', label: 'Return Date', required: true,
-              },
-              {
-                name: 'location', type: 'text', label: 'Location', required: true,
-              },
-            ]
-          }
-      onSubmit={(formData) => handleSubmit(formData)}
-      action="Book Appointment"
-    />
+
+    <div className="form-container">
+      <h3 className="u-center-text">Add an Appointment</h3>
+      <Form
+        message={message}
+        errors={errors}
+        field={
+              [
+                {
+                  name: 'name', type: 'text', label: 'Name', required: true, defaultValue: name,
+                },
+                {
+                  name: 'model', type: 'text', label: 'Model', required: true, defaultValue: title,
+                },
+                {
+                  name: 'pickup', type: 'datetime-local', label: 'Pickup', required: true,
+                },
+                {
+                  name: 'return_date', type: 'datetime-local', label: 'Return Date', required: true,
+                },
+                {
+                  name: 'location', type: 'text', label: 'Location', required: true,
+                },
+              ]
+            }
+        onSubmit={(formData) => handleSubmit(formData)}
+        action="Book Appointment"
+      />
+    </div>
   );
 
   return (
