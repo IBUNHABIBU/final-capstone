@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Carousel from 'react-elastic-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { recentCars } from '../redux/actions/fetch';
 
 // import ImageDisplay from './ImageDisplay';
