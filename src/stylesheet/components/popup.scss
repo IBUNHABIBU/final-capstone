@@ -1,0 +1,96 @@
+.popup {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .popup__button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .popup__content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popup__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  .popup__close:hover {
+    color: black;
+  }
+  
+  .popup__close:focus {
+    color: black;
+  }
+  
+  .popup__close:active {
+    color: black;
+  }
+  
+  .popup__close:before {
+    content: 'x';
+  }
+  
+  .popup__close:hover:before {
+    content: 'x';
+  }
+  
+  .popup__close:focus:before {
+    content: 'x';
+  }
+  
+  .popup__close:active:before {
+    content: 'x';
+  }
+  
+  .popup__close:hover,
+  .popup__close:focus,
+  .popup__close:active {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .popup__close:hover,
+  .popup__close:focus,
+  .popup__close:active {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .popup__close:hover,
+  .popup__close:focus,
+  .popup__close:active {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .popup__close:hover,
+  .popup__close:focus,
+  .popup__close:active {
+    text-decoration: none;
+}
