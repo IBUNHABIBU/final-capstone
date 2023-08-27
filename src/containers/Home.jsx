@@ -41,10 +41,10 @@ const Home = () => {
                     {car.title}
                   </h4>
                   <p className="paragraph">{car.description}</p>
-                  <div className="social-links">
-                    <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
-                    <FontAwesomeIcon icon={faTwitter} className="social-icon" />
-                    <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+                  <div className="social--links">
+                    <FontAwesomeIcon icon={faFacebookF} className="social--icon" />
+                    <FontAwesomeIcon icon={faTwitter} className="social--icon" />
+                    <FontAwesomeIcon icon={faInstagram} className="social--icon" />
                   </div>
                 </div>
               </div>

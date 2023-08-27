@@ -38,4 +38,25 @@
         }
       }
     }
+
+    .social {
+        &--links {
+            display: flex;
+            flex-direction: row;
+            // width: 20rem;
+            // margin-top: 1rem;
+            // margin-bottom: 1rem;
+            justify-content: space-around;
+        }
+
+        &--icon {
+            font-size: $font-size-xl;
+            color: $color-primary;
+            width: $spacing-lg;
+            height: $spacing-lg;
+            padding: $padding-xs;
+            border: 1px solid $color-primary;
+            border-radius: 50%;
+        }
+    }
 }
