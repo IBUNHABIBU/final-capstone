@@ -42,9 +42,15 @@ const Home = () => {
                   </h4>
                   <p className="paragraph">{car.description}</p>
                   <div className="social--links">
-                    <FontAwesomeIcon icon={faFacebookF} className="social--icon" />
-                    <FontAwesomeIcon icon={faTwitter} className="social--icon" />
-                    <FontAwesomeIcon icon={faInstagram} className="social--icon" />
+                    <NavLink>
+                      <FontAwesomeIcon icon={faFacebookF} className="social--icon" />
+                    </NavLink>
+                    <NavLink>
+                      <FontAwesomeIcon icon={faTwitter} className="social--icon" />
+                    </NavLink>
+                    <NavLink>
+                      <FontAwesomeIcon icon={faInstagram} className="social--icon" />
+                    </NavLink>
                   </div>
                 </div>
               </div>
