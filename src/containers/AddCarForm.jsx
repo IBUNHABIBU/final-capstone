@@ -80,7 +80,7 @@ const AddCarForm = () => {
   );
 
   return (
-    <div className="models">
+    <div className="models-container">
 
       <div className="options">
         <div className="option">
