@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import Carousel from 'react-elastic-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -43,13 +42,13 @@ const Home = () => {
                   </h4>
                   <p className="paragraph">{car.description}</p>
                   <div className="social--links">
-                    <a href="https://github.com/IBUNHABIBU" target='_blank'>
+                    <a href="https://github.com/IBUNHABIBU" target="_blank" rel="noreferrer">
                       <FontAwesomeIcon icon={faGithub} className="social--icon" />
                     </a>
-                    <a href="https://twitter.com/ibunhabibu" target='_blank'>
+                    <a href="https://twitter.com/ibunhabibu" target="_blank" rel="noreferrer">
                       <FontAwesomeIcon icon={faTwitter} className="social--icon" />
                     </a>
-                    <a href="https://www.instagram.com/ibunhabibu/" target='_blank'>
+                    <a href="https://www.instagram.com/ibunhabibu/" target="_blank" rel="noreferrer">
                       <FontAwesomeIcon icon={faInstagram} className="social--icon" />
                     </a>
                   </div>
