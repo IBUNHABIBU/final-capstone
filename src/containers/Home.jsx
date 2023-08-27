@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import Carousel from 'react-elastic-carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -42,7 +43,7 @@ const Home = () => {
                   </h4>
                   <p className="paragraph">{car.description}</p>
                   <div className="social--links">
-                    <NavLink>
+                    <NavLink to='www.google.com'>
                       <FontAwesomeIcon icon={faFacebookF} className="social--icon" />
                     </NavLink>
                     <NavLink>
