@@ -89,7 +89,7 @@ const CarDetails = () => {
         <img alt="car" src={imageUrl} />
       </div>
       <div className="details__section">
-        <div className="details__section__header">
+        <div className="details__header">
           <p>
             {title}
           </p>
@@ -98,7 +98,7 @@ const CarDetails = () => {
             {price}
           </p>
         </div>
-        <div className="details__section__lists">
+        <div className="details__lists">
           <ul>
             <li>
               {' '}
@@ -116,7 +116,7 @@ const CarDetails = () => {
           </ul>
         </div>
 
-        <div className="details__section__actions">
+        <div className="details__actions">
           <Pop trigger="Book a ride" content={form} isOpen={isOpen} setIsOpen={setIsOpen} />
           <div className="form-floating mb-3 col-6">
             <button type="submit" className="btn btn-primary col-12">Edit car</button>

@@ -13,7 +13,7 @@ const Pop = ({
   };
 
   return (
-    <div className="popup">
+    <div className={isOpen ? 'popup active' : 'popup'}>
       <button type="submit" className="btn" onClick={handleOpen}>
         {trigger}
       </button>

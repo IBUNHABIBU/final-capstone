@@ -5,6 +5,17 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin popup($top, $left) {
+    .popup.active {
+        width: 60vw;
+       .popup__content {
+           position: absolute;
+           top: $top;
+           left: $left;
+       }
+   }
+}
+
 // Media queries Manager
 
 // ORDER: base > typography > general layout + grid,  page layout, components

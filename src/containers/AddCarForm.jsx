@@ -93,7 +93,7 @@ const AddCarForm = () => {
           <h2 className="heading-secondary">Add New Car</h2>
           <p className="paragraph">Admins can add new cars here.</p>
           <div className="carform">
-            <Pop trigger="Create Car" content={form} isOpen={isOpen} setIsOpen={setIsOpen} />
+            <Pop trigger="Create Car" content={form} isOpen={isOpen} setIsOpen={setIsOpen} id="pop" />
           </div>
         </div>
       </div>
