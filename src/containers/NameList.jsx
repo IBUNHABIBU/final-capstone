@@ -10,7 +10,7 @@ const NameList = ({ car }) => {
   } = car;
   const slug = slugify(title, { lower: true });
   return (
-    <div className=" col-6 col-lg-3 col-md-6 p-1" key={uuid()}>
+    <div className=" col-6 col-lg-3 col-md-6 p-1 m-2" key={uuid()}>
       <div className="card">
         <img alt="car" src={imageUrl} />
         <div className="card-body bg-light">
