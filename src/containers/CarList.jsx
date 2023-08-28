@@ -18,7 +18,7 @@ const CarList = () => {
 
   return (
     <div className="car-container">
-      <div className="p-2 carlist">
+      
         <div className="u-center-text u-mt-lg">
           <h2 className="heading-secondary">See all latest cars</h2>
           <p className="paragraph u-mb-sm">Try your ride to test our services</p>
@@ -27,7 +27,7 @@ const CarList = () => {
           {
         nameList
       }
-        </div>
+        
       </div>
     </div>
   );
