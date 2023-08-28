@@ -10,16 +10,16 @@ const NameList = ({ car }) => {
   } = car;
   const slug = slugify(title, { lower: true });
   return (
-    <div className="card" key={uuid()}>
+    <div className="car-card" key={uuid()}>
       <img alt="car" src={imageUrl} />
-      <div className="">
+      <div className="car-card__details">
         <h5>Model Type: new </h5>
-        <h5 className="card-title">
+        <h5 className="car-card__title">
           Color:
           {' '}
           {color}
         </h5>
-        <p className="card-text">
+        <p className="car-card__text">
           Engine Type:
           {' '}
           {engine}
