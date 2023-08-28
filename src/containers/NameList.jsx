@@ -12,7 +12,7 @@ const NameList = ({ car }) => {
   return (
     <div className="card" key={uuid()}>
       <img alt="car" src={imageUrl} />
-      <div className="card-body bg-light">
+      <div className="">
         <h5>Model Type: new </h5>
         <h5 className="card-title">
           Color:
