@@ -15,12 +15,14 @@
 @import 'components/authorize';
 @import 'components/popup';
 @import 'components/table';
+@import 'components/card';
 
 @import 'layouts/navigation';
 @import 'layouts/layout';
 
 @import 'pages/home';
 @import 'pages/models';
+@import 'pages/carlist';
 
 
 body {
