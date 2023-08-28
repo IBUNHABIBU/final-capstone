@@ -10,25 +10,25 @@ const NameList = ({ car }) => {
   } = car;
   const slug = slugify(title, { lower: true });
   return (
-    // <div className=" col-6 col-lg-3 col-md-6 p-1 m-2" key={uuid()}>
-      <div className="card" key={uuid()}>
-        <img alt="car" src={imageUrl} />
-        <div className="card-body bg-light">
-          <h5>Model Type: new </h5>
-          <h5 className="card-title">
-            Color:
-            {' '}
-            {color}
-          </h5>
-          <p className="card-text">
-            Engine Type:
-            {' '}
-            {engine}
-          </p>
-          <Link to={`/cars/${slug}-${id}`} className="btn btn-primary">see details</Link>
-        </div>
+  // <div className=" col-6 col-lg-3 col-md-6 p-1 m-2" key={uuid()}>
+    <div className="card" key={uuid()}>
+      <img alt="car" src={imageUrl} />
+      <div className="card-body bg-light">
+        <h5>Model Type: new </h5>
+        <h5 className="card-title">
+          Color:
+          {' '}
+          {color}
+        </h5>
+        <p className="card-text">
+          Engine Type:
+          {' '}
+          {engine}
+        </p>
+        <Link to={`/cars/${slug}-${id}`} className="btn btn-primary">see details</Link>
       </div>
-    // </div>
+    </div>
+  // </div>
   );
 };
 NameList.propTypes = {
