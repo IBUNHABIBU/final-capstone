@@ -23,6 +23,11 @@
             text-align: left;
             padding: $padding-sm;
             font-size: $font-size-md;
+            transition: all 0.2s;
+
+            &:hover {
+                transform: scale(0.95);
+            }
 
             &--active {
                 background-color: $color-primary;
