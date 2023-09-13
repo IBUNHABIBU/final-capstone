@@ -5,8 +5,13 @@ table {
 
     
   tbody tr:nth-child(odd) {
+    background-color: #D8F47B;
+  }
+
+  tbody tr:nth-child(even) {
     background-color: red;
   }
+
   }
  
   thead th {
