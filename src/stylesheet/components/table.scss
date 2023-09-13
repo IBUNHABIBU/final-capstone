@@ -2,6 +2,11 @@ table {
     margin-top: 4rem;
     border-collapse: collapse;
     width: 100%;
+
+    
+  tbody tr:nth-child(odd) {
+    background-color: #D8F471;
+  }
   }
  
   thead th {
@@ -23,9 +28,6 @@ table {
     color: white;
   }
 
-  tbody tr:nth-child(odd) {
-    background-color: #D8F47B;
-  }
 
   tbody tr:nth-child(odd):hover {
     background-color: #E3F7A1;
