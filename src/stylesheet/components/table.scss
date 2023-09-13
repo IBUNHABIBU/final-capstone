@@ -3,14 +3,15 @@ table {
     // border-collapse: collapse;
     width: 100%;
 
-    tbody tr {
-        background-color: red;
-        border: #161c01 1px solid;
-    }
+   
     
   tbody tr:nth-child(odd) {
-    // background-color: #D8F47B;
+    background-color: #D8F47B;
   }
+  tbody tr {
+    background-color: red;
+    border: #161c01 1px solid;
+}
 
   }
  
