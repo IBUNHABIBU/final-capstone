@@ -3,6 +3,10 @@ table {
     border-collapse: collapse;
     width: 100%;
     border-collapse: collapse;
+
+    tr {
+        background-color: #D8F47B;
+    }
     
   tbody tr:nth-child(odd) {
     background-color: #D8F47B;
