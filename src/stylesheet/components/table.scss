@@ -16,9 +16,7 @@ table {
     font-size: $font-size-sm;
   }
 
-  tbody tr:nth-child(even) {
-    background-color: pink;
-  }
+
 
   tbody tr:hover {
     background-color: $color-secondary;
