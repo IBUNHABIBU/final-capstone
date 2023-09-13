@@ -1,11 +1,11 @@
 table {
     margin-top: 4rem;
-    border-collapse: collapse;
+    // border-collapse: collapse;
     width: 100%;
-    border-collapse: collapse;
 
     tr {
-        background-color: #D8F47B;
+        background-color: red;
+        border: #161c01 1px solid;
     }
     
   tbody tr:nth-child(odd) {
