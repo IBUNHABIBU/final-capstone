@@ -23,7 +23,7 @@ const Nav = () => {
         <div className="nav__logo">
           <img src="logo.jpg" alt="nav logo" />
           <div className="menu-btn">
-            <div className="menu-btn-burger" />
+            <button type="button" className='hambuger'></button>
           </div>
         </div>
       </NavLink>
