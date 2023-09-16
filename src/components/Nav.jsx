@@ -24,7 +24,7 @@ const Nav = () => {
           <img src="logo.jpg" alt="nav logo" />
           <div className="menu-btn">
             <button type="button" className="hambuger">
-              &#9776;
+              <span className="navigation__icon">&nbsp;</span>
             </button>
           </div>
         </div>
