@@ -58,9 +58,18 @@
     }
 
     &__logo {
+        position: relative;
         img {
             width: 200px;
             height: 200px;
+        }
+
+        .menu-btn {
+            // display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 12rem;
         }
     }
 }
