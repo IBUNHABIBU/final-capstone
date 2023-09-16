@@ -25,7 +25,7 @@ const Nav = () => {
           <div className="menu-btn">
             <button type="button" className="hambuger">
               &#9776;
-              </button>
+            </button>
           </div>
         </div>
       </NavLink>
