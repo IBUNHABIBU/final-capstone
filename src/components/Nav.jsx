@@ -23,7 +23,9 @@ const Nav = () => {
         <div className="nav__logo">
           <img src="logo.jpg" alt="nav logo" />
           <div className="menu-btn">
-            <button type="button" className='hambuger'></button>
+            <button type="button" className="hambuger">
+              &#9776;
+              </button>
           </div>
         </div>
       </NavLink>
