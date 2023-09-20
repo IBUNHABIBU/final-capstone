@@ -52,7 +52,7 @@ const ImageSlider = ({ images }) => {
           }
       </div>
       <div className="slider-controls">
-        <button type="submit" disabled={currentIndex === 0} onClick={prev}>
+        <button type="submit" disabled={currentIndex === 0} onClick={prev} className='btn btn--display'>
           Prev
         </button>
         <button
