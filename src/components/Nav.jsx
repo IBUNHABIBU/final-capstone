@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { setUser } from '../redux/actions/actions';
 import list from '../costants';
 import { urlBase } from '../redux/actions/fetch';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const Nav = () => {
           <img src="logo.jpg" alt="nav logo" />
           <div className="menu-btn">
             <button type="button" className="hambuger">
-              <FontAwesomeIcon icon={faInstagram} className="social--icon" />
+              <FontAwesomeIcon icon={faBars} className="social--icon" />
             </button>
           </div>
         </div>
