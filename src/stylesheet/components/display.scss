@@ -26,25 +26,4 @@
     justify-content: space-between;
     margin-top: 1rem;
   }
-  
-  button {
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    background-color: #4caf50;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: #388e3c;
-  }
-  
-  button:disabled {
-    background-color: #a5a5a5;
-    cursor: not-allowed;
-  }
-  
+ 
