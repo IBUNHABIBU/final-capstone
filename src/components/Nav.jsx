@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
@@ -9,6 +9,7 @@ import list from '../costants';
 import { urlBase } from '../redux/actions/fetch';
 
 const Nav = () => {
+  const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.register);
 
@@ -19,10 +20,14 @@ const Nav = () => {
       });
   };
 
+  const toggleMenu = () => {
+    setToggle(!toggle);
+  }
+
   return (
     <div className="nav">
       <div className="nav__toggle">
-        <button type="button" className="btn btn--menu">
+        <button type="button" className="btn btn--menu" onClick={toggleMenu}>
           <FontAwesomeIcon icon={faBars} className="social--icon" />
         </button>
       </div>
