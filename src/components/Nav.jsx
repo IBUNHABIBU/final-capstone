@@ -25,7 +25,7 @@ const Nav = () => {
         <div className="nav__logo">
           <img src="logo.jpg" alt="nav logo" />
           <div className="menu-btn">
-            <button type="button" className="hambuger">
+            <button type="button" className="btn btn-menu">
               <FontAwesomeIcon icon={faBars} className="social--icon" />
             </button>
           </div>

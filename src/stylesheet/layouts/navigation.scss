@@ -69,29 +69,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-color: red;
             outline: none;
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;  
-                height: 3px;
-                // background-color: $color-primary;
-                z-index: 1;
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;  
-                height: 3px;
-                background-color: red;
-                z-index: 1;
-            }
-
         }
     }
 }
