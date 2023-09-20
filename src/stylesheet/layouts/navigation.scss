@@ -7,16 +7,14 @@
     border-right: 1px solid #efefef;
 
     &__menu {
-    //     .show {
-    //         @include respond(tab-land) {
-    //             display: none;
-    //          }
-    //     }
-    // //    display: block;
+        border: 4px solid green;
     }
 
-    &__menu.show {
-        display: block;
+
+    &__menu .show {
+        transform: translateY(0);
+        display: none;
+        border: 2px solid red;
     }
 
     &__lists {
@@ -73,4 +71,9 @@
             height: 200px;
         }
     }
+}
+
+.nav__menu.show {
+    transform: translateY(0);
+    display: none;
 }
