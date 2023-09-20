@@ -22,7 +22,7 @@ const Nav = () => {
 
   const toggleMenu = () => {
     setToggle(!toggle);
-  }
+  };
 
   return (
     <div className="nav">
