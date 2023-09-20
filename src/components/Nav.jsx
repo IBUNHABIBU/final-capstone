@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { setUser } from '../redux/actions/actions';
 import list from '../costants';
 import { urlBase } from '../redux/actions/fetch';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
   const dispatch = useDispatch();
