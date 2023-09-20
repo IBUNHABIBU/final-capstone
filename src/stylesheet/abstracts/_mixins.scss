@@ -6,11 +6,9 @@
 }
 
 @mixin popup{
-
     .popup.active {
         width: 100vw;
         height: 100vh;
-       
         @supports (-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px)) {
             -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
