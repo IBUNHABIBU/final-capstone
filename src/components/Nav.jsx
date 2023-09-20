@@ -22,10 +22,10 @@ const Nav = () => {
   return (
     <div className="nav">
       <div className="nav__toggle">
-          <button type="button" className="btn btn--menu">
-            <FontAwesomeIcon icon={faBars} className="social--icon" />
-          </button>
-        </div>
+        <button type="button" className="btn btn--menu">
+          <FontAwesomeIcon icon={faBars} className="social--icon" />
+        </button>
+      </div>
       <div className="nav__menu">
         <NavLink to="/" className="link">
           <div className="nav__logo">
