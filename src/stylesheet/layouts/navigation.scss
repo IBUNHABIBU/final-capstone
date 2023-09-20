@@ -7,11 +7,18 @@
     border-right: 1px solid #efefef;
 
     &__menu {
-        @include respond(tab-land) {
-            display: none;
-         }
+    //     .show {
+    //         @include respond(tab-land) {
+    //             display: none;
+    //          }
+    //     }
+    // //    display: block;
     }
-    
+
+    &__menu.show {
+        display: block;
+    }
+
     &__lists {
         display: flex;
         flex-direction: column;
