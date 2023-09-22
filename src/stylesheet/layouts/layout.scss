@@ -2,4 +2,8 @@
     display: flex;
     justify-content: center;
     height: 100vh;
+
+    @include respond(tab-land) {
+        // flex-direction: column;
+    }
 }

@@ -6,8 +6,12 @@
     margin-left: 1rem;
     border-right: 1px solid #efefef;
 
-    @include respond(tab-land) {
-       display: none;
+    &__toggle {
+        display: none;
+
+        @include respond(tab-land) {
+            display: block;
+        }
     }
 
     &__lists {
