@@ -4,6 +4,6 @@
     height: 100vh;
 
     @include respond(tab-land) {
-        // flex-direction: column;
+        display: block;
     }
 }
