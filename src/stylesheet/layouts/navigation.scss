@@ -6,6 +6,10 @@
     margin-left: 1rem;
     border-right: 1px solid #efefef;
 
+    &__menu {
+        transition: all 0.9s ease-in-out;
+    }
+
     &__toggle {
         display: none;
 
