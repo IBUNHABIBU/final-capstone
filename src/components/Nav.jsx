@@ -22,7 +22,6 @@ const Nav = () => {
 
   const toggleMenu = () => {
     setToggle(!toggle);
-    console.log('toggle', toggle);
   };
 
   return (
@@ -78,5 +77,4 @@ const Nav = () => {
     </div>
   );
 };
-
 export default Nav;
