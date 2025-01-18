@@ -49,6 +49,7 @@ const Nav = () => {
               to={list.path}
               key={list.id}
               className={({ isActive }) => (isActive ? 'link link--active' : 'link')}
+              onClick={closeMenu}
             >
               {list.name}
             </NavLink>
