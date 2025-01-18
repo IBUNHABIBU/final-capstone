@@ -26,7 +26,7 @@ const Nav = () => {
 
   const closeMenu = () => {
     setToggle(false);
-  }
+  };
 
   return (
     <div className="nav">
