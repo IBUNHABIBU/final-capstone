@@ -22,8 +22,12 @@ const Nav = () => {
 
   const toggleMenu = () => {
     setToggle(!toggle);
-    console.log("Toggle")
+    console.log("Toggle", toggle)
   };
+
+  const closeMenu = () => {
+    setToggle(false);
+  }
 
   return (
     <div className="nav">
@@ -45,7 +49,6 @@ const Nav = () => {
               to={list.path}
               key={list.id}
               className={({ isActive }) => (isActive ? 'link link--active' : 'link')}
-              onClick={toggleMenu}
             >
               {list.name}
             </NavLink>
