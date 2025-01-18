@@ -1,3 +1,5 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
 
 body {
     font-family: "Lato", sans-serif;
@@ -13,7 +15,7 @@ body {
     letter-spacing: $letter-spacing-md;
 
     @include respond(phone) {
-        font-size: ;
+        font-size: 6rem;
     }
 }
 
