@@ -27,6 +27,7 @@ const Nav = () => {
 
   const closeMenu = () => {
     setToggle(false);
+    console.log(toggle)
   }
 
   return (
