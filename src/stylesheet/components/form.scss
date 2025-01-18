@@ -20,6 +20,10 @@
             max-width: 300px;
             margin: 0 auto;
 
+            @include respond(phone) {
+                width: 400px;
+            }
+
             label {
                 font-size: 1.2rem;
                 margin-top: 0.3rem;
