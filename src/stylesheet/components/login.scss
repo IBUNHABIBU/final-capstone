@@ -4,10 +4,12 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
-    
+
     @include respond(phone) {
         position: absolute;
         top: -8rem;
-        left: 4rem;
+        left: 2rem;
+        width: 100%;
+        z-index: -8;
     }
 }
