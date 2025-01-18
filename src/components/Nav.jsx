@@ -22,12 +22,10 @@ const Nav = () => {
 
   const toggleMenu = () => {
     setToggle(!toggle);
-    console.log("Toggle", toggle)
   };
 
   const closeMenu = () => {
     setToggle(false);
-    console.log(toggle)
   }
 
   return (
