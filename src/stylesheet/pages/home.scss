@@ -3,8 +3,6 @@
     flex-direction: column;
     position: relative;
     top: 12rem;
-    z-index: -78;
-
     @include respond(tab-land) {
         position: absolute;
         top: 5rem;

@@ -9,6 +9,7 @@
 
     &__menu {
         transition: all 0.9s ease-in-out;
+        z-index: 14;
 
         @include respond(phone) {
             background-color: #efefef;
