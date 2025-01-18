@@ -4,4 +4,10 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+
+    @include respond(phone) {
+        position: absolute;
+        top: -8rem;
+        left: 4rem;
+    }
 }

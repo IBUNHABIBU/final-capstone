@@ -9,6 +9,11 @@
 
     &__menu {
         transition: all 0.9s ease-in-out;
+
+        @include respond(phone) {
+            background-color: #efefef;
+            width: 58%;
+        }
     }
 
     &__toggle {
