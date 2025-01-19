@@ -1,8 +1,5 @@
+
 .carform {
     @include popup;
-    @include respond(phone) {
-        position: absolute;
-        top: 4rem;
-        left: 0;
-    }
+   
 }
