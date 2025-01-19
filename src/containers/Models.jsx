@@ -14,7 +14,7 @@ const Models = () => {
     dispatch(fetchCars());
   }, []);
   return (
-    <div className='models'>
+    <div className='models-list'>
       {
         userLogin.logged_in ? [
           userLogin.details.admin ? [
