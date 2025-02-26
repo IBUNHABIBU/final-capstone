@@ -37,6 +37,9 @@ export const fetchDetails = (id) => async (dispatch) => {
 export const createCarBooking = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/bookings`, {
     withCredentials: true,
+    headers: {
+      "Content-Type": "application/json",
+    }
   });
   dispatch(bookCar(response.data));
 };
