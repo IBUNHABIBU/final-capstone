@@ -295,15 +295,6 @@ export const fetchCars = () => async (dispatch) => {
   dispatch(addCar(response.data));
 };
 
-export const recentCars = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/api/v1/cars/recent`);
-  dispatch(addRecentCar(response.data));
-};
-
-export const fetchBookings = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/api/v1/bookings`);
-  dispatch(bookCar(response.data));
-};
 
 
 export const fetchDetails = (id) => async (dispatch) => {
