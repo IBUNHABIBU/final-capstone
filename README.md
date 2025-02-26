@@ -205,3 +205,14 @@ module EventsBooking
 end
 
 config/initializers/cors.rb
+
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'https://salum-microverse-final-capstone.netlify.app'
+
+    resource "*",
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      credentials: true
+  end
+end
