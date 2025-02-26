@@ -295,8 +295,6 @@ export const fetchCars = () => async (dispatch) => {
   dispatch(addCar(response.data));
 };
 
-
-
 export const fetchDetails = (id) => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/cars/${id}`);
   dispatch(selectCar(response.data));
