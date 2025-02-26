@@ -305,12 +305,6 @@ export const fetchBookings = () => async (dispatch) => {
   dispatch(bookCar(response.data));
 };
 
-export const checkLoginStatus = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/logged_in`, {
-    withCredentials: true, mode: 'no-cors',
-  });
-  dispatch(setUser(response.data));
-};
 
 export const fetchDetails = (id) => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/cars/${id}`);
