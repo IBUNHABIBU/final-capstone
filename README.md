@@ -288,8 +288,6 @@ import {
 
 export const urlBase = 'https://hysan.writehub.cyou';
 
-// export const urlBase = 'http://localhost:3000';
-
 export const fetchCars = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/cars`);
   dispatch(addCar(response.data));
