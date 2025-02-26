@@ -195,6 +195,10 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Check my rails code
+
+Here is the application.rb 
+
 module EventsBooking
   class Application < Rails::Application
     config.api_only = true
@@ -280,6 +284,8 @@ end
 
 Rails.application.routes.default_url_options = { host: 'https://hysan.writehub.cyou' }
 
+
+And here is my react code .
 
 import axios from 'axios';
 import {
