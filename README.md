@@ -203,3 +203,5 @@ module EventsBooking
     config.middleware.use config.session_store, config.session_options   
   end
 end
+
+config/initializers/cors.rb
