@@ -217,4 +217,4 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 end
 
-config/application/production.rb
+config/environments/production.rb
