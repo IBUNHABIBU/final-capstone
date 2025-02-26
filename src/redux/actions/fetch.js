@@ -44,6 +44,9 @@ export const createCarBooking = () => async (dispatch) => {
 export const createCar = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/cars`, {
     withCredentials: true,
+    headers: {
+      "Content-Type": "application/json",
+    }
   });
   dispatch(addCar(response.data));
 };
