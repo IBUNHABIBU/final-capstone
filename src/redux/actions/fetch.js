@@ -56,7 +56,7 @@ export const fetchDetails = (id) => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  })
+  });
   dispatch(selectCar(response.data));
 };
 
