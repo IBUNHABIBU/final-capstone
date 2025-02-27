@@ -68,7 +68,7 @@ export const createCarBooking = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  })
+  });
   dispatch(bookCar(response.data));
 };
 
