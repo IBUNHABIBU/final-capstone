@@ -64,7 +64,7 @@ export const fetchDetails = (id) => async (dispatch) => {
 export const createCarBooking = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/bookings`, {
     withCredentials: true,
-    timeout: 10000
+    timeout: 10000,
     headers: {
       "Content-Type": "application/json",
     }
