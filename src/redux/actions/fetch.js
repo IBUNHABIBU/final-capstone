@@ -75,6 +75,7 @@ export const createCarBooking = () => async (dispatch) => {
 export const createCar = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/cars`, {
     withCredentials: true,
+    timeout: 10000
     headers: {
       "Content-Type": "application/json",
     }
