@@ -13,12 +13,22 @@ export const fetchCars = () => async (dispatch) => {
 };
 
 export const recentCars = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/api/v1/cars/recent`);
+  const response = await axios.get(`${urlBase}/api/v1/cars/recent`, {
+    withCredentials: true,
+    headers: {
+      "Content-Type": "application/json",
+    }
+  });
   dispatch(addRecentCar(response.data));
 };
 
 export const fetchBookings = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/api/v1/bookings`);
+  const response = await axios.get(`${urlBase}/api/v1/bookings`, {
+    withCredentials: true,
+    headers: {
+      "Content-Type": "application/json",
+    }
+  });
   dispatch(bookCar(response.data));
 };
 
