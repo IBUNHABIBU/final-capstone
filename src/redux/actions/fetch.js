@@ -13,7 +13,7 @@ export const fetchCars = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch(error => console.log(error));
+  }).catch(error => console.log("Error in the console", error));
   dispatch(addCar(response.data));
 };
 
@@ -23,7 +23,7 @@ export const recentCars = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch(error => console.error(error));
+  }).catch(error => console.error("there is Error", error));
   dispatch(addRecentCar(response.data));
 };
 
@@ -33,14 +33,14 @@ export const fetchBookings = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch(error => console.error(error));;
+  }).catch(error => console.error("there is Error", error));;
   dispatch(bookCar(response.data));
 };
 
 export const checkLoginStatus = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/logged_in`, {
     withCredentials: true, mode: 'no-cors',
-  }).catch(error => console.error(error));
+  }).catch(error => console.error("there is Error", error));
   dispatch(setUser(response.data));
 };
 
@@ -50,7 +50,7 @@ export const fetchDetails = (id) => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch(error => console.error(error));
+  }).catch(error => console.error("there is Error", error));
   dispatch(selectCar(response.data));
 };
 
@@ -60,7 +60,7 @@ export const createCarBooking = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch(error => console.error(error));
+  }).catch(error => console.error("there is Error", error));
   dispatch(bookCar(response.data));
 };
 
@@ -70,6 +70,6 @@ export const createCar = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch(error => console.error(error));
+  }).catch(error => console.error("there is Error", error));
   dispatch(addCar(response.data));
 };
