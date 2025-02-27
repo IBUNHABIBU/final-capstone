@@ -46,7 +46,7 @@ export const checkLoginStatus = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/logged_in`, {
     withCredentials: true, mode: 'no-cors',
     timeout: 10000,
-  })
+  });
   dispatch(setUser(response.data));
 };
 
@@ -56,7 +56,7 @@ export const fetchDetails = (id) => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch(error => console.error("there is Error", error));
+  })
   dispatch(selectCar(response.data));
 };
 
