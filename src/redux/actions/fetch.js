@@ -46,7 +46,7 @@ export const checkLoginStatus = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/logged_in`, {
     withCredentials: true, mode: 'no-cors',
     timeout: 10000,
-  }).catch(error => console.error("there is Error", error));
+  }).ca
   dispatch(setUser(response.data));
 };
 
