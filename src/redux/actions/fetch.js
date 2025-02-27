@@ -78,6 +78,6 @@ export const createCar = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  })
+  });
   dispatch(addCar(response.data));
 };
