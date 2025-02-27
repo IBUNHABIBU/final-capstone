@@ -34,6 +34,7 @@ export const recentCars = () => async (dispatch) => {
 export const fetchBookings = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/bookings`, {
     withCredentials: true,
+    timeout: 10000,
     headers: {
       "Content-Type": "application/json",
     }
