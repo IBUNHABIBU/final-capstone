@@ -10,6 +10,7 @@ export const urlBase = 'https://hysan.writehub.cyou';
 export const fetchCars = () => async (dispatch) => {
   try {const response = await axios.get(`${urlBase}/api/v1/cars`, {
     withCredentials: true,
+    timeout: 10000,
     headers: {
       "Content-Type": "application/json",
     }
