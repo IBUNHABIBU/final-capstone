@@ -33,7 +33,7 @@ export const fetchBookings = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  });
+  }).catch(error => console.error(error));;
   dispatch(bookCar(response.data));
 };
 
