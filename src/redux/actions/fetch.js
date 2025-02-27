@@ -8,7 +8,12 @@ export const urlBase = 'https://hysan.writehub.cyou';
 // export const urlBase = 'http://localhost:3000';
 
 export const fetchCars = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/api/v1/cars`);
+  const response = await axios.get(`${urlBase}/api/v1/cars`, {
+    withCredentials: true,
+    headers: {
+      "Content-Type": "application/json",
+    }
+  });
   dispatch(addCar(response.data));
 };
 
