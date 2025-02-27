@@ -23,7 +23,7 @@ export const recentCars = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  });
+  }).catch(error => console.error(error));
   dispatch(addRecentCar(response.data));
 };
 
