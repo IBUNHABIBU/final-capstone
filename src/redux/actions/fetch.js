@@ -68,7 +68,7 @@ export const createCarBooking = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch(error => console.error("there is Error", error));
+  })
   dispatch(bookCar(response.data));
 };
 
