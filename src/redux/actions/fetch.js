@@ -78,6 +78,6 @@ export const createCar = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch(error => console.error("there is Error", error));
+  })
   dispatch(addCar(response.data));
 };
