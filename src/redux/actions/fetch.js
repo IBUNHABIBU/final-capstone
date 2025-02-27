@@ -23,6 +23,7 @@ export const fetchCars = () => async (dispatch) => {
 export const recentCars = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/cars/recent`, {
     withCredentials: true,
+    timeout: 10000,
     headers: {
       "Content-Type": "application/json",
     }
