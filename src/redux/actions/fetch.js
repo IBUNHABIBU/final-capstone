@@ -13,7 +13,7 @@ export const fetchCars = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  });
+  }).catch(error => console.log(error));
   dispatch(addCar(response.data));
 };
 
