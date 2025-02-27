@@ -8,12 +8,14 @@ export const urlBase = 'https://hysan.writehub.cyou';
 // export const urlBase = 'http://localhost:3000';
 
 export const fetchCars = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/api/v1/cars`, {
+  try {const response = await axios.get(`${urlBase}/api/v1/cars`, {
     withCredentials: true,
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch(error => console.log("Error in the console", error));
+  })} catch (error) {
+    console.error('Error fetching data:', error);
+  }
   dispatch(addCar(response.data));
 };
 
