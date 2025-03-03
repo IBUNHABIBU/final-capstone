@@ -303,11 +303,3 @@ export const fetchDetails = (id) => async (dispatch) => {
   const response = await axios.get(`${urlBase}/api/v1/cars/${id}`);
   dispatch(selectCar(response.data));
 };
-
-
-export const createCar = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/api/v1/cars`, {
-    withCredentials: true,
-  });
-  dispatch(addCar(response.data));
-};
