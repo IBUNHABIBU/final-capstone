@@ -285,12 +285,3 @@ end
 Rails.application.routes.default_url_options = { host: 'https://hysan.writehub.cyou' }
 
 
-And here is my react code .
-
-import axios from 'axios';
-import {
-  addCar, setUser, bookCar, selectCar, addRecentCar,
-} from './actions';
-
-export const urlBase = 'https://hysan.writehub.cyou';
-
