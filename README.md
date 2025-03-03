@@ -281,7 +281,3 @@ Rails.application.configure do
   config.active_record.attributes_for_inspect = [ :id ]
 
 end
-
-Rails.application.routes.default_url_options = { host: 'https://hysan.writehub.cyou' }
-
-
