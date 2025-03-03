@@ -294,7 +294,3 @@ import {
 
 export const urlBase = 'https://hysan.writehub.cyou';
 
-export const fetchCars = () => async (dispatch) => {
-  const response = await axios.get(`${urlBase}/api/v1/cars`);
-  dispatch(addCar(response.data));
-};
