@@ -14,9 +14,7 @@ export const fetchCars = () => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  }).catch (error) {
-    console.error('Error fetching data:', error);
-  }
+  }).catch(error => console.error('Error fetching data:', error));
   dispatch(addCar(response.data));
 };
 
