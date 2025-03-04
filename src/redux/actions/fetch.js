@@ -2,6 +2,7 @@ import axios from 'axios';
 import {
   addCar, setUser, bookCar, selectCar, addRecentCar,
 } from './actions';
+import errors from 'eslint-config-airbnb-base/rules/errors';
 
 export const urlBase = 'https://hysan.writehub.cyou';
 
@@ -55,7 +56,7 @@ export const fetchDetails = (id) => async (dispatch) => {
     headers: {
       "Content-Type": "application/json",
     }
-  });
+  }).catch(error => console.error("Fetch details error", error));
   dispatch(selectCar(response.data));
 };
 
