@@ -5,6 +5,5 @@
 
 .models-list {
     position: absolute;
-    top: 48rem;
-    left: 0;
+    @include centerposition;
 }
