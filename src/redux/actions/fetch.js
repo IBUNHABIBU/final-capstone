@@ -42,7 +42,7 @@ export const fetchBookings = () => async (dispatch) => {
 
 export const checkLoginStatus = () => async (dispatch) => {
   const response = await axios.get(`${urlBase}/logged_in`, {
-    withCredentials: true, mode: 'no-cors',
+    withCredentials: true,
     timeout: 10000,
   });
   dispatch(setUser(response.data));
