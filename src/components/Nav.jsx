@@ -36,11 +36,7 @@ const Nav = () => {
         </button>
       </div>
       <div className={`nav__menu ${toggle ? '' : 'show'}`}>
-      <NavLink to="/" className="link">
-          <div className="nav__logo">
-            <img src="logo.jpg" alt="nav logo" />
-          </div>
-        </NavLink>
+      
         <div className="nav__lists">
           {
           list.map((list) => (
