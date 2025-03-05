@@ -36,7 +36,6 @@ const Nav = () => {
         </button>
       </div>
       <div className={`nav__menu ${toggle ? '' : 'show'}`}>
-      
         <div className="nav__lists">
           {
           list.map((list) => (
