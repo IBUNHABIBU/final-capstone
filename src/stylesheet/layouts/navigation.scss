@@ -8,7 +8,7 @@
     z-index: 14;
 
     @include respond(phone) {
-        position: relative;
+        
     }
 
     &__menu {
