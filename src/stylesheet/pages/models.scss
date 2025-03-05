@@ -5,5 +5,8 @@
 
 .models-list {
     position: absolute;
-    @include centerposition;
+    // @include centerposition;
+    width: 90vw;
+    // margin: 0 auto;
+    border: 2px solid red;
 }
