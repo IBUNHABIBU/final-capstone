@@ -18,6 +18,8 @@
         @include respond(phone) {
             background-color: #efefef;
             width: 100%;
+            position: relative;
+            top: 0;
         }
     }
 
