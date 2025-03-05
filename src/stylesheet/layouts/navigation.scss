@@ -13,8 +13,7 @@
 
         @include respond(phone) {
             background-color: #efefef;
-            width: 58%;
-            border: 2px solid red;
+            width: 100%;
         }
     }
 
