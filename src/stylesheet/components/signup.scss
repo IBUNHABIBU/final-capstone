@@ -7,7 +7,6 @@
 
     @include respond(phone) {
         position: absolute;
-        top: -8rem;
-        left: 4rem;
+        top: 0;
     }
 }
