@@ -35,6 +35,11 @@ const Nav = () => {
           <FontAwesomeIcon icon={faBars} className="social--icon" />
         </button>
       </div>
+      <NavLink to="/" className="link">
+          <div className="nav__logo">
+            <img src="logo.jpg" alt="nav logo" />
+          </div>
+      </NavLink>
       <div className={`nav__menu ${toggle ? '' : 'show'}`}>
         <div className="nav__lists">
           {
