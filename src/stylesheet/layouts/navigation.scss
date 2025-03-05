@@ -7,7 +7,9 @@
     border-right: 1px solid #efefef;
     z-index: 14;
 
-    @include respond(phone)
+    @include respond(phone) {
+        // flex-direction: row;
+    }
 
     &__menu {
         transition: all 0.9s ease-in-out;
