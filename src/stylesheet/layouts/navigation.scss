@@ -8,7 +8,6 @@
     z-index: 14;
 
     @include respond(phone) {
-        // flex-direction: row;
         position: relative;
  
     }
