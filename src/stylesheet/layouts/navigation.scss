@@ -84,7 +84,7 @@
 
 .nav__menu.show {
 
-    @include respond(ta) {
+    @include respond() {
         display: none;
         // position: absolute;
         position: fixed;
