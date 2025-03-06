@@ -17,7 +17,7 @@
         transition: all 0.9s ease-in-out;
         z-index: 14;
 
-        @include respond(phone) {
+        @include respond(tab-land) {
             background-color: #efefef;
             width: 100%;
             position: absolute;
