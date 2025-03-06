@@ -26,15 +26,6 @@ html {
 
 body {
     box-sizing: border-box;
-
-    @include respond(tab-port) {
-        padding: 0;
-
-        .heading-primary {
-            font-size: 4px;
-        }
-    }
-
 }
 
 //::selection is a pseudo-element which applies styles to the part of a document

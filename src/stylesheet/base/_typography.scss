@@ -13,10 +13,6 @@ body {
     font-weight: 900;
     font-size: $h1-font-size;
     letter-spacing: $letter-spacing-md;
-
-    @include respond(phone) {
-        font-size: 6rem;
-    }
 }
 
 .heading-secondary {
@@ -30,4 +26,8 @@ body {
    font-size: $font-size-xs;
    color: $gray-very-light;
    font-weight: $font-weight-bold;
+
+   @include respond(tab-land) {
+    font-size: $font-size-xl;
+   }
 }
