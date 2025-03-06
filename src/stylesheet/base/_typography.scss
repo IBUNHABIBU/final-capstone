@@ -13,11 +13,6 @@ body {
     font-weight: 900;
     font-size: $h1-font-size;
     letter-spacing: $letter-spacing-md;
-
-    @include respond(phone) {
-        font-size: $h6-font-size;
-        // color: red;
-    }
 }
 
 .heading-secondary {
