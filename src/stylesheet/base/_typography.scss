@@ -28,6 +28,6 @@ body {
    font-weight: $font-weight-bold;
 
    @include respond(tab-land) {
-    font-size: $font-size-lg;
+    font-size: $font-size-xl;
    }
 }
