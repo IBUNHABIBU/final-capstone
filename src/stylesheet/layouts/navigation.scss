@@ -8,7 +8,9 @@
     z-index: 14;
 
     @include respond(phone) {
-        
+        flex-direction: row;
+        // border: 4px solid red;
+        z-index: 7;
     }
 
     &__menu {
@@ -18,6 +20,9 @@
         @include respond(phone) {
             background-color: #efefef;
             width: 100%;
+
+            position: absolute;
+            top: 6rem;
         }
     }
 
@@ -81,6 +86,14 @@
         img {
             width: 200px;
             height: 200px;
+
+            @include respond(tab-land) {
+                width: 64px;
+                height: 64px;
+                position: absolute;
+                top: -1rem;
+                left: 12rem;
+            }
         }
 
     }
@@ -88,7 +101,6 @@
 }
 
 .nav__menu.show {
-
     @include respond(phone) {
         display: none;
         position: fixed;
@@ -96,5 +108,4 @@
         top: 0;
         width: 50%;
     }
-   
 }
