@@ -84,7 +84,7 @@
 
 .nav__menu.show {
 
-    @include respond(phone) {
+    @include respond(tab-land) {
         display: none;
         // position: absolute;
         position: fixed;
