@@ -15,7 +15,8 @@ body {
     letter-spacing: $letter-spacing-md;
 
     @include respond(phone) {
-        font-size: 6rem;
+        font-size: $h6-font-size;
+        // color: red;
     }
 }
 
