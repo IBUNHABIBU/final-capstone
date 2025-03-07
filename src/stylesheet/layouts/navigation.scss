@@ -92,9 +92,10 @@
             }
 
             @include respond(phone) {
-                position: absolute;
-                top: -12rem;
-                left: 32rem;
+                // top: -12rem;
+                // left: 32rem;
+                width: 140px;
+                height: 140px;
             }
         }
 
