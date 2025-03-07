@@ -86,10 +86,10 @@
             height: 240px;
 
             @include respond(tab-land) {
-                width: 64px;
-                height: 64px;
+                width: 164px;
+                height: 164px;
                 position: absolute;
-                top: -1rem;
+                top: -2rem;
                 left: 12rem;
             }
         }
