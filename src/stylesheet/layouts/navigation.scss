@@ -9,7 +9,6 @@
 
     @include respond(phone) {
         flex-direction: row;
-        // border: 4px solid red;
         z-index: 7;
     }
 
@@ -17,7 +16,7 @@
         transition: all 0.9s ease-in-out;
         z-index: 14;
 
-        @include respond(phone) {
+        @include respond(tab-land) {
             background-color: #efefef;
             width: 100%;
             position: absolute;
@@ -83,15 +82,20 @@
     &__logo {
         position: relative;
         img {
-            width: 200px;
-            height: 200px;
+            width: 240px;
+            height: 240px;
 
             @include respond(tab-land) {
-                width: 64px;
-                height: 64px;
                 position: absolute;
-                top: -1rem;
-                left: 12rem;
+                top: -12rem;
+                left: 32rem;
+            }
+
+            @include respond(phone) {
+                top: -4rem;
+                left: 6rem;
+                width: 140px;
+                height: 140px;
             }
         }
 
@@ -100,11 +104,12 @@
 }
 
 .nav__menu.show {
-    @include respond(phone) {
+    @include respond(tab-land) {
         display: none;
         position: fixed;
         right: 0;
         top: 0;
         width: 50%;
+        z-index: 7;
     }
 }
