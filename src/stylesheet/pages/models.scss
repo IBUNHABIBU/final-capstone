@@ -5,8 +5,9 @@
 .models-list {
     position: absolute;
     width: 90vw;
+    border: solid 2px red;
 
-    @include respond(phone) {
+    @include respond(tab-land) {
         top: 6rem;
     }
 }
