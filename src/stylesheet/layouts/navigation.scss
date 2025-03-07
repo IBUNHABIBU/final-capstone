@@ -6,7 +6,6 @@
     margin-left: 1rem;
     border-right: 1px solid #efefef;
     z-index: 14;
-    margin-top: 4rem;
 
     @include respond(phone) {
         flex-direction: row;
