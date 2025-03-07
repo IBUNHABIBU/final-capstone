@@ -35,6 +35,10 @@
             margin-top: 8rem;
         }
 
+        @include respond(tab-land) {
+            margin-top: 12rem;
+        }
+
         &__title {
             font-size: 2rem;
             font-weight: bolder;
