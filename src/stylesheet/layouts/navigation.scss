@@ -82,8 +82,8 @@
     &__logo {
         position: relative;
         img {
-            width: 340px;
-            height: 340px;
+            width: 240px;
+            height: 240px;
 
             @include respond(tab-land) {
                 width: 64px;
