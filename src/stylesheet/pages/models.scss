@@ -7,6 +7,6 @@
     width: 90vw;
 
     @include respond(phone) {
-        top: -rem;
+        top: -1rem;
     }
 }
