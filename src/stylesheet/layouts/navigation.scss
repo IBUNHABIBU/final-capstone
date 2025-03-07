@@ -90,6 +90,12 @@
                 top: -12rem;
                 left: 32rem;
             }
+
+            @include respond(phone) {
+                position: absolute;
+                top: -12rem;
+                left: 32rem;
+            }
         }
 
     }
