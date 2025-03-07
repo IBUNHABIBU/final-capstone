@@ -8,6 +8,6 @@
     border: solid 2px red;
 
     @include respond(tab-land) {
-        top: 8rem;
+        top: 12rem;
     }
 }
