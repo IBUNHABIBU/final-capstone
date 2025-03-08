@@ -187,12 +187,6 @@ all my standup team for their help.
 
 This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 
-require_relative "boot"
 
-require "rails/all"
-
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups)
 
 
