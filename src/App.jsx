@@ -13,7 +13,6 @@ import layout from './layouts';
 import './stylesheet/App.scss';
 import Pop from './containers/Pop';
 import Project from './containers/Project';
-import SliderMain from './components/testcomp/SliderMain';
 
 const App = () => {
   const dispatch = useDispatch();
