@@ -15,7 +15,6 @@ const list = [
     path: '/appointments',
   },
  
-  //   name: 'images',
   //   path: '/images',
   // },
 ];
