@@ -26,7 +26,7 @@ const App = () => {
   const AppointmentComponent = layout(Appointment);
   const PopComponent = layout(Pop);
   const ProjectComponent = layout(Project);
-  const SliderComponent = layout(SliderMain);
+  // const SliderComponent = layout(SliderMain);
 
   useEffect(() => {
     dispatch(checkLoginStatus());
