@@ -43,7 +43,7 @@ const App = () => {
       { path: '/appointments', element: <AppointmentComponent /> },
       { path: '/pop', element: <PopComponent /> },
       { path: '/projects', element: <ProjectComponent /> },
-      { path: '/images', element: <SliderComponent /> },
+      // { path: '/images', element: <SliderComponent /> },
     ],
   );
   return (
