@@ -14,7 +14,6 @@ const list = [
     name: 'APPOINTMENTS',
     path: '/appointments',
   },
- 
 ];
 
 export default list;
