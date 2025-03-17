@@ -34,7 +34,7 @@ const App = () => {
 
   const router = createBrowserRouter(
     [
-      // { path: '/', element: <HomeComponent /> },
+      { path: '/', element: <HomeComponent /> },
       
       { path: '/login', element: <LoginComponent /> },
       { path: '/signup', element: <SignupComponent /> },
