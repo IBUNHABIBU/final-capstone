@@ -13,6 +13,7 @@ import layout from './layouts';
 import './stylesheet/App.scss';
 import Pop from './containers/Pop';
 import Project from './containers/Project';
+import Loading from './components/Loading';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ const App = () => {
   const CarListComponent = layout(CarList);
   const CarDetailsComponent = layout(CarDetails);
   const AppointmentComponent = layout(Appointment);
+  const SpinningComponent = layout(Loading)
   const PopComponent = layout(Pop);
   const ProjectComponent = layout(Project);
 
