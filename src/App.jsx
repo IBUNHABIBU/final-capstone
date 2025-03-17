@@ -24,7 +24,7 @@ const App = () => {
   const CarListComponent = layout(CarList);
   const CarDetailsComponent = layout(CarDetails);
   const AppointmentComponent = layout(Appointment);
-  const SpinningComponent = layout(Loading)
+  const SpinningComponent = layout(Loading);
   const PopComponent = layout(Pop);
   const ProjectComponent = layout(Project);
 
